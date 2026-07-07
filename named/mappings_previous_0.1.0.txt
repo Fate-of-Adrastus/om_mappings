@@ -1,0 +1,4838 @@
+## Atom
+method_804,GetCopy
+field_2275,atomType
+field_2276,transmutationEffect
+param_4420,_atomType
+
+## AtomReference
+field_2277,molecule
+field_2278,pos
+field_2280,atomType
+field_2279,atom
+field_2281,doesMoleculeExist
+field_2282,isHeldByArm
+param_4421,_molecule
+param_4422,_pos
+param_4423,_atomType
+param_4424,_atom
+param_4425,_isHeldByArm
+
+## AtomType
+field_2283,byteId
+field_2284,defaultName
+field_2285,elementalName
+field_2286,name
+field_2287,symbol
+field_2288,shadow
+field_2289,cardinallikeTextures
+field_2290,saltlikeTextures
+field_2291,metallikeTextures
+field_2292,quintessencelikeTextures
+field_2293,isCardinallike
+field_2294,isMetallike
+field_2296,isQuintessencelike
+field_2295,isQuicksilver
+field_2297,successor
+field_2298,internalMolecule
+param_4426,type1
+param_4427,type2
+# param_122,type1 -!- shared with Utils
+# param_3693,type2 -!- shared with Utils
+param_4428,obj
+
+## AtomTypes
+class_175,AtomTypes
+method_248,Init
+method_485,AfterInit
+orig_method_248,orig_Init
+field_1675,Salt
+field_1676,Air
+field_1677,Earth
+field_1678,Fire
+field_1679,Water
+field_1680,Quicksilver
+field_1681,Lead
+field_1682,Copper
+field_1683,Tin
+field_1684,Iron
+field_1685,Silver
+field_1686,Gold
+field_1687,Vitae
+field_1688,Mors
+field_1689,Repeat
+field_1690,Quintessence
+field_1691,atoms
+
+## SaltlikeTextures
+class_106,SaltlikeTextures
+field_994,diffuse
+field_995,shade
+
+## CardinallikeTextures
+class_5,CardinallikeTextures
+field_8,base1
+field_9,fog
+field_10,base2
+
+## MetallikeTextures
+class_8,MetallikeTextures
+field_13,diffuse
+field_14,lightramp
+field_15,rimlight
+
+## QuintessencelikeTextures
+class_229,QuintessencelikeTextures
+field_1950,base1
+field_1951,colors
+field_1952,mask
+field_1953,rimlight
+
+## BondTypeEnum
+enum_126,BondTypeEnum
+
+## Bond
+class_277,Bond
+method_754,GetCopy
+field_2186,type
+field_2187,index1
+field_2188,index2
+field_2189,effects
+param_2048,_type
+param_4280,_index1
+param_4281,_index2
+
+## BondTextures
+class_167,BondTextures
+method_471,Init
+field_1639,standard
+field_1640,prisma0
+field_1641,prisma1
+field_1642,prisma2
+field_1643,bondTextures
+
+## BondTexture
+class_200,BondTexture
+field_1814,type
+field_1815,texture
+field_1816,normalMap
+field_1817,bondAnim
+field_1818,textureOffset
+field_1819,glyphAnim
+field_1820,bondSound
+
+## BondTextureDecider
+class_283,BondTextureDecider
+method_779,DecideBondTexture
+param_4302,type
+
+## Molecule
+method_1100,GetAtoms
+method_1101,GetBonds
+method_1102,GetRepetitionLocation
+method_1103,SetRepetitionLocation
+method_1104,GetCopy
+method_1105,AddAtom
+method_1106,ReplaceAtom
+method_1107,RemoveAtom
+method_1108,AddRepeat
+method_1109,RemoveAndRepeat
+method_1110,SpawnRepeats
+method_1111,AddBond
+method_1112,AddBond
+method_1113,GetBondTypeAt
+method_1114,RemoveBond
+method_1115,GetRotatedCopy
+method_1116,Rotate
+method_1117,GetTranslatedCopy
+method_1118,Translate
+method_1119,GetMergedCopy
+method_1120,CompressRepetition
+method_1121,GetSinglet
+method_1122,GetDoublet
+orig_method_1104,orig_GetCopy
+field_2638,wasBondRemoved
+field_2639,displayName
+# field_2640,
+# field_2641,
+field_2642,atomDict
+field_2643,bonds
+field_2644,compressedMolecule
+field_2645,repetitionIndexQ
+param_4822,_repetitionIndexQ
+param_4823,atom
+param_4824,index
+param_4825,atom
+param_4826,index
+param_4827,index
+param_4828,repeatCount
+param_4829,index
+param_4830,repeatCount
+param_4831,type
+param_4832,index1
+param_4833,index2
+param_4834,type
+param_4835,index1
+param_4836,index2
+param_4837,effects
+param_4838,index1
+param_4839,index2
+param_4840,index1
+param_4841,index2
+param_4842,rotation
+param_4843,center
+param_4844,translation
+param_4845,translation
+param_4846,molecule
+param_4847,atom
+param_4848,atom1
+param_4849,atom2
+## NestedClasses
+class_348,BondMatcher
+method_1123,IsMatchingBond
+field_2646,testIndex1
+field_2647,testIndex2
+# param_4648,bond -!- shared with SolutionEditorScreen
+class_349,BondEffectAdder
+method_1124,AddEffect
+param_4850,effect
+field_2648,bond
+class_350,ConnectionChecker
+method_1125,IsBondToIndex
+field_2649,index
+param_4851,bond
+class_351,BondEffectAdder2
+method_1126,AddEffect
+param_117,effect
+field_2650,bond
+class_352,BondMatcher2
+method_1127,IsMatchingBond
+field_2651,testIndex1
+field_2652,testIndex2
+param_4852,bond
+## LambdaGeneratedClass
+method_1128,HasInternalMolecule
+field_2653,LGen_hasInternalMolecule
+param_4853,atom
+
+## MoleculeBuilder
+class_160,MoleculeBuilder
+method_393,SetName
+method_394,Atom
+method_395,Bond
+method_396,PrismaBond
+method_397,Pop
+method_398,RepeatPrevious
+method_399,AddRotatedToOrigin
+field_1623,molecule
+field_1624,hexPath
+param_3654,name
+param_435,type
+param_3655,cord1
+param_3656,cord2
+param_3657,cord1
+param_3658,cord2
+param_3659,builder
+
+
+## Campaign
+field_2309,chapters
+
+## CampaignChapter
+field_2310,chapterNumber
+field_2311,title
+field_2312,name
+field_2313,areaName
+field_2314,locations
+field_2315,background
+field_2316,lockedIcon
+field_2317,unlockedIcon
+field_2318,hoverIcon
+field_2319,gemIcon
+field_2320,buttonOffset
+field_2321,isLeftAligned
+param_4465,_title
+param_4466,_name
+param_691,_areaName
+param_4467,_background
+param_4468,_lockedIcon
+param_4469,_unlockedIcon
+param_4470,_hoverIcon
+param_4471,_gemIcon
+param_4472,_buttonOffset
+param_4473,_isLeftAligned
+
+## CampaignItem
+method_825,IsComplete
+method_826,GetIcon
+method_827,GetIconSmall
+orig_method_826,orig_GetIcon
+orig_method_827,orig_GetIconSmall
+field_2322,locationId
+field_2323,locationName
+field_2324,locationType
+field_2325,puzzle
+field_2326,requirement
+field_2327,dialogue
+field_2328,track
+field_2329,fanfare
+param_4474,_locationId
+param_4475,_locationName
+param_4476,_locationType
+param_4477,_puzzle
+param_4478,_requirement
+param_4479,_track
+param_4480,_fanfare
+
+## Campaigns
+method_828,Init
+method_829,AddItemToChapter
+method_830,CheckPuzzleIds
+method_831,DumpLoreToFile
+method_832,FindLocationById
+method_833,GetPuzzleSelectEvents
+field_2330,mainCampaign
+field_2331,campaigns
+param_4481,campaign
+param_4482,chapter
+param_4483,locationId
+param_4484,locationName
+param_2441,locationType
+param_4485,tip
+param_4486,puzzle
+param_4487,track
+param_4488,fanfare
+param_4489,requirement
+param_4490,locationId
+## LambdaGeneratedClass
+method_841,GetPuzzles
+method_842,GetPuzzles
+method_843,HasPuzzle
+method_844,GetPuzzle
+method_845,TrimString
+method_846,IsCompletePuzzle
+field_2344,LGen_hasPuzzle
+field_2345,LGen_getPuzzle
+field_2346,LGen_getPuzzles
+# field_2347,LGen_getPuzzles -!- shared with JournalVolume
+field_2348,LGen_trimString
+field_2349,LGen_isCompletePuzzle
+param_4492,campaign
+param_4493,chapter
+param_4494,item
+param_4495,item
+# param_4496,str -!- shared with SolitaireScreen
+param_4497,item
+
+## PuzzleSelectEvent
+class_166,PuzzleSelectEvent
+
+## ChapterUnlockEvent
+field_2350,chapter
+param_4498,_chapter
+param_4499,obj
+
+## UIUnlockEvent
+class_213,UIUnlockEvent
+field_1462,campaignItem
+param_3317,_campaignItem
+param_3318,obj
+
+## UICompleteEvent
+class_125,UICompleteEvent
+field_1887,campaignItem
+param_3886,_campaignItem
+param_3887,obj
+
+## LocationType
+enum_129,LocationType
+## 0: PUZZLE
+## 1: CUTSCENE
+## 2: LETTER
+## 3: SOLITAIRE
+## 4: ?
+## 5: ?
+## 6: ?
+## 6+ Unhandled case
+
+## LocationRequirement
+class_259,LocationRequirement
+
+## LocReqNothing
+class_174,LocReqNothing
+
+## LocReqCompleteLoc
+class_243,LocReqCompleteLoc
+field_2005,locationId
+param_3995,_locationId
+
+## LocReqPuzzlesComplete
+class_265,LocReqPuzzlesComplete
+field_2092,requiredMinimum
+param_1705,_requiredMinimum
+
+
+## JournalVolume
+field_2569,issueName
+field_2570,flavorText
+field_2571,puzzles
+
+## JournalVolumes
+method_1051,CompletedJournalPuzzles
+method_1052,Init
+method_1053,CheckLengths
+field_2572,volumes
+## LambdaGeneratedClass
+method_1054,GetPuzzles
+# method_1055,
+method_1056,VerifyIONames
+method_1057,HasCorrectLength
+field_2378,LGen_getPuzzles
+# field_2379,LGen_
+# field_2347,LGen_verifyIONames -!- shared with Campaigns
+field_2573,LGen_hasCorrectLength
+param_4714,volume
+# param_4715,
+param_4716,puzzle
+param_4717,volume
+
+
+## Dialogue
+class_264,Dialogue
+method_712,GetVignette
+field_2090,dialoguePath
+field_2091,vignetteDict
+param_4199,_dialoguePath
+
+## StoryPanel
+method_2170,GetCompletion
+method_2171,SaveScrollbarState
+method_2172,RenderFrame
+method_2173,RenderNoDialouge
+method_2174,RenderSingleEvent
+method_2175,RenderDialouge
+field_4086,nextDelay
+field_4087,skipDelay
+field_4088,fadeInLength
+field_4089,scrollbarMoveTimelength
+field_4090,dialouge
+field_4091,addOptionalTag
+field_4092,scrollbar
+# field_4093,parsedText -!- shared with LineFields
+field_4094,nextTimer
+field_4095,scrollbarInfo
+field_4096,fadeInTimer
+param_5756,_dialouge
+param_5757,_addOptionalTag
+param_5758,_isAfterInit
+param_5759,deltaTime
+param_5760,pos
+param_5761,completionAmount
+param_5762,storyPanelSections
+param_5763,pos
+param_5764,pos
+param_5435,deltaTime
+param_5765,pos
+param_5766,completionAmount
+param_5767,storyPanelSections
+## NestedClasses
+enum_193,AdvanceMode
+# 0: Stopped
+# 1: Trigger
+# 2: Timer
+class_444,ScrollbarInfo
+field_4097,scrollOffset
+field_4098,maxOffset
+field_4099,height
+field_4100,isAfterInit
+field_4101,movementTimer
+## LambdaGeneratedClass
+method_2176,TrimString
+method_2177,GetLineFields
+method_2178,GetLineFields2
+field_4102,LGen_trimString
+# field_2674,LGen_getLineFields -!- shared with Solution
+# field_2675,LGen_getLineFields2 -!- shared with Solution
+param_5654,str
+# param_5013,_event -!- shared with PuzzleInfoScreen
+param_4650,_event
+
+## Vignette
+field_4123,parseCancelCode
+field_4124,data
+field_4125,events
+field_4126,actorPortraits
+param_5787,vignetteData
+param_5788,name
+param_5789,language
+## NestedClasses
+class_448,PortraitGetter
+method_2210,GetPortrait
+field_4127,lineNumber
+field_4128,name
+param_5790,name
+class_449,VignetteName
+field_4129,str
+## LambdaGeneratedClass
+method_2211,TrimString
+field_3978,LGen_trimString
+param_2124,str
+
+## VignetteEvent
+method_2212,AddTalkEvent
+method_2213,AddEnterEvent
+method_2214,AddChangeEvent
+method_2215,IsTalkEvent
+method_2216,IsEnterEvent
+method_2217,IsChangeEvent
+method_2218,ToLineFields
+method_2219,ToAddFields
+method_2220,ToReplaceFields
+method_2221,ActionOnLineFields
+method_2222,ActionOnEnterFields
+method_2223,ActionOnChangeFields
+method_2224,ActionOnEach
+# field_3899,type -!- shared with SolitaireState
+field_4130,primary
+# field_1431,secondary -!- shared with MaybeCreator
+field_4132,text
+param_5791,_type
+param_5792,portrait
+# field_1575,line -!- this is actually a parameter!
+param_5793,portrait
+param_5794,from
+param_5795,to
+param_5796,action
+param_5797,action
+param_5798,action
+param_5799,actionLineF
+param_5800,actionEnterF
+param_5801,actionChangeF
+## NestedClasses
+struct_131,EnterFields
+field_4133,portrait
+struct_132,ChangeFields
+field_4134,from
+field_4135,to
+field_4136,portrait
+# field_4093,line -!- shared with StoryPanel
+
+
+## VignetteEventType
+enum_194,VignetteEventType
+## 0: TalkEvent
+## 1: EnterEvent
+## 2: ChangeEvent
+
+## Portraits
+class_172,Portraits
+method_480,Init
+field_1670,portraits
+
+## Portrait
+class_230,Portrait
+field_1954,name
+field_1955,largeTexture
+field_1956,smallTexture
+field_1957,tint
+# field_1958,	onlyTrueFor Anataeus
+param_3965,_name
+param_3966,_largeTexture
+param_3967,_smallTexture
+# param_3404,_tint -!- shared with class_135
+# param_3968,_
+
+
+
+## PuzzleInputOutput
+field_2813,molecule
+field_2814,index
+field_2815,gaugeOffset
+param_5016,atom
+param_5017,atom
+param_5018,_index
+param_5019,_gaugeOffset
+param_5020,atom1
+param_5021,atom2
+param_5022,atom1
+param_5023,atom2
+param_5024,_index
+param_5025,_gaugeOffset
+param_5026,_molecule
+param_5027,_molecule
+param_5028,_index
+param_5029,_gaugeOffset
+param_5030,_molecule
+param_5031,_index
+param_5032,_gaugeOffset
+
+## Puzzle
+method_1246,VerifyIONames
+method_1247,CalculatePipelineBounds
+method_1248,SaveToFile
+method_1249,LoadFromFile
+method_1250,writeMoleculeToFile
+method_1251,readMoleculeFromFile
+method_1252,writeHexIndexToFile
+method_1253,readHexIndexFromFile
+method_1254,hasPermissionForPart
+method_1255,hasPermissionForInstr
+orig_method_1248,orig_SaveToFile
+orig_method_1249,orig_LoadFromFile
+field_2765,maxPuzzleFormatVersion
+field_2766,puzzleId
+field_2767,puzzleName
+field_2768,journalAuthor
+field_2769,puzzleTip
+field_2770,inputs
+field_2771,outputs
+field_2772,preplacedParts
+field_2773,permissionFlags
+field_2774,highlights
+# field_2775,isTutorial		needs validation (this field determens icons)
+field_2776,notes
+# field_2777,isTutorial		needs validation
+field_2778,limitedPartAmounts
+field_2779,productionInfo
+field_2780,outputMultiplier
+# field_2781,			!not set at creation?
+# field_2782,			!not set at creation?
+# field_2783,			!not set at creation?
+# field_2784,			!not set at creation?
+param_4980,path
+param_4981,path
+param_4982,writer
+param_4983,molecule
+param_4984,reader
+param_4985,writer
+param_4986,molecule
+param_4987,reader
+param_4988,partType
+param_4989,instructionType
+## NestedClasses
+class_371,IdMatcher
+method_1256,IsMatchingId
+field_2785,testId
+param_4942,type
+class_372,ChamberIdMatcher
+method_1257,IsMatchingChamberId
+# param_159,testChamberId -!- this is actually a field!
+param_4990,chamber
+
+## Puzzles
+method_1282,GetAllPuzzles
+method_1283,GetJournalPuzzles
+method_1284,GetById
+method_1285,Init
+field_2816,campaignPuzzles
+field_2817,lessonIntroduction
+field_2818,lessonArms
+field_2819,lessonPivots
+field_2820,lessonPistons
+field_2821,lessonTracks
+field_2822,lessonTransmutation
+field_2823,lessonBonding
+field_2824,stabilizedWater
+field_2825,airshipFuel
+field_2826,facePowder
+field_2827,refinedGold
+field_2828,waterproofSealant
+field_2829,precisionMachineOil
+field_2830,hangoverCure
+field_2831,healthTonic
+field_2832,staminaPotion
+field_2833,hairProduct
+field_2834,explosivePompound
+field_2835,mistOfIncapacitation
+field_2836,rocketPropellant
+field_2837,armorFilament
+field_2838,CouragePotion
+field_2839,surrenderFlare
+field_2840,alcoholSeparation
+field_2841,waterPurifier
+field_2842,sealSolvent
+field_2843,climbingRopeFiber
+field_2844,warmingTonic
+field_2845,veryDarkThread
+field_2846,lifeSensingPotion
+field_2847,lithargeSeparation
+field_2848,invisibleInk
+field_2849,swordAlloy
+field_2850,stainRemover
+field_2851,alchemicalJewel
+field_2852,purifiedGold
+field_2853,goldenThread
+field_2854,mistOfHallucination
+field_2855,voltaicCoil
+field_2856,unstableCompound
+field_2857,curiousLipstick
+field_2858,timingCrystal
+field_2859,universalSolvent
+# field_2860,
+# field_2861,
+# field_2862,
+# field_2863,
+# field_2864,
+# field_2865,
+# field_2866,
+# field_2867,
+# field_2868,
+field_2869,vanBerlosWheel
+field_2870,vanBerlosChain
+field_2871,reactiveCinnabar
+field_2872,silverCaustic
+field_2873,lambentIIIX
+field_2874,explorersSalve
+field_2875,preservativeSalt
+field_2876,sailclothThread
+field_2877,buoyantCable
+field_2878,spyglassCrystal
+field_2879,ravarisWheel
+field_2880,lubricatingFilament
+field_2881,resonantCrystal
+field_2882,refinedBronze
+field_2883,ablativeCrystal
+field_2884,proofOfCompleteness
+field_2885,wheelRepresentation
+field_2886,synthesisViaAlcohol
+field_2887,universalCompound
+field_2888,sigmarsGardenII
+field_2889,ratPoison
+field_2890,fragrantPowders
+field_2891,silverPaint
+field_2892,aetherDetector
+field_2893,vaporOfLevity
+field_2894,viscousSludge
+field_2895,abrasiveParticles
+field_2896,eyedropsOfRevelation
+field_2897,parade-RocketFuel
+field_2898,specialAmaro
+field_2899,reconstructedSolvent
+field_2900,sutureThread
+field_2901,generalAnaesthetic
+field_2902,bloodStanchingPowder
+field_2903,wakefulnessPotion
+field_2904,tonicOfHydration
+field_2905,lustre
+field_2906,hexstabilizedSalt
+field_2907,lamplightGas
+field_2908,conductiveEnamel
+field_2909,weldingThermite
+field_2910,reactiveGold
+field_2911,vanBerlosPivots
+field_2912,assassinsFilament
+field_2913,vaporousSolvent
+field_2914,alchemicalSlag
+field_2915,explosiveVictrite
+field_2916,celestialThread
+field_2917,visillaryAnaesthetic
+field_2918,electrumSeparation
+field_2919,animismusBuffer
+field_2920,vanishingMaterial
+field_2921,hyperVolatileGas
+field_2922,quintessentialMedium
+field_2923,embalmingFluid
+field_2924,syntheticMalachite
+# field_2925, ???Puzzles
+field_2926,pipelineCSmall
+field_2927,pipelineCSmallWide
+field_2928,pipelineCSmallWider
+field_2929,pipelineCMedium
+field_2930,pipelineCMediumWide
+field_2931,pipelineCLarge
+field_2932,pipelineChambers
+param_5033,id
+## NestedClasses
+class_382,IdMatcher
+method_1286,IsMatchingId
+field_2933,testId
+param_4990,puzzle
+## LambdaGeneratedClass
+method_1287,GetPuzzles
+field_2934,LGen_getPuzzles
+param_5034,volume
+
+## ProductionInfo
+class_261,ProductionInfo
+field_2071,chambers
+field_2072,pipes
+field_2073,vials
+field_2074,bounds
+field_2075,tightLeftBound
+field_2076,tightRightBound
+field_2077,requireIsolation
+
+## PipelineChamber
+class_183,PipelineChamber
+field_1727,name
+field_1728,interiorHexes
+field_1729,borderHexes
+field_1731,borderTexture
+field_1732,interiorTexture
+field_1733,mask
+
+## PlacedChamber
+class_189,PlacedChamber
+method_494,GetWorldIndices
+method_495,ToWorldPos
+field_1746,index
+field_1747,chamber
+param_3801,cord1
+param_3802,cord2
+param_3803,_chamber
+param_3652,index
+
+## PlacedPipe
+class_117,PlacedPipe
+field_1440,pipeIndices
+field_1441,pipeTransforms
+param_3285,pipe1_cord1
+param_3286,pipe1_cord2
+param_3287,pipe2_cord1
+param_3288,pipe2_cord2
+param_3289,_pipeIndices
+
+## PlacedVial
+class_128,PlacedVial
+field_1471,index
+field_1472,isTopConnected
+field_1473,textures
+param_3324,cord1
+param_3325,cord2
+param_3326,_isTopConnected
+param_3327,_textures
+
+
+
+## EditableProgram
+method_897,GetCopy
+method_898,CopyInstructionsTo
+method_899,FirstInstructionIndex
+method_900,LastInstructionIndex
+method_901,GetInstruction
+# method_902,
+method_903,HasInstruction
+method_904,Lenght
+method_905,SetInstruction
+method_906,InsertInstruction
+method_907,RemoveInstruction
+method_908,RemoveAll
+method_909,RemoveOverride
+method_910,GetReferenceForPart
+method_911,GetReferenceForReset
+method_912,GetReferenceForRepeat
+# field_2414,   wasModified ???
+field_2415,instructions
+param_4550,program
+param_2296,pos
+param_4551,type
+param_4552,pos
+param_4553,type
+param_4554,pos
+param_4555,type
+param_1828,pos
+# param_4556,   countsAsModification ???
+param_4557,part
+param_4558,trackPart
+param_4559,instructionList
+param_4560,instructionIndex
+param_4561,part
+param_4562,trackPart
+param_4563,instructionList
+param_4564,instructionIndex
+## NestedClasses
+# class_318,
+# field_2416,
+# field_2417,
+# field_2418,
+# field_2419,
+## LambdaGeneratedClass
+method_920,RemoveOverride
+field_2421,LGen_removeOverride
+# param_977,instruction -!- shared with Sim
+
+## CompiledInstruction
+field_2364,type
+field_2365,isExtension
+
+## CompiledProgram
+field_2367,instructions
+field_2366,startIndex
+
+## CompiledProgramGrid
+method_851,GetProgramForPart
+method_852,GetInstructionForPart
+method_853,GetLoopedCycle
+method_854,TotalInstructions
+method_855,FromSolution
+orig_method_853,orig_GetLoopedCycle
+field_2368,programDict
+field_2369,startIndex
+param_4505,_programDict
+param_4506,part
+param_4507,cycle
+param_4508,part
+param_4509,instructionIndex
+## LambdaGeneratedClass
+method_856,CountInstructions
+method_857,DoesInstructionCount
+field_2370,LGen_doesInstructionCount
+field_2371,LGen_countInstructions
+param_2164,program
+param_4510,pos
+param_4512,cycle
+
+## InstructionCategory
+enum_144,InstructionCategory
+## 0: Idle
+## 1: Extend
+## 2: Rotate
+## 3: Pivot
+## 4: Move
+## 5: Grab
+## 6: Reset
+## 7: Repeat
+
+## InstructionType
+method_1036,GetHotkey
+field_2542,id
+field_2543,name
+field_2544,description
+field_2545,hotkey
+field_2546,enabledTexture
+field_2547,disabledTexture
+field_2548,category
+field_2549,isPositiveChange
+field_2550,permissionCategory
+field_2551,isPeriodOverride
+field_2552,countsToHistogram
+
+## Instructions
+class_169,Instructions
+method_476,Init
+method_477,GetById
+field_1652,periodOverride
+field_1653,idle
+field_1654,placeholderIdle
+field_1655,movePlus
+field_1656,moveMinus
+field_1657,rotateRight
+field_1658,rotateLeft
+field_1659,extend
+field_1660,retract
+field_1661,pivotRight
+field_1662,pivotLeft
+field_1663,grab
+field_1664,drop
+field_1665,reset
+field_1666,repeat
+field_1667,instructions
+param_3774,instructionId
+## NestedClasses
+class_170,IdMatcher
+method_478,IsMatchingId
+field_1668,testId
+# param_3305,instruction -!- shared with LogManager
+class_171,TypeMatcher
+method_479,IsMatchingType
+field_1669,testType
+# param_3775,instruction -!- shared with GameLogic
+
+## ProgramRefInstruction
+class_14,ProgramRefInstruction
+field_56,instruction
+field_57,referredCode
+
+## InstructionsWRef
+class_188,InstructionsWRef
+field_1745,program
+
+## IndexedInstruction
+struct_17,IndexedInstruction
+field_1421,index
+field_1422,instruction
+param_3259,_index
+param_3260,_instruction
+
+## InstructionReference
+struct_8,InstructionReference
+field_50,part
+field_51,instructionIndex
+param_40,_part
+param_41,_instructionIndex
+
+
+## Part
+method_1159,GetType
+method_1160,SetType
+method_1161,GetIndex
+method_1162,SetIndex
+method_1163,GetRotation
+method_1164,SetRotation
+method_1165,GetArmLength
+method_1166,SetArmLength
+method_1167,GetInputOutputIndex
+method_1168,SetInputOutputIndex
+method_1169,GetOutputCount
+method_1170,SetOutputCount
+method_1171,GetIsFixed
+method_1172,SetIsFixed
+method_1173,GetPipeTiles
+method_1174,SetPipeTiles
+method_1175,GetCopy
+method_1176,SetupInputOutputFromSolution
+method_1177,HasNoParent
+method_1178,GetSimState
+method_1179,GetParentOrThis
+method_1180,GetParrentList
+method_1181,CollectSubparts
+method_1182,CollectSubparts
+method_1183,GetDebugReferenceName
+method_1184,InFrontBy
+method_1185,GetMoleculeForInputOutput
+method_1186,GetTilesAtPart
+method_1187,GetTiles
+method_1188,ResetTypeById
+method_1189,GetTrack
+method_1190,IsTrackLooping
+method_1191,AddTrackFront
+method_1192,AddTrackBack
+method_1193,RemoveTrackFront
+method_1194,RemoveTrackBack
+method_1195,SetIndexAndUpdate
+method_1196,IsRotatable
+method_1197,RotateBy
+method_1198,SetRotation
+method_1199,SetAllowedLength
+method_1200,UpdateSubparts
+method_1201,HasArms
+method_1202,HasAtoms
+# method_1203,
+method_1204,PipeSetup
+method_1205,SetType2
+orig_method_1176,orig_SetupInputOutputFromSolution
+field_2689,minLength
+field_2690,maxLength
+field_2691,type
+field_2692,index
+field_2693,rotation
+field_2694,armLength
+field_2695,parentPart
+field_2696,subparts
+field_2697,program
+field_2698,inputOutputIndex
+field_2699,requiredOutputCount
+field_2700,trackTiles
+field_2701,isFixed
+field_2702,programIndex
+field_2703,pipeId
+field_2704,pipeTiles
+field_2705,pipeConnections
+param_4902,_type
+param_4903,_isFixed
+param_4904,_type
+param_4905,_index
+param_437,_rotation
+# param_1288,_armLength -!- shared with GameLogic
+param_1796,_inputOutputIndex
+param_2840,_requiredCount
+param_4906,_isFixed
+param_4907,tiles
+param_4908,solution
+param_4909,parent
+param_4910,solution
+param_4911,_inputOutputIndex
+param_4912,collectTo
+param_4913,index
+param_4914,solution
+param_4915,solution
+param_4916,solution
+param_4917,occupationMode
+param_4918,translation
+param_4919,rotation
+param_4920,tile
+param_4921,tile
+param_4922,index
+param_4923,solution
+param_4924,solution
+param_4925,rotation
+param_4511,solution
+param_4926,rotation
+param_4927,armLenght
+param_4928,_pipeTiles
+param_4929,_type
+## NestedClasses
+class_360,AsyncStateMachine
+
+## PartType
+class_139,PartType
+method_309,IsOutput
+method_310,IsInputOutput
+method_311,GetRotation
+field_1528,id
+field_1529,name
+field_1530,description
+field_1531,cost
+field_1532,tileOccupationMode
+field_1533,isProgrammable
+field_1534,armRotaions
+field_1535,canExtend
+field_1536,canRotate
+field_1537,isClaw
+field_1538,bonders
+# field_1539,isStatic	needs validation
+field_1540,glyphTiles
+field_1542,isTrack
+field_1541,isInput
+field_1543,isPipe
+field_1544,subatoms
+field_1545,isSubpart
+# field_1546,	only set to false for disposal and marker glyph???
+field_1547,baseTexture
+field_1548,hoverTexture
+field_1549,glowTexture
+field_1550,strokeTexture
+field_1551,permissionCategory
+# field_1552,	only set for berlo wheel, and disposal glyph???
+field_1553,isStdOutput
+field_1554,isRepOutput
+param_3537,index
+
+## PartTypes
+class_191,PartTypes
+method_496,Init
+method_497,CheckIds
+method_498,GetById
+field_1760,input
+field_1761,outStd
+field_1762,outRep
+field_1763,pipe
+field_1764,arm1
+field_1765,arm2
+field_1766,arm3
+field_1767,arm6
+field_1768,piston
+field_1769,clawpivot
+field_1770,track
+field_1771,baronWheel
+field_1772,bonder
+field_1773,unbonder
+field_1774,multibonder
+field_1775,triplexbonder
+field_1776,calcificationGlyph
+field_1777,duplicationGlyph
+field_1778,projectionGlyph
+field_1779,purificationGlyph
+field_1780,animismusGlyph
+field_1781,disposalGlyph
+field_1782,markerGlyph
+field_1783,unificationGlyph
+field_1784,dispersionGlyph
+field_1785,partTypes
+param_3804,id
+## NestedClasses
+class_192,IdMatcher
+method_499,IsMatchingId
+field_1786,testId
+param_3805,type
+
+## PreplacedPart
+class_157,PreplacedPart
+field_1597,type
+field_1598,index
+field_1599,rotation
+field_1600,armLength
+field_1601,instructions
+field_1602,index
+
+## PuzzlePermissions
+enum_149,PuzzlePermissions
+
+## BonderInfo
+class_222,BonderInfo
+field_1920,index1
+field_1920,index2
+field_1922,bondType
+field_1923,uniqueAtom
+param_3903,_index1
+param_3904,_index1
+# param_69,_bondType -!- shared with ScreenTransition
+param_3905,_uniqueAtom
+
+## PipeHexConnection
+struct_36,PipeHexConnection
+# param_4416,index1 -!- shared with Matrix4
+param_4417,index2
+field_2273,index1
+field_2274,index2
+
+## PartOccupationMode
+enum_2,PartOccupationMode
+## 0: TOP-BOTTOM
+## 1: TOP
+## 2: BOTTOM
+
+
+## TipType
+class_215,TipType
+field_1899,id
+field_1900,name
+field_1901,description
+field_1902,fileName
+field_1903,image
+# field_1904,
+
+## Tips
+class_214,Tips
+method_558,Init
+field_1888,panningTip
+field_1889,multibondingTip
+field_1890,projectionTip
+field_1891,repeatingTip
+field_1892,triplexbondingTip
+field_1893,baronwheelTip
+field_1894,unbonderTip
+field_1895,animismusTip
+field_1896,purificationTip
+field_1897,disposalTip
+field_1898,draggingTip
+
+## StickyNote
+class_290,StickyNote
+field_2268,renderMode
+# field_2269,
+field_2270,offset
+field_2271,points
+
+## NoteStickMode
+enum_145,NoteStickMode
+## 0: ProgramPanel
+## 1: PartPanel
+## 2: BoardPanel
+
+
+## ISimulate
+interface_2,ISimulate
+method_481,GetSimState
+method_482,GetHeldMolecule
+method_483,GetMolecules
+method_484,GetOccupiedTilesTiles
+param_3776,part
+param_3777,part
+
+## Sim
+method_1817,GetSolution
+method_1818,GetCycle
+method_1819,SetCycle
+method_1820,GetProgram
+method_1821,SetProgram
+method_1822,GetInCycle
+method_1823,SetInCycle
+method_1824,ConstructSimulation
+method_1825,IsOutputComplete
+method_1826,BeginCycle
+method_1827,EndCycle
+method_1828,ResetSimStates
+method_1829,RunCycleInstructions
+method_1830,isEarlyInstruction
+method_1831,GetNewMoleculePos
+method_1832,RunCycleGlyphs
+method_1833,IsPartAtMolecule
+method_1834,IsInsideTiles
+method_1835,SimulateCycleMovements
+method_1836,ProcessInputs
+method_1837,HasOverlap
+method_1838,MeasureArmFootprint
+method_1839,ResetGlyphs
+method_1840,MarkTilesAsOccupied
+method_1841,Grab
+method_1842,Drop
+method_1843,SpawnMolecules
+method_1844,IsSameMolecule
+method_1845,IsSameMolecule
+method_1846,GetCompletedRepeats
+method_1847,GetSimState
+method_1848,GetMoleculeAt
+method_1849,GetMolecules
+method_1850,GetAtomReference
+method_1852,TranslatePart
+method_1851,RotatePart
+method_1853,ReportMovementError
+method_1854,ReportMovementError
+method_1855,GetTrackDirToNextTile
+method_1856,PlaySound
+orig_method_1832,orig_RunCycleGlyphs
+field_3804,simErrorMultDir
+field_3805,simErrorBoundMDir
+field_3806,simErrorAtomColl
+field_3807,simErrorArmColl
+field_3808,simErrorAToAColl
+field_3809,simErrorAtomLeave
+field_3810,simErrorArmLeave
+field_3811,simErrorNoTrack
+field_3812,simErrorNotPiston
+field_3813,additionalErrors
+field_3814,simErrorLeaveTrack
+field_3815,simErrorRetract
+field_3816,simErrorExtend
+field_3817,simErrorGrab
+field_3818,solutionEditor
+field_3819,cycle
+field_3820,programGrid
+field_3821,simulationDict
+field_3822,holderInfos
+field_3823,molecules
+field_3824,occupiedTiles
+field_3825,isCycleInProgress
+field_3826,additionalCollisions
+field_3827,simDeltaTime
+# class_284, -!- this is actually a field!
+field_3828,droppedMolecules
+# field_3829,
+# field_3830,
+field_3831,collSizeAtom
+field_3832,collSizeEmergingAtom
+field_3833,collSizePartBase
+field_3834,collSizeSubpart
+field_3835,collSizeChamber
+param_5362,_cycle
+param_5363,programGrid
+param_5364,inCycle
+param_5365,_solutionEditor
+param_5369,isCycleStart
+param_5370,molecule
+param_5371,partList
+param_5372,tiles
+param_5373,molecule
+param_5374,molecule
+param_5375,additionalTiles
+param_5376,centerPos
+param_5377,part
+param_5378,part
+param_5379,molecule1
+param_5380,molecule2
+param_5381,translation
+param_5382,rotation
+param_5383,molecule1
+param_5384,molecule2
+param_5385,outputPos
+param_5386,repeatingOutput
+param_5387,moleculeToTest
+param_5388,part
+param_5389,index
+param_5390,part
+param_5399,holder1
+param_5400,holder2
+param_5401,singularError
+param_5402,pluralError
+param_5403,errorMessage
+param_5404,pos1
+param_5405,pos2
+param_5406,currentPos
+param_5407,isPositiveChange
+param_5408,sound
+## NestedClasses
+enum_190,ColliderType
+## 0: Atom
+## 1: PartBase
+## 2: PartSubpart
+## 3: Chamber
+class_401,HolderMovementInfo
+method_1857,GetStationary
+method_1858,FormatType
+field_3836,holder
+field_3837,movementType
+field_3838,translateTo
+field_3839,rotationPivot
+field_3840,rotation
+param_5409,_holder
+class_402,ReferredPart
+method_1859,IsCorrespondingPipe
+field_3841,part
+field_3842,findCorrespondingPipe
+param_5391,part
+param_5392,offset
+param_5393,holdingParts
+param_5394,allowPartSubatoms
+param_5410,part
+enum_191,SimulationMovementType
+class_403,TileOccupationChecker
+method_1860,HasPartAt
+field_3845,partList
+field_3846,sim
+param_5411,pos
+class_404,PositionMatcher
+method_1861,IsAtPos
+field_3847,pos
+field_3848,simRef
+param_5412,part
+class_405,BondMatcher
+method_1862,IsMatchingBond
+field_3849,bond
+param_5413,bond
+struct_122,Collider
+field_3850,type
+field_3851,center
+field_3852,radius
+param_5414,_type
+param_5415,_center
+## LambdaGeneratedClass
+method_1863,IsFire
+method_1864,IsWater
+method_1865,IsEarth
+method_1866,IsAir
+method_1867,GetType
+method_1868,WasBondRemoved
+method_1869,IsStdOutput
+method_1870,IsOutput
+method_1871,HasAtoms
+method_1872,IsProgrammable
+method_1873,isInput2
+method_1874,IsInput
+method_1875,HasInternalMolecule
+method_1876,GetAtom
+method_1877,HasInternalMolecule2
+method_1878,GetKey
+method_1879,IsTrack
+param_1019,atomRef
+param_5416,atomRef
+field_3222,atomRef
+# param_977,atomRef  -!- shared with EditableProgram, Sim
+param_1024,atomRef
+param_5417,molecule
+# param_33,part -!- shared with SolitaireScreen
+# param_977,part -!- shared with EditableProgram, Sim
+param_5418,part
+param_3749,part
+# param_1246,part -!- shared with Matrix4
+param_2212,part
+param_5419,pair
+param_5420,pair
+param_5421,pair
+param_5422,pair
+param_2497,part
+
+## EmptySim
+class_284,EmptySim
+method_780,GetSimState
+method_781,GetHeldMolecule
+method_782,GetMolecules
+method_783,GetOccupiedTilesTiles
+field_2208,molecules
+field_2209,occupiedTiles
+param_4303,part
+param_4304,part
+
+## SimError
+class_232,SimError
+field_1962,errorTime
+field_1963,locations
+field_1964,errorMessage
+
+## InstructionCycleState
+enum_127,InstructionCycleState
+## 0: AfterGlyphs
+## 1: BeforeGlyphs
+
+## PartSimState
+field_2724,newPosition
+field_2725,length
+field_2726,rotation
+field_2727,pivot
+field_2728,grabState
+field_2729,heldMolecule
+field_2730,outputDone
+field_2731,outputCompleteTime
+field_2732,disappearingMolecule
+field_2733,emergingMolecule
+field_2734,oldPosition
+field_2735,deltaPosition
+field_2736,oldLength
+field_2737,deltaLength
+field_2738,oldRotation
+field_2739,deltaRotation
+field_2740,hasGrabStateChanged
+field_2741,deltaPivot
+field_2742,hasMovedOnTrack
+field_2743,isProcessing
+field_2744,heldAtoms
+
+## SimPlayState
+enum_128,SimPlayState
+
+## SolutionEditorBase
+method_502,GetSolution
+method_503,GetSimPlayState
+method_504,GetCycleTime
+method_505,HasError
+method_506,GetFastForwardCycleTarget
+method_507,GetSimulation
+method_509,GetSimTime
+method_510,GetRealTime
+method_511,GetSimulationSpeed
+method_512,IsPartDragged
+method_513,CurrentlyEditedPart
+# method_514,
+method_515,GetTrackStartPos
+method_516,GetTrackEndPos
+method_517,IsPartSelected
+method_518,HandleSimulationError
+# method_1984,
+method_1985,GetHolder
+method_1986,GetClawState
+method_1987,GetLightForClaw
+method_1988,GetShadowForClaw
+method_1989,GetIntermState
+method_1990,GetIntermState
+method_1991,CycleTransition
+method_1992,CycleTransition
+# method_1993,
+method_1994,RenderPartOverlays
+method_1995,GetLightData
+# method_1996,
+# method_1997,
+# method_1998,
+method_1999,GetPos
+# method_2000,
+method_2001,GetGlossOfset
+method_2002,RenderCenterRotated
+method_2003,RenderLights
+method_2004,RenderWithLights
+method_2005,RenderArmLights
+method_2006,RenderArmSelection
+method_2007,RenderArms
+method_2008,RenderPistonLights
+method_2009,ClearDebugMarkers
+method_2010,AddDebugMarker
+# method_2011,
+# method_2012,
+method_2013,DoesTransfOvelapAtPoint
+method_2014,RenderBoard
+method_2015,RenderMoleculeWithHolder
+method_2016,RenderRotated
+method_2017,RenderTileSelection
+method_2018,GetScaledClampedCycleTime
+method_2019,GetClampedCycleTime
+method_2020,RenderGlyphEffects
+method_2021,RenderConsumptionEffects
+# method_2022,
+method_2023,IsCompleted
+# orig_method_1996,
+field_3935,glyphEffects
+# field_3936, glyphEffects2 ???
+field_3937,consumptionEffects
+field_3938,debugMarkerPositions
+# field_3939,
+# field_3940,
+param_5524,part
+param_5525,part
+# param_5526,
+param_5527,part
+param_5528,part
+param_5529,part
+param_5530,errorTime
+param_5531,errorMessage
+param_5532,locations
+param_5539,molecule
+param_5540,simstate
+param_5541,simstate
+param_5542,simstate
+param_5543,pos
+param_5544,part
+param_5545,pos
+param_5546,t
+param_5547,part
+param_5548,pos
+param_5549,t
+param_5550,intermediatePartStates
+param_5551,pos
+param_5552,t
+param_5558,part
+param_5559,pos
+param_5560,renderProgramIndex
+param_5561,skipMoleculeRenderWhileStopped
+param_5562,part
+param_5563,pos
+param_5571,intermState
+param_5572,index
+# param_5573,
+# param_5574,
+# param_4854,
+# param_5575,
+param_5576,renderer
+param_5577,index
+param_5578,texture
+param_5579,pos
+param_5580,centerOffset
+param_5581,rotation
+param_5582,lightTextures
+param_5583,pos
+param_5584,centerOffset
+param_5585,rotation
+param_5586,lightTextures
+param_5587,texture
+param_5588,pos
+param_5589,centerOffset
+param_5590,rotation
+param_5591,length
+param_5592,rotations
+param_5593,intermState
+param_5594,length
+param_5595,rotations
+param_5596,intermState
+param_5597,color
+param_5598,length
+param_5599,rotations
+param_5600,intermState
+param_5603,pos
+param_5609,texture
+param_5610,centerOffset
+param_5611,pos
+param_5612,rotation
+param_5613,point
+param_5617,molecule
+param_5618,partPos
+param_5619,texture
+param_5620,color
+param_5621,pos
+param_5622,intermState
+param_5623,tiles
+param_5624,color
+param_5625,glyphEffects
+param_5626,offset
+param_5627,offset
+# param_4648,effect -!- shared with Molecule
+## NestedClasses
+class_420,HexModuloList
+method_2024,At
+field_3941,list
+class_421,AsyncStateMachine
+class_422,ConsumptionEffectVerifier
+method_2031,IsCompleted
+field_3956,solutionEditor
+field_3957,timelength
+# class_423,
+## LambdaGeneratedClass
+method_2034,IsTrack
+
+## IntermediatePartState
+class_236,IntermediatePartState
+field_1984,pos
+field_1985,rotation
+field_1986,pivot
+field_1987,leftoverDeltaPivot
+field_1988,length
+
+## SolutionEditorScreen
+method_2089,GetSimulationError
+method_2090,SetSimulationError
+method_2091,CloseButtonDisplayArea
+method_2092,PreventLowerScreenUpdates
+method_2093,RenderNote
+method_2094,GetButtonState
+method_2095,EditorPanels
+method_2096,HasScreensAbove
+method_2097,StartPlayback
+method_2098,ToPlaying
+method_2099,ToStepping
+method_2100,ToSteppingTransition
+method_2101,StopSim
+method_2102,CompleteAndPauseSim
+method_2103,ThrowInvalidStateTransError
+method_2104,ResetCycleTime
+method_2105,SetTooltipIfNotSet
+method_2106,GetCharacterFromKey
+method_2107,SetTooltip
+method_2108,SaveRedoAction
+method_2109,Save
+method_2110,IsPartControlMode
+method_2111,IsPartDraggingMode
+method_2112,OnDraggedParts
+method_2113,GetDraggedParts
+method_2114,IsInstructionInsertMode
+method_2115,IsTobeInserted
+method_2116,IsInstructionRowInsertMode
+method_2117,IsPartDraggingPrecursorMode
+method_2118,IsPartEditMode
+method_2119,IsNormalMode
+# method_2120,
+method_2121,ClearPartSelection
+method_2122,GetSolutionWindowBounds
+method_2123,BoardPanelContainsMouse
+method_2124,PartsPanelContainsMouse
+method_2125,ProgramPanelContainsMouse
+method_2126,CloseEditorScreen
+method_2127,GetCycle
+method_2128,GetOccupiedTiles
+method_2129,GetProgram
+# method_2130,
+method_2131,GetInputOutputPipeTiles
+method_2132,IsSameDiscName
+# <method_2130>g__dot|0_0,
+field_4001,partsPanel
+field_4002,boardPanel
+field_4003,programPanel
+field_4004,solution
+field_4005,musicTrack
+field_4006,fanfare
+field_4007,needsSaveing
+field_4008,needsRedoActionSaveing
+field_4009,boardOffset
+field_4010,currentInputMode
+field_4011,partSelection
+field_4012,instructionSelection
+field_4013,areGhostMoleculesShown
+field_4014,ghostMolecules
+field_4015,highlighOccupiedTiles
+field_4016,wasCompleted
+field_4017,cycleLength
+field_4018,footprint
+field_4019,draggingPosition
+field_4020,draggingAngle
+field_4021,draggingRotationTarget
+field_4022,simulation
+field_4023,simulationState
+field_4024,cycleTime
+field_4025,simTime
+field_4026,realTime
+field_4027,simulationError
+field_4028,hasError
+field_4029,stepSimSpeedupTime
+field_4030,fastForwardCycleTarget
+field_4031,tooltipText
+field_4032,oldTooltipDelay
+field_4033,tooltipDelay
+field_4034,isLargeTooltipOffset
+field_4035,closeEditorMeter
+field_4036,editorCloseFrameTimer
+field_4037,simErrorSpeed
+field_4038,simStartSpeed
+field_4039,simMaxSpeed
+field_4040,simProdStartSpeed
+field_4041,simProdMaxSpeed
+field_4042,simFastForwardSpeed
+field_4043,simEndlessRunSpeed
+field_4044,simStepSpeed
+field_4045,defaultStepTime
+field_4046,defaultCloseEditorMeter
+param_5698,_solution
+param_5699,_musicTrack
+param_5700,_fanfare
+param_5701,_simulationError
+param_5702,useTip
+param_5703,deltaTime
+param_5704,note
+param_5705,pos
+param_5706,text
+param_5707,pos
+param_5708,width
+param_5709,sim
+param_5710,forceSet
+param_5711,simState
+param_5712,tooltipText
+param_5713,isLargeTooltipOffset
+param_5714,key
+param_5715,name
+param_5716,description
+param_5717,hotkey
+param_5718,part
+param_5719,funct
+param_5720,instructionType
+param_5721,errorTime
+param_5722,errorMessage
+param_5723,locations
+param_5724,part
+# param_5725,
+# param_5726,
+param_5727,track
+param_5728,track
+param_5729,solution
+param_5730,part
+param_5731,solution
+param_5732,part
+param_5733,solution
+## NestedClasses
+class_435,SimButtonDrawer
+method_2133,GetBounds
+method_2134,RenderButton
+field_4047,pos
+field_4048,width
+field_4049,text
+param_5734,bounds
+param_4703,isHover
+class_436,AsyncStateMachine
+## LambdaGeneratedClass
+method_2140,IsInput
+method_2141,IsOutput1
+method_2142,IsOutput2
+param_5736,part
+# param_4648,part -!- shared with SolutionEditorBase
+param_5737,part
+
+## SolutionEditorPanel
+class_245,SolutionEditorPanel
+method_357,GetBounds
+method_358,IsMouseInPanel
+# method_221,RenderFrame -!- shared with LogManager
+method_361,PanPanel
+field_2007,solEditScr
+param_3996,_solEditScr
+param_3997,deltaTime
+param_3998,panningMode
+param_3999,startPos
+param_4000,deltaPos
+
+## SolutionEditorBoardPanel
+class_153,SolutionEditorBoardPanel
+method_359,GetBoardOffset
+method_360,SetBoardStartOffset
+param_3615,solEditScr
+param_3616,deltaTime
+param_3617,panningMode
+param_3618,startPos
+param_3619,deltaPos
+
+## SolutionEditorProgramPanel
+method_2057,ToolbarBounds
+method_2058,RowLabelAreaBounds
+method_2059,ProgramAreaBounds
+method_2060,ProgramScrollAreaBounds
+method_2061,InstructionSelection
+method_2062,AlignedProgramArea
+method_2063,IsLimitReached
+method_2064,RenderInstructionInTray
+method_2065,SimulationButton
+method_2066,ToolButton
+method_2067,GetScreenPosition
+method_2068,GetScreenPosition
+method_2069,GetInstructionBounds
+method_2070,GetInstructionAt
+method_2071,ClampProgramOffset
+method_2072,ClearInstrSelection
+method_2073,ClearPartSelection
+method_2074,GetInstructionAtPos
+method_2075,GetInstructionsIn
+method_2076,GetInstructionLableBounds
+method_2077,GetProgrammableByLabelAt
+method_2078,GetProgramIndexOfRow
+method_2079,IsFastForwardHeld
+field_3980,programAreaHeight
+field_3981,programAreaOffset
+field_3982,instructionSize
+field_3983,rowLabelWidth
+field_3984,blinkingPeriod
+field_3985,blinkingLitFraction
+field_3986,rowLabelRenderHandle
+field_3987,rowRenderHandle
+field_3988,programOffset
+param_5658,deltaTime
+param_5659,instructionType
+param_5660,pos
+param_5661,selectedInstructionType
+param_5662,texture
+param_5663,hoverTexture
+param_5664,name
+param_5665,description
+param_5667,hotkey
+param_5668,pos
+param_5669,icon
+param_4697,pos
+param_5670,isEnabled
+param_5671,isPressed
+param_5672,isBlinking
+param_5673,name
+# field_3650,description -!- this is actually a parameter!
+param_5674,hotkey
+param_5675,instructionPos
+param_5676,instRef
+param_5677,instructionPos
+param_5678,instructionBound
+param_5679,instructionRelativeBound
+param_5680,screenPos
+param_5681,panningMode
+param_5682,startPos
+param_5683,deltaPos
+param_5684,pos
+param_5685,bound
+param_5686,programIndex
+param_5687,screenPos
+param_5688,screenPos
+## NestedClasses
+class_431,PanelWParts
+field_3989,parts
+field_3990,panel
+class_432,InstructionHighlighter
+method_2080,RenderInstructionHighlight
+field_3991,programGrid
+field_3992,panelWParts
+param_5689,instructionIndex
+param_5690,programIndex
+class_433,InstructionChecker
+method_2081,HasInstruction
+field_3993,instruction
+## LambdaGeneratedClass
+method_2082,IsOutput1
+method_2083,IsOutput2
+method_2084,IsProgrammable
+method_2085,FirstInstructionIndex
+method_2086,RenderScoreLabel
+method_2087,IsOutput3
+method_2088,GetInputOutputIndex
+param_5691,part
+param_5692,part
+param_5693,name
+param_5694,displayedInfo
+param_5695,pos
+param_5696,nameOffset
+# field_3678,part -!- this is actually a parameter!
+# field_3621,part -!- this is actually a parameter!
+param_5697,part
+
+## SolutionEditorPartsPanel
+method_2038,GetHidingOffset
+field_3963,bounds
+field_3964,panningOffset
+field_3965,isHidden
+field_3966,hidingState
+field_3967,hidingTime
+param_5634,solEditScr
+param_5635,deltaTime
+param_5636,panningMode
+param_5637,startPos
+param_5638,deltaPos
+## NestedClasses
+# class_425,
+class_426,OutputMatcher
+method_2042,OutputWMatchingIndex
+method_2043,OutputWMatchingIndex
+param_5640,part
+param_4647,part
+field_3970,index
+class_427,InputMatcher
+method_2044,InputWMatchingIndex
+method_2045,InputWMatchingIndex2
+param_5641,part
+param_5642,part
+field_3971,index
+# class_428,
+field_3972,partsPanel
+## LambdaGeneratedClass
+# method_2048,
+# method_2049,
+
+## SolutionEditorPartsPanel.PartsSection
+# method_2050,
+# method_2051,
+# method_2052,
+# method_2053,
+## LambdaGeneratedClass
+# method_2054,
+# method_2055,
+# method_2056,
+
+## PartTypeForToolbar
+# method_1225,
+# method_1226,
+field_2745,type
+field_2746,index
+param_1980,type
+param_4949,type
+param_4950,indexOfType
+
+## PanningMode
+enum_135,PanningMode
+# 0: MouseDrag
+# 1: MouseWheel
+
+## SimpleSolutionEditor
+class_194,SimpleSolutionEditor
+method_500,GetSimulation
+method_501,SetSimulation
+method_508,AdvanceCycle
+field_1791,solution
+field_1792,hasError
+field_1793,simulation
+field_1794,cycleTime
+field_1795,cycleLength
+field_1796,cyclesPerSec
+param_3809,_solution
+param_3810,_cycleLength
+param_3811,_cyclesPerSec
+# param_1799,sim -!- shared with Scrollbar
+param_3812,advaceByHalfCycles
+param_3813,part
+param_3814,part
+# param_3815,
+param_3816,part
+param_3817,part
+param_3818,part
+param_3819,errorTime
+param_3820,errorMessage
+param_3821,locations
+
+## ButtonDrawingLogic
+method_824,IsPressedAndDraw
+delegate_385,D_getBounds
+delegate_386,D_drawButton
+field_2307,getBounds
+field_2308,drawButton
+param_4458,isEnabled
+param_4459,canHoverAndClick
+param_3584,bounds
+param_3608,isHover
+param_4461,isEnabled
+
+## Editor
+# method_921,
+# method_922,
+method_923,RenderBandBox
+method_924,RenderPartHandle
+method_925,RenderMolecule
+method_926,RenderBond
+method_927,RenderAtom
+method_928,RenderMoleculeForDisplay
+field_2422,programPanelHeight
+# field_2423,
+# field_2424,
+# field_2425,
+param_4566,size
+param_4567,pos
+param_4568,isHover
+param_4569,molecule
+param_4570,offset
+param_4571,index
+param_4572,rotationAngle
+param_4573,tintGreen
+param_4574,tintRed
+param_4575,shadowStrength
+param_4576,isOutputRender
+param_4577,solutionEditor
+param_4578,renderHelper
+param_4579,bond
+param_4580,atomType
+param_4581,translation
+param_4582,scaleMultiplier
+param_4583,tintGreen
+param_4584,tintRed
+param_4585,shadowStrength
+param_4586,shadowOffset
+param_4587,shadowAngle
+param_4588,shadow
+param_4589,overlayEffect
+param_4590,isOutputRender
+param_4591,molecule
+# param_4592,
+# param_4593,
+# param_4594, max/min?
+# param_4595,
+# param_4596,
+
+## MoleculeRenderHelper
+class_133,MoleculeRenderHelper
+method_247,ToWorldPos
+field_1486,offset
+field_1487,hexOffset
+field_1488,rotationAngle
+field_1489,tintGreen
+field_1490,tintRed
+field_1491,isOutputRender
+field_1492,simTime
+field_1493,realTime
+param_3339,index
+## LambdaGeneratedClass
+method_929,IsCompletedEffect
+param_4597,completed
+field_2376,LGen_isCompletedEffect
+
+## Solution
+method_1934,GetPuzzle
+method_1935,SetPuzzle
+# method_1936,
+method_1937,CollectPartsAndSubparts
+# method_1938,
+method_1939,RepositionPart
+method_1940,RemovePart
+method_1941,GetOrderedProgrammables
+method_1942,GetTrackUnderPart
+method_1943,OrderProgrammables
+method_1944,SetProgramIndex
+method_1945,ResetAllById
+method_1946,CompareIndices
+method_1947,GetOccupiedTiles
+method_1948,IsAllowedPlacement
+method_1949,CanPartBePlacedInChamber
+method_1950,GetChamberTiles
+method_1951,IsArmInChamber
+method_1952,GetContainingChambers
+method_1953,Contains
+method_1954,GetTotalCost
+method_1955,GetExpandedBounds
+method_1956,GlobalSolutionList
+method_1957,FromPuzzle
+method_1958,GetSolutionAt
+method_1959,ToData
+method_1960,GetFromData
+method_1961,SaveRedoAction
+method_1962,GetRedoAction
+method_1963,RestoreRedoAction
+method_1964,GetCopySolution
+method_1965,Save
+method_1966,SetNameAndSave
+method_1967,MoveToDeleted
+method_1968,GetSafeFilePrefix
+method_1969,GetNameForNewSolution
+method_1970,GetFilePath
+method_1971,CopyWithThis
+field_3914,puzzle
+field_3915,name
+field_3916,nameOnDisc
+field_3917,creationTime
+field_3918,scores
+field_3919,parts
+field_3920,redoActions
+field_3921,orderedProgrammables
+field_3922,fileExtension
+field_3923,solutionVersion
+# field_3931,
+param_5473,_puzzle
+param_5474,solutionName
+param_5475,solutionDiscName
+param_5476,_creationTime
+param_5477,_puzzle
+# param_5478,
+# param_5479,
+param_5480,part
+param_5481,newIndex
+param_5482,part
+param_5483,part
+param_5484,part
+param_1018,programIndex
+param_5485,part1
+param_5486,part2
+param_5487,exceptionPart
+param_5488,occupationMode
+param_5489,part
+param_5490,otherInputOutputIndex
+param_5491,offset
+param_5492,rotationOffset
+param_5493,errorMessage
+# param_5494,
+# param_5495,
+param_5496,errorMessage
+param_5497,productionInfo
+# param_5498,
+param_5499,offset
+param_5500,rotationOffset
+param_5501,chamberTiles
+param_5502,index
+param_5503,superset
+param_5504,subset
+param_5505,puzzle
+param_5506,solutionName
+param_5507,path
+param_5508,data
+param_5509,nameOnDisc
+param_5510,creationTime
+param_5511,redoAction
+param_5512,_name
+param_5513,puzzle
+param_4652,puzzle
+param_5514,part
+## NestedClasses
+class_416,PartContainer
+field_3924,part
+class_417,PrefixMatcher
+method_1972,IsMatchingPrefix
+field_3925,prefix
+param_5515,solution
+class_418,TrackMatcher
+method_1973,IsTrackUnderPart
+field_3926,track
+field_3927,partOnTrack
+param_5516,trackOffset
+## LambdaGeneratedClass
+# method_1974,
+# method_1975,
+method_1976,IsTrueForAll
+method_1977,IsTrue
+method_1978,IsProgrammable
+method_1979,GetProgramIndex
+# method_1980,
+method_1981,IsNotFixed
+method_1982,IsNotFixed
+method_1983,GetSerialNumber
+# field_2760,LGen_
+# field_3928,LGen_
+field_3929,LGen_isTrue
+field_3930,LGen_isTrueForAll
+# field_2674,LGen_isProgrammable -!- shared with StoryPanel
+# field_2675,LGen_getProgramIndex -!- shared with StoryPanel
+# field_3931,LGen_
+# field_3932,LGen_
+# field_3933,LGen_
+field_3934,LGen_getSerialNumber
+param_5517,part
+param_5518,part
+param_5519,boolDict
+param_5520,_bool
+param_5521,part
+param_2317,part
+param_5522,part
+param_5523,part
+param_3751,part
+param_3753,solution
+
+## HistogramType
+enum_133,HistogramType
+
+## TileOccupationMode
+enum_137,TileOccupationMode
+## 0: TOP-BOTTOM
+## 1: TOP
+## 2: BOTTOM
+
+## PartSelection
+class_6,PartSelection
+method_13,GetCount
+method_14,Enumerable
+method_15,IsSelected
+method_16,Clear
+method_17,Add
+method_18,Remove
+field_11,selection
+field_12,solution
+param_24,_solution
+param_25,part
+param_26,part
+param_27,part
+
+## InstructionSelection
+class_154,InstructionSelection
+method_365,Add
+method_366,Remove
+method_367,Clear
+method_368,HasMatching
+method_369,GetEnumerator2
+field_1594,instructions
+param_3629,instRef
+param_3630,instRef
+param_3631,instRef
+## NestedClasses
+class_155,InstructionRefMatcher
+method_370,IsMatching
+field_1595,comparedInstRef
+param_3632,instRef
+class_156,InstructionRefMatcher2
+method_371,IsMatching
+field_1596,comparedInstRef
+param_3633,instRef
+
+## RedoAction
+class_291,RedoAction
+field_2272,previousParts
+
+
+## Effect
+class_109,Effect
+method_146,GetTime
+method_147,GetElapsed
+method_148,GetElapsed
+field_1000,startTime
+field_1001,timescaleType
+param_148,solutionEditor
+param_149,_timescaleType
+param_150,simTime
+param_151,realTime
+param_152,solutionEditor
+param_153,renderHelper
+
+## BondEffect
+field_2299,effectTextures
+field_2300,timelength
+field_2301,offset
+field_2302,completed
+param_4429,solutionEditor
+param_4430,timescaleType
+param_4431,_effectTextures
+param_4432,_timelength
+param_4433,_offset
+
+## GlyphEffect
+class_228,GlyphEffect
+field_1945,position
+field_1946,effectTextures
+field_1947,timelength
+field_1948,textureOffset
+field_1949,rotationAngle
+param_3958,solutionEditor
+param_3959,timescaleType
+param_3960,_position
+param_3961,_effectTextures
+param_3962,_timelength
+param_3963,_textureOffset
+param_3964,_rotationAngle
+
+## TransmutationEffect
+class_168,TransmutationEffect
+field_1644,renderMode
+field_1645,originalAtom
+field_1646,effectTextures
+field_1647,timelength
+param_3764,solutionEditor
+param_3765,timescaleType
+param_3766,_renderMode
+param_3767,_originalAtom
+param_3768,_effectTextures
+param_3769,timelength
+
+## ConsumptionEffect
+class_286,ConsumptionEffect
+field_2231,pos
+field_2232,type
+param_4397,solutionEditor
+param_4398,_pos
+param_4399,_type
+
+## EffectTimescaleType
+enum_7,EffectTimescaleType
+# 0: SimTime
+# 1: RealTime
+
+## TransmutationEffectRenderMode
+enum_132,TransmutationEffectRenderMode
+# 0: AsMask
+# 1: AsEffect
+
+
+## IInputMode
+interface_0,IInputMode
+# method_0,
+# method_1,
+# method_2,
+param_66,solEditScr
+param_67,solEditScr
+param_68,solEditScr
+
+## NormalInputMode
+param_4879,solEditScr
+param_4240,solEditScr
+param_4880,solEditScr
+field_2678,markedTiles
+## LambdaGeneratedClass
+# method_1146,
+param_4881,instructionType
+
+## PartDraggingInputMode
+method_1212,StartInputMode
+
+## PartDraggingPrecursorInputMode
+class_122,PartDraggingPrecursorInputMode
+
+## InstructionRowInsertInputMode
+class_249,InstructionRowInsertInputMode
+
+## InstructionInsertInputMode
+class_217,InstructionInsertInputMode
+
+## InstructionInsertPrecursorInputMode
+class_258,InstructionInsertPrecursorInputMode
+field_2066,startMousePos
+
+## HandleControlInputMode
+class_282,HandleControlInputMode
+
+## PartPlaceInputMode
+class_114,PartPlaceInputMode
+
+## PanningInputMode
+class_2,PanningInputMode
+field_2,pannedItem
+field_3,startMousePos
+param_13,_pannedItem
+param_14,solEditScr
+param_15,solEditScr
+param_16,solEditScr
+
+## AreaSelectPartsInputMode
+class_223,AreaSelectInputMode
+field_1924,startMousePos
+field_1925,currentMousePos
+
+## AreaSelectInstructionsInputMode
+class_270,AreaSelectInstructionsInputMode
+field_2110,startMousePos
+field_2111,currentMousePos
+
+## InputManager
+class_115,InputManager
+method_188,EnableInput
+method_189,DisableInput
+# method_190,
+method_191,ForceNextDelete
+method_192,WhileKeyHeld
+method_193,IsModifierKeyHeld
+method_194,IsKeyCombination
+method_195,IsKeyCombination
+method_196,IsEnterPressed
+method_197,IsDeletePressed
+method_198,IsKeyPressed
+method_199,IsKeyReleased
+method_200,IsKeyHeld
+# method_201, 
+method_202,MousePos
+method_203,MouseDelta
+method_204,MouseWheel
+method_205,IsClickHeld
+method_206,IsClickPressed
+method_207,IsClickReleased
+method_208,PushContext
+method_209,PopContext
+field_1432,SDLInput
+field_1433,screenSize
+field_1434,isKeyInputEnabled
+field_1435,isMouseButtonInputEnabled
+field_1436,isMouseMovementInputEnabled
+field_1437,currentContext
+field_1438,contextStack
+field_1439,forceDelete
+param_3271,key
+param_3272,modifier
+param_3273,modifier
+param_3274,key
+param_3275,modifier1
+param_3276,modifier2
+param_3277,key
+param_3278,key
+param_3279,key
+param_3280,key
+param_3281,mouseButton
+param_3282,mouseButton
+param_3283,mouseButton
+param_3284,inputContext
+## NestedClasses
+class_116,ContextDisposer
+method_210,DisposeContext
+
+## ModifierKeyType
+enum_143,ModifierKeyType
+# 0: Shift
+# 1: CTRL
+# 2: ALT
+
+## MouseButtonType
+enum_142,MouseButtonType
+# 0: ?
+# 1: LeftClick
+# 2: MiddleClick
+# 3: RightClick
+# 4: ?
+
+
+## SolitaireScreen
+method_1889,GetState
+method_1890,SetState
+method_1891,GenerateNewGame
+method_1892,PreventLowerScreenUpdates
+method_1893,CanOpenDiagram
+method_1894,CanGenerateNewGame
+method_1895,DrawDiagramButton
+field_3867,orderedBoardHexes
+field_3868,storyPanelSections
+field_3869,marbleRevelationDelay
+field_3870,boardHexes
+field_3871,solitaireStat
+field_3872,storyPanel
+field_3873,highlightedAtomType
+field_3874,isAdvanced
+param_5432,_isAdvanced
+param_5433,state
+param_5434,isOpening
+param_5435,deltaTime
+param_5436,pos
+param_5437,width
+param_5438,height
+## NestedClasses
+class_409,ButtonData
+method_1896,GetBounds
+# param_3543,pos -!- this is actually a field
+field_3875,width
+field_3876,height
+class_410,BoardManager
+method_1897,SetValue
+field_3877,atomData
+field_3878,atomManager
+param_2087,index
+class_411,AtomManager
+method_1898,IsQuintessence
+method_1899,IsQuintessence2
+method_1900,IsCardinallike
+field_3879,gameplayF
+field_3880,isQuintessence
+field_3881,isQuintessence2
+field_3882,isCardinallike
+# param_4496,index -!- shared with Campaigns
+param_3901,index
+# param_33,index -!- shared with Sim
+class_412,SolitaireRenderer
+method_1901,RenderAtomCounter
+method_1902,GetScreenPosition
+method_1903,RenderAtom
+method_1904,RenderNewGameRevelation
+method_1905,RenderAndRun
+method_1906,RenderPulseAnimation
+field_3883,solitaireScreen
+field_3884,pos
+field_3885,getScreenPosition
+field_3886,deltaTime
+field_3887,renderAtom
+param_5439,atomType
+param_5440,pos
+param_5441,index
+param_5442,gameState
+param_5443,atomType
+param_5444,index
+param_5445,revealNewGameF
+param_5446,gameplayF
+param_5447,wonLastGameF
+class_413,AtomCounter
+method_1907,CountAtoms
+method_1908,IsSameType1
+method_1909,CountAtoms
+method_1910,IsSameType2
+field_3888,matchingAtoms
+field_3889,atomType
+field_3890,quintessenceAtoms
+field_3891,isSameType1
+field_3892,isSameType2
+param_5448,revealNewGameF
+param_2495,atomType
+param_5449,gameplayF
+param_5450,atomType
+## LambdaGeneratedClass
+method_1911,Empty
+method_1912,isQuintessence
+method_1913,isQuintessence2
+method_1914,Empty2
+method_1915,Empty3
+method_1916,DrawDiagramButton
+param_5451,wfgField
+# param_4868,atomType -!- shared with MoleculeEditorScreen
+# param_5061,atomType -!- shared with Render
+param_5452,wlgField
+param_5453,wfgField
+param_5454,bounds
+param_5455,isHover
+param_5456,isEnabled
+
+## SolitaireState
+method_1917,GetWfForNewGame
+method_1918,GetRevealNewGameF
+method_1919,GetGameplayF
+method_1920,GetWonLastGameF
+method_1921,IsWfForNewGameF
+method_1922,IsRevealNewGameF
+method_1923,IsGameplayF
+method_1924,IsWonLastGameF
+method_1925,ToWfForNewGameF
+method_1926,ToRevealNewGameF
+method_1927,ToGameplayF
+method_1928,ToWonLastGameF
+method_1929,ActionOnWfForNewGameF
+method_1930,ActionOnRevealNewGameF
+method_1931,ActionOnGameplayF
+method_1932,ActionOnWonLastGameF
+method_1933,ActionOnEach
+# field_3899,state -!- shared with VignetteEvent
+field_3900,primaryState
+field_3901,secondaryState
+field_3902,primaryTimer
+field_3903,completionCount
+field_3904,secondaryTimers
+field_3905,index
+param_1435,_state
+param_5457,currentState
+param_5458,newState
+param_5459,marbleRevelationTimer
+param_5460,hexCount
+param_5461,atomTimers
+param_5462,gameState
+param_5463,pulseStartIndex
+param_5464,pulseTimer
+param_5465,action
+param_5466,action
+param_5467,action
+param_5468,action
+param_5469,action0
+param_5470,action1
+param_5471,action2
+param_5472,action3
+## NestedClasses
+enum_192,State
+# 0: WaitingForNewGame
+# 1: RevealNewGame
+# 2: Gameplay
+# 3: WonLastGame
+# WaitingForNewGameFields
+struct_123,RevealNewGameFields
+field_3906,currentState
+field_3907,newState
+field_3908,marbleRevelationTimer
+field_3909,hexCount
+field_3910,atomTimers
+struct_124,GameplayFields
+field_3911,gameState
+# WonLastGameFields
+field_3912,pulseStartIndex
+field_3913,pulseTimer
+
+## SolitaireGameState
+method_1880,GetCopy
+method_1881,CanRemove
+method_1882,IsGold
+method_1883,IsQuintessence
+method_1884,IsValidPair
+method_1885,IsEmpty
+method_1886,RemoveAt
+field_3864,atoms
+field_3865,selectedAtoms
+param_5423,index
+param_5424,index
+param_5425,index
+param_5426,index1
+param_5427,index2
+param_5428,index
+## NestedClasses
+class_407,SuccessorFinder
+method_1887,IsSuccessor
+field_3866,atomType
+param_5429,atomType
+# LambdaGeneratedClass
+method_1888,IsValidPair
+param_5430,atom1
+param_5431,atom2
+
+## SolitaireGenerator
+class_198,SolitaireGenerator
+method_536,SaveToFile
+method_537,GetRandomFromFile
+field_1809,normalGames
+field_1810,advancedGames
+field_1811,validAtomCount
+field_1812,StateDataSize
+param_3873,gameStates
+param_3874,isAdvanced
+## NestedClasses
+class_199,IdMatcher
+method_538,IsSameId
+field_1813,testId
+param_3875,atomType
+
+## SolitaireHelpScreen
+class_16,SolitaireHelpScreen
+method_49,PreventLowerScreenUpdates
+field_64,hintClearing
+field_65,hintUnlocking
+field_66,hintOffTheBoard
+field_67,hintCardinals
+field_68,hintSalt
+field_69,hintVitaeMoros
+field_70,hintMetals
+param_63,isOpening
+param_64,deltaTime
+
+
+## Renderer
+method_1304,GetIsD3D11
+method_1305,SetIsD3D11
+method_1306,SetupRendererForPlatform
+method_1307,Clear
+method_1308,InitializeWindow
+method_1309,LoadShader
+method_1310,TextureFromPng
+method_1311,GetEmptyTexture
+method_1312,ReplaceTexture
+method_1313,PngFromTexture
+method_1314,CopyTexture
+method_1315,DestroyTexture
+method_1316,CreateMesh
+method_1317,CreateDynamicMesh
+method_1318,SetMeshData
+method_1319,SetMeshData
+method_1320,CreateRenderTarget
+method_1321,DestroyRenderTarget
+method_1322,ClearWindow
+method_1323,ClearRenderTarget
+method_1324,SetRenderTargetToWindow
+method_1325,SetRenderTarget
+method_1326,SetBackfaceCullingMode
+method_1327,SetDepthTestMode
+method_1328,SetPerFrameConstants
+method_1329,SetPerCameraConstants
+method_1330,SetPerMeshConstants
+method_1331,SetShader
+method_1332,SetTextures
+method_1333,SetSamplerModes
+method_1334,DrawMesh
+method_1335,ClearMesh
+method_1336,Present
+method_1337,OnWindowResize
+method_1338,LoadImage
+method_1339,GetImageByExtension
+method_1340,GetPNGAtPath
+method_1341,GetPNGAtPathUnsafe
+method_1342,AtomLightApplyAlpha
+method_1343,ReloadAndReset
+method_1344,GetCompilerLogFromPath
+orig_method_1339,orig_GetImageByExtension
+field_2965,textureBatchSize
+field_2966,platformRenderer
+field_2967,isD3D11
+field_2968,shader
+field_2969,textures
+field_2970,samplerModes
+field_2973,vertexArray
+field_2974,vertexBuffer
+field_2975,elementArrayBuffer
+field_2976,textures
+field_2977,shaders
+param_5051,value
+param_5052,rendererType
+param_5053,use_CONTEXT_PROFILE_MASKs
+param_5054,window
+param_5055,width
+param_4010,height
+param_5056,shaderHLSLName
+param_5057,shaderVSName
+param_5058,shaderPSName
+param_5059,png
+param_5060,width
+param_2801,texture
+# param_5061,xOffset -!- shared with StoryPanel
+param_5062,yOffset
+param_5063,width
+param_5064,height
+param_955,replacement
+param_5065,texture
+param_5066,to
+param_5067,from
+param_5068,texture
+param_5069,vertecies
+param_5070,elements
+param_5071,_vertexBufferSize
+param_5072,_elementArrayBufferSize
+param_5073,mesh
+param_5074,vertecies
+param_5075,elements
+param_5076,mesh
+param_5077,vertecies
+param_5078,elements
+param_5079,width
+param_5080,height
+param_5081,renderTarget
+param_5082,window
+param_5083,renderTarget
+param_5084,color
+param_5085,window
+param_5086,size
+param_625,renderTarget
+param_5087,size
+param_4963,height
+param_5088,value
+param_5095,shader
+param_5096,textures
+param_5097,samplerModes
+param_5098,mesh
+param_5099,count
+param_5100,indices
+param_5101,basevertex
+param_5102,mesh
+param_5103,window
+# param_5104,
+param_5105,window
+# param_5106,
+# param_5107,
+param_5108,path
+param_5109,format
+param_144,texture
+param_5110,path
+param_5111,path
+param_5112,png
+param_5113,path
+
+## RenderTargetHandle
+method_1349,GetTargetWidth
+method_1350,GetTargetHeight
+method_1351,GetTarget
+method_1352,GetTarget
+method_1353,AgeAndDecacheTargets
+method_1354,DestroyTarget
+field_2991,isLogging
+field_2992,targetHandles
+field_2987,targetSize
+field_2988,currentTargetSize
+field_2989,age
+field_2990,target
+param_5117,wasCreated
+
+## RenderTarget
+class_95,RenderTarget
+field_936,renderTarget
+field_937,renderedTexture
+
+## Window
+class_279,Window
+method_757,GetSize
+method_758,SetSizeOfWindow
+method_759,GetWidth
+method_760,GetHeight
+method_761,SetSize
+method_762,SetRenderTarget
+method_763,Clear
+method_764,HasKeyboardFocus
+method_765,IsVisible
+method_766,IsFullscreen
+method_767,ShowWindow
+method_768,HideWindow
+method_769,RaiseWindow
+method_770,SetFullscreen
+method_771,SetSizeWithScaling
+method_772,SetSizeToDrawable
+method_773,RequiresScaling
+field_2191,HiDPIscaling
+field_2192,window
+field_2193,renderWindow
+param_4282,_window
+param_4283,_renderWindow
+param_4284,size
+param_4286,color
+param_4287,toFullscreen
+
+## IRenderCanvas
+interface_3,IRenderCanvas
+method_93,GetSize
+method_802,SetRenderTarget
+method_803,Clear
+param_4419,color
+
+## RendererType
+enum_6,RendererType
+## 0: OpenGL
+## 1: 
+
+## Shader
+class_221,Shader
+field_1915,shader
+field_1916,directoryName
+field_1917,creationTime
+field_1918,nameVS
+field_1919,namePS
+
+## Texture
+class_256,Texture
+method_688,GetWidth
+method_689,GetHeight
+method_690,GetHalfSize
+method_691,GetHalfSizeRounded
+field_2056,size
+field_2057,textureData
+field_2058,isDynamic
+field_2059,textureFormat
+# field_2060,
+field_2061,isPositiveAlpha
+field_2062,sourceFile
+field_2063,creationTime
+param_4180,obj
+
+## TextureFormat
+enum_3,TextureFormat
+
+## TextureBatch
+class_100,TextureBatch
+field_956,shader
+field_957,textures
+field_958,samplers
+field_959,vertexIndex
+field_960,elementIndex
+field_961,elementCount
+
+## Mesh
+class_196,Mesh
+field_1800,vertexBuffer
+field_1801,elementArrayBuffer
+field_1802,vertexArray
+field_1803,isDynamic
+field_1804,vertexBufferSize
+field_1805,elementArrayBufferSize
+field_1806,vertexCount
+field_1807,elementCount
+
+## SamplerMode
+enum_123,SamplerMode
+## 0: NearestClamp
+## 1: NearestRepeat
+## 2: LinearClamp
+## 3: LinearRepeat
+
+## TextureBatcher
+class_176,TextureBatcher
+field_1692,shader
+field_1693,textures
+field_1694,samplers
+field_1695,texCoord
+field_1696,defaultSpriteShader
+field_1697,textShader
+field_1698,mesh
+field_1699,batches
+field_1700,currentBatch
+field_1701,vertecies
+field_1702,elements
+
+## TextureRenderer
+class_135,TextureRenderer
+method_257,GetBatcher
+method_258,setDefaults
+method_259,CompleteRender
+method_260,NewBatch
+method_261,RenderMeshSquare
+method_262,Render3D
+method_263,Render2D
+method_264,Render2D
+method_265,Render3D
+method_266,Render2D
+method_267,Render2D
+method_268,Render2DMasked
+method_269,Render2DMasked
+method_270,Render2DRepeating
+method_271,Render2D
+method_272,Render2D
+# method_273,
+# method_274,
+method_276,Render9Slice
+method_275,Render9Slice
+method_277,RenderSlice
+method_278,RenderColor
+method_279,RenderColor
+method_280,RenderColor
+method_281,RenderColorBorder
+method_282,RenderColorBorder
+method_283,RenderColorBorder
+method_284,RenderColor
+method_285,RenderCentered
+method_286,RenderOrientedRectangle
+method_287,RenderOrientedRectangle
+method_288,IsGapChar
+method_289,RenderChar
+method_290,RenderText
+method_291,GetTextBounds
+method_292,RenderTextVerticalCentered
+method_293,RenderTextUnsafe
+method_294,GetOrientationMode
+param_3350,spriteShader
+param_3351,textShader
+param_3352,vertexCount
+param_3353,elementCount
+param_3354,texture
+param_3355,topLeft
+param_3356,topRight
+param_3357,bottomRight
+param_3358,bottomLeft
+param_3359,texture
+param_3360,color
+param_3361,transformation
+param_3362,texture
+param_3363,color
+param_3364,pos
+param_3365,size
+param_3366,texture
+param_3367,color
+param_3368,pos
+param_3369,size
+param_3370,texCoord
+param_2151,texture
+param_3371,color
+param_3372,texCoord
+param_3373,transformation
+param_3374,texture
+param_3375,color
+param_3376,pos
+param_3377,size
+param_3378,texCoord
+param_3379,orientation
+param_3380,flipping
+param_3381,color
+param_3382,orientation
+param_3383,flipping
+param_3384,texture
+param_3385,pos
+param_3386,mask
+param_3387,texture
+param_3388,color
+param_3389,pos
+param_3390,size
+param_3391,mask
+param_3392,texture
+param_1529,color
+param_3393,pos
+param_3394,size
+param_3395,texture
+param_1564,color
+param_3396,pos
+param_3397,texture
+param_3398,pos
+param_3399,color
+param_3400,pos
+# param_3401,
+param_3402,size
+param_3403,texture
+# param_3404,color -!- shared with Portrait
+param_3405,pos
+# param_3406,
+param_3407,size
+param_3408,texture
+param_3409,color
+param_3410,bounds
+param_3411,texture
+param_885,color
+param_3412,pos
+param_3413,texture
+param_3414,color
+param_3415,texCoordXPos
+param_3416,texCoordYPos
+param_3417,texCoordWidth
+param_3418,texCoordHeight
+param_3419,xPos
+param_3420,yPos
+param_3421,width
+param_3422,height
+param_3423,color
+param_3424,translateX
+param_3425,translateY
+param_3426,scaleX
+param_3427,scaleY
+param_3428,color
+param_3429,translation
+param_3430,scale
+param_3431,color
+param_3432,bounds
+param_3433,color
+param_3434,pos
+param_3435,size
+param_3436,width
+param_3437,color
+param_3438,bounds
+param_3439,width
+param_3440,color
+param_3441,bounds
+param_3442,color
+param_3443,bounds
+param_3444,color
+param_3445,pos
+param_3446,doubledScacle
+param_3447,baseBottom
+# param_3448,baseTop -!- shared with Utils
+param_3449,width
+param_3450,color
+param_3451,baseBottom
+param_3452,baseTop
+param_3453,texture
+param_3454,color
+param_3455,ch
+param_3456,ch
+param_3457,pos
+param_3458,font
+param_3459,color
+param_3460,text
+param_3461,position
+param_3462,fontStyles
+param_3463,color
+param_3464,textAlignment
+param_3465,lineGapsPerLine
+param_3466,lineGapMultiplier
+param_3467,lineWidth
+param_3468,overflowSize
+param_3469,shadowOffset
+param_3470,shadowColor
+param_3471,gradientTexture
+param_3472,maxRenderdCharCount
+param_3473,calculateBounds
+param_3474,doRender
+param_3475,text
+# param_3302,position -!- shared with LogManager
+param_3476,fontStyles
+param_3477,textAlignment
+param_3478,lineGapsPerLine
+param_3479,lineGapMultiplier
+param_3480,lineWidth
+param_3481,overflowSize
+param_3482,text
+param_3483,position
+param_3484,fontStyles
+param_3485,color
+param_3486,textAlignment
+param_3487,lineGapsPerLine
+param_3488,lineGapMultiplier
+param_3489,lineWidth
+param_3490,overflowSize
+param_3491,shadeOffset
+param_3492,shadeColor
+param_3493,gradientTexture
+param_3494,maxRenderdCharCount
+param_3495,text
+param_3496,position
+param_3497,fontStyles
+param_3498,color
+param_3499,textAlignment
+param_3500,lineGapsPerLine
+param_3501,lineGapMultiplier
+param_3502,lineWidth
+param_3503,overflowSize
+param_3504,shadeOffset
+param_3505,shadeColor
+param_3506,gradientTexture
+param_3507,maxRenderdCharCount
+param_3508,calculateBounds
+param_3509,doRender
+param_3510,rotation
+## NestedClasses
+class_136,FontTypeSwitcher
+method_295,SwitchType
+method_296,ShouldSkippChar
+field_1508,activeType
+field_1509,activeFont
+field_1510,fontStyles
+field_1511,activeFallbackFont
+# field_1512,
+field_1513,forcePrintNextChar
+field_1514,switchType
+
+## PartRenderer
+class_195,PartRenderer
+field_1797,partPos
+field_1798,partRotation
+# field_1799,
+
+## LightDirTextures
+class_126,LightDirTextures
+method_235,GetSize
+method_236,GetWidth
+method_237,GetHeight
+field_1463,leftLight
+field_1464,rightLight
+field_1465,bottomLight
+field_1466,topLight
+param_3319,left
+param_3320,right
+param_3321,bottom
+param_3322,top
+param_3323,universal
+
+## LightDirData
+struct_25,LightDirData
+field_1735,lightTexture
+# field_1736,
+# field_1737,
+# field_1738,
+param_2481,_lightTexture
+# param_3790,
+# param_3791,
+# param_3792,
+
+## FlippingMode
+enum_1,FlippingMode
+# 2^0: FlipX
+# 2^1: FlipY
+
+## OrientationMode
+enum_130,OrientationMode
+# 0: 0°
+# 1: 90°
+# 2: 180°
+# 3: 270°
+
+## TextAlignment
+enum_0,TextAlignment
+# 0: Left
+# 0: Center
+# 0: Right
+
+
+## MusicManager
+class_251,MusicManager
+method_673,setTrack
+method_676,UpdateMusic
+# field_2035, defaultMusic?
+# field_2036, currentMusic?
+param_4166,musicTrack
+param_4169,deltaTime
+
+
+## Utils
+class_162,Utils
+method_403,AssertOrThrow
+method_404,Clamp
+method_405,Clamp
+method_406,Clamp0to1
+method_408,Remainder
+method_409,Remainder
+method_410,SmallestRotationAngle
+method_411,InterpolateLinear
+method_412,InterpolateRotation
+method_413,InterpolateVect
+method_414,InterpolateVectSeparate
+method_415,InterpolatePoints
+method_416,InterpolatePointsClamped
+method_417,InterpolateCos
+method_418,SetAllElements
+method_420,GetHexDigit
+method_421,HexIntValue
+method_422,GetWatchElapsed
+method_423,GetByteMultiplier
+method_424,SubstringByInterval
+method_425,ActionOnEach
+method_431,Satisfies
+method_438,HasCopies
+# method_439,
+method_440,FormatInt
+method_441,FormatBold
+method_442,FormatItalic
+param_3660,condition
+param_3661,message
+param_3662,value
+param_3663,min
+param_3664,max
+param_3589,value
+param_3665,min
+param_3666,max
+param_3667,value
+param_3668,dividend
+param_3669,modulo
+# param_3670,dividend -!- shared with PointSampledCurve
+param_3671,modulo
+# param_122,endAngle -!- shared with AtomType
+param_3672,startAngle
+param_3673,start
+param_3674,end
+param_3675,t
+param_3676,start
+param_3677,end
+param_3678,t
+param_3679,start
+param_3680,end
+param_3681,t
+param_3682,start
+# param_3448,end -!- shared with class_135
+param_3683,t
+param_3127,t
+param_3684,x1
+param_3685,x2
+param_3686,y1
+param_3687,y2
+# param_1246,t -!- shared with Sim
+param_3688,x1
+param_3689,x2
+param_3690,y1
+param_3691,y2
+param_3692,start
+# param_3693,end -!- shared with AtomType
+param_3694,t
+param_3695,array
+param_3696,value
+# param_3699,hexValue -!- shared with Renderer
+param_3700,_char
+param_3701,value
+param_3702,watch
+param_1068,imageFormat
+param_3703,str
+param_3704,interval
+param_3705,enumerable
+param_3706,action
+param_3731,str
+param_3732,str
+
+## HexTransform
+class_202,HexTransform
+field_1879,index
+field_1880,rotation
+
+## HexGrid
+class_187,HexGrid
+method_490,GetHexWidth
+method_491,ToWorldCord
+method_492,ToWorldCord
+method_493,GetHexDistance
+field_1742,standardGrid
+field_1743,solitaireGrid
+field_1744,hexSize
+param_3795,_hexSize
+param_3796,index
+param_3797,offset
+param_3798,index
+param_3799,from
+param_3800,to
+
+## Translations
+class_134,Translations
+method_249,ToPseudo
+method_250,MarkSpecialCharacters
+method_251,IsChinese
+method_252,GetCommaSeparatedList
+method_253,Translate
+method_254,WithAllLanguages
+method_255,GetDefaultLanguage
+method_256,GetCurrentCultureInfo
+field_1498,countryCodes
+field_1499,cultureInfos
+field_1500,languagesNames
+field_1501,missingTranslationReplacement
+field_1502,pseudoChars
+field_1503,fullwidthPunctuation
+field_1504,currentLanguage
+field_1505,translationDict
+param_3340,str
+param_3341,str
+param_3342,language
+param_3343,ch
+param_3344,str
+param_3345,toTranslate
+param_3346,extraTypeData
+param_3347,str
+
+## StringWData
+struct_21,StringWData
+field_1506,str
+field_1507,extraTypeData
+param_3348,_str
+param_3349,_extraTypeData
+
+## LocString
+method_619,GetTranslated
+method_620,GetEnglish
+field_2597,emptyString
+field_2598,locDictionary
+param_4722,locString
+
+## EmptyLocString
+class_237,EmptyLocString
+
+## Matrix4
+method_1069,Unit
+method_1070,GetTranslation
+method_1071,RotYZ
+method_1072,RotXZ
+method_1073,RotXY
+method_1074,GetScale
+method_1075,GetScale
+method_1076,GetScaleTrans
+method_1077,GetScaleTrans
+method_1078,GetScaleRotTrans
+method_1079,GetTranslatedRotation
+# method_1080,
+method_1081,ProjectToTarget
+method_1082,Apply
+method_1083,ApplyAsLinearTransform
+method_1084,Transpose
+field_2600,xx
+field_2601,xy
+field_2602,xz
+field_2603,xw
+field_2604,yx
+field_2605,yy
+field_2606,yz
+field_2607,yw
+field_2608,zx
+field_2609,zy
+field_2610,zz
+field_2611,zw
+field_2612,wx
+field_2613,wy
+field_2614,wz
+field_2615,ww
+param_4734,_xx
+param_4735,_xy
+param_4736,_xz
+param_4737,_xw
+param_4738,_yx
+param_4739,_yy
+param_4740,_yz
+param_4741,_yw
+param_4742,_zx
+param_4743,_zy
+param_4744,_zz
+param_4745,_zw
+param_4746,_wx
+param_4747,_wy
+param_4748,_wz
+param_4749,_ww
+param_4750,vec
+param_4751,radians
+param_4752,radians
+param_4753,radians
+param_4754,vec
+param_4755,scaleFactor
+param_4756,translationVec
+param_4757,scaleVec
+param_4758,translateX
+param_4759,translateY
+param_4760,scaleX
+param_4761,scaleY
+param_4762,trans
+param_4763,rot
+param_4764,scale
+param_4765,trans
+param_4766,rotTranslation
+param_4767,rot
+param_4768,scale
+# param_3956,matrix1 -!- shared with DeltaTime
+param_4773,targetSize
+param_4774,isInverted
+param_4775,matrix2
+param_4776,obj
+param_4777,matrix1
+param_4778,matrix2
+# param_4416,matrix1 -!- shared with PipeHexConnection
+param_4779,matrix2
+param_4780,vec
+param_4781,vec
+
+## Interval
+struct_28,Interval
+method_630,GetRange
+method_631,GetFromLength
+method_632,IsElement
+field_1997,start
+field_1998,end
+field_1999,empty
+param_3989,_start
+param_3990,_end
+param_3991,start
+param_3992,length
+param_2120,value
+
+## PointCurve
+class_240,PointSampledCurve
+method_628,GetYOnCurve
+method_629,InterpolateWithCurve
+field_1996,points
+param_3985,_points
+param_3986,x
+# param_3670,start -!- shared with Utils
+param_3987,end
+param_3988,t
+
+## SelectorList<T>
+class_260,SelectorList
+generic_13,T
+method_696,GetSelected
+method_697,ClearAndAdd
+method_698,Add
+method_699,ClearAfterSelector
+method_700,Previous
+method_701,Next
+method_702,GetList
+field_2068,capacity
+field_2069,list
+field_2070,selector
+param_4190,_capacity
+param_4191,item
+param_4192,item
+
+## StreamArray<T>
+class_4,StreamArray
+generic_2,T
+method_8,GetLastIndex
+method_9,SetLastIndex
+method_10,GetArray
+method_11,SetAndAdvance
+method_12,ToStart
+field_6,array
+field_7,index
+param_21,size
+param_22,index
+param_23,item
+
+## Stack<T>
+class_197,Stack
+generic_12,T
+method_532,Size
+method_533,Push
+method_534,Pop
+method_535,GetLast
+field_1808,stack
+param_3872,item
+
+## Container<T>
+class_179,Container
+generic_11,T
+method_488,SetContent
+param_2469,_value
+param_3783,_value
+param_3784,container
+field_1711,value
+
+## Maybe<T>
+method_1085,HasValue
+method_1086,SetHasValue
+method_1087,GetValue
+method_1088,GetString
+method_1089,From
+method_1090,GetValueWDefault
+method_1091,GetMaybeWDefault
+method_1092,FunctionOnValue
+method_1093,ActionOnValue
+field_2616,__hasValue
+field_2617,value
+param_4782,_hasValue
+param_2914,_value
+param_4783,_hasValue
+param_4784,_value
+param_4785,_value
+param_4787,_default
+param_4788,_default
+param_4790,action
+param_4791,obj
+param_4792,maybe
+param_4793,maybe1
+param_4794,maybe2
+param_4795,maybe1
+param_4796,maybe2
+
+## MaybeCreator
+struct_18,MaybeCreator
+method_187,Create
+# field_1431,empty -!- shared with VignetteEvent
+param_3270,value
+
+## DeltaTime
+struct_27,DeltaTime
+# method_602,ScaledTpS
+method_603,InSeconds
+method_604,InMils
+field_1944,ticks
+param_3950,_ticks
+param_3951,scaleFactor
+param_3952,delta1
+param_3953,delta2
+param_3954,delta1
+param_3955,delta2
+# param_3956,delta1 -!- shared with Matrix4
+param_3957,delta2
+
+## OpusMagnumException
+class_266,OpusMagnumException
+param_4200,message
+param_4201,message
+param_4202,innerException
+param_4203,info
+param_4204,context
+
+## PsdImageException
+class_281,PsdImageException
+param_4290,message
+param_4291,message
+param_4292,innerException
+param_4293,info
+param_4294,context
+
+
+## Assets
+class_238,Assets
+field_1989,textures
+field_1990,fonts
+field_1991,sounds
+field_1992,musicTracks
+field_1993,curves
+field_1994,cursors
+field_1995,shaderAssets
+
+## AssetLoaderHelper
+class_235,AssetLoaderHelper
+method_615,LoadTexture
+method_616,LoadSound
+method_617,LoadMusic
+method_618,ColorTexture
+param_3980,path
+param_3981,path
+param_3982,path
+param_3983,color
+
+## TextureAssets
+class_17,TextureAssets
+method_51,InitColors
+field_71,white
+field_72,black
+field_73,transparent
+
+## PngImage
+class_272,PngImage
+method_733,GetWidth
+method_734,GetHeight
+method_735,Save
+method_736,FlipVertical
+field_2123,format
+field_2124,size
+field_2125,rowByteSize
+field_2126,imageData
+param_3005,format
+param_4243,size
+param_4244,data
+param_4245,format
+param_4246,width
+param_4247,height
+param_4248,data
+param_4249,path
+
+## CursorAssets
+class_10,CursorAssets
+field_45,normal
+field_46,running
+field_47,unassigned
+field_48,handClosed
+field_49,fastForward
+
+## Cursor
+class_108,Cursor
+field_998,ptr
+field_999,texture
+param_146,_ptr
+param_147,_texture
+
+## FontAssets
+class_275,FontAssets
+field_2138,cpmono
+field_2139,cga
+field_2140,crimson_9_75
+field_2141,crimson_10_5
+field_2142,crimson_12
+field_2143,crimson_13
+field_2144,crimson_15
+field_2145,crimson_16_5
+field_2146,crimson_21
+field_2147,cinzel_21
+field_2148,cormorant_22_5
+field_2149,cormorant_18
+field_2150,cormorant_15
+field_2151,cormorant_12_75
+field_2152,cormorant_11
+field_2153,reenie_17_25
+field_2154,naver_17_25
+
+## Font
+class_233,Font
+method_609,getInfoForChar
+field_1965,fontInfo
+param_3972,character
+
+## FontStyles
+class_1,FontStyles
+field_0,styles
+field_1,fallback
+param_0,universalFont
+param_1,regular
+param_2,bold
+param_3,italic
+param_4,_fallback
+param_5,regularFileName
+param_6,boldFileName
+param_7,italicFileName
+param_8,pointSize
+# param_9,
+# param_10,
+# param_11,
+param_12,_fallback
+
+## FontStyle
+enum_121,FontStyle
+# 0: Regular
+# 1: Bold
+# 2: Italic
+
+## SoundAssets
+class_201,SoundAssets
+
+## MusicAssets
+class_102,MusicAssets
+
+## MusicTrack
+class_186,MusicTrack
+
+## CurveAssets
+class_278,CurveAssets
+method_755,Init
+field_2190,screenTransCurve
+
+## ShaderAssets
+class_190,ShaderAssets
+field_1748,sharpen
+field_1749,part
+field_1750,piston
+field_1751,board
+field_1752,bonder
+field_1753,metalAtom
+field_1754,matteAtom
+field_1755,glassAtom
+field_1756,quintessenceAtom
+field_1757,maskedGloss
+field_1758,bond
+field_1759,cabinet
+
+
+## IScreen
+method_47,OnOpenOrClose
+method_48,Reset
+method_50,RenderFrame
+orig_method_50,orig_RenderFrame
+method_1037,PreventLowerScreenUpdates
+param_4686,deltaTime
+param_4687,isOpening
+
+## LoadingScreen
+class_93,LoadingScreen
+method_89,PreventLowerScreenUpdates
+method_90,Render
+orig_method_90,orig_Render
+field_932,textAnimSpeed
+field_933,symbolTimeing
+field_934,totalTime
+param_93,isOpening
+param_94,deltaTime
+param_95,loadCompletion
+param_96,animationTime
+param_97,displayText
+
+## TipScreen
+class_288,TipScreen
+method_791,PreventLowerScreenUpdates
+field_2234,cyclesPerSec
+field_2235,cycleLength
+field_2236,cycleTickInterval
+field_2237,tipType
+field_2238,solution
+field_2239,solutionRenderTarget
+field_2240,solutionEditor
+field_2241,cycleTime
+param_4400,tip
+param_4401,isOpening
+param_4402,deltaTime
+
+## PuzzleFinishScreen
+method_692,PreventLowerScreenUpdates
+method_693,ContinueEditing
+method_694,QuitEditor
+class_257,PuzzleFinishScreen
+field_2064,solEditScr
+field_2065,histogramData
+param_4181,_solEditScr
+param_4183,isOpening
+param_4184,deltaTime
+
+## CinematicsScreen
+class_252,CinematicsScreen
+method_678,IsLargeScreen
+method_679,GetDialogueSizeMultiplier
+method_680,GetPortraitWidth
+method_681,GetPortraitHeighth
+method_682,PreventLowerScreenUpdates
+method_683,GetActorPosition
+method_684,QuitCinematics
+field_2038,dialogue
+field_2039,actors
+field_2040,currentEvent
+field_2041,cinematicsEventTime
+field_2042,cinematicsEventLength
+field_2043,timeSinceEvent
+field_2044,actorPosOffset
+field_2045,displayTimePerChar
+param_4171,_dialogue
+param_4172,track
+param_4173,isOpening
+param_4174,i
+param_4175,numberOfActors
+param_4176,deltaTime
+## NestedClasses
+class_253,Actor
+field_2046,portrait
+field_2047,pos
+field_2048,cinematicsEvent
+field_2049,flip
+class_254,VignetteFieldHandler
+method_685,RenderLine
+method_686,HandleEnter
+method_687,HandleChange
+field_2050,cinematicsScreen
+field_2051,readyForNextEvent
+param_4177,vignetteLine
+param_4178,vignetteEnter
+param_4179,vignetteChange
+class_255,CinematicsChangeEvent
+field_2052,primaryPortrait
+field_2053,secondaryPortrait
+field_2054,startPos
+field_2055,endPos
+
+## PeriodicTableScreen
+class_177,PeriodicTableScreen
+method_486,PreventLowerScreenUpdates
+# field_1703,
+field_1704,title
+field_1705,quote
+field_1706,name
+# param_3778,
+param_3779,isOpening
+param_3780,deltaTime
+
+## GifRecorderScreen
+class_250,GifRecorderScreen
+method_670,PreventLowerScreenUpdates
+method_671,GetEffectiveCompletedOutputs
+method_672,GetLoopedCycle
+field_2015,minRecorderSize
+field_2016,boundDelta
+field_2017,cycleLength
+field_2018,cyclesPerSec
+field_2019,maxSize
+field_2020,renderTarget
+field_2021,overlayRenderTarget
+field_2022,solutionEditor
+field_2023,targetSize
+field_2024,targetOffset
+field_2025,primedForRecording
+field_2026,completedRecording
+field_2027,recordingStartCycleOffset
+field_2028,startCycle
+field_2029,endCycle
+field_2030,isCycleEditMode
+field_2031,gifRecorder
+param_4163,solution
+param_4164,isOpening
+param_4165,deltaTime
+
+## PauseScreen
+class_178,PauseScreen
+method_487,PreventLowerScreenUpdates
+param_3781,isOpening
+param_3782,deltaTime
+
+## DocumentScreen
+method_894,GetFonts
+field_2408,sections
+field_2409,dialogue
+field_2410,textBlack
+field_2411,textRed
+field_2412,textFaded
+param_4544,_dialogue
+param_4545,isOpening
+param_4546,deltaTime
+## NestedClasses
+# class_314,PipTextRenderer -!- shared with CreditsScreen
+method_895,RenderWithPips
+field_2413,pos
+param_4547,text
+param_4548,verticalOffset
+## LambdaGeneratedClass
+method_896,TrimString
+param_4549,str
+
+## MessageBoxScreen
+method_1094,NoticeBox
+method_1095,ConfirmBox
+method_1096,TextFieldBox
+method_1097,PreventLowerScreenUpdates
+field_2622,cursorBlinkPeriod
+field_2623,bounds
+field_2624,hasCornerCutout
+field_2625,message
+field_2626,messagePart2
+field_2627,confirmText
+field_2628,confirmable
+field_2629,cancelText
+field_2630,isTextbox
+field_2631,defaultValue
+field_2632,cursorBlinkTimer
+field_2633,onConfirm
+field_2634,onCancel
+param_4801,_bounds
+param_4802,_hasCornerCutout
+param_4803,_message
+param_4804,_cancelText
+param_4805,_onCancel
+param_4806,_bounds
+param_4807,_hasCornerCutout
+param_4808,_message
+param_4809,_messagePart2
+param_4810,_confirmText
+param_4811,_cancelText
+param_4812,_onConfirm
+param_4813,_onCancel
+param_4814,_bounds
+param_4815,_hasCornerCutout
+param_4816,_message
+param_4817,_defaultValue
+param_4818,_confirmText
+param_4819,_onConfirm
+param_4820,isOpening
+param_4821,deltaTime
+## NestedClasses
+class_346,DefaultValueConfirmer
+method_1098,OnConfirm
+field_2635,onConfirm
+field_2636,messageBoxScreen
+## LambdaGeneratedClass
+method_1099,Empty
+
+## UploadMessageScreen
+method_2195,PreventLowerScreenUpdates
+field_4120,progressTimerPeriod
+field_4121,bounds
+field_4122,progressTimer
+param_5781,_bounds
+param_5782,isOpening
+param_5783,deltaTime
+## LambdaGeneratedClass
+method_2196,Empty
+
+## PuzzleEditorScreen
+method_1258,GetPuzzles
+method_1259,PreventLowerScreenUpdates
+method_1260,RenderMolecule
+method_1261,RenderPermissionToggle
+method_1262,SetSelected
+method_1263,IsSelectedById
+method_1264,IsSelected
+method_1265,SetSelectedName
+method_1266,DeleteSelected
+field_2786,puzzlesScrollbar
+field_2787,unusedScrollbar
+field_2788,type
+field_2789,selectedPuzzle
+field_2790,lastSelectionTime
+param_4991,_type
+param_4992,isOpening
+param_4993,deltaTime
+param_4994,molecule
+param_4995,offset
+param_4996,pos
+param_4997,name
+param_4998,permission
+param_4999,puzzle
+param_5000,puzzle
+# param_5001,puzzle -!- shared with PuzzleSelectScreen
+param_5002,puzzle
+param_5003,name
+## NestedClasses
+class_374,PuzzleCont
+field_2791,puzzle
+class_375,InputOutputRemover
+method_1267,RemoveInputOutput
+field_2792,mode
+field_2793,removedIndex
+field_2794,puzzle
+class_376,PuzzleSetter
+method_1268,SetInputOutput
+field_2795,mode
+field_2796,puzzle
+param_5004,molecule
+class_377,InputOutputMoleculeSetter
+method_1269,SetMolecule
+field_2797,inputOutput
+field_2798,puzzle
+param_5005,molecule
+## LambdaGeneratedClass
+method_1270,Empty
+method_1271,Empty2
+
+## PuzzleEditorScreenType
+enum_138,PuzzleEditorScreenType
+# 0: PersonalPuzzles
+# 1: WorkshopPuzzles
+
+## PuzzleSelectScreen
+method_1288,PreventLowerScreenUpdates
+method_1289,IsMatchingChapterTitle
+field_2935,unlockAllMode
+field_2936,currentChapter
+field_2937,chapterUIFadeTimer
+field_2938,chapterNameFadeTimer
+field_2939,chapterTransitionTimer
+field_2940,newChapter
+field_2941,completedPuzzleSelectEvents
+field_2942,eventQueue
+field_2943,eventTimer
+field_2944,openingDelay
+field_2945,chapterUnlockDelay
+field_2946,uiUnlockDelay
+field_2947,uiCompleteEvent
+field_2948,uiFadeLength
+field_2949,nameFadeLength
+field_2950,chapterTransitionDelay
+field_2951,chapterFadeLength
+param_5035,isOpening
+param_5036,deltaTime
+param_5037,chapter
+## NestedClasses
+class_384,ChapterMatcher
+method_1290,IsSameChapter
+field_2952,chapter
+param_5038,chUnlockEvent
+class_385,CampaignItemMatcher
+method_1291,IsSameCampaignItem
+method_1292,IsSameCampaignItem
+param_5039,uiUnlockEvent
+param_5040,uiCompleteEvent
+field_2953,campaignItem
+class_386,ChapterBackgroundRenderer
+method_1293,RenderChapterBackGround
+field_2954,pzSelectScr
+field_2955,size
+# param_5001,chapter -!- shared with PuzzleEditorScreen
+## LambdaGeneratedClass
+# method_1294,
+method_1295,GetChapter
+method_1296,GetChapters
+# param_3580,chUnlockEvent -!- shared with class_140
+param_5041,chUnlockEvent
+param_5042,campaign
+
+## PuzzleInfoScreen
+method_1272,PreventLowerScreenUpdates
+method_1273,NewSolution
+method_1274,SelectSolution
+method_1275,EditSolution
+method_1276,SelectSolution2
+method_1277,IsSelected
+method_1278,SetSolutionName
+method_1279,DeleteSelected
+field_2801,storyPanelSections
+field_2802,puzzle
+field_2803,track
+field_2804,fanfare
+field_2805,storyPanel
+field_2806,scrollbar
+field_2807,selectedSolution
+field_2808,lastSelectionTime
+field_2809,histogramData
+param_5006,_puzzle
+param_5007,track
+param_5008,fanfare
+param_5009,dialogue
+param_5010,isOpening
+param_5011,solution
+param_5012,solution
+# param_5013,solution -!- shared with StoryPanel
+param_5014,solution
+param_5015,name
+## NestedClasses
+class_379,NameMatcher
+method_1280,IsMatchingName
+field_2810,name
+field_2811,isMatchingName
+param_3699,solution
+## LambdaGeneratedClass
+method_1281,Empty
+
+## OptionsScreen
+method_1147,PreventLowerScreenUpdates
+method_1148,AddKeycode
+method_1149,GetLanguages
+method_1150,GetScreenResolutions
+method_1151,DropDownList
+method_1152,Button
+method_1153,ToggleButtons
+method_1154,SliderBar
+field_2679,storyPanelSections
+field_2680,storyPanel
+field_2681,languageDDLOpen
+field_2682,resolutionDDLOpen
+field_2683,keyboardLayoutDDLOpen
+field_2684,soundVolumeChanged
+field_2685,musicVolumeChanged
+field_2686,inputtedCode
+field_2687,unused
+param_4882,isOpening
+param_4883,deltaTime
+param_4884,codeNum
+param_4885,isFullscreen
+param_4886,text
+param_4887,pos
+param_4888,canHoverAndClick
+param_4889,text
+param_3606,pos
+param_4890,canHoverAndClick
+param_4891,currentValue
+param_4892,pos
+param_4893,canHoverAndClick
+param_4894,disableOn
+param_4895,value
+param_4896,valueChanged
+param_4897,disableClick
+param_4898,canHoverAndClick
+## LambdaGeneratedClass
+method_1155,GetHeight
+method_1156,GetHeight2
+method_1157,GetHeight3
+method_1158,GetWidth
+param_4899,size
+param_4900,size
+param_4901,size
+param_4231,size
+
+## ControlsScreen
+method_866,PreventLowerScreenUpdates
+field_2377,controls
+param_4521,isOpening
+param_4522,deltaTime
+## LambdaGeneratedClass
+method_867,RMDrag
+method_868,ScrWheel
+method_869,ShiftScrWheel
+method_870,Four
+method_871,AandD
+method_872,WandS
+method_873,CtrlLMDrag
+method_874,DelOrBacksp
+method_875,ShiftLM
+method_876,CtrlA
+method_877,CtrlShifA
+method_878,CtrlZ
+method_879,CtrlY
+method_880,AltLM
+
+## CreditsScreen
+method_881,PreventLowerScreenUpdates
+method_882,RenderTitle
+method_883,RenderPerson
+method_884,RenderSpcThx
+method_885,RenderCopyRight
+method_886,RenderItem
+method_887,AddDelay
+field_2392,fadeInOutLength
+field_2393,displayDelay
+field_2394,time
+field_2395,isComplete
+param_4523,isOpening
+param_4524,deltaTime
+param_4525,cm
+param_4526,pos
+param_4527,cm
+param_4528,pos
+param_4529,person
+param_4530,title
+param_4531,cm
+param_4532,pos
+param_4533,cm
+param_4534,pos
+param_4535,cm
+param_4536,displayLength
+param_4537,renderAction
+param_4538,cm
+param_4539,delay
+## NestedClasses
+class_309,TitleRenderer
+field_2396,pos
+method_888,RenderTitle
+param_4540,alpha
+class_310,CreditsManager
+field_2397,renderTime
+field_2398,renderActions
+class_311,RenderActionRunner
+method_889,RunRender
+field_2399,alphaModifier
+field_2400,actionHolder
+class_312,ActionHolder
+field_2401,action
+class_313,CopyRightRenderer
+method_890,RenderCpR
+field_2402,pos
+param_4540,alpha
+# class_314,SpecialThanksRenderer -!- shared with DocumentScreen
+method_891,RenderSpcThx
+field_2403,pos
+param_4541,alpha
+class_315,PersonRenderer
+method_892,RenderP
+field_2404,person
+field_2405,pos
+field_2406,title
+param_4542,alpha
+## LambdaGeneratedClass
+method_893,RunAction
+param_4543,action
+
+## JournalScreen
+method_1038,PreventLowerScreenUpdates
+method_1039,SimpleButton
+method_1040,RenderPuzzleSelect
+method_1041,RenderMenuButton
+method_1042,MenuButtons
+field_2553,wasInitialized
+field_2554,volumeCount
+field_2555,pushSubmissionScreen
+param_4688,_pushSubmissionScreen
+param_4689,isOpening
+param_4690,deltaTime
+param_4691,icon
+param_4692,hoverIcon
+param_4693,pos
+param_4694,puzzle
+param_4695,isLarge
+param_4696,isSelected
+param_4698,pos
+param_4699,isJournalSelected
+param_4700,isPzEditorSelected
+param_4701,isSWorkshopSelected
+## NestedClasses
+class_337,MenuButtonRenderer
+method_1043,GetBounds
+method_1044,DrawButton
+field_2556,pos
+field_2557,isSelected
+field_2558,title
+param_4702,bounds
+param_4704,isEnabled
+class_338,SimpleButton
+method_1045,GetBounds
+method_1046,DrawButton
+param_4705,bounds
+param_4706,isHover
+param_4707,isEnabled
+field_2559,pos
+field_2560,icon
+field_2561,hoverIcon
+## LambdaGeneratedClass
+method_1047,GetMolecule
+method_1048,GetAtomCount
+param_4708,inputOutput
+param_1409,molecule
+
+## JournalSubmissionScreen
+method_1049,PreventLowerScreenUpdates
+field_2564,alphaDelay
+field_2565,bounds
+field_2566,parsedText
+field_2567,type
+field_2568,alphaTimer
+param_4709,_bounds
+param_4710,_type
+param_4711,isOpening
+param_4712,deltaTime
+## NestedClasses
+enum_152,Type
+# 0: Warning
+# 1: Submission
+## LambdaGeneratedClass
+method_1050,TrimString
+param_4713,str
+
+## MoleculeEditorScreen
+method_1129,PreventLowerScreenUpdates
+method_1130,AtomTypeSelector
+method_1131,BondTypeSelector
+method_1132,MoleculeError
+method_1133,ExportRepeatingMolecules
+method_1134,ImportRepeatingMolecules
+field_2654,builderBoard
+field_2655,bondDirections
+field_2656,molecule
+field_2657,isProduct
+field_2658,onSave
+field_2659,selectedAtomType
+field_2660,selectedBondType
+field_2661,errorMessage
+param_4854,_molecule
+param_4855,_isProduct
+param_4856,_onSave
+param_4857,isOpening
+param_4858,deltaTime
+param_4859,pos
+param_4860,atomType
+param_4861,isEnabled
+param_4862,pos
+param_4863,bondType
+param_4864,texture
+param_4865,molecule
+param_4866,repetitionCount
+param_4867,molecule
+## NestedClasses
+class_354,HexIndexHolder
+field_2662,index
+class_355,BondMatcher
+method_1135,IsBondBetweenIndices
+field_2663,index
+field_2664,indexHolder
+# param_4868,bond -!- shared with SolitaireScreen
+class_356,MoleculeBuilderBuilder
+method_1136,Build
+field_2665,completedAtoms
+field_2666,strBuilder
+field_2667,completedBonds
+field_2668,buildAction
+field_2669,molecEdiScr
+param_4869,index
+## LambdaGeneratedClass
+method_1137,IsRepeat
+method_1138,IsRepeat
+method_1139,GetIndex
+method_1140,IsRepeat2
+method_1141,GetIndex2
+method_1142,HasInternalMolecule
+method_1143,GetAtom
+method_1144,HasInternalMolecule2
+method_1145,GetIndex3
+param_4870,atom
+param_4871,pair
+param_4872,pair
+param_4873,pair
+param_4874,pair
+param_4875,pair
+param_4876,pair
+param_4877,pair
+param_4878,pair
+
+## UIUtils
+class_140,UIUtils
+method_312,BasicButton
+method_313,TextButton
+method_314,TextButton
+method_315,SolutionButton
+method_316,PuzzleButton
+method_317,RenderScreenTitle
+method_318,FancyTextButton
+method_319,FormatHistogramData
+method_320,Unused
+method_321,RenderHistogram
+method_322,RenderScreenArms
+method_323,CloseButton
+field_1555,histogramShadeColor
+field_1556,histogramLines
+param_3538,texture
+param_3539,hoverTexture
+param_3540,disabledTexture
+param_3541,pos
+param_3542,text
+param_3543,pos
+param_3025,width
+param_3544,height
+param_3545,text
+param_3546,pos
+param_3547,name
+param_3548,subText
+param_3549,pos
+param_3151,textOverflow
+param_3550,isSelected
+param_3551,name
+param_3552,pos
+param_3553,isSelected
+param_3554,isComplete
+param_3555,title
+param_3556,length
+param_3557,isSpacedOut
+param_3558,upperCase
+param_3559,text
+param_3560,font
+param_3561,pos
+param_3562,lineWidth
+param_943,type
+param_3563,data
+param_3564,unused
+param_3565,data
+param_3566,pos
+param_3567,renderDif
+param_3568,screenPos
+param_3569,pos
+param_3570,size
+param_3571,offset
+## SubClasses
+class_141,BasicButton
+method_324,GetBounds
+method_325,DrawButton
+field_1557,pos
+field_1558,texture
+field_1559,disabledTexture
+field_1560,hoverTexture
+param_3572,bounds
+param_3573,isHover
+param_3574,isEnabled
+class_142,TextButton
+method_326,GetBounds
+method_327,DrawButton
+field_1561,pos
+# param_403,width -!- this is actually a field
+field_1562,height
+# param_3559,text -!- this is actually a field
+param_3575,bounds
+param_3576,isHover
+param_3577,isEnabled
+class_143,LineRenderer
+method_328,GetLineOffset
+method_329,RenderLine
+method_330,RenderLineWeak
+method_331,RenderLine2
+method_332,RenderLine3
+field_1563,scoreData
+field_1564,calcOffset
+field_1565,height
+field_1566,histgRenderer
+param_3578,score
+param_3579,score
+param_2333,score
+param_442,score
+# param_3580,score -!- shared with PuzzleSelectScreen
+class_144,SolutionButton
+method_333,GetBounds
+method_334,DrawButton
+field_1567,pos
+field_1568,textOverflow
+field_1569,isSelected
+field_1570,subText
+field_1571,name
+param_3581,bounds
+param_3582,isHover
+param_3583,isEnabled
+class_145,PuzzleButton
+method_335,GetBounds
+method_336,DrawButton
+field_1572,pos
+# param_2028,textOverflow -!- this is actually a field
+field_1573,isComplete
+field_1574,isSelected
+field_1575,name
+param_3585,isHover
+param_3586,isEnabled
+class_146,HistogramRenderer
+method_337,RenderGraphLine
+method_338,AsPrevious
+method_339,AsNow
+method_340,AsBest
+method_341,FormatHistogramData
+method_342,AsBestBold
+method_343,RenderLeaderboard
+field_1576,bounds
+field_1577,data
+field_1578,bestScore
+param_1346,value
+param_2422,scale
+param_3587,value
+param_3588,value
+param_3590,data
+param_3591,value
+param_3592,leaderboardData
+class_147,BasicTextButton
+method_344,GetBounds
+method_345,DrawButton
+field_1579,pos
+field_1580,text
+param_3593,bounds
+param_3594,isHover
+param_3595,isEnabled
+class_148,FancyTextButton
+method_346,GetBounds
+method_347,DrawButton
+field_1581,text
+field_1582,pos
+field_1583,font
+field_1584,lineWidth
+param_3596,bounds
+param_3597,isHover
+param_3598,isEnabled
+# class_149,
+# method_348,
+# method_349,
+# method_350,
+## NestedClasses
+# class_150,
+method_351,GetBounds
+method_352,DrawButton
+# field_1585,
+# field_1586,
+# class_151,
+method_353,GetBounds
+method_354,DrawButton
+# field_1587,
+# field_1588,
+# field_1589,
+# class_152,
+method_355,GetBounds
+method_356,DrawButton
+# field_1590,
+# field_1591,
+# field_1592,
+
+## HistogramData
+class_132,HistogramData
+field_1480,type
+field_1481,saveKey
+field_1482,scoreData
+field_1483,best
+field_1484,score
+field_1485,now
+
+## ScoreData
+class_182,ScoreData
+# field_1725,
+field_1726,scores
+
+## Scrollbar
+class_262,Scrollbar
+method_703,GetHeight
+method_704,SetHeight
+method_705,GetMaxScrollOffset
+method_706,GetOffset
+method_707,SetHeightAndClamp
+method_708,ClampOffset
+#ethod_709,RenderScrollbar
+method_710,DisposeContext
+field_2078,scrollOffset
+field_2079,height
+field_2080,scrollbarRenderTarget
+field_2081,handleHeightDelta
+field_2082,isControlling
+field_2083,startMousePos
+field_2084,startOffset
+# param_1799,height -!- shared with SimpleSolutionEditor
+param_4193,height
+param_4194,pos
+param_4195,barSize
+param_4196,xOffset
+param_4197,_handleHeightDelta
+param_4198,context
+## NestedClasses
+class_263,ScrollbarContext
+method_711,Dispose
+field_2085,scrollbar
+# field_2086,
+field_2087,contextDisposer
+field_2088,pos
+field_2089,ContainsMouse
+
+## ScreenTransition
+class_91,ScreenTransition
+method_53,Empty
+method_54,FadeOutPush
+method_55,FadeInPush
+method_56,FadeOutPop
+method_57,FadeInPop
+method_58,IsEmpty
+method_59,IsFadeOutPush
+method_60,IsFadeInPush
+method_61,IsFadeOutPop
+method_62,IsFadeInPop
+method_63,ToEmpty
+method_64,ToFadeOutPush
+method_65,ToFadeInPush
+method_66,ToFadeOutPop
+method_67,ToFadeInPop
+method_68,ApplyAction
+method_69,ApplyAction
+method_70,ApplyAction
+method_71,ApplyAction
+method_72,ApplyAction
+method_73,ActionOnEach
+field_902,type
+field_903,primaryTransition
+field_904,screen
+field_905,secondaryTransition
+field_906,amount
+# param_69,_type -!- shared with BondType
+param_70,outTrans
+param_71,_screen
+param_72,inTrans
+param_73,inTrans
+param_74,_amount
+param_75,outTrans
+param_76,inTrans
+param_77,inTrans
+param_78,action
+param_79,action
+param_80,action
+param_81,action
+param_82,action
+param_83,action1
+param_84,action2
+param_85,action3
+param_86,action4
+param_87,action5
+## NestedClasses
+enum_4,TransitionType
+struct_10,FadeOutPushScrTrans
+field_907,outTrans
+field_908,newScreen
+field_909,inTrans
+struct_11,FadeOutPopScrTrans
+field_910,amount
+field_911,outTrans
+field_912,inTrans
+struct_12,FadeInPopScrTrans
+field_913,inTrans
+struct_13,FadeInPushScrTrans
+field_914,inTrans
+struct_14,EmptyScrTrans
+
+## Transitions
+method_2181,Init
+method_2182,AfterInit
+field_4104,raise
+field_4105,sink
+field_4106,toBlack
+field_4107,fromBlack
+field_4108,toBlackSlow
+field_4109,fromBlackSlow
+## LambdaGeneratedClass
+method_2183,RaiseTransitionTransform
+method_2184,RaiseTransitionFade
+method_2185,SinkTransitionTransform
+method_2186,SinkTransitionFade
+method_2187,ToBlackTransitionTransform
+method_2188,ToBlackTransitionFade
+method_2189,FromBlackTransitionTransform
+method_2190,FromBlackTransitionFade
+method_2191,ToBlackTransitionTransform2
+method_2192,ToBlackTransitionFade2
+method_2193,FromBlackTransitionTransform2
+method_2194,FromBlackTransitionFade2
+param_5770,t
+param_5771,t
+param_5772,t
+param_5773,t
+param_5774,t
+param_5775,t
+param_5776,t
+param_5777,t
+param_5778,t
+param_5779,t
+param_5780,t
+
+## Transition
+class_124,Transition
+field_1458,length
+field_1459,transform
+field_1460,fade
+field_1461,sound
+
+
+## Log
+method_1062,LogMessage
+method_1063,LogMessage
+method_1064,LogMessage
+method_1065,LogMessageWithTime
+method_1066,LogData
+method_1067,LogDataWithReplacement
+param_4723,message
+param_4724,format
+param_4725,args
+param_4726,color
+param_4727,format
+param_4728,args
+param_4729,time
+param_4730,message
+param_4731,name
+param_1776,data
+param_1950,name
+param_4731,data
+## LambdaGeneratedClass
+method_1068,ToString
+param_4733,obj
+
+## LogManager
+class_120,LogManager
+# method_221, -!- shared with SolutionEditorPanel
+method_222,showLogWindow
+method_223,MakeEntry
+method_224,MakeDataEntry
+method_225,RenderFrame
+method_226,RenderText
+method_227,RenderButton
+field_1451,logWindow
+field_1452,entries
+field_1453,dataEntries
+field_1454,_lock
+param_3296,color
+param_3297,message
+param_3298,name
+param_3299,data
+param_3300,text
+param_3301,backgroundColor
+# param_3302,offset -!- shared with TextureRenderer
+param_3303,name
+param_3304,pos
+## NestedClasses
+class_121,NameMatcher
+method_228,IsMatchingName
+field_1455,defaultName
+# param_3305,dataEntry -!- shared with Instructions
+
+## LogEntry
+class_101,LogEntry
+field_965,message
+field_966,creationTime
+field_967,color
+
+## DataLogEntry
+class_231,DataLogEntry
+field_1959,name
+field_1960,data
+field_1961,lastUpdateTime
+
+## AppInit
+class_119,AppInit
+method_220,Main
+field_1445,mutex
+param_3295,args
+
+## GameLogic
+method_934,GetLogManager
+method_935,SetLogManager
+method_936,GetScreenTransition
+method_937,SetScreenTransition
+method_938,GetLastScreen
+method_939,GetBeforLastScreen
+method_942,GameInit
+method_945,PushScreen
+method_946,PushScreen
+method_947,PopScreen
+method_948,PopScreens
+method_949,PopScreen
+method_950,PopScreens
+method_951,ForceRemoveScreenType
+method_952,HasScreenOfType
+method_956,ContentInit
+method_957,GameLoop
+method_960,CreateWindow
+method_961,GetCursorAsset
+method_963,GameUnload
+orig_method_942,orig_GameInit
+orig_method_956,orig_ContentInit
+orig_method_963,orig_GameUnload
+field_2434,instance
+field_2435,rendererType
+field_2436,windows
+field_2437,gameWindow
+field_2443,musicManager
+field_2444,time
+field_2453,logManager
+field_2454,screenStack
+field_2455,screenTransition
+field_2456,timeSinceTransition
+field_2475,gameLogic
+field_2476,lastDeltaTime
+# param_1288,logManager -!- shared with Part
+param_1704,transition
+param_4614,screen
+param_4615,outTransition
+param_4616,inTransition
+param_4617,screen
+param_4618,outTransition
+param_4619,inTransition
+param_4620,amount
+param_4621,outTransition
+param_4622,inTransition
+param_4623,amount
+param_4626,title
+param_4627,width
+param_3141,height
+param_4628,center
+param_4629,path
+param_4630,texture
+param_4631,exitCode
+param_4644,transition
+## NestedClasses
+class_324,ScreenUpdater
+method_974,UpdateScreen
+field_2477,updateFunct
+param_4642,screen
+param_4643,hasInputAccess
+class_325,SimStateGetter
+method_975,GetSimState
+field_2478,solEditScr
+# param_3775,part -!- shared with Instructions
+## LambdaGeneratedClass
+class_326,LambdaGeneratedClass2
+method_988,IsMatchingScreenType
+param_4657,screen
+
+## AppConsts
+class_110,AppConsts
+field_1002,title
+field_1006,steamAppId
+field_1007,minWindowSize
+field_1009,use_CONTEXT_PROFILE_MASKs
+field_1010,isDevEnv
+field_1012,requireSteam
+field_1014,showLogWindow
+field_1015,fullscreenWindowes
+field_1020,resizableWindows
+field_1022,allowPseudo
+field_1026,logSimulationState
+
+## Platform
+enum_131,Platform
+
+
+## SDL
+struct_103,SDL_Event
+enum_160,SDLKey
+enum_167,SDL_WindowFlags
+enum_175,SDL_EventType
+# 0      : SDL_FIRSTEVENT
+# 0x100  : SDL_QUIT
+# 0x101  : SDL_APP_TERMINATING
+# 0x102  : SDL_APP_LOWMEMORY
+# 0x103  : SDL_APP_WILLENTERBACKGROUND
+# 0x104  : SDL_APP_DIDENTERBACKGROUND
+# 0x105  : SDL_APP_WILLENTERFOREGROUND
+# 0x106  : SDL_APP_DIDENTERFOREGROUND
+# 0x107  : SDL_LOCALECHANGED
+# 0x150  : SDL_DISPLAYEVENT
+# 0x200  : SDL_WINDOWEVENT
+# 0x201  : SDL_SYSWMEVENT
+# 0x300  : SDL_KEYDOWN
+# 0x301  : SDL_KEYUP
+# 0x302  : SDL_TEXTEDITING
+# 0x303  : SDL_TEXTINPUT
+# 0x304  : SDL_KEYMAPCHANGED
+# 0x305  : SDL_TEXTEDITING_EXT
+# 0x400  : SDL_MOUSEMOTION
+# 0x401  : SDL_MOUSEBUTTONDOWN
+# 0x402  : SDL_MOUSEBUTTONUP
+# 0x403  : SDL_MOUSEWHEEL
+# 0x600  : SDL_JOYAXISMOTION
+# 0x601  : SDL_JOYBALLMOTION
+# 0x602  : SDL_JOYHATMOTION
+# 0x603  : SDL_JOYBUTTONDOWN
+# 0x604  : SDL_JOYBUTTONUP
+# 0x605  : SDL_JOYDEVICEADDED
+# 0x606  : SDL_JOYDEVICEREMOVED
+# 0x607  : SDL_JOYBATTERYUPDATED
+# 0x650  : SDL_CONTROLLERAXISMOTION
+# 0x651  : SDL_CONTROLLERBUTTONDOWN
+# 0x652  : SDL_CONTROLLERBUTTONUP
+# 0x653  : SDL_CONTROLLERDEVICEADDED
+# 0x654  : SDL_CONTROLLERDEVICEREMOVED
+# 0x655  : SDL_CONTROLLERDEVICEREMAPPED
+# 0x656  : SDL_CONTROLLERTOUCHPADDOWN
+# 0x657  : SDL_CONTROLLERTOUCHPADMOTION
+# 0x658  : SDL_CONTROLLERTOUCHPADUP
+# 0x659  : SDL_CONTROLLERSENSORUPDATE
+# 0x65A  : SDL_CONTROLLERUPDATECOMPLETE_RESERVED_FOR_SDL3
+# 0x65B  : SDL_CONTROLLERSTEAMHANDLEUPDATED
+# 0x700  : SDL_FINGERDOWN
+# 0x701  : SDL_FINGERUP
+# 0x702  : SDL_FINGERMOTION
+# 0x800  : SDL_DOLLARGESTURE
+# 0x801  : SDL_DOLLARRECORD
+# 0x802  : SDL_MULTIGESTURE
+# 0x900  : SDL_CLIPBOARDUPDATE
+# 0x1000 : SDL_DROPFILE
+# 0x1001 : SDL_DROPTEXT
+# 0x1002 : SDL_DROPBEGIN
+# 0x1003 : SDL_DROPCOMPLETE
+# 0x1100 : SDL_AUDIODEVICEADDED
+# 0x1101 : SDL_AUDIODEVICEREMOVED
+# 0x1200 : SDL_SENSORUPDATE
+# 0x2000 : SDL_RENDER_TARGETS_RESET
+# 0x2001 : SDL_RENDER_DEVICE_RESET
+# 0x7F00 : SDL_POLLSENTINEL
+# 0x8000 : SDL_USEREVENT
+# 0xFFFF : SDL_LASTEVENT
+
+
+## Misc.
+class_301,LambdaGeneratedClass
+field_2343,instance
