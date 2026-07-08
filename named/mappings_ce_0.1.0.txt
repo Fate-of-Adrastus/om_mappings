@@ -256,12 +256,12 @@ field_1623,molecule
 field_1624,hexPath
 param_3654,name
 param_8106,type
-param_3655,cord1
-param_3656,cord2
-param_3657,cord1
-param_3658,cord2
-param_8451,cord1
-param_8452,cord2
+param_3655,offsetQ
+param_3656,offsetR
+param_3657,offsetQ
+param_3658,offsetR
+param_8451,offsetQ
+param_8452,offsetR
 param_3659,builder
 
 
@@ -933,8 +933,8 @@ method_494,GetWorldIndices
 method_495,ToWorldPos
 field_1746,index
 field_1747,chamber
-param_3801,cord1
-param_3802,cord2
+param_3801,q
+param_3802,r
 param_3803,chamber
 param_8133,index
 
@@ -953,8 +953,8 @@ class_128,PlacedVial
 field_1471,index
 field_1472,isTopConnected
 field_1473,textures
-param_3324,cord1
-param_3325,cord2
+param_3324,q
+param_3325,r
 param_3326,isTopConnected
 param_3327,textures
 
@@ -4144,8 +4144,8 @@ field_1880,rotation
 ## HexGrid
 class_187,HexGrid
 method_490,GetHexWidth
-method_491,ToWorldCord
-method_492,ToWorldCord
+method_491,ToWorldCoords
+method_492,ToWorldCoords
 method_493,GetHexDistance
 field_1742,standardGrid
 field_1743,solitaireGrid
