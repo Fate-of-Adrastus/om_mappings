@@ -1245,7 +1245,7 @@ field_1540,glyphTiles
 field_1542,isTrack
 field_1541,isInput
 field_1543,isConduit
-field_1544,subatoms
+field_1544,attachedAtoms
 field_1545,isSubpart
 field_1546,canRotateInEditor
 field_1547,baseTexture
@@ -1505,7 +1505,7 @@ param_5390,part
 param_5391,part
 param_5392,offset
 param_5393,holdingParts
-param_5394,allowPartSubatoms
+param_5394,allowPartAttachedAtoms
 param_5395,part
 param_5396,pivot
 param_5397,rotation
