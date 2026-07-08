@@ -27,13 +27,13 @@ field_2285,elementalName
 field_2286,name
 field_4538,symbol
 field_4539,shadow
-field_2289,cardinallikeTextures
-field_4540,saltlikeTextures
-field_2291,metallikeTextures
-field_2292,quintessencelikeTextures
-field_2293,isCardinallike
-field_4541,isMetallike
-field_2296,isQuintessencelike
+field_2289,glassyTextures
+field_4540,matteTextures
+field_2291,metallicTextures
+field_2292,prismaticTextures
+field_2293,isGlassy
+field_4541,isMetallic
+field_2296,isPrismatic
 field_2295,isQuicksilver
 field_2297,successor
 field_4542,predecessor
@@ -75,25 +75,25 @@ param_8547,lower
 field_4526,upper
 field_4527,lower
 
-## SaltlikeTextures
-class_106,SaltlikeTextures
+## MatteAtomTextures
+class_106,MatteAtomTextures
 field_994,diffuse
 field_995,shade
 
-## CardinallikeTextures
-class_5,CardinallikeTextures
+## GlassyAtomTextures
+class_5,GlassyAtomTextures
 field_8,base1
 field_9,fog
 field_10,base2
 
-## MetallikeTextures
-class_8,MetallikeTextures
+## MetallicAtomTextures
+class_8,MetallicAtomTextures
 field_13,diffuse
 field_14,lightramp
 field_15,rimlight
 
-## QuintessencelikeTextures
-class_229,QuintessencelikeTextures
+## PrismaticAtomTextures
+class_229,PrismaticAtomTextures
 field_1950,base1
 field_1951,colors
 field_1952,mask
@@ -3071,11 +3071,11 @@ param_8308,index
 class_411,AtomManager
 method_1898,IsQuintessence
 method_1899,IsQuintessence2
-method_1900,IsCardinallike
+method_1900,IsGlassy
 field_3879,gameplayF
 field_3880,isQuintessence
 field_3881,isQuintessence2
-field_3882,isCardinallike
+field_3882,isGlassy
 param_8309,index
 param_8310,index
 param_8311,index
