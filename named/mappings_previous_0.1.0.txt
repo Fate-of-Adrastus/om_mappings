@@ -2,7 +2,7 @@
 method_804,GetCopy
 field_2275,atomType
 field_2276,transmutationEffect
-param_4420,_atomType
+param_4420,atomType
 
 ## AtomReference
 field_2277,molecule
@@ -11,11 +11,11 @@ field_2280,atomType
 field_2279,atom
 field_2281,doesMoleculeExist
 field_2282,isHeldByArm
-param_4421,_molecule
-param_4422,_pos
-param_4423,_atomType
-param_4424,_atom
-param_4425,_isHeldByArm
+param_4421,molecule
+param_4422,pos
+param_4423,atomType
+param_4424,atom
+param_4425,isHeldByArm
 
 ## AtomType
 field_2283,byteId
@@ -97,9 +97,9 @@ field_2186,type
 field_2187,index1
 field_2188,index2
 field_2189,effects
-param_2048,_type
-param_4280,_index1
-param_4281,_index2
+param_2048,type
+param_4280,index1
+param_4281,index2
 
 ## BondTextures
 class_167,BondTextures
@@ -158,7 +158,7 @@ field_2642,atomDict
 field_2643,bonds
 field_2644,compressedMolecule
 field_2645,repetitionIndexQ
-param_4822,_repetitionIndexQ
+param_4822,repetitionIndexQ
 param_4823,atom
 param_4824,index
 param_4825,atom
@@ -250,16 +250,16 @@ field_2318,hoverIcon
 field_2319,gemIcon
 field_2320,buttonOffset
 field_2321,isLeftAligned
-param_4465,_title
-param_4466,_name
-param_691,_areaName
-param_4467,_background
-param_4468,_lockedIcon
-param_4469,_unlockedIcon
-param_4470,_hoverIcon
-param_4471,_gemIcon
-param_4472,_buttonOffset
-param_4473,_isLeftAligned
+param_4465,title
+param_4466,name
+param_691,areaName
+param_4467,background
+param_4468,lockedIcon
+param_4469,unlockedIcon
+param_4470,hoverIcon
+param_4471,gemIcon
+param_4472,buttonOffset
+param_4473,isLeftAligned
 
 ## CampaignItem
 method_825,IsComplete
@@ -275,13 +275,13 @@ field_2326,requirement
 field_2327,dialogue
 field_2328,track
 field_2329,fanfare
-param_4474,_locationId
-param_4475,_locationName
-param_4476,_locationType
-param_4477,_puzzle
-param_4478,_requirement
-param_4479,_track
-param_4480,_fanfare
+param_4474,locationId
+param_4475,locationName
+param_4476,locationType
+param_4477,puzzle
+param_4478,requirement
+param_4479,track
+param_4480,fanfare
 
 ## Campaigns
 method_828,Init
@@ -328,19 +328,19 @@ class_166,PuzzleSelectEvent
 
 ## ChapterUnlockEvent
 field_2350,chapter
-param_4498,_chapter
+param_4498,chapter
 param_4499,obj
 
 ## UIUnlockEvent
 class_213,UIUnlockEvent
 field_1462,campaignItem
-param_3317,_campaignItem
+param_3317,campaignItem
 param_3318,obj
 
 ## UICompleteEvent
 class_125,UICompleteEvent
 field_1887,campaignItem
-param_3886,_campaignItem
+param_3886,campaignItem
 param_3887,obj
 
 ## LocationType
@@ -363,12 +363,12 @@ class_174,LocReqNothing
 ## LocReqCompleteLoc
 class_243,LocReqCompleteLoc
 field_2005,locationId
-param_3995,_locationId
+param_3995,locationId
 
 ## LocReqPuzzlesComplete
 class_265,LocReqPuzzlesComplete
 field_2092,requiredMinimum
-param_1705,_requiredMinimum
+param_1705,requiredMinimum
 
 
 ## JournalVolume
@@ -401,7 +401,7 @@ class_264,Dialogue
 method_712,GetVignette
 field_2090,dialoguePath
 field_2091,vignetteDict
-param_4199,_dialoguePath
+param_4199,dialoguePath
 
 ## StoryPanel
 method_2170,GetCompletion
@@ -421,9 +421,9 @@ field_4092,scrollbar
 field_4094,nextTimer
 field_4095,scrollbarInfo
 field_4096,fadeInTimer
-param_5756,_dialouge
-param_5757,_addOptionalTag
-param_5758,_isAfterInit
+param_5756,dialouge
+param_5757,addOptionalTag
+param_5758,isAfterInit
 param_5759,deltaTime
 param_5760,pos
 param_5761,completionAmount
@@ -453,8 +453,8 @@ field_4102,LGen_trimString
 # field_2674,LGen_getLineFields -!- shared with Solution
 # field_2675,LGen_getLineFields2 -!- shared with Solution
 param_5654,str
-# param_5013,_event -!- shared with PuzzleInfoScreen
-param_4650,_event
+# param_5013,event -!- shared with PuzzleInfoScreen
+param_4650,event
 
 ## Vignette
 field_4123,parseCancelCode
@@ -495,7 +495,7 @@ method_2224,ActionOnEach
 field_4130,primary
 # field_1431,secondary -!- shared with MaybeCreator
 field_4132,text
-param_5791,_type
+param_5791,type
 param_5792,portrait
 # field_1575,line -!- this is actually a parameter!
 param_5793,portrait
@@ -535,11 +535,11 @@ field_1955,largeTexture
 field_1956,smallTexture
 field_1957,tint
 # field_1958,	onlyTrueFor Anataeus
-param_3965,_name
-param_3966,_largeTexture
-param_3967,_smallTexture
-# param_3404,_tint -!- shared with class_135
-# param_3968,_
+param_3965,name
+param_3966,largeTexture
+param_3967,smallTexture
+# param_3404,tint -!- shared with class_135
+# param_3968,
 
 
 
@@ -549,21 +549,21 @@ field_2814,index
 field_2815,gaugeOffset
 param_5016,atom
 param_5017,atom
-param_5018,_index
-param_5019,_gaugeOffset
+param_5018,index
+param_5019,gaugeOffset
 param_5020,atom1
 param_5021,atom2
 param_5022,atom1
 param_5023,atom2
-param_5024,_index
-param_5025,_gaugeOffset
-param_5026,_molecule
-param_5027,_molecule
-param_5028,_index
-param_5029,_gaugeOffset
-param_5030,_molecule
-param_5031,_index
-param_5032,_gaugeOffset
+param_5024,index
+param_5025,gaugeOffset
+param_5026,molecule
+param_5027,molecule
+param_5028,index
+param_5029,gaugeOffset
+param_5030,molecule
+param_5031,index
+param_5032,gaugeOffset
 
 ## Puzzle
 method_1246,VerifyIONames
@@ -778,7 +778,7 @@ field_1746,index
 field_1747,chamber
 param_3801,cord1
 param_3802,cord2
-param_3803,_chamber
+param_3803,chamber
 param_3652,index
 
 ## PlacedPipe
@@ -789,7 +789,7 @@ param_3285,pipe1_cord1
 param_3286,pipe1_cord2
 param_3287,pipe2_cord1
 param_3288,pipe2_cord2
-param_3289,_pipeIndices
+param_3289,pipeIndices
 
 ## PlacedVial
 class_128,PlacedVial
@@ -798,8 +798,8 @@ field_1472,isTopConnected
 field_1473,textures
 param_3324,cord1
 param_3325,cord2
-param_3326,_isTopConnected
-param_3327,_textures
+param_3326,isTopConnected
+param_3327,textures
 
 
 
@@ -867,7 +867,7 @@ method_855,FromSolution
 orig_method_853,orig_GetLoopedCycle
 field_2368,programDict
 field_2369,startIndex
-param_4505,_programDict
+param_4505,programDict
 param_4506,part
 param_4507,cycle
 param_4508,part
@@ -950,15 +950,15 @@ field_1745,program
 struct_17,IndexedInstruction
 field_1421,index
 field_1422,instruction
-param_3259,_index
-param_3260,_instruction
+param_3259,index
+param_3260,instruction
 
 ## InstructionReference
 struct_8,InstructionReference
 field_50,part
 field_51,instructionIndex
-param_40,_part
-param_41,_instructionIndex
+param_40,part
+param_41,instructionIndex
 
 
 ## Part
@@ -1027,20 +1027,20 @@ field_2702,programIndex
 field_2703,pipeId
 field_2704,pipeTiles
 field_2705,pipeConnections
-param_4902,_type
-param_4903,_isFixed
-param_4904,_type
-param_4905,_index
-param_437,_rotation
-# param_1288,_armLength -!- shared with GameLogic
-param_1796,_inputOutputIndex
-param_2840,_requiredCount
-param_4906,_isFixed
+param_4902,type
+param_4903,isFixed
+param_4904,type
+param_4905,index
+param_437,rotation
+# param_1288,armLength -!- shared with GameLogic
+param_1796,inputOutputIndex
+param_2840,requiredCount
+param_4906,isFixed
 param_4907,tiles
 param_4908,solution
 param_4909,parent
 param_4910,solution
-param_4911,_inputOutputIndex
+param_4911,inputOutputIndex
 param_4912,collectTo
 param_4913,index
 param_4914,solution
@@ -1058,8 +1058,8 @@ param_4925,rotation
 param_4511,solution
 param_4926,rotation
 param_4927,armLenght
-param_4928,_pipeTiles
-param_4929,_type
+param_4928,pipeTiles
+param_4929,type
 ## NestedClasses
 class_360,AsyncStateMachine
 
@@ -1153,10 +1153,10 @@ field_1920,index1
 field_1920,index2
 field_1922,bondType
 field_1923,uniqueAtom
-param_3903,_index1
-param_3904,_index1
-# param_69,_bondType -!- shared with ScreenTransition
-param_3905,_uniqueAtom
+param_3903,index1
+param_3904,index1
+# param_69,bondType -!- shared with ScreenTransition
+param_3905,uniqueAtom
 
 ## PipeHexConnection
 struct_36,PipeHexConnection
@@ -1294,10 +1294,10 @@ field_3832,collSizeEmergingAtom
 field_3833,collSizePartBase
 field_3834,collSizeSubpart
 field_3835,collSizeChamber
-param_5362,_cycle
+param_5362,cycle
 param_5363,programGrid
 param_5364,inCycle
-param_5365,_solutionEditor
+param_5365,solutionEditor
 param_5369,isCycleStart
 param_5370,molecule
 param_5371,partList
@@ -1344,7 +1344,7 @@ field_3837,movementType
 field_3838,translateTo
 field_3839,rotationPivot
 field_3840,rotation
-param_5409,_holder
+param_5409,holder
 class_402,ReferredPart
 method_1859,IsCorrespondingPipe
 field_3841,part
@@ -1373,8 +1373,8 @@ struct_122,Collider
 field_3850,type
 field_3851,center
 field_3852,radius
-param_5414,_type
-param_5415,_center
+param_5414,type
+param_5415,center
 ## LambdaGeneratedClass
 method_1863,IsFire
 method_1864,IsWater
@@ -1714,10 +1714,10 @@ field_4043,simEndlessRunSpeed
 field_4044,simStepSpeed
 field_4045,defaultStepTime
 field_4046,defaultCloseEditorMeter
-param_5698,_solution
-param_5699,_musicTrack
-param_5700,_fanfare
-param_5701,_simulationError
+param_5698,solution
+param_5699,musicTrack
+param_5700,fanfare
+param_5701,simulationError
 param_5702,useTip
 param_5703,deltaTime
 param_5704,note
@@ -1775,7 +1775,7 @@ method_358,IsMouseInPanel
 # method_221,RenderFrame -!- shared with LogManager
 method_361,PanPanel
 field_2007,solEditScr
-param_3996,_solEditScr
+param_3996,solEditScr
 param_3997,deltaTime
 param_3998,panningMode
 param_3999,startPos
@@ -1954,9 +1954,9 @@ field_1793,simulation
 field_1794,cycleTime
 field_1795,cycleLength
 field_1796,cyclesPerSec
-param_3809,_solution
-param_3810,_cycleLength
-param_3811,_cyclesPerSec
+param_3809,solution
+param_3810,cycleLength
+param_3811,cyclesPerSec
 # param_1799,sim -!- shared with Scrollbar
 param_3812,advaceByHalfCycles
 param_3813,part
@@ -2093,11 +2093,11 @@ field_3921,orderedProgrammables
 field_3922,fileExtension
 field_3923,solutionVersion
 # field_3931,
-param_5473,_puzzle
+param_5473,puzzle
 param_5474,solutionName
 param_5475,solutionDiscName
-param_5476,_creationTime
-param_5477,_puzzle
+param_5476,creationTime
+param_5477,puzzle
 # param_5478,
 # param_5479,
 param_5480,part
@@ -2133,7 +2133,7 @@ param_5508,data
 param_5509,nameOnDisc
 param_5510,creationTime
 param_5511,redoAction
-param_5512,_name
+param_5512,name
 param_5513,puzzle
 param_4652,puzzle
 param_5514,part
@@ -2173,7 +2173,7 @@ field_3934,LGen_getSerialNumber
 param_5517,part
 param_5518,part
 param_5519,boolDict
-param_5520,_bool
+param_5520,bool
 param_5521,part
 param_2317,part
 param_5522,part
@@ -2200,7 +2200,7 @@ method_17,Add
 method_18,Remove
 field_11,selection
 field_12,solution
-param_24,_solution
+param_24,solution
 param_25,part
 param_26,part
 param_27,part
@@ -2239,7 +2239,7 @@ method_148,GetElapsed
 field_1000,startTime
 field_1001,timescaleType
 param_148,solutionEditor
-param_149,_timescaleType
+param_149,timescaleType
 param_150,simTime
 param_151,realTime
 param_152,solutionEditor
@@ -2252,9 +2252,9 @@ field_2301,offset
 field_2302,completed
 param_4429,solutionEditor
 param_4430,timescaleType
-param_4431,_effectTextures
-param_4432,_timelength
-param_4433,_offset
+param_4431,effectTextures
+param_4432,timelength
+param_4433,offset
 
 ## GlyphEffect
 class_228,GlyphEffect
@@ -2265,11 +2265,11 @@ field_1948,textureOffset
 field_1949,rotationAngle
 param_3958,solutionEditor
 param_3959,timescaleType
-param_3960,_position
-param_3961,_effectTextures
-param_3962,_timelength
-param_3963,_textureOffset
-param_3964,_rotationAngle
+param_3960,position
+param_3961,effectTextures
+param_3962,timelength
+param_3963,textureOffset
+param_3964,rotationAngle
 
 ## TransmutationEffect
 class_168,TransmutationEffect
@@ -2279,9 +2279,9 @@ field_1646,effectTextures
 field_1647,timelength
 param_3764,solutionEditor
 param_3765,timescaleType
-param_3766,_renderMode
-param_3767,_originalAtom
-param_3768,_effectTextures
+param_3766,renderMode
+param_3767,originalAtom
+param_3768,effectTextures
 param_3769,timelength
 
 ## ConsumptionEffect
@@ -2289,8 +2289,8 @@ class_286,ConsumptionEffect
 field_2231,pos
 field_2232,type
 param_4397,solutionEditor
-param_4398,_pos
-param_4399,_type
+param_4398,pos
+param_4399,type
 
 ## EffectTimescaleType
 enum_7,EffectTimescaleType
@@ -2347,7 +2347,7 @@ class_114,PartPlaceInputMode
 class_2,PanningInputMode
 field_2,pannedItem
 field_3,startMousePos
-param_13,_pannedItem
+param_13,pannedItem
 param_14,solEditScr
 param_15,solEditScr
 param_16,solEditScr
@@ -2443,7 +2443,7 @@ field_3871,solitaireStat
 field_3872,storyPanel
 field_3873,highlightedAtomType
 field_3874,isAdvanced
-param_5432,_isAdvanced
+param_5432,isAdvanced
 param_5433,state
 param_5434,isOpening
 param_5435,deltaTime
@@ -2548,7 +2548,7 @@ field_3902,primaryTimer
 field_3903,completionCount
 field_3904,secondaryTimers
 field_3905,index
-param_1435,_state
+param_1435,state
 param_5457,currentState
 param_5458,newState
 param_5459,marbleRevelationTimer
@@ -2717,8 +2717,8 @@ param_5067,from
 param_5068,texture
 param_5069,vertecies
 param_5070,elements
-param_5071,_vertexBufferSize
-param_5072,_elementArrayBufferSize
+param_5071,vertexBufferSize
+param_5072,elementArrayBufferSize
 param_5073,mesh
 param_5074,vertecies
 param_5075,elements
@@ -2800,8 +2800,8 @@ method_773,RequiresScaling
 field_2191,HiDPIscaling
 field_2192,window
 field_2193,renderWindow
-param_4282,_window
-param_4283,_renderWindow
+param_4282,window
+param_4283,renderWindow
 param_4284,size
 param_4286,color
 param_4287,toFullscreen
@@ -3131,7 +3131,7 @@ field_1735,lightTexture
 # field_1736,
 # field_1737,
 # field_1738,
-param_2481,_lightTexture
+param_2481,lightTexture
 # param_3790,
 # param_3791,
 # param_3792,
@@ -3237,7 +3237,7 @@ param_3694,t
 param_3695,array
 param_3696,value
 # param_3699,hexValue -!- shared with Renderer
-param_3700,_char
+param_3700,char
 param_3701,value
 param_3702,watch
 param_1068,imageFormat
@@ -3262,7 +3262,7 @@ method_493,GetHexDistance
 field_1742,standardGrid
 field_1743,solitaireGrid
 field_1744,hexSize
-param_3795,_hexSize
+param_3795,hexSize
 param_3796,index
 param_3797,offset
 param_3798,index
@@ -3300,8 +3300,8 @@ param_3347,str
 struct_21,StringWData
 field_1506,str
 field_1507,extraTypeData
-param_3348,_str
-param_3349,_extraTypeData
+param_3348,str
+param_3349,extraTypeData
 
 ## LocString
 method_619,GetTranslated
@@ -3346,22 +3346,22 @@ field_2612,wx
 field_2613,wy
 field_2614,wz
 field_2615,ww
-param_4734,_xx
-param_4735,_xy
-param_4736,_xz
-param_4737,_xw
-param_4738,_yx
-param_4739,_yy
-param_4740,_yz
-param_4741,_yw
-param_4742,_zx
-param_4743,_zy
-param_4744,_zz
-param_4745,_zw
-param_4746,_wx
-param_4747,_wy
-param_4748,_wz
-param_4749,_ww
+param_4734,xx
+param_4735,xy
+param_4736,xz
+param_4737,xw
+param_4738,yx
+param_4739,yy
+param_4740,yz
+param_4741,yw
+param_4742,zx
+param_4743,zy
+param_4744,zz
+param_4745,zw
+param_4746,wx
+param_4747,wy
+param_4748,wz
+param_4749,ww
 param_4750,vec
 param_4751,radians
 param_4752,radians
@@ -3401,8 +3401,8 @@ method_632,IsElement
 field_1997,start
 field_1998,end
 field_1999,empty
-param_3989,_start
-param_3990,_end
+param_3989,start
+param_3990,end
 param_3991,start
 param_3992,length
 param_2120,value
@@ -3412,7 +3412,7 @@ class_240,PointSampledCurve
 method_628,GetYOnCurve
 method_629,InterpolateWithCurve
 field_1996,points
-param_3985,_points
+param_3985,points
 param_3986,x
 # param_3670,start -!- shared with Utils
 param_3987,end
@@ -3431,7 +3431,7 @@ method_702,GetList
 field_2068,capacity
 field_2069,list
 field_2070,selector
-param_4190,_capacity
+param_4190,capacity
 param_4191,item
 param_4192,item
 
@@ -3463,8 +3463,8 @@ param_3872,item
 class_179,Container
 generic_11,T
 method_488,SetContent
-param_2469,_value
-param_3783,_value
+param_2469,value
+param_3783,value
 param_3784,container
 field_1711,value
 
@@ -3478,15 +3478,15 @@ method_1090,GetValueWDefault
 method_1091,GetMaybeWDefault
 method_1092,FunctionOnValue
 method_1093,ActionOnValue
-field_2616,__hasValue
+field_2616,_hasValue
 field_2617,value
-param_4782,_hasValue
-param_2914,_value
-param_4783,_hasValue
-param_4784,_value
-param_4785,_value
-param_4787,_default
-param_4788,_default
+param_4782,hasValue
+param_2914,value
+param_4783,hasValue
+param_4784,value
+param_4785,value
+param_4787,default
+param_4788,default
 param_4790,action
 param_4791,obj
 param_4792,maybe
@@ -3507,7 +3507,7 @@ struct_27,DeltaTime
 method_603,InSeconds
 method_604,InMils
 field_1944,ticks
-param_3950,_ticks
+param_3950,ticks
 param_3951,scaleFactor
 param_3952,delta1
 param_3953,delta2
@@ -3592,8 +3592,8 @@ field_49,fastForward
 class_108,Cursor
 field_998,ptr
 field_999,texture
-param_146,_ptr
-param_147,_texture
+param_146,ptr
+param_147,texture
 
 ## FontAssets
 class_275,FontAssets
@@ -3629,7 +3629,7 @@ param_0,universalFont
 param_1,regular
 param_2,bold
 param_3,italic
-param_4,_fallback
+param_4,fallback
 param_5,regularFileName
 param_6,boldFileName
 param_7,italicFileName
@@ -3637,7 +3637,7 @@ param_8,pointSize
 # param_9,
 # param_10,
 # param_11,
-param_12,_fallback
+param_12,fallback
 
 ## FontStyle
 enum_121,FontStyle
@@ -3720,7 +3720,7 @@ method_694,QuitEditor
 class_257,PuzzleFinishScreen
 field_2064,solEditScr
 field_2065,histogramData
-param_4181,_solEditScr
+param_4181,solEditScr
 param_4183,isOpening
 param_4184,deltaTime
 
@@ -3741,7 +3741,7 @@ field_2042,cinematicsEventLength
 field_2043,timeSinceEvent
 field_2044,actorPosOffset
 field_2045,displayTimePerChar
-param_4171,_dialogue
+param_4171,dialogue
 param_4172,track
 param_4173,isOpening
 param_4174,i
@@ -3818,7 +3818,7 @@ field_2409,dialogue
 field_2410,textBlack
 field_2411,textRed
 field_2412,textFaded
-param_4544,_dialogue
+param_4544,dialogue
 param_4545,isOpening
 param_4546,deltaTime
 ## NestedClasses
@@ -3849,25 +3849,25 @@ field_2631,defaultValue
 field_2632,cursorBlinkTimer
 field_2633,onConfirm
 field_2634,onCancel
-param_4801,_bounds
-param_4802,_hasCornerCutout
-param_4803,_message
-param_4804,_cancelText
-param_4805,_onCancel
-param_4806,_bounds
-param_4807,_hasCornerCutout
-param_4808,_message
-param_4809,_messagePart2
-param_4810,_confirmText
-param_4811,_cancelText
-param_4812,_onConfirm
-param_4813,_onCancel
-param_4814,_bounds
-param_4815,_hasCornerCutout
-param_4816,_message
-param_4817,_defaultValue
-param_4818,_confirmText
-param_4819,_onConfirm
+param_4801,bounds
+param_4802,hasCornerCutout
+param_4803,message
+param_4804,cancelText
+param_4805,onCancel
+param_4806,bounds
+param_4807,hasCornerCutout
+param_4808,message
+param_4809,messagePart2
+param_4810,confirmText
+param_4811,cancelText
+param_4812,onConfirm
+param_4813,onCancel
+param_4814,bounds
+param_4815,hasCornerCutout
+param_4816,message
+param_4817,defaultValue
+param_4818,confirmText
+param_4819,onConfirm
 param_4820,isOpening
 param_4821,deltaTime
 ## NestedClasses
@@ -3883,7 +3883,7 @@ method_2195,PreventLowerScreenUpdates
 field_4120,progressTimerPeriod
 field_4121,bounds
 field_4122,progressTimer
-param_5781,_bounds
+param_5781,bounds
 param_5782,isOpening
 param_5783,deltaTime
 ## LambdaGeneratedClass
@@ -3904,7 +3904,7 @@ field_2787,unusedScrollbar
 field_2788,type
 field_2789,selectedPuzzle
 field_2790,lastSelectionTime
-param_4991,_type
+param_4991,type
 param_4992,isOpening
 param_4993,deltaTime
 param_4994,molecule
@@ -4009,7 +4009,7 @@ field_2806,scrollbar
 field_2807,selectedSolution
 field_2808,lastSelectionTime
 field_2809,histogramData
-param_5006,_puzzle
+param_5006,puzzle
 param_5007,track
 param_5008,fanfare
 param_5009,dialogue
@@ -4165,7 +4165,7 @@ method_1042,MenuButtons
 field_2553,wasInitialized
 field_2554,volumeCount
 field_2555,pushSubmissionScreen
-param_4688,_pushSubmissionScreen
+param_4688,pushSubmissionScreen
 param_4689,isOpening
 param_4690,deltaTime
 param_4691,icon
@@ -4209,8 +4209,8 @@ field_2565,bounds
 field_2566,parsedText
 field_2567,type
 field_2568,alphaTimer
-param_4709,_bounds
-param_4710,_type
+param_4709,bounds
+param_4710,type
 param_4711,isOpening
 param_4712,deltaTime
 ## NestedClasses
@@ -4236,9 +4236,9 @@ field_2658,onSave
 field_2659,selectedAtomType
 field_2660,selectedBondType
 field_2661,errorMessage
-param_4854,_molecule
-param_4855,_isProduct
-param_4856,_onSave
+param_4854,molecule
+param_4855,isProduct
+param_4856,onSave
 param_4857,isOpening
 param_4858,deltaTime
 param_4859,pos
@@ -4491,7 +4491,7 @@ param_4193,height
 param_4194,pos
 param_4195,barSize
 param_4196,xOffset
-param_4197,_handleHeightDelta
+param_4197,handleHeightDelta
 param_4198,context
 ## NestedClasses
 class_263,ScrollbarContext
@@ -4530,12 +4530,12 @@ field_903,primaryTransition
 field_904,screen
 field_905,secondaryTransition
 field_906,amount
-# param_69,_type -!- shared with BondType
+# param_69,type -!- shared with BondType
 param_70,outTrans
-param_71,_screen
+param_71,screen
 param_72,inTrans
 param_73,inTrans
-param_74,_amount
+param_74,amount
 param_75,outTrans
 param_76,inTrans
 param_77,inTrans
@@ -4642,7 +4642,7 @@ method_227,RenderButton
 field_1451,logWindow
 field_1452,entries
 field_1453,dataEntries
-field_1454,_lock
+field_1454,lock
 param_3296,color
 param_3297,message
 param_3298,name
