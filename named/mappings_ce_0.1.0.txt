@@ -106,12 +106,12 @@ enum_126,BondTypeEnum
 class_277,Bond
 method_754,Clone
 field_2186,type
-field_2187,index1
-field_2188,index2
+field_2187,hexPos1
+field_2188,hexPos2
 field_2189,effects
 param_8177,type
-param_4280,index1
-param_4281,index2
+param_4280,hexPos1
+param_4281,hexPos2
 
 ## BondTextures
 class_167,BondTextures
@@ -177,27 +177,27 @@ field_2642,atomDict
 field_2643,bonds
 field_2644,compressedMolecule
 # field_4604,
-field_2645,repetitionIndex
-param_4822,repetitionIndex
+field_2645,repetitionHexPos
+param_4822,repetitionHexPos
 param_4823,atom
-param_4824,index
+param_4824,hexPos
 param_4825,atom
-param_4826,index
-param_4827,index
+param_4826,hexPos
+param_4827,hexPos
 param_4828,repeatCount
-param_4829,index
+param_4829,hexPos
 param_4830,repeatCount
 param_4831,type
-param_4832,index1
-param_4833,index2
+param_4832,hexPos1
+param_4833,hexPos2
 param_4834,type
-param_4835,index1
-param_4836,index2
+param_4835,hexPos1
+param_4836,hexPos2
 param_4837,effects
-param_4838,index1
-param_4839,index2
-param_4840,index1
-param_4841,index2
+param_4838,hexPos1
+param_4839,hexPos2
+param_4840,hexPos1
+param_4841,hexPos2
 param_4842,rotation
 param_4843,center
 param_4844,translation
@@ -210,16 +210,16 @@ param_8621,notAsChange
 ## NestedClasses
 class_348,BondMatcher
 method_1123,IsMatchingBond
-field_2646,testIndex1
-field_2647,testIndex2
+field_2646,testHexPos1
+field_2647,testHexPos2
 param_8246,bond
 class_349,BondEffectAdder
 method_1124,AddEffect
 param_4850,effect
 field_2648,bond
 class_350,ConnectionChecker
-method_1125,IsBondToIndex
-field_2649,index
+method_1125,IsBondToHex
+field_2649,hexPos
 param_4851,bond
 class_351,BondEffectAdder2
 method_1126,AddEffect
@@ -227,8 +227,8 @@ param_117,effect
 field_2650,bond
 class_352,BondMatcher2
 method_1127,IsMatchingBond
-field_2651,testIndex1
-field_2652,testIndex2
+field_2651,testHexPos1
+field_2652,testHexPos2
 param_4852,bond
 class_541,BondPositionChecker
 method_2404,IsMoleculeAtBond
@@ -239,7 +239,7 @@ class_477,LambdaGeneratedClass
 field_4217,instance
 method_2405,IsRepeat
 param_8623,pair
-method_2406,GetIndex
+method_2406,GetHexPos
 param_8624,pair
 
 ## MoleculeBuilder
@@ -605,24 +605,24 @@ param_3968,isLeftSide
 
 ## PuzzleInputOutput
 field_2813,molecule
-field_2814,index
+field_2814,hexPos
 field_2815,gaugeOffset
 param_5016,atom
 param_5017,atom
-param_5018,index
+param_5018,hexPos
 param_5019,gaugeOffset
 param_5020,atom1
 param_5021,atom2
 param_5022,atom1
 param_5023,atom2
-param_5024,index
+param_5024,hexPos
 param_5025,gaugeOffset
 param_5026,molecule
 param_5027,molecule
-param_5028,index
+param_5028,hexPos
 param_5029,gaugeOffset
 param_5030,molecule
-param_5031,index
+param_5031,hexPos
 param_5032,gaugeOffset
 
 ## Puzzle
@@ -632,8 +632,8 @@ method_1248,SaveToFile
 method_1249,LoadFromFile
 method_1250,WriteMoleculeToFile
 method_1251,ReadMoleculeFromFile
-method_1252,WriteHexIndexToFile
-method_1253,ReadHexIndexFromFile
+method_1252,WriteHexPosToFile
+method_1253,ReadHexPosFromFile
 method_1254,HasPermissionForPart
 method_1255,HasPermissionForInstr
 method_2409,HasDRMPermission
@@ -931,12 +931,12 @@ field_1732,mask
 class_189,PlacedChamber
 method_494,GetWorldIndices
 method_495,ToWorldPos
-field_1746,index
+field_1746,hexPos
 field_1747,chamber
 param_3801,q
 param_3802,r
 param_3803,chamber
-param_8133,index
+param_8133,hexPos
 
 ## PlacedConduit
 class_117,PlacedConduit
@@ -950,7 +950,7 @@ param_3289,conduitHexes
 
 ## PlacedVial
 class_128,PlacedVial
-field_1471,index
+field_1471,hexPos
 field_1472,isTopConnected
 field_1473,textures
 param_3324,q
@@ -1125,8 +1125,8 @@ param_41,instructionIndex
 ## Part
 method_1159,GetType
 method_1160,SetType
-method_1161,GetIndex
-method_1162,SetIndex
+method_1161,GetHexPos
+method_1162,SetHexPos
 method_1163,GetRotation
 method_1164,SetRotation
 method_1165,GetArmLength
@@ -1159,7 +1159,7 @@ method_1191,AddTrackFront
 method_1192,AddTrackBack
 method_1193,RemoveTrackFront
 method_1194,RemoveTrackBack
-method_1195,SetIndexAndUpdate
+method_1195,SetHexPosAndUpdate
 method_1196,IsRotatable
 method_1197,RotateBy
 method_1198,SetRotation
@@ -1174,7 +1174,7 @@ field_2689,minLength
 field_2690,maxLength
 field_4607,startConduitId
 field_2691,type
-field_2692,index
+field_2692,hexPos
 field_2693,rotation
 field_2694,armLength
 field_2695,parentPart
@@ -1191,7 +1191,7 @@ field_2705,conduitConnections
 param_4902,type
 param_4903,isFixed
 param_4904,type
-param_4905,index
+param_4905,hexPos
 param_8254,rotation
 param_8255,armLength
 param_8256,inputOutputIndex
@@ -1203,7 +1203,7 @@ param_4909,parent
 param_4910,solution
 param_4911,inputOutputIndex
 param_4912,collectTo
-param_4913,index
+param_4913,hexPos
 param_4914,solution
 param_4915,solution
 param_4916,solution
@@ -1212,7 +1212,7 @@ param_4918,translation
 param_4919,rotation
 param_4920,tile
 param_4921,tile
-param_4922,index
+param_4922,hexPos
 param_4923,solution
 param_4924,solution
 param_4925,rotation
@@ -1256,7 +1256,7 @@ field_1551,permissionCategory
 field_1552,isUnique
 field_1553,isStdOutput
 field_1554,isRepOutput
-param_3537,index
+param_3537,armIndex
 
 ## PartTypes
 class_191,PartTypes
@@ -1303,32 +1303,32 @@ param_3805,type
 ## PreplacedPart
 class_157,PreplacedPart
 field_1597,type
-field_1598,index
+field_1598,hexPos
 field_1599,rotation
 field_1600,armLength
 field_1601,instructions
-field_1602,index
+field_1602,hexPos
 
 ## PuzzlePermissions
 enum_149,PuzzlePermissions
 
 ## BonderInfo
 class_222,BonderInfo
-field_1920,index1
-field_1921,index2
+field_1920,hexPos1
+field_1921,hexPos2
 field_1922,bondType
 field_1923,uniqueAtom
-param_3903,index1
-param_3904,index1
+param_3903,hexPos1
+param_3904,hexPos1
 param_8141,bondType
 param_3905,uniqueAtom
 
 ## ConduitHexConnection
 struct_36,ConduitHexConnection
-field_2273,index1
-field_2274,index2
-param_8191,index1
-param_4417,index2
+field_2273,hexPos1
+field_2274,hexPos2
+param_8191,hexPos1
+param_4417,hexPos2
 
 ## PartOccupationMode
 enum_2,PartOccupationMode
@@ -1500,7 +1500,7 @@ param_5384,molecule2
 # param_8655,                   ??? repeatingOutput
 # param_8656,                   ??? moleculeToTest
 param_5388,part
-param_5389,index
+param_5389,hexPos
 param_5390,part
 param_5391,part
 param_5392,offset
@@ -1510,15 +1510,15 @@ param_5395,part
 param_5396,pivot
 param_5397,rotation
 param_5398,part
-param_8296,index
+param_8296,hexPos
 param_5399,holder1
 param_5400,holder2
 param_5401,singularError
 param_5402,pluralError
 param_5403,errorMessage
-param_5404,pos1
-param_5405,pos2
-param_5406,currentPos
+param_5404,hexPos1
+param_5405,hexPos2
+param_5406,currentHex
 param_5407,isPositiveChange
 param_5408,sound
 # param_8658,
@@ -1772,13 +1772,13 @@ param_5568,part
 param_5569,pos
 param_5570,alpha
 param_5571,intermState
-param_5572,index
+param_5572,hexPos
 param_5573,intermState
 param_5574,offset
 param_4854,molecule
 param_5575,isInput
 param_5576,renderer
-param_5577,index
+param_5577,hexPos
 # param_8686,
 # param_8687,
 # param_8688,
@@ -2323,7 +2323,7 @@ param_8218,pos
 param_4568,isHover
 param_8456,molecule
 param_8457,offset
-param_8458,index
+param_8458,hexPos
 param_8459,rotationAngle
 param_8460,tintGreen
 param_8461,tintRed
@@ -2332,7 +2332,7 @@ param_8463,isOutputRender
 param_8464,solutionEditor
 param_8465,bond
 param_8466,offset
-param_8467,indexOffset
+param_8467,hexOffset
 param_8468,rotationAngle
 param_8469,tintGreen
 param_8470,tintRed
@@ -2372,7 +2372,7 @@ field_4481,solutionEditor
 # field_1491,isOutputRender
 # field_1492,simTime
 # field_1493,realTime
-# param_3339,index
+# param_3339,hexPos
 # ## LambdaGeneratedClass
 # method_929,IsCompletedEffect
 # param_4597,completed
@@ -2434,7 +2434,7 @@ param_5477,puzzle
 # param_5478,
 # param_5479,
 param_5480,part
-param_5481,newIndex
+param_5481,newHexPos
 param_5482,part
 param_5483,part
 param_5484,part
@@ -2456,7 +2456,7 @@ param_5498,part
 param_5499,offset
 param_5500,rotationOffset
 param_5501,chamberTiles
-param_5502,index
+param_5502,hexPos
 param_5503,superset
 param_5504,subset
 param_5505,puzzle
@@ -3067,7 +3067,7 @@ class_410,BoardManager
 method_1897,SetValue
 field_3877,atomData
 field_3878,atomManager
-param_8308,index
+param_8308,hexPos
 class_411,AtomManager
 method_1898,IsQuintessence
 method_1899,IsQuintessence2
@@ -3076,9 +3076,9 @@ field_3879,gameplayF
 field_3880,isQuintessence
 field_3881,isQuintessence2
 field_3882,isGlassy
-param_8309,index
-param_8310,index
-param_8311,index
+param_8309,hexPos
+param_8310,hexPos
+param_8311,hexPos
 class_412,SolitaireRenderer
 method_1902,GetScreenPosition
 method_1903,RenderAtom
@@ -3090,10 +3090,10 @@ field_3884,pos
 field_3885,getScreenPosition
 field_3886,deltaTime
 field_3887,renderAtom
-param_5441,index
+param_5441,hexPos
 param_5442,gameState
 param_5443,atomType
-param_5444,index
+param_5444,hexPos
 param_5445,revealNewGameF
 param_5446,gameplayF
 param_5447,wonLastGameF
@@ -3148,7 +3148,7 @@ field_3901,secondaryState
 field_3902,primaryTimer
 field_3903,completionCount
 field_3904,secondaryTimers
-field_3905,index
+field_3905,hexPos
 param_8316,state
 param_5457,currentState
 param_5458,newState
@@ -3156,7 +3156,7 @@ param_5459,marbleRevelationTimer
 param_5460,hexCount
 param_5461,atomTimers
 param_5462,gameState
-param_5463,pulseStartIndex
+param_5463,pulseStartHex
 param_5464,pulseTimer
 param_5465,action
 param_8681,action
@@ -3182,7 +3182,7 @@ field_3910,atomTimers
 struct_124,GameplayFields
 field_3911,gameState
 # WonLastGameFields
-field_3912,pulseStartIndex
+field_3912,pulseStartHex
 field_3913,pulseTimer
 
 ## SolitaireGameState
@@ -3195,12 +3195,12 @@ method_1885,IsEmpty
 method_1886,RemoveAt
 field_3864,atoms
 field_3865,selectedAtoms
-param_5423,index
-param_5424,index
-param_5425,index
-param_5426,index1
-param_5427,index2
-param_5428,index
+param_5423,hexPos
+param_5424,hexPos
+param_5425,hexPos
+param_5426,hexPos1
+param_5427,hexPos2
+param_5428,hexPos
 ## NestedClasses
 class_407,SuccessorFinder
 method_1887,IsSuccessor
@@ -4138,7 +4138,7 @@ param_3757,Source
 
 ## HexTransform
 class_202,HexTransform
-field_1879,index
+field_1879,translation
 field_1880,rotation
 
 ## HexGrid
@@ -4151,9 +4151,9 @@ field_1742,standardGrid
 field_1743,solitaireGrid
 field_1744,hexSize
 param_3795,hexSize
-param_3796,index
+param_3796,hexPos
 param_3797,offset
-param_3798,index
+param_3798,hexPos
 param_3799,from
 param_3800,to
 
@@ -5373,14 +5373,14 @@ param_4866,repetitionCount
 param_4867,molecule
 ## NestedClasses
 class_354,HexIndexHolder
-field_2662,index
+field_2662,hexPos
 class_355,BondMatcher
 method_2348,IsMoleculeAtBond
 field_4517,molecEditScr
 field_4518,primaryMolecule
 field_4519,secondaryMolecule
-param_8536,index1
-param_8537,index2
+param_8536,hexPos1
+param_8537,hexPos2
 class_356,MoleculeBuilderBuilder
 method_1136,Build
 field_2665,completedAtoms
@@ -5388,7 +5388,7 @@ field_2666,strBuilder
 field_2667,completedBonds
 field_2668,buildAction
 field_2669,molecEdiScr
-param_4869,index
+param_4869,hexPos
 
 ## UIUtils
 class_140,UIUtils
