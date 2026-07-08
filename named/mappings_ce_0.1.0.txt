@@ -627,7 +627,7 @@ param_5032,gaugeOffset
 
 ## Puzzle
 method_1246,VerifyIONames
-method_1247,CalculatePipelineBounds
+method_1247,CalculateCabinetBounds
 method_1248,SaveToFile
 method_1249,LoadFromFile
 method_1250,WriteMoleculeToFile
@@ -888,13 +888,13 @@ field_4717,guipureLace
 field_4718,lapisSolaris
 field_4719,universalOintment
 field_2925,tipPuzzles
-field_2926,pipelineCSmall
-field_2927,pipelineCSmallWide
-field_2928,pipelineCSmallWider
-field_2929,pipelineCMedium
-field_2930,pipelineCMediumWide
-field_2931,pipelineCLarge
-field_2932,pipelineChambers
+field_2926,prodChamberSmall
+field_2927,prodChamberSmallWide
+field_2928,prodChamberSmallWider
+field_2929,prodChamberMedium
+field_2930,prodChamberMediumWide
+field_2931,prodChamberLarge
+field_2932,prodChambers
 param_5033,id
 ## NestedClasses
 class_382,IdMatcher
@@ -911,15 +911,15 @@ param_5034,volume
 ## ProductionInfo
 class_261,ProductionInfo
 field_2071,chambers
-field_2072,pipes
+field_2072,conduits
 field_2073,vials
 field_2074,bounds
 field_2075,tightLeftBound
 field_2076,tightRightBound
 field_2077,requireIsolation
 
-## PipelineChamber
-class_183,PipelineChamber
+## ProductionChamber
+class_183,ProductionChamber
 field_1727,name
 field_1728,interiorHexes
 field_1729,borderHexes
@@ -938,15 +938,15 @@ param_3802,cord2
 param_3803,chamber
 param_8133,index
 
-## PlacedPipe
-class_117,PlacedPipe
-field_1440,pipeIndices
-field_1441,pipeTransforms
-param_3285,pipe1_cord1
-param_3286,pipe1_cord2
-param_3287,pipe2_cord1
-param_3288,pipe2_cord2
-param_3289,pipeIndices
+## PlacedConduit
+class_117,PlacedConduit
+field_1440,conduitHexes
+field_1441,conduitTransforms
+param_3285,conduit1_q
+param_3286,conduit1_r
+param_3287,conduit2_q
+param_3288,conduit2_r
+param_3289,conduitHexes
 
 ## PlacedVial
 class_128,PlacedVial
@@ -1137,8 +1137,8 @@ method_1169,GetOutputCount
 method_1170,SetOutputCount
 method_1171,GetIsFixed
 method_1172,SetIsFixed
-method_1173,GetPipeTiles
-method_1174,SetPipeTiles
+method_1173,GetConduitHexes
+method_1174,SetConduitHexes
 method_1175,Clone
 method_1176,SetupInputOutputFromSolution
 method_1177,HasNoParent
@@ -1167,12 +1167,12 @@ method_1199,SetAllowedLength
 method_1200,UpdateSubparts
 method_1201,HasArms
 method_1202,HasAtoms
-method_1203,IsNotPipe
-method_1204,PipeSetup
+method_1203,IsNotConduit
+method_1204,InitConduit
 method_1205,SetType2
 field_2689,minLength
 field_2690,maxLength
-field_4607,startPipeId
+field_4607,startConduitId
 field_2691,type
 field_2692,index
 field_2693,rotation
@@ -1185,9 +1185,9 @@ field_2699,requiredOutputCount
 field_2700,trackTiles
 field_2701,isFixed
 field_2702,programIndex
-field_2703,pipeId
-field_2704,pipeTiles
-field_2705,pipeConnections
+field_2703,conduitId
+field_2704,conduitHexes
+field_2705,conduitConnections
 param_4902,type
 param_4903,isFixed
 param_4904,type
@@ -1219,7 +1219,7 @@ param_4925,rotation
 param_8258,solution
 param_4926,rotation
 param_4927,armLenght
-param_4928,pipeTiles
+param_4928,conduitHexes
 param_4929,type
 ## NestedClasses
 class_360,AsyncStateMachine
@@ -1244,7 +1244,7 @@ field_1539,isFullHexCover
 field_1540,glyphTiles
 field_1542,isTrack
 field_1541,isInput
-field_1543,isPipe
+field_1543,isConduit
 field_1544,subatoms
 field_1545,isSubpart
 field_1546,canRotateInEditor
@@ -1266,7 +1266,7 @@ method_498,GetById
 field_1760,input
 field_1761,outStd
 field_1762,outRep
-field_1763,pipe
+field_1763,conduit
 field_1764,arm1
 field_1765,arm2
 field_1766,arm3
@@ -1323,8 +1323,8 @@ param_3904,index1
 param_8141,bondType
 param_3905,uniqueAtom
 
-## PipeHexConnection
-struct_36,PipeHexConnection
+## ConduitHexConnection
+struct_36,ConduitHexConnection
 field_2273,index1
 field_2274,index2
 param_8191,index1
@@ -1548,9 +1548,9 @@ field_3840,rotation
 # field_4731,
 # field_4732,
 class_402,ReferredPart
-method_1859,IsCorrespondingPipe
+method_1859,IsPairedConduit
 field_3841,part
-field_3842,findCorrespondingPipe
+field_3842,findPairedConduit
 param_5410,part
 enum_191,SimulationMovementType
 class_403,TileOccupationChecker
@@ -1920,7 +1920,7 @@ method_2127,GetCycle
 method_2128,GetOccupiedTiles
 method_2129,GetProgram
 # method_2130,
-method_2131,GetInputOutputPipeTiles
+method_2131,GetInputOutputConduitHexes
 # method_2468,
 field_4001,partsPanel
 field_4002,boardPanel
