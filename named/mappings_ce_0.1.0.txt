@@ -1,7 +1,7 @@
 Mapping version: 0.1.0
 
 ## Atom
-method_804,GetCopy
+method_804,Clone
 field_2275,atomType
 field_2276,transmutationEffect
 param_4420,atomType
@@ -20,7 +20,7 @@ param_4424,atom
 param_4425,isHeldByArm
 
 ## AtomType
-# method_2360,Copy    !requires validation
+method_2360,CloneWithRepetitionSymbol
 field_2283,byteId
 field_2284,defaultName
 field_2285,elementalName
@@ -104,7 +104,7 @@ enum_126,BondTypeEnum
 
 ## Bond
 class_277,Bond
-method_754,GetCopy
+method_754,Clone
 field_2186,type
 field_2187,index1
 field_2188,index2
@@ -143,7 +143,7 @@ method_1101,GetBonds
 method_1102,GetRepetitionLocation
 method_2395,SetRepetitionLocation
 method_2396,HasRepetitionLocation
-method_1104,GetCopy
+method_1104,Clone
 method_1105,AddAtom
 method_1106,ReplaceAtom
 method_1107,RemoveAtom
@@ -154,11 +154,11 @@ method_1111,AddBond
 method_1112,AddBond
 method_1113,GetBondTypeAt
 method_1114,RemoveBond
-method_1115,GetRotatedCopy
+method_1115,CloneAndRotate
 method_1116,Rotate
-method_1117,GetTranslatedCopy
+method_1117,CloneAndTranslate
 method_1118,Translate
-method_1119,GetMergedCopy
+method_1119,MergeWith
 # method_2397,
 # method_1120,CompressRepetition --Removed
 method_1121,GetSinglet
@@ -961,7 +961,7 @@ param_3327,textures
 
 
 ## EditableProgram
-method_897,GetCopy
+method_897,Clone
 method_898,CopyInstructionsTo
 method_899,FirstInstructionIndex
 method_900,LastInstructionIndex
@@ -1139,7 +1139,7 @@ method_1171,GetIsFixed
 method_1172,SetIsFixed
 method_1173,GetPipeTiles
 method_1174,SetPipeTiles
-method_1175,GetCopy
+method_1175,Clone
 method_1176,SetupInputOutputFromSolution
 method_1177,HasNoParent
 method_1178,GetSimState
@@ -2408,14 +2408,14 @@ method_1960,FromData
 method_1961,SaveRedoAction
 method_1962,GetRedoAction
 method_1963,RestoreRedoAction
-method_1964,GetCopySolution
+method_1964,MakeCopyOfSolution
 method_1965,Save
 method_1966,SetNameAndSave
 method_1967,MoveToDeleted
 method_1968,GetSafeFilePrefix
 method_1969,GetNameForNewSolution
 method_1970,GetFilePath
-method_1971,CopyWithThis
+method_1971,ClonePart
 field_3914,puzzle
 field_3915,name
 field_3916,nameOnDisc
@@ -3186,7 +3186,7 @@ field_3912,pulseStartIndex
 field_3913,pulseTimer
 
 ## SolitaireGameState
-method_1880,GetCopy
+method_1880,Clone
 method_1881,CanRemove
 method_1882,IsGold
 method_1883,IsQuintessence
