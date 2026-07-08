@@ -1150,8 +1150,8 @@ method_1182,CollectSubparts
 method_1183,GetDebugReferenceName
 method_1184,InFrontBy
 method_1185,GetMoleculeForInputOutput
-method_1186,GetTilesAtPart
-method_1187,GetTiles
+method_1186,GetHexFootprint
+method_1187,GetHexFootprintWithTransform
 method_1188,ResetTypeById
 method_1189,GetTrack
 method_1190,IsTrackLooping
@@ -1182,7 +1182,7 @@ field_2696,subparts
 field_2697,program
 field_2698,inputOutputIndex
 field_2699,requiredOutputCount
-field_2700,trackTiles
+field_2700,trackHexes
 field_2701,isFixed
 field_2702,programIndex
 field_2703,conduitId
@@ -1197,7 +1197,7 @@ param_8255,armLength
 param_8256,inputOutputIndex
 param_8257,requiredCount
 param_4906,isFixed
-param_4907,tiles
+param_4907,hexes
 param_4908,solution
 param_4909,parent
 param_4910,solution
@@ -1210,8 +1210,8 @@ param_4916,solution
 param_4917,occupationMode
 param_4918,translation
 param_4919,rotation
-param_4920,tile
-param_4921,tile
+param_4920,hexPos
+param_4921,hexPos
 param_4922,hexPos
 param_4923,solution
 param_4924,solution
@@ -1233,7 +1233,7 @@ field_1528,id
 field_1529,name
 field_1530,description
 field_1531,cost
-field_1532,tileOccupationMode
+field_1532,hexOccupationMode
 field_1533,isProgrammable
 field_1534,armRotaions
 field_1535,canExtend
@@ -1241,7 +1241,7 @@ field_1536,canRotateInSimulation
 field_1537,isGripper
 field_1538,bonders
 field_1539,isFullHexCover
-field_1540,glyphTiles
+field_1540,glyphHexes
 field_1542,isTrack
 field_1541,isInput
 field_1543,isConduit
@@ -1389,7 +1389,7 @@ interface_2,ISimulate
 method_481,GetSimState
 method_482,GetHeldMolecule
 method_483,GetMolecules
-method_484,GetOccupiedTilesTiles
+method_484,GetOccupiedHexes
 param_3776,part
 param_8130,part
 
@@ -1411,14 +1411,14 @@ method_1829,RunCycleInstructions
 method_1830,IsEarlyInstruction
 method_1831,GetNewMoleculePos
 method_1832,RunCycleGlyphs
-method_1833,IsPartAtMolecule
-method_1834,IsInsideTiles
+method_1833,AnyPartOverlapsMolecule
+method_1834,MoleculeContainedWithinHexes
 method_1835,SimulateCycleMovements
 method_2429,ProcessInputs
 method_1837,HasOverlap
 method_1838,MeasureArmFootprint
 method_1839,ResetGlyphs
-method_1840,MarkTilesAsOccupied
+method_1840,MarkHexesAsOccupied
 method_1841,Grab
 method_1842,Drop
 method_1843,SpawnMolecules
@@ -1433,7 +1433,7 @@ method_1851,RotatePart
 method_1852,TranslatePart
 method_1853,ReportMovementError
 method_1854,ReportMovementError
-method_1855,GetTrackDirToNextTile
+method_1855,GetOffsetToNextTrackHex
 method_1856,PlaySound
 # method_2431,
 # method_2432,
@@ -1459,7 +1459,7 @@ field_3820,programGrid
 field_3821,simulationDict
 field_3822,holderInfos
 field_3823,molecules
-field_3824,occupiedTiles
+field_3824,occupiedHexes
 field_3825,isCycleInProgress
 field_3826,additionalCollisions
 field_3827,simDeltaTime
@@ -1482,10 +1482,10 @@ param_5368,type
 param_5369,isCycleStart
 param_5370,molecule
 param_5371,partList
-param_5372,tiles
+param_5372,hexes
 param_5373,molecule
 param_5374,molecule
-param_5375,additionalTiles
+param_5375,additionalHexes
 param_5376,centerPos
 param_5377,part
 param_5378,part
@@ -1553,7 +1553,7 @@ field_3841,part
 field_3842,findPairedConduit
 param_5410,part
 enum_191,SimulationMovementType
-class_403,TileOccupationChecker
+class_403,HexOccupationChecker
 method_1860,HasPartAt
 field_3845,partList
 field_3846,sim
@@ -1606,9 +1606,9 @@ class_459,EmptySim
 method_780,GetSimState
 method_781,GetHeldMolecule
 method_782,GetMolecules
-method_783,GetOccupiedTilesTiles
+method_783,GetOccupiedHexes
 field_2208,molecules
-field_2209,occupiedTiles
+field_2209,occupiedHexes
 param_4303,part
 param_4304,part
 
@@ -1704,7 +1704,7 @@ method_2013,DoesTransfOvelapAtPoint
 method_2014,RenderBoard
 method_2015,RenderMoleculeWithHolder
 method_2016,RenderRotated
-method_2017,RenderTileSelection
+method_2017,RenderHexSelection
 method_2018,GetScaledClampedCycleTime
 method_2019,GetClampedCycleTime
 method_2020,RenderGlyphEffects
@@ -1831,7 +1831,7 @@ param_5620,color
 param_5621,pos
 # param_8330,
 param_5622,intermState
-param_5623,tiles
+param_5623,hexes
 param_5624,color
 param_5625,glyphEffects
 param_5626,offset
@@ -1917,7 +1917,7 @@ method_2126,CloseEditorScreen
 # method_2466,
 method_2467,DrawErrorPanel
 method_2127,GetCycle
-method_2128,GetOccupiedTiles
+method_2128,GetOccupiedHexes
 method_2129,GetProgram
 # method_2130,
 method_2131,GetInputOutputConduitHexes
@@ -1939,7 +1939,7 @@ field_4011,partSelection
 field_4012,instructionSelection
 field_4013,areGhostMoleculesShown
 field_4756,ghostMolecules
-field_4015,highlighOccupiedTiles
+field_4015,highlightOccupiedHexes
 field_4016,wasCompleted
 field_4017,cycleLength
 field_4018,footprint
@@ -2391,10 +2391,10 @@ method_1943,OrderProgrammables
 method_1944,SetProgramIndex
 method_1945,ResetAllById
 method_1946,CompareIndices
-method_1947,GetOccupiedTiles
+method_1947,GetOccupiedHexes
 method_1948,IsAllowedPlacement
 method_1949,CanArmBePlacedInChamber
-method_1950,GetChamberTiles
+method_1950,GetChamberHexes
 method_1951,IsArmInsideChamber
 method_1952,GetContainingChambers
 method_1953,Contains
@@ -2455,7 +2455,7 @@ param_5497,productionInfo
 param_5498,part
 param_5499,offset
 param_5500,rotationOffset
-param_5501,chamberTiles
+param_5501,chamberHexes
 param_5502,hexPos
 param_5503,superset
 param_5504,subset
@@ -2509,8 +2509,8 @@ param_8323,solution
 ## HistogramType
 enum_133,HistogramType
 
-## TileOccupationMode
-enum_137,TileOccupationMode
+## HexOccupationMode
+enum_137,HexOccupationMode
 ## 0: TOP-BOTTOM
 ## 1: TOP
 ## 2: BOTTOM
@@ -2752,7 +2752,7 @@ param_68,solEditScr
 param_4879,solEditScr
 param_4240,solEditScr
 param_4880,solEditScr
-field_2678,markedTiles
+field_2678,markedHexes
 ## LambdaGeneratedClass
 class_479,LambdaGeneratedClass
 field_4226,instance
