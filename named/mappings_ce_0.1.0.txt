@@ -1915,7 +1915,7 @@ method_2125,ProgramPanelContainsMouse
 method_2126,CloseEditorScreen
 # method_2465,
 # method_2466,
-method_2467,DrawErrorPanel
+method_2467,RenderErrorPanel
 method_2127,GetCycle
 method_2128,GetOccupiedHexes
 method_2129,GetProgram
@@ -2015,11 +2015,11 @@ param_5730,part
 param_5731,solution
 param_5732,part
 ## NestedClasses
-class_544,ErrorPanelDrawer
-method_2469,DrawErrorPanel
+class_544,ErrorPanelRenderer
+method_2469,RenderErrorPanel
 field_4760,error
 field_4761,pos
-class_435,SimButtonDrawer
+class_435,SimButtonRenderer
 method_2133,GetBounds
 method_2134,RenderButton
 field_4047,pos
@@ -2293,11 +2293,11 @@ param_3820,errorMessage
 param_3821,locations
 
 ## ButtonDrawingLogic
-method_824,IsPressedAndDraw
+method_824,RenderAndCheckIfPressed
 delegate_385,D_getBounds
-delegate_386,D_drawButton
+delegate_386,D_renderButton
 field_2307,getBounds
-field_2308,drawButton
+field_2308,renderButton
 param_4458,isEnabled
 param_4459,canHoverAndClick
 param_8200,bounds
@@ -3019,7 +3019,7 @@ method_1891,GenerateNewGame
 method_1892,PreventLowerScreenUpdates
 method_1893,CanOpenDiagram
 method_1894,CanGenerateNewGame
-method_1895,DrawDiagramButton
+method_1895,RenderDiagramButton
 method_2435,CountAtom
 method_2436,RenderAtomCounter
 method_2437,RenderCounters
@@ -3116,7 +3116,7 @@ field_4274,instance
 method_2445,Empty
 method_1914,Empty2
 method_1915,Empty3
-method_1916,DrawDiagramButton
+method_1916,RenderDiagramButton
 param_8680,wlgField
 param_5452,wfgField
 param_5453,wfgField
@@ -5294,7 +5294,7 @@ param_4701,isSWorkshopSelected
 ## NestedClasses
 class_337,MenuButtonRenderer
 method_1043,GetBounds
-method_1044,DrawButton
+method_1044,RenderButton
 field_2556,pos
 field_2557,isSelected
 field_2558,title
@@ -5303,7 +5303,7 @@ param_8234,isHover
 param_4704,isEnabled
 class_338,SimpleButton
 method_1045,GetBounds
-method_1046,DrawButton
+method_1046,RenderButton
 param_4705,bounds
 param_4706,isHover
 param_4707,isEnabled
@@ -5448,7 +5448,7 @@ param_3571,offset
 ## NestedClasses
 class_141,BasicButton
 method_324,GetBounds
-method_325,DrawButton
+method_325,RenderButton
 field_1557,pos
 field_1558,texture
 field_1559,disabledTexture
@@ -5458,7 +5458,7 @@ param_3573,isHover
 param_3574,isEnabled
 class_142,TextButton
 method_326,GetBounds
-method_327,DrawButton
+method_327,RenderButton
 field_1561,pos
 field_4171,width
 field_1562,height
@@ -5483,7 +5483,7 @@ param_8092,score
 param_8093,score
 class_144,SolutionButton
 method_333,GetBounds
-method_334,DrawButton
+method_334,RenderButton
 field_1567,pos
 field_1568,textOverflow
 field_1569,isSelected
@@ -5494,7 +5494,7 @@ param_3582,isHover
 param_3583,isEnabled
 class_145,PuzzleButton
 method_335,GetBounds
-method_336,DrawButton
+method_336,RenderButton
 field_1572,pos
 field_4173,textOverflow
 field_1573,isComplete
@@ -5524,7 +5524,7 @@ param_3591,value
 param_3592,leaderboardData
 class_147,BasicTextButton
 method_344,GetBounds
-method_345,DrawButton
+method_345,RenderButton
 field_1579,pos
 field_1580,text
 param_3593,bounds
@@ -5532,7 +5532,7 @@ param_3594,isHover
 param_3595,isEnabled
 class_148,FancyTextButton
 method_346,GetBounds
-method_347,DrawButton
+method_347,RenderButton
 field_1581,text
 field_1582,pos
 field_1583,font
@@ -5547,18 +5547,18 @@ param_3598,isEnabled
 ## NestedClasses
 # class_150,
 method_351,GetBounds
-method_352,DrawButton
+method_352,RenderButton
 # field_1585,
 # field_1586,
 # class_151,
 method_353,GetBounds
-method_354,DrawButton
+method_354,RenderButton
 # field_1587,
 # field_1588,
 # field_1589,
 # class_152,
 method_355,GetBounds
-method_356,DrawButton
+method_356,RenderButton
 # field_1590,
 # field_1591,
 # field_1592,
