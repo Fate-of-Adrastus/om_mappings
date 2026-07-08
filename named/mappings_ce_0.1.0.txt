@@ -1238,7 +1238,7 @@ field_1533,isProgrammable
 field_1534,armRotaions
 field_1535,canExtend
 field_1536,canRotateInSimulation
-field_1537,isClaw
+field_1537,isGripper
 field_1538,bonders
 field_1539,isFullHexCover
 field_1540,glyphTiles
@@ -1272,7 +1272,7 @@ field_1765,arm2
 field_1766,arm3
 field_1767,arm6
 field_1768,piston
-field_1769,clawpivot
+field_1769,gripper
 field_1770,track
 field_4485,baronWheel
 field_4486,ravarisWheel
@@ -1672,9 +1672,9 @@ method_518,HandleSimulationError
 method_2449,GetMousePos
 # method_1984,
 method_1985,GetHolder
-method_1986,GetClawState
-method_1987,GetLightForClaw
-method_1988,GetShadowForClaw
+method_1986,GetGripperState
+method_1987,GetLightForGripper
+method_1988,GetShadowForGripper
 method_1989,GetIntermState
 method_1990,GetIntermState
 method_1991,TransitionState
