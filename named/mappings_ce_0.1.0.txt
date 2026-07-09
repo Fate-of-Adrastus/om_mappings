@@ -281,8 +281,8 @@ field_4551,chapterSelectBaseHeight
 field_2310,chapterNumber
 field_2311,title
 field_4552,name
-field_2313,areaName
-field_2314,locations
+field_2313,locationName
+field_2314,campaignItems
 field_4553,background
 field_2315,lockedIcon
 field_2321,unlockedIcon
@@ -293,7 +293,7 @@ field_4554,alignment
 field_4555,campaign
 param_4465,title
 param_4466,name
-param_8205,areaName
+param_8205,locationName
 param_4467,background
 param_4468,lockedIcon
 param_4469,unlockedIcon
@@ -313,18 +313,18 @@ method_825,IsComplete
 method_2361,GetIcon
 method_2362,GetIconSmall
 method_2363,GetSolitaireType
-field_2322,locationId
-field_2323,locationName
-field_2324,locationType
+field_2322,itemId
+field_2323,itemName
+field_2324,itemType
 field_2325,puzzle
 field_2326,requirement
-field_2327,dialogue
+field_2327,vignette
 field_4556,musicTrack
 field_4557,fanfare
 field_4558,campaign
-param_4474,locationId
-param_4475,locationName
-param_4476,locationType
+param_4474,itemId
+param_4475,itemName
+param_4476,itemType
 param_4477,puzzle
 param_4478,requirement
 param_4479,musicTrack
@@ -336,22 +336,22 @@ method_828,Init
 method_829,AddItemToChapter
 method_830,CheckPuzzleIds
 method_831,DumpLore
-method_832,FindLocationById
+method_832,FindCampaignItemById
 method_833,GetPuzzleSelectEvents
 field_2330,opusMagnum
 field_4559,deReMetallica
 field_2331,campaigns
 param_4481,campaign
 param_4482,chapter
-param_4483,locationId
-param_4484,locationName
-param_8206,locationType
+param_4483,itemId
+param_4484,itemName
+param_8206,itemType
 param_8576,tip
 param_4486,puzzle
 param_4487,track
 param_4488,fanfare
 param_4489,requirement
-param_4490,locationId
+param_4490,itemId
 class_300,AsyncStateMachine
 ## LambdaGeneratedClass
 class_460,LambdaGeneratedClass
@@ -377,20 +377,20 @@ field_2350,chapter
 param_4498,chapter
 param_4499,obj
 
-## UIUnlockEvent
-class_213,UIUnlockEvent
+## CampaignItemUnlockEvent
+class_213,CampaignItemUnlockEvent
 field_1462,campaignItem
 param_3317,campaignItem
 param_3318,obj
 
-## UICompleteEvent
-class_125,UICompleteEvent
+## CampaignItemCompleteEvent
+class_125,CampaignItemCompleteEvent
 field_1887,campaignItem
 param_3886,campaignItem
 param_3887,obj
 
-## LocationType
-enum_129,LocationType
+## CampaignItemType
+enum_129,CampaignItemType
 ## 0: PUZZLE
 ## 1: CUTSCENE
 ## 2: LETTER
@@ -399,19 +399,19 @@ enum_129,LocationType
 ## 5: ?
 ## 6: ?
 
-## LocationRequirement
-class_259,LocationRequirement
+## UnlockRequirement
+class_259,UnlockRequirement
 
-## LocReqNothing
-class_174,LocReqNothing
+## UnlockReqNothing
+class_174,UnlockReqNothing
 
-## LocReqCompleteLoc
-class_243,LocReqCompleteLoc
-field_2005,locationId
-param_3995,locationId
+## UnlockReqCompleteCampaignItem
+class_243,UnlockReqCompleteCampaignItem
+field_2005,requiredItemId
+param_3995,requiredItemId
 
-## LocReqPuzzlesComplete
-class_265,LocReqPuzzlesComplete
+## UnlockReqPuzzlesComplete
+class_265,UnlockReqPuzzlesComplete
 field_2092,requiredMinimum
 param_8169,requiredMinimum
 
@@ -445,32 +445,32 @@ param_4716,puzzle
 param_4717,volume
 
 
-## Dialogue
-class_264,Dialogue
+## LocalizedVignette
+class_264,LocalizedVignette
 method_712,GetVignette
-field_2090,dialoguePath
+field_2090,vignettePath
 field_2091,vignetteDict
-param_4199,dialoguePath
+param_4199,vignettePath
 
 ## StoryPanel
 method_2170,GetCompletion
 method_2171,SaveScrollbarState
 method_2172,RenderFrame
-method_2173,RenderNoDialouge
+method_2173,RenderWithoutVignette
 method_2174,RenderSingleEvent
-method_2175,RenderDialouge
+method_2175,RenderVignette
 field_4086,nextDelay
 field_4087,skipDelay
 field_4088,fadeInLength
 field_4089,scrollbarMoveTimelength
-field_4090,dialouge
+field_4090,vignette
 field_4091,addOptionalTag
 field_4092,scrollbar
 field_4298,parsedText
 field_4094,nextTimer
 field_4095,scrollbarInfo
 field_4096,fadeInTimer
-param_8722,dialouge
+param_8722,vignette
 param_5757,addOptionalTag
 param_5758,isAfterInit
 param_8353,deltaTime
@@ -498,8 +498,8 @@ field_4101,movementTimer
 class_501,LambdaGeneratedClass
 field_4299,instance
 method_2176,TrimString
-method_2177,GetLineFields
-method_2178,GetLineFields2
+method_2177,GetLine
+method_2178,GetLine2
 param_8354,str
 param_8355,event
 param_8356,event
@@ -528,22 +528,22 @@ field_3978,LGen_trimString
 param_8359,str
 
 ## VignetteEvent
-method_2212,AddLineEvent
-method_2213,AddEnterEvent
-method_2214,AddChangeEvent
-method_2482,AddExitEvent
+method_2212,CreateLineEvent
+method_2213,CreateEnterEvent
+method_2214,CreateChangeEvent
+method_2482,CreateExitEvent
 method_2215,IsLineEvent
 method_2216,IsEnterEvent
 method_2217,IsChangeEvent
-method_2483,IsExitFields
-method_2218,ToLineFields
-method_2219,ToEnterFields
-method_2220,ToChangeFields
-method_2484,ToExitFields
-method_2221,ActionOnLineFields
-method_2485,ActionOnEnterFields
-method_2486,ActionOnChangeFields
-method_2487,ActionOnExitFields
+method_2483,IsExitEvent
+method_2218,ToLineEvent
+method_2219,ToEnterEvent
+method_2220,ToChangeEvent
+method_2484,ToExitEvent
+method_2221,ActionOnLineEvent
+method_2485,ActionOnEnterEvent
+method_2486,ActionOnChangeEvent
+method_2487,ActionOnExitEvent
 method_2488,ActionOnEach
 field_4309,type
 field_4130,primary
@@ -560,19 +560,21 @@ param_5796,action
 param_8724,action
 param_8725,action
 param_8726,action
-param_8727,actionLineF
-param_8728,actionEnterF
-param_8729,actionChangeF
-param_8730,actionExitF
+param_8727,actionForLine
+param_8728,actionForEnter
+param_8729,actionForChange
+param_8730,actionForExit
 ## NestedClasses
-struct_131,EnterFields
+struct_131,Enter
 field_4133,portrait
-struct_132,ChangeFields
+struct_132,Change
 field_4134,from
 field_4135,to
+# Note: non-obfuscated name remapped here
+LineFields,Line
 field_4136,portrait
 field_4310,line
-struct_142,ExitFields
+struct_142,Exit
 field_4787,portrait
 
 
@@ -4719,7 +4721,7 @@ method_681,GetPortraitHeighth
 method_682,PreventLowerScreenUpdates
 method_683,GetActorPosition
 method_684,QuitCinematics
-field_2038,dialogue
+field_2038,vignette
 field_2039,actors
 field_4480,exitingActors
 field_2040,currentEvent
@@ -4728,7 +4730,7 @@ field_2042,cinematicsEventLength
 field_2043,timeSinceEvent
 field_2044,actorPosOffset
 field_2045,displayTimePerChar
-param_4171,dialogue
+param_4171,vignette
 param_4172,track
 param_4173,isOpening
 param_4174,i
@@ -4825,11 +4827,11 @@ param_3782,deltaTime
 method_894,GetFonts
 method_2279,PreventLowerScreenUpdates
 field_2408,sections
-field_2409,dialogue
+field_2409,vignette
 field_2410,textBlack
 field_2411,textRed
 field_2412,textFaded
-param_4544,dialogue
+param_4544,vignette
 param_4545,isOpening
 param_4546,deltaTime
 ## NestedClasses
@@ -5015,8 +5017,8 @@ param_5038,chUnlockEvent
 class_385,CampaignItemMatcher
 method_1291,IsSameCampaignItem
 method_1292,IsSameCampaignItem
-param_5039,uiUnlockEvent
-param_5040,uiCompleteEvent
+param_5039,campaignItemUnlockEvent
+param_5040,campaignItemCompleteEvent
 field_4726,campaignItem
 class_386,ChapterBackgroundRenderer
 method_1293,RenderChapterBackGround
@@ -5054,7 +5056,7 @@ field_2809,histogramData
 param_5006,puzzle
 param_5007,track
 param_5008,fanfare
-param_8641,dialogue
+param_8641,vignette
 param_5010,isOpening
 param_5011,solution
 param_5012,solution
