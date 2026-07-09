@@ -132,17 +132,17 @@ field_1818,textureOffset
 field_1819,glyphAnim
 field_1820,bondSound
 
-## BondTextureDecider
-class_283,BondTextureDecider
-method_779,DecideBondTexture
+## BondTextureGetter
+class_283,BondTextureGetter
+method_779,GetBondTexture
 param_4302,type
 
 ## Molecule
 method_1100,GetAtoms
 method_1101,GetBonds
-method_1102,GetRepetitionLocation
-method_2395,SetRepetitionLocation
-method_2396,HasRepetitionLocation
+method_1102,GetRepetitionPos
+method_2395,SetRepetitionPos
+method_2396,HasRepetitionPos
 method_1104,Clone
 method_1105,AddAtom
 method_1106,ReplaceAtom
@@ -167,7 +167,7 @@ method_1122,GetDoublet
 # method_2399,
 # method_2400,
 # method_2401,
-method_2402,RepetitionIndices
+method_2402,RepeatAtomPositions
 method_2403,RemoveRepetitions
 field_2638,wasChanged
 field_2639,displayName
@@ -319,7 +319,7 @@ field_2324,locationType
 field_2325,puzzle
 field_2326,requirement
 field_2327,dialogue
-field_4556,track
+field_4556,musicTrack
 field_4557,fanfare
 field_4558,campaign
 param_4474,locationId
@@ -327,7 +327,7 @@ param_4475,locationName
 param_4476,locationType
 param_4477,puzzle
 param_4478,requirement
-param_4479,track
+param_4479,musicTrack
 param_4480,fanfare
 param_8575,campaign
 
@@ -422,8 +422,8 @@ field_2570,flavorText
 field_2571,puzzles
 
 ## JournalVolumes
-method_1051,CompletedJournalPuzzles
-method_2390,VolumesWithComplete
+method_1051,CompletedPuzzleCount
+method_2390,VolumesWithAnyComplete
 method_1052,Init
 method_1053,CheckLengths
 field_2572,volumes
@@ -606,24 +606,24 @@ param_3968,isLeftSide
 ## PuzzleInputOutput
 field_2813,molecule
 field_2814,hexPos
-field_2815,gaugeOffset
+field_2815,outputCounterOffset
 param_5016,atom
 param_5017,atom
 param_5018,hexPos
-param_5019,gaugeOffset
+param_5019,outputCounterOffset
 param_5020,atom1
 param_5021,atom2
 param_5022,atom1
 param_5023,atom2
 param_5024,hexPos
-param_5025,gaugeOffset
+param_5025,outputCounterOffset
 param_5026,molecule
 param_5027,molecule
 param_5028,hexPos
-param_5029,gaugeOffset
+param_5029,outputCounterOffset
 param_5030,molecule
 param_5031,hexPos
-param_5032,gaugeOffset
+param_5032,outputCounterOffset
 
 ## Puzzle
 method_1246,VerifyIONames
@@ -968,7 +968,7 @@ method_900,LastInstructionIndex
 method_901,GetInstruction
 # method_902,
 method_903,HasInstruction
-method_904,Lenght
+method_904,Count
 method_905,SetInstruction
 method_906,InsertInstruction
 method_907,RemoveInstruction
@@ -1007,7 +1007,7 @@ param_8217,instruction
 
 ## CompiledInstruction
 field_2364,type
-field_2365,isExtension
+field_2365,isExpansion
 
 ## CompiledProgram
 field_2367,instructions
@@ -1144,7 +1144,7 @@ method_1176,SetupInputOutputFromSolution
 method_1177,HasNoParent
 method_1178,GetSimState
 method_1179,GetParentOrThis
-method_1180,GetParrentList
+method_1180,GetParentList
 method_1181,CollectSubparts
 method_1182,CollectSubparts
 method_1183,GetDebugReferenceName
@@ -1228,14 +1228,14 @@ class_360,AsyncStateMachine
 class_139,PartType
 method_309,IsOutput
 method_310,IsInputOutput
-method_311,GetRotation
+method_311,GetArmRotation
 field_1528,id
 field_1529,name
 field_1530,description
 field_1531,cost
 field_1532,hexOccupationMode
 field_1533,isProgrammable
-field_1534,armRotaions
+field_1534,armRotations
 field_1535,canExtend
 field_1536,canRotateInSimulation
 field_1537,isGripper
@@ -1264,22 +1264,22 @@ method_496,Init
 method_497,CheckIds
 method_498,GetById
 field_1760,input
-field_1761,outStd
-field_1762,outRep
+field_1761,normalOutput
+field_1762,repeatingOutput
 field_1763,conduit
-field_1764,arm1
-field_1765,arm2
-field_1766,arm3
-field_1767,arm6
-field_1768,piston
+field_1764,singleArm
+field_1765,biArm
+field_1766,triArm
+field_1767,hexArm
+field_1768,pistonArm
 field_1769,gripper
 field_1770,track
-field_4485,baronWheel
+field_4485,berlosWheel
 field_4486,ravarisWheel
 field_1772,bonder
 field_1773,unbonder
 field_1774,multibonder
-field_1775,triplexbonder
+field_1775,triplexBonder
 field_1776,calcificationGlyph
 field_1777,duplicationGlyph
 field_1778,projectionGlyph
@@ -1289,7 +1289,7 @@ field_4488,divisionGlyph
 field_4489,proliferationGlyph
 field_1780,animismusGlyph
 field_1781,disposalGlyph
-field_1782,markerGlyph
+field_1782,equilibriumGlyph
 field_1783,unificationGlyph
 field_1784,dispersionGlyph
 field_1785,partTypes
@@ -1353,8 +1353,8 @@ field_1888,panningTip
 field_1889,multibondingTip
 field_1890,projectionTip
 field_4502,repeatingTip
-field_4503,triplexbondingTip
-field_1891,baronwheelTip
+field_4503,triplexBondingTip
+field_1891,berlosWheelTip
 field_1892,unbonderTip
 field_1893,animismusTip
 field_1894,purificationTip
@@ -1384,8 +1384,8 @@ enum_147,NoteVisibilityMode
 ## 1: NoInputOutput
 
 
-## ISimulate
-interface_2,ISimulate
+## ISim
+interface_2,ISim
 method_481,GetSimState
 method_482,GetHeldMolecule
 method_483,GetMolecules
@@ -1632,8 +1632,8 @@ field_2728,grabState
 field_2729,heldMolecule
 field_2730,outputDone
 field_2731,outputCompleteTime
-field_2732,disappearingMolecule
-field_2733,emergingMolecule
+field_2732,disappearingMolecules
+field_2733,emergingMolecules
 field_4612,hasHalted
 field_2734,oldPosition
 field_2735,deltaPosition
@@ -1925,7 +1925,7 @@ method_2131,GetInputOutputConduitHexes
 field_4001,partsPanel
 field_4002,boardPanel
 field_4003,programPanel
-field_4753,baseicEffects
+field_4753,basicEffects
 field_4754,specialEffects
 field_4004,solution
 field_4005,musicTrack
@@ -2418,7 +2418,7 @@ method_1970,GetFilePath
 method_1971,ClonePart
 field_3914,puzzle
 field_3915,name
-field_3916,nameOnDisc
+field_3916,nameOnDisk
 field_3917,creationTime
 field_3918,scores
 field_3919,parts
@@ -2463,7 +2463,7 @@ param_5505,puzzle
 param_5506,solutionName
 param_5507,path
 param_5508,data
-param_5509,nameOnDisc
+param_5509,nameOnDisk
 param_5510,creationTime
 param_5511,redoAction
 param_5512,name
@@ -2523,7 +2523,7 @@ method_15,IsSelected
 method_16,Clear
 method_17,Add
 method_18,Remove
-field_11,selection
+field_11,selectedParts
 field_12,solution
 param_24,solution
 param_25,part
@@ -2537,7 +2537,7 @@ method_366,Remove
 method_367,Clear
 method_368,HasMatching
 method_369,GetEnumerator2
-field_1594,instructions
+field_1594,selectedInstructions
 param_3629,instRef
 param_3630,instRef
 param_3631,instRef
@@ -2787,7 +2787,7 @@ param_4938,solEditScr
 # param_4939,
 # param_4940,
 ## NestedClasses
-class_362,
+# class_362,
 # method_1217,
 # field_4608,
 param_8261,part
@@ -3028,7 +3028,7 @@ method_2439,RenderAtomDivLine
 method_2440,RenderAtomC
 field_3867,orderedBoardHexes
 field_3868,storyPanelSections
-field_3869,marbleRevelationDelay
+field_3869,marbleRevealDelay
 field_3870,boardHexes
 field_3871,solitaireStat
 field_3872,storyPanel
@@ -3152,7 +3152,7 @@ field_3905,hexPos
 param_8316,state
 param_5457,currentState
 param_5458,newState
-param_5459,marbleRevelationTimer
+param_5459,marbleRevealTimer
 param_5460,hexCount
 param_5461,atomTimers
 param_5462,gameState
@@ -3176,7 +3176,7 @@ enum_192,State
 struct_123,RevealNewGameFields
 field_3906,currentState
 field_3907,newState
-field_3908,marbleRevelationTimer
+field_3908,marbleRevealTimer
 field_3909,hexCount
 field_3910,atomTimers
 struct_124,GameplayFields
@@ -3241,7 +3241,7 @@ field_65,hintUnlocking
 field_4500 field_66,hintOffTheBoard
 field_66,hintCardinals
 field_67,hintSalt
-field_68,hintVitaeMoros
+field_68,hintVitaeMors
 field_69,hintMetals
 field_70,hintMetalsColvan
 param_8518,type
@@ -4146,7 +4146,7 @@ class_187,HexGrid
 method_490,GetHexWidth
 method_491,ToWorldCoords
 method_492,ToWorldCoords
-method_493,GetHexDistance
+method_493,GetHexOffset
 field_1742,standardGrid
 field_1743,solitaireGrid
 field_1744,hexSize
@@ -4170,7 +4170,7 @@ method_255,GetDefaultLanguage
 method_256,GetCurrentCultureInfo
 field_1498,countryCodes
 field_1499,cultureInfos
-field_1500,languagesNames
+field_1500,languageNames
 field_1501,missingTranslationReplacement
 field_1502,pseudoChars
 field_1503,fullwidthPunctuation
@@ -4199,8 +4199,8 @@ param_4722,locString
 
 ## StringExtension
 class_241,StringExtension
-method_633,translateToLower
-method_634,translateToUpper
+method_633,TranslateToLower
+method_634,TranslateToUpper
 
 ## EmptyLocString
 class_237,EmptyLocString
@@ -4651,7 +4651,7 @@ class_93,LoadingScreen
 method_2272,PreventLowerScreenUpdates
 method_90,Render
 field_932,textAnimSpeed
-field_933,symbolTimeing
+field_933,symbolTiming
 field_934,totalTime
 param_93,isOpening
 param_94,deltaTime
@@ -4665,7 +4665,7 @@ method_791,PreventLowerScreenUpdates
 field_2234,cyclesPerSec
 field_2235,cycleLength
 field_2236,cycleTickInterval
-field_2237,tipType
+field_2237,tip
 field_2238,solution
 field_2239,solutionRenderTarget
 field_2240,solutionEditor
@@ -4698,7 +4698,7 @@ field_4522,pos
 method_2357,ClearSpecialEffects
 method_2358,RenderCompletionScreen
 field_4533,randomiser
-field_4534,Timer
+field_4534,timer
 field_4535,boardOffset
 param_8564,solEditScr
 param_8565,saveProgress
@@ -4740,7 +4740,7 @@ field_2046,portrait
 field_2047,pos
 field_2048,cinematicsEvent
 field_2049,flip
-class_254,VignetteFieldHandler
+class_254,VignetteEventHandler
 method_685,RenderLine
 method_686,HandleEnter
 method_2330,HandleExit
@@ -5724,7 +5724,7 @@ method_1063,LogMessage
 method_1064,LogMessage
 method_1065,LogMessageWithTime
 method_1066,LogData
-method_1067,LogDataWithReplacement
+method_1067,LogDataWithStringEscapes
 param_4723,message
 param_4724,format
 param_4725,args
@@ -5745,8 +5745,8 @@ param_4733,obj
 
 ## LogManager
 class_120,LogManager
-method_2273,FocuseLogWindow
-method_222,showLogWindow
+method_2273,FocusLogWindow
+method_222,ShowLogWindow
 method_223,MakeEntry
 method_224,MakeDataEntry
 method_225,RenderFrame
@@ -5796,7 +5796,7 @@ method_936,GetScreenTransition
 method_937,SetScreenTransition
 # method_2383,
 method_938,GetLastScreen
-method_939,GetBeforLastScreen
+method_939,GetBeforeLastScreen
 method_940,IsMinWindow
 method_941,IsWindowOver1080p
 method_942,GameInit
@@ -5950,7 +5950,7 @@ field_1011,vsync
 field_1012,requireSteam
 field_1013,linkCrashSite
 field_1014,showLogWindow
-field_1015,fullscreenWindowes
+field_1015,fullscreenWindows
 # field_4472,
 # field_1017,
 # field_1018,
