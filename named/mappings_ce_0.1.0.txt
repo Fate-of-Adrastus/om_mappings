@@ -474,14 +474,15 @@ param_8722,vignette
 param_5757,addOptionalTag
 param_5758,isAfterInit
 param_8353,deltaTime
+param_5759,deltaTime
 param_5760,pos
-param_5761,completionAmount
+param_5761,progress
 param_5762,storyPanelSections
 param_5763,pos
 param_5764,pos
 param_5435,deltaTime
 param_5765,pos
-param_5766,completionAmount
+param_5766,progress
 param_5767,storyPanelSections
 ## NestedClasses
 enum_193,AdvanceMode
@@ -3174,16 +3175,18 @@ enum_192,State
 # 1: RevealNewGame
 # 2: Gameplay
 # 3: WonLastGame
-# WaitingForNewGameFields
-struct_123,RevealNewGameFields
+# Note: non-obfuscated name remapped here
+WaitingForNewGameFields,WaitingForNewGame
+struct_123,RevealNewGame
 field_3906,currentState
 field_3907,newState
 field_3908,marbleRevealTimer
 field_3909,hexCount
 field_3910,atomTimers
-struct_124,GameplayFields
+struct_124,Gameplay
 field_3911,gameState
-# WonLastGameFields
+# Note: non-obfuscated name remapped here
+WonLastGameFields,WonLastGame
 field_3912,pulseStartHex
 field_3913,pulseTimer
 
