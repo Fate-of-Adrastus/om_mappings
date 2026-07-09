@@ -4336,15 +4336,15 @@ param_4192,item
 ## StreamArray<T>
 class_4,StreamArray
 generic_2,T
-method_8,GetLastIndex
-method_9,SetLastIndex
+method_8,GetItemCount
+method_9,SetItemCount
 method_10,GetArray
-method_11,SetAndAdvance
+method_11,Push
 method_12,ToStart
 field_6,array
-field_7,index
-param_21,size
-param_5837,index
+field_7,itemCount
+param_21,capacity
+param_5837,itemCount
 param_23,item
 
 ## Stack<T>
@@ -4353,7 +4353,7 @@ generic_12,T
 method_532,Size
 method_533,Push
 method_534,Pop
-method_535,GetLast
+method_535,Peek
 field_1808,stack
 param_3872,item
 
@@ -4372,20 +4372,20 @@ method_1086,SetHasValue
 method_1087,GetValue
 method_1088,GetString
 method_1089,From
-method_1090,GetValueWDefault
-method_1091,GetMaybeWDefault
-method_1092,FunctionOnValue
-method_1093,ActionOnValue
-field_2616,_hasValue
+method_1090,GetOrDefault
+method_1091,Or
+method_1092,Map
+method_1093,ApplyIfPresent
+field_2616,hasValue
 field_2617,value
 param_4782,hasValue
 param_8241,value
 param_4783,hasValue
 param_4784,value
 param_4785,value
-param_4786,creator
-param_4787,default
-param_4788,default
+param_4786,helper
+param_4787,defaultValue
+param_4788,defaultValue
 param_4789,funct
 param_4790,action
 param_4791,obj
@@ -4395,8 +4395,8 @@ param_4794,maybe2
 param_4795,maybe1
 param_4796,maybe2
 
-## MaybeCreator
-struct_18,MaybeCreator
+## MaybeHelper
+struct_18,MaybeHelper
 method_187,Create
 field_1431,empty
 param_3270,value
