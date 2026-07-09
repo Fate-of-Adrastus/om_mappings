@@ -1893,7 +1893,7 @@ method_2104,ResetCycleTime
 method_2105,SetTooltipIfNotSet
 method_2106,GetCharacterFromKey
 method_2107,SetTooltip
-method_2108,SaveRedoAction
+method_2108,MarkNeedsNewSnapshot
 method_2109,Save
 method_2110,IsPartControlMode
 method_2111,IsPartDraggingMode
@@ -1930,8 +1930,8 @@ field_4754,specialEffects
 field_4004,solution
 field_4005,musicTrack
 field_4006,fanfare
-field_4007,needsSaveing
-field_4008,needsRedoActionSaveing
+field_4007,needsSaving
+field_4008,needsNewSnapshot
 field_4009,boardOffset
 # field_4755,
 field_4010,currentInputMode
@@ -2405,9 +2405,9 @@ method_1957,FromPuzzle
 method_1958,GetSolutionAt
 method_1959,ToData
 method_1960,FromData
-method_1961,SaveRedoAction
-method_1962,GetRedoAction
-method_1963,RestoreRedoAction
+method_1961,SavePartsSnapshot
+method_1962,CreatePartsSnapshot
+method_1963,RestorePartsSnapshot
 method_1964,MakeCopyOfSolution
 method_1965,Save
 method_1966,SetNameAndSave
@@ -2422,7 +2422,7 @@ field_3916,nameOnDisk
 field_3917,creationTime
 field_3918,scores
 field_3919,parts
-field_3920,redoActions
+field_3920,undoRedoBuffer
 field_3921,orderedProgrammables
 field_3922,fileExtension
 field_3923,solutionVersion
@@ -2465,7 +2465,7 @@ param_5507,path
 param_5508,data
 param_5509,nameOnDisk
 param_5510,creationTime
-param_5511,redoAction
+param_5511,snapshot
 param_5512,name
 param_8318,puzzle
 param_8319,puzzle
@@ -2551,9 +2551,9 @@ method_371,IsMatching
 field_1596,comparedInstRef
 param_3633,instRef
 
-## RedoAction
-class_291,RedoAction
-field_2272,previousParts
+## PartsSnapshot
+class_291,PartsSnapshot
+field_2272,parts
 
 
 ## BaseEffect
@@ -4314,19 +4314,19 @@ param_8153,start
 param_3987,end
 param_3988,t
 
-## SelectorList<T>
-class_260,SelectorList
+## UndoRedoBuffer<T>
+class_260,UndoRedoBuffer
 generic_13,T
-method_696,GetSelected
+method_696,GetCurrentSnapshot
 method_697,ClearAndAdd
-method_698,Add
-method_699,ClearAfterSelector
-method_700,Previous
-method_701,Next
+method_698,AddSnapshotAfterCurrent
+method_699,ClearAfterCurrentSnapshot
+method_700,PreviousSnapshot
+method_701,NextSnapshot
 method_702,GetList
 field_2068,capacity
-field_2069,list
-field_2070,selector
+field_2069,snapshots
+field_2070,currentSnapshotIndex
 param_4190,capacity
 param_4191,item
 param_4192,item
