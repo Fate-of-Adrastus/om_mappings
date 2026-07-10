@@ -1071,8 +1071,8 @@ field_2550,permissionCategory
 field_2551,isPeriodOverride
 field_2552,countsToHistogram
 
-## Instructions
-class_169,Instructions
+## InstructionTypes
+class_169,InstructionTypes
 method_476,Init
 method_477,GetById
 field_1652,periodOverride
@@ -4651,8 +4651,8 @@ method_1037,PreventLowerScreenUpdates
 param_4686,deltaTime
 param_4687,isOpening
 
-## LoadingScreen
-class_93,LoadingScreen
+## TitleScreen
+class_93,TitleScreen
 method_2272,PreventLowerScreenUpdates
 method_90,Render
 field_932,textAnimSpeed
@@ -4664,8 +4664,8 @@ param_95,loadCompletion
 param_96,animationTime
 param_97,displayText
 
-## TipScreen
-class_288,TipScreen
+## PuzzleTipScreen
+class_288,PuzzleTipScreen
 method_791,PreventLowerScreenUpdates
 field_2234,cyclesPerSec
 field_2235,cycleLength
@@ -4715,15 +4715,15 @@ field_4536,instance
 method_2359,IsErrorEffect
 param_8568,effect
 
-## CinematicsScreen
-class_252,CinematicsScreen
+## CinematicScreen
+class_252,CinematicScreen
 method_678,IsLargeScreen
 method_679,GetDialogueSizeMultiplier
 method_680,GetPortraitWidth
 method_681,GetPortraitHeighth
 method_682,PreventLowerScreenUpdates
 method_683,GetActorPosition
-method_684,QuitCinematics
+method_684,QuitCinematic
 field_2038,vignette
 field_2039,actors
 field_4480,exitingActors
@@ -4820,8 +4820,8 @@ param_8719,part
 param_8720,part
 param_8721,instruction
 
-## PauseScreen
-class_178,PauseScreen
+## EscapeScreen
+class_178,EscapeScreen
 method_487,PreventLowerScreenUpdates
 param_3781,isOpening
 param_3782,deltaTime
