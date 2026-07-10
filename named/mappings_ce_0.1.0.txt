@@ -3692,7 +3692,7 @@ method_280,RenderColor
 method_281,RenderColorBorder
 method_282,RenderColorBorder
 method_283,RenderColorBorder
-method_284,RenderColor
+method_284,RenderColor2
 method_285,RenderCentered
 method_286,RenderOrientedRectangle
 method_287,RenderOrientedRectangle
@@ -5351,8 +5351,6 @@ method_1130,AtomTypeSelector
 method_1131,BondTypeSelector
 method_2347,RenderMolecule
 method_1132,MoleculeError
-method_1133,ExportRepeatingMolecules
-method_1134,ImportRepeatingMolecules
 field_2654,builderBoard
 field_2655,bondDirections
 field_2656,molecule
