@@ -657,9 +657,9 @@ field_2777,isSoftTutorial
 field_2778,limitedPartAmounts
 field_2779,productionInfo
 field_2780,outputMultiplier
-# field_2781,			!not set at creation?
+field_2781,isWorkshop
 field_2782,isCustom
-# field_2783,			!not set at creation?
+field_2783,uniqueCustomVersion
 # field_2784,			!not set at creation?
 param_4980,path
 param_4981,path
@@ -3961,7 +3961,7 @@ method_403,AssertOrThrow
 method_404,Clamp
 method_405,Clamp
 method_406,Clamp0to1
-# method_407,
+method_407,ShuffleSeed
 method_2355,MergeHashCodes
 method_408,Remainder
 method_409,Remainder
@@ -3974,16 +3974,16 @@ method_415,InterpolatePoints
 method_416,InterpolatePointsClamped
 method_417,InterpolateCos
 method_418,SetAllElements
-# method_419,
+method_419,RandomNumber
 method_420,GetHexDigit
 method_421,HexIntValue
 method_422,GetWatchElapsed
 method_423,GetByteMultiplier
 method_424,SubstringByInterval
 method_425,ActionOnEach
-# method_426,
-# method_427,
-# method_428,
+method_426,Shuffle
+method_427,Shuffle
+method_428,MergeRandom
 method_429,OrderWithKeys
 method_430,FirstOrNone
 method_431,Satisfies
@@ -4026,7 +4026,7 @@ param_8107,value
 param_3665,min
 param_3666,max
 param_3667,value
-# param_8108,
+param_8108,seed
 param_8559,str
 param_8109,dividend
 param_3669,modulo
@@ -4061,8 +4061,8 @@ param_8115,end
 param_3694,t
 param_3695,array
 param_8116,value
-# param_3697,
-# param_3698,
+param_3697,source
+param_3698,length
 param_8117,hexValue
 param_3700,char
 param_3701,value
@@ -4072,13 +4072,13 @@ param_3703,str
 param_3704,interval
 param_3705,enumerable
 param_3706,action
-# param_3707,
-# param_3708,
-# param_3709,
-# param_3710,
-# param_3711,
-# param_3712,
-# param_3713,
+param_3707,source
+param_3708,list
+param_3709,enumerable
+param_3710,source
+param_3711,source
+param_3712,enumerable1
+param_3713,enumerable2
 param_3714,source
 param_3715,sourceKeyMap
 param_3716,orderedKeys
@@ -4140,6 +4140,23 @@ field_1625,mapToKey
 field_1626,dict
 field_1627,defaultValue
 param_3757,Source
+
+## Extensions
+class_96,Extensions
+method_96,GetOrNone
+method_97,GetNonEmpty
+method_98,Transform
+method_99,GetOrDefault
+param_100,dict
+param_101,key
+param_102,enumerable
+param_103,enumerable
+param_104,transform
+param_105,maybe
+param_106,value
+# NestedClasses
+class_508,AsyncStateMachine1
+class_509,AsyncStateMachine2
 
 ## HexTransform
 class_202,HexTransform
@@ -4209,6 +4226,26 @@ method_634,TranslateToUpper
 
 ## EmptyLocString
 class_237,EmptyLocString
+
+## Random
+class_137,Random
+method_297,SetSeed
+method_298,GetULong
+method_299,GetInt
+method_300,Get0to1
+method_301,GetFloat
+method_302,GetBool
+method_303,GetElement
+field_1515,randA
+field_1516,randB
+param_3513,seed
+param_3514,seed
+param_3515,min
+param_3516,max
+param_3517,min
+param_3518,max
+param_3519,trueChance
+param_3520,list
 
 ## Matrix4
 method_1069,Unit
@@ -4641,6 +4678,312 @@ method_143,Init
 # field_997,
 param_5847,texture
 param_145,texture
+
+
+## Keybinds
+class_203,Keybinds
+method_541,NumpadNames
+method_542,MapKey
+field_1881,currentLayout
+field_1882,keyboardLayouts
+field_1883,keyMappings
+param_3877,key
+
+## ConfigFile
+method_858,Set
+method_859,Remove
+method_860,Set
+method_861,Get
+method_862,Get
+method_863,ReadFile
+method_864,WriteFile
+field_2372,filePath
+field_2373,values
+field_2374,hasRead
+field_2375,needsToWrite
+param_4513,filePath
+param_4514,key
+param_8210,value
+param_4515,key
+param_4516,key
+param_8211,value
+param_4517,key
+param_4518,dataValueMap
+param_4519,key
+delegate_384,ConfigValueMap
+generic_6,TValue
+param_8048,data
+param_8049,value
+## LambdaGeneratedClass
+class_462,LambdaGeneratedClass
+field_4182,instance
+method_865,GetKey
+param_4520,pair
+
+## Settings
+class_159,Settings
+method_377,GetConfig
+method_378,SetConfig
+method_379,GetResolution
+method_380,SetResolution
+method_381,GetString
+method_382,SetString
+method_383,ParseBool
+method_384,BoolToString
+method_385,ParseInt
+method_386,IntToString
+method_387,ParsePercentage
+method_388,PercentageToString
+method_389,GetLanguageByName
+method_390,GetLanguageName
+method_391,GetLayoutByName
+method_392,GetLayoutName
+field_1608,configFile
+field_1609,language
+field_1610,resolutionWidth
+field_1611,resolutionHeight
+field_1612,fullscreen
+field_1613,volumeSound
+field_1614,volumeMusic
+field_1615,quickHotkeys
+field_1616,keyboardLayout
+field_1617,windowsUseOpenGL
+field_1618,useSoftwareCursor
+field_1619,enableHermitMode
+field_1620,showGlobalRecords
+field_1621,gifOutputDirectory
+field_1622,enableAltClickDrag
+field_4347,externalLeaderboardURLs
+field_4348,panOnScroll
+param_3641,filePath
+param_3642,configFile
+param_3643,resolution
+param_3644,value
+param_3645,value
+param_3646,value
+param_3647,value
+param_3648,value
+param_8103,value
+param_3649,percentage
+param_3650,percentage
+param_3651,name
+param_8104,language
+param_3653,name
+param_8105,layout
+
+## SettingsItem<T>
+class_131,SettingsItem
+generic_7,Td
+method_244,Get
+method_245,DefaultIfNoValue
+method_246,Set
+field_1475,configFile
+field_1476,settingName
+field_1477,defaultValue
+field_1478,fromString
+field_1479,toString
+param_3334,configFile
+param_3335,settingName
+param_3336,defaultValue
+param_8549,setter
+param_8550,getter
+param_8058,value
+
+## SaveData
+class_224,SaveData
+method_568,GetPlayerId
+method_569,GetPuzzleBest
+method_570,SetPuzzleBest
+method_571,RemovePuzzleBest
+method_572,RemovePuzzleBest
+method_573,IsComplete
+method_574,SetSeenVignette
+method_2284,GetSeenVignette
+method_2285,GetSeenVignette
+method_576,SetVignetteProgress
+method_577,GetVignetteProgress
+method_578,SetTipLearned
+method_579,GetTipLearned
+method_580,GetCustomVersion
+method_581,SetCustomVersion
+method_582,GetWorkshopID
+method_583,SetWorkshopID
+method_584,RemoveWorkshopID
+method_585,GetCreditsSeen
+method_586,SetCreditsSeen
+method_2286,GetDlcCreditsSeen
+method_2287,SetDlcCreditsSeen
+method_587,GetWASDLearned
+method_588,SetWASDLearned
+method_589,GetDiagramLearned
+method_590,SetDiagramLearned
+method_591,GetDefaultChapter
+method_592,SetDefaultChapter
+method_593,GetSolitaireVariantWon
+method_594,SetSolitaireVariantWon
+method_2288,GetJournalVolume
+method_2289,SetJournalVolume
+field_1929,configFile
+field_1930,playerID
+field_1931,bestScore
+field_1932,vignetteSeen
+field_1933,vignetteProgress
+field_1934,tipLearned
+field_1935,customVersion
+field_1936,customWorkshopID
+field_1937,creditsSeen
+field_4319,dlcCreaditsSeen
+field_1938,WASDLearned
+field_1939,diagramLearned
+field_1940,defaultChapter
+field_1941,solitaireVariantWon
+field_4320,journalVolume
+param_3912,filePath
+param_3913,puzzle
+param_3914,type
+param_3915,puzzle
+param_3916,type
+param_3917,value
+param_3918,puzzle
+param_3919,type
+param_3920,puzzle
+param_8144,puzzle
+param_3922,vignette
+param_8383,vignette
+param_8384,vignettePath
+param_3924,vignette
+param_3925,progress
+param_3926,vignette
+param_3927,tip
+param_3928,tip
+param_3929,puzzle
+param_3930,puzzle
+param_8145,version
+param_3931,puzzle
+param_3932,puzzle
+param_3933,id
+param_3934,puzzle
+param_3935,value
+param_8385,value
+param_3936,value
+param_3937,value
+param_3938,value
+param_3939,value
+param_8386,index
+
+## WorkshopManager
+method_2226,GetIsUploading
+method_2227,SetIsUploading
+method_2228,GetError
+method_2229,SetError
+method_2230,ReloadAll
+# method_2231,
+method_2232,RedownloadWorkshopPuzzles
+method_2233,ActivateWorkshopOverlay
+method_2234,ReloadWorkshopPuzzles
+method_2235,ReloadCustomPuzzles
+method_2236,LoadPuzzlesOfFolder
+method_2237,CustomPuzzlePath
+method_2238,GetCustomVersion
+method_2239,NewCustomPuzzle
+method_2240,RegenPuzzleId
+method_2241,RegenCustomVersion
+method_2242,DeleteCustom
+method_2243,HadEdits
+method_2244,UploadPuzzle
+method_2245,ReportError
+method_2246,ClearError
+method_2247,DoUpload
+method_2248,HandleUploadResult
+method_2249,UpdateWorkshopPuzzle
+method_2250,HandleUpdateResult
+method_2251,SavePuzzlePuzzlePreview
+field_4137,customPuzzles
+field_4139,isUploading
+field_4138,workshopPuzzles
+field_4140,uploadError
+param_5803,value
+param_8361,message
+param_5804,folder
+param_5805,puzzle
+param_5806,filePath
+param_5807,puzzle
+param_5808,puzzle
+param_5809,puzzle
+param_5810,puzzle
+param_5811,puzzle
+param_5812,message
+param_5813,puzzle
+param_8362,result
+param_5814,unknownError
+param_5815,puzzle
+param_5816,puzzle
+param_5817,publishedId
+param_8363,result
+param_5818,unknownError
+param_8364,puzzle
+param_5819,publishedId
+param_5820,tempFilePath
+param_5821,puzzlePreviewPath
+param_5822,puzzle
+## NestedClasses
+class_457,UploadHandler
+method_2262,HandleUploadResult
+field_4155,result
+field_4156,unknownError
+param_5826,workshopManager
+param_5827,puzzle
+class_455,MoleculeDisplayRenderer
+method_2254,RenderMoleculeDisplay
+field_4145,isInput
+field_4146,scaleBound
+field_4147,scaleFactor
+param_5824,inputOutput
+class_454,UpdateHandler
+method_2253,HandleUpdateResult
+field_4311,workshopManager
+field_4312,puzzle
+field_4142,publishedId
+field_4143,tempFilePath
+field_4144,puzzlePreviewPath
+param_8365,result
+field_3487,unknownError
+class_456,AsyncStateMachine
+class_453,PuzzleMatcher
+method_2252,IsSameId
+field_4141,puzzle
+param_5823,puzzle
+class_458,PuzzleMatcher2
+method_2263,IsSameId
+field_4157,puzzle
+param_5828,puzzle
+# LambdaGeneratedClass
+class_505,LambdaGeneratedClass
+field_4313,instance
+method_2264,SetAsWorkshop
+method_2265,SetAsCustom
+method_2266,GetCreationTime
+method_2489,Empty
+method_2490,Empty
+method_2267,GetMoleculeDisplays
+method_2268,GetTotalRenderArea
+method_2269,GetWidth
+method_2270,GetHeight
+method_2271,GetHeight2
+param_5829,isWorkshop
+param_8366,isCustom
+param_5830,filePath
+param_8731,unused
+param_8732,unused
+param_8733,unused
+param_8734,unused
+param_5831,inputOutputs
+param_5832,isInput
+param_5833,scaleFactor
+param_5834,targetHandles
+param_8367,targetHandle
+param_5835,targetHandle
+param_8368,targetHandle
 
 
 ## IScreen
@@ -5844,8 +6187,8 @@ field_2444,time
 # field_2448,
 # field_2449,
 # field_2450,
-# field_2451,
-# field_2452,
+field_2451,saveData
+field_2452,settingsData
 field_2453,logManager
 field_2454,screenStack
 field_2455,screenTransition
@@ -5974,6 +6317,24 @@ field_4473,blockDLC
 
 ## Platform
 enum_131,Platform
+
+## ErrorHandler
+class_129,ErrorHandler
+method_238,BindHandler
+method_239,HandleException
+method_240,GetDllDiagnostics
+field_1474,htmlDoc
+param_3328,obj
+param_3329,args
+## NestedClasses
+class_130,Imports
+# method_241,
+# method_242,
+# method_243,
+# param_3330,
+# param_3331,
+# param_3332,
+# param_3333,
 
 
 ## SDL
