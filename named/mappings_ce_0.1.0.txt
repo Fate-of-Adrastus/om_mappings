@@ -1210,7 +1210,7 @@ param_4913,hexPos
 param_4914,solution
 param_4915,solution
 param_4916,solution
-param_4917,occupationMode
+param_4917,layer
 param_4918,translation
 param_4919,rotation
 param_4920,hexPos
@@ -1236,7 +1236,7 @@ field_1528,id
 field_1529,name
 field_1530,description
 field_1531,cost
-field_1532,hexOccupationMode
+field_1532,layer
 field_1533,isProgrammable
 field_1534,armRotations
 field_1535,canExtend
@@ -1333,8 +1333,8 @@ field_2274,hexPos2
 param_8191,hexPos1
 param_4417,hexPos2
 
-## PartOccupationMode
-enum_2,PartOccupationMode
+## PartTypeLayer
+enum_2,PartTypeLayer
 ## 0: TOP-BOTTOM
 ## 1: TOP
 ## 2: BOTTOM
@@ -2445,7 +2445,7 @@ param_8317,programIndex
 param_5485,part1
 param_5486,part2
 param_5487,exceptionPart
-param_5488,occupationMode
+param_5488,layer
 param_5489,part
 param_5490,otherInputOutputIndex
 param_5491,offset
@@ -2512,8 +2512,8 @@ param_8323,solution
 ## HistogramType
 enum_133,HistogramType
 
-## HexOccupationMode
-enum_137,HexOccupationMode
+## PartLayer
+enum_137,PartLayer
 ## 0: TOP-BOTTOM
 ## 1: TOP
 ## 2: BOTTOM
