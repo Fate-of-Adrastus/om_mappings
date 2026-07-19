@@ -94,8 +94,8 @@ field_15,rimlight
 
 ## PrismaticAtomTextures
 class_229,PrismaticAtomTextures
-field_1950,base1
-field_1951,colors
+field_1950,base
+field_1951,colorsMask
 field_1952,mask
 field_1953,rimlight
 
@@ -2328,8 +2328,8 @@ param_8456,molecule
 param_8457,offset
 param_8458,hexPos
 param_8459,rotationAngle
-param_8460,tintGreen
-param_8461,tintRed
+param_8460,opacityMultiplier
+param_8461,height
 param_8462,shadowStrength
 param_8463,isOutputRender
 param_8464,solutionEditor
@@ -2337,14 +2337,14 @@ param_8465,bond
 param_8466,offset
 param_8467,hexOffset
 param_8468,rotationAngle
-param_8469,tintGreen
-param_8470,tintRed
+param_8469,opacityMultiplier
+param_8470,height
 param_8471,solutionEditor
 param_4580,atomType
 param_4581,translation
 param_4582,scaleMultiplier
-param_4583,tintGreen
-param_8219,tintRed
+param_4583,opacityMultiplier
+param_8219,height
 param_4585,shadowStrength
 param_4586,shadowOffset
 param_4587,shadowAngle
@@ -2370,8 +2370,8 @@ field_4481,solutionEditor
 # field_1486,offset
 # field_1487,hexOffset
 # field_1488,rotationAngle
-# field_1489,tintGreen
-# field_1490,tintRed
+# field_1489,opacityMultiplier
+# field_1490,height
 # field_1491,isOutputRender
 # field_1492,simTime
 # field_1493,realTime
@@ -2680,8 +2680,8 @@ param_8374,textureSwapDelay
 param_8375,solutionEditor
 param_8376,newAtomType
 param_8377,pos
-param_8378,tintGreen
-param_8379,tintRed
+param_8378,opacityMultiplier
+param_8379,height
 param_8380,shadowOffset
 param_8381,shadowAngle
 param_8382,isOutputRender
@@ -3364,12 +3364,12 @@ param_8285,renderTarget
 param_5087,size
 param_5088,value
 param_8286,mode
-# param_5089,
-# param_5090,
-# param_5091,
-# param_5092,
-# param_5093,
-# param_5094,
+param_5089,time
+param_5090,visibleBounds
+param_5091,projectionMatrix
+param_5092,viewMatrix
+param_5093,modelMatrix
+param_5094,meshColorRaw
 param_5095,shader
 param_5096,textures
 param_5097,samplerModes
@@ -3508,6 +3508,12 @@ param_3255,window
 param_3257,window
 param_3258,width
 param_8045,height
+param_3243,time
+param_3244,visibleBounds
+param_3245,projectionMatrix
+param_3246,viewMatrix
+param_3247,modelMatrix
+param_3248,meshColorRaw
 
 ## DepthTestMode
 enum_8,DepthTestMode
