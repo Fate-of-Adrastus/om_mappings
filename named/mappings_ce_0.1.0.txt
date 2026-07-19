@@ -3376,7 +3376,7 @@ param_5097,samplerModes
 param_5098,mesh
 param_5099,count
 param_5100,indices
-param_5101,basevertex
+param_5101,baseVertex
 param_5102,mesh
 param_5103,window
 # param_5104,
@@ -3481,7 +3481,7 @@ param_3224,elements
 param_3225,elementArrayBufferSize
 param_3226,width
 param_8042,height
-param_3227,textreData
+param_3227,textureData
 param_3228,renderTarget
 param_3229,window
 param_3230,color
@@ -3502,7 +3502,7 @@ param_3250,vertexBuffer
 param_3249,elementArrayBuffer
 param_3252,count
 param_3253,indices
-param_3254,basevertex
+param_3254,baseVertex
 param_3255,window
 # param_3256,
 param_3257,window
@@ -3654,7 +3654,7 @@ class_176,TextureBatcher
 field_1692,shader
 field_1693,textures
 field_1694,samplers
-field_1695,texCoord
+field_1695,texCoords
 field_1696,defaultSpriteShader
 field_1697,textShader
 field_1698,mesh
@@ -3876,7 +3876,7 @@ param_3510,rotation
 ## NestedClasses
 class_136,FontTypeSwitcher
 method_295,SwitchType
-method_296,ShouldSkippChar
+method_296,ShouldSkipChar
 field_1508,activeStyle
 field_1509,activeFont
 field_1510,fontStyles
@@ -3938,7 +3938,7 @@ enum_0,TextAlignment
 
 ## MusicManager
 class_251,MusicManager
-method_673,setTrack
+method_673,SetTrack
 # method_674,
 # method_675,
 # method_677,
@@ -4773,7 +4773,7 @@ param_8105,layout
 
 ## SettingsItem<T>
 class_131,SettingsItem
-generic_7,Td
+generic_7,T
 method_244,Get
 method_245,DefaultIfNoValue
 method_246,Set
@@ -5329,7 +5329,7 @@ method_1289,IsMatchingChapterTitle
 field_2935,unlockAllMode
 field_2936,currentChapter
 field_2937,chapterUIFadeTimer
-field_4720,uiFadeLTimer
+field_4720,uiFadeTimer
 field_2938,chapterNameFadeTimer
 field_4721,uiFadeOneDirTimer
 field_2939,chapterTransitionTimer
@@ -5367,7 +5367,7 @@ param_5039,campaignItemUnlockEvent
 param_5040,campaignItemCompleteEvent
 field_4726,campaignItem
 class_386,ChapterBackgroundRenderer
-method_1293,RenderChapterBackGround
+method_1293,RenderChapterBackground
 field_2954,pzSelectScr
 field_2955,size
 param_8277,chapter
@@ -6199,7 +6199,7 @@ field_2458,scoreManager
 field_2460,workshopManager
 # field_2461,
 # field_4597,
-field_2464,fadeBackGround
+field_2464,fadeBackground
 # field_2465,
 # field_2466,
 # field_2467,
