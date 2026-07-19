@@ -11,7 +11,7 @@ field_2277,molecule
 field_2278,pos
 field_2280,atomType
 field_2279,atom
-field_2281,doesMoleculeExist
+field_2281,inMultiAtomMolecule
 field_2282,isHeldByArm
 param_4421,molecule
 param_4422,pos
@@ -159,7 +159,7 @@ method_1116,Rotate
 method_1117,CloneAndTranslate
 method_1118,Translate
 method_1119,MergeWith
-# method_2397,
+method_2397,SplitIntoConnectedComponents
 # method_1120,CompressRepetition --Removed
 method_1121,GetSinglet
 method_1122,GetDoublet
@@ -169,13 +169,13 @@ method_1122,GetDoublet
 # method_2401,
 method_2402,RepeatAtomPositions
 method_2403,RemoveRepetitions
-field_2638,wasChanged
+field_2638,shouldRecomputeConnectivity
 field_2639,displayName
 field_2640,hoverMoleculeRenderT
 field_2641,baseMoleculeRenderT
 field_2642,atomDict
 field_2643,bonds
-field_2644,compressedMolecule
+field_2644,monomer
 # field_4604,
 field_2645,repetitionHexPos
 param_4822,repetitionHexPos
@@ -206,7 +206,7 @@ param_4846,molecule
 param_4847,atom
 param_4848,atom1
 param_4849,atom2
-param_8621,notAsChange
+param_8621,skipRecomputeConnectivity
 ## NestedClasses
 class_348,BondMatcher
 method_1123,IsMatchingBond
@@ -659,7 +659,7 @@ field_2779,productionInfo
 field_2780,outputMultiplier
 field_2781,isWorkshop
 field_2782,isCustom
-field_2783,uniqueCustomVersion
+field_2783,fileHash
 # field_2784,			!not set at creation?
 param_4980,path
 param_4981,path
@@ -1146,10 +1146,10 @@ method_1175,Clone
 method_1176,SetupInputOutputFromSolution
 method_1177,HasNoParent
 method_1178,GetSimState
-method_1179,GetParentOrThis
+method_1179,GetRootPart
 method_1180,GetParentList
-method_1181,CollectSubparts
-method_1182,CollectSubparts
+method_1181,CollectSelfAndSubparts
+method_1182,CollectSelfAndSubparts
 method_1183,GetDebugReferenceName
 method_1184,InFrontBy
 method_1185,GetMoleculeForInputOutput
@@ -1406,7 +1406,7 @@ method_1822,GetInCycle
 method_1823,SetInCycle
 method_2428,IsSimpleEditor
 method_1824,ConstructSimulation
-method_1825,IsOutputComplete
+method_1825,AllOutputsComplete
 method_1826,BeginCycle
 method_1827,EndCycle
 method_1828,ResetSimStates
@@ -1542,7 +1542,7 @@ method_1857,GetStationary
 method_1858,FormatType
 field_3836,holder
 field_3837,movementType
-field_3838,translateTo
+field_3838,translateBy
 field_3839,rotationPivot
 field_3840,rotation
 # param_5409,
@@ -1584,7 +1584,7 @@ method_1864,IsWater
 method_1865,IsEarth
 method_1866,IsAir
 method_1867,GetType
-method_1868,WasChanged
+method_1868,ShouldRecomputeConnectivity
 method_1869,IsStdOutput
 method_1870,IsOutput
 method_1871,HasAtoms
@@ -1648,7 +1648,7 @@ field_2740,hasGrabStateChanged
 field_2741,deltaPivot
 field_2742,hasMovedOnTrack
 field_2743,isProcessing
-field_2744,heldAtoms
+field_2744,processingAtoms
 field_4613,useActiveCodeLine
 
 ## SimPlayState
@@ -3296,11 +3296,11 @@ method_1335,ClearMesh
 method_1336,Present
 method_1337,OnWindowResize
 method_1338,LoadImage
-method_1339,GetImageByExtension
+method_1339,ReloadTextureIfChanged
 method_1340,GetPNGAtPath
 method_1341,GetPNGAtPathUnsafe
-method_1342,AtomLightApplyAlpha
-method_1343,ReloadAndReset
+method_1342,PremultiplyAlpha
+method_1343,ReloadAssetsAndResetIfChanged
 method_1344,GetCompilerLogFromPath
 field_2965,textureBatchSize
 field_2966,platformRenderer
@@ -3409,7 +3409,7 @@ param_5115,psdGuide
 interface_1,IPlatformRenderer
 method_155,Initialize
 method_156,InitializeWindow
-method_157,CreateShader
+method_157,ReloadShaderIfChanged
 method_158,DestroyShader
 method_159,CreateTexture
 method_160,CreateDynamicTexture
@@ -3813,7 +3813,7 @@ param_3442,color
 param_3443,bounds
 param_3444,color
 param_3445,pos
-param_3446,doubledScacle
+param_3446,halfScale
 param_3447,baseBottom
 param_8077,baseTop
 param_3449,width
@@ -3968,9 +3968,9 @@ method_404,Clamp
 method_405,Clamp
 method_406,Clamp0to1
 method_407,ShuffleSeed
-method_2355,MergeHashCodes
-method_408,Remainder
-method_409,Remainder
+method_2355,StableStringHashCode
+method_408,Modulo
+method_409,Modulo
 method_410,SmallestRotationAngle
 method_411,InterpolateLinear
 method_412,InterpolateRotation
@@ -3979,8 +3979,8 @@ method_414,InterpolateVectSeparate
 method_415,InterpolatePoints
 method_416,InterpolatePointsClamped
 method_417,InterpolateCos
-method_418,SetAllElements
-method_419,RandomNumber
+method_418,FillArray
+method_419,RandomDigits
 method_420,GetHexDigit
 method_421,HexIntValue
 method_422,GetWatchElapsed
@@ -3992,28 +3992,28 @@ method_427,Shuffle
 method_428,MergeRandom
 method_429,OrderWithKeys
 method_430,FirstOrNone
-method_431,Satisfies
-method_432,GetLast
-method_433,CountMatching
-method_434,CountFulfilling
-method_435,PopLastFew
+method_431,FirstMatching
+method_432,LastOrNone
+method_433,FirstIndexOf
+method_434,FirstIndexMatching
+method_435,TruncateToSize
 method_436,ReplaceWithASCII
 method_437,RemoveStyleFormat
-method_438,HasCopies
+method_438,ItemsAreUnique
 # method_439,
 method_440,FormatInt
 method_441,FormatBold
 method_442,FormatItalic
 method_443,EscapeFormatting
-method_444,CopyArray
-method_445,TryGetValueOrSet
+method_444,CloneArray
+method_445,GetOrInsert
 method_446,TypeToString
-method_448,GetAtCenter
+method_448,Middle
 method_447,MaxOrDefault
-method_449,CeilingToPow2
-method_2356,GetLCD
+method_449,CeilingToNextPow2
+method_2356,Gcd
 method_450,ReplaceFirst
-method_451,Concat
+method_451,Append
 method_452,FormatInvariant
 method_2276,ToInvariant
 method_2277,ToInvariant
@@ -4097,7 +4097,7 @@ param_8120,value
 param_3721,enumerable
 param_3722,condition
 param_3723,list
-param_3724,remainingCount
+param_3724,newCount
 param_3725,str
 param_3726,str
 param_3727,list
@@ -4120,9 +4120,9 @@ param_3740,enumerable
 param_3741,value
 param_8562,value1
 param_8563,value2
-param_8122,baseString
-param_3742,to
-param_3743,from
+param_8122,str
+param_3742,from
+param_3743,to
 param_3744,first
 param_3745,second
 param_3746,format
@@ -4254,7 +4254,7 @@ param_3519,trueChance
 param_3520,list
 
 ## Matrix4
-method_1069,Unit
+method_1069,Identity
 method_1070,GetTranslation
 method_1071,RotYZ
 method_1072,RotXZ
@@ -4565,13 +4565,13 @@ field_2154,naver_17_25
 class_233,Font
 # method_607,
 # method_608,
-method_609,getInfoForChar
+method_609,getGlyphInfoForChar
 # method_610,
 # method_611,
 # method_612,
 # method_613,
 # method_614,
-field_1965,fontInfo
+field_1965,unicodeBlackCircleGlyphInfo
 # field_1966,
 # field_1967,
 # field_1968,
@@ -4678,10 +4678,10 @@ field_1759,cabinet
 ## TextureOffsets
 class_107,TextureOffsets
 method_143,Init
-# method_144
-# method_145
-# field_996,
-# field_997,
+method_144,GetOffset
+method_145,GetScale
+field_996,offsets
+field_997,scales
 param_5847,texture
 param_145,texture
 
@@ -4705,7 +4705,7 @@ method_863,ReadFile
 method_864,WriteFile
 field_2372,filePath
 field_2373,values
-field_2374,hasRead
+field_2374,needsToRead
 field_2375,needsToWrite
 param_4513,filePath
 param_4514,key
@@ -4890,10 +4890,10 @@ method_2234,ReloadWorkshopPuzzles
 method_2235,ReloadCustomPuzzles
 method_2236,LoadPuzzlesOfFolder
 method_2237,CustomPuzzlePath
-method_2238,GetCustomVersion
+method_2238,ComputeFileHash
 method_2239,NewCustomPuzzle
 method_2240,RegenPuzzleId
-method_2241,RegenCustomVersion
+method_2241,UpdateFileHash
 method_2242,DeleteCustom
 method_2243,HadEdits
 method_2244,UploadPuzzle
@@ -5126,10 +5126,10 @@ param_3780,deltaTime
 method_2470,GetBaseRecorderArea
 method_2471,PreventLowerScreenUpdates
 method_2472,GetEffectiveCompletedOutputs
-method_2473,GetEffectiveRequeredOutputs
-method_2474,HasHaltedPart
+method_2473,GetOutputCountToStartRecording
+method_2474,WaitingForAnyPartToHalt
 method_2475,GetLoopedCycle
-field_4762,boundDelta
+field_4762,boundsMargin
 field_4763,cycleLength
 field_4764,cyclesPerSec
 field_4765,maxSize
@@ -5138,14 +5138,14 @@ field_4767,overlayRenderTarget
 field_4768,solutionEditor
 field_4769,targetSize
 field_4770,targetOffset
-field_4771,primedForRecording
-field_4772,requiredOutputCount
-field_4773,completedRecording
+field_4771,useDlcOverlay
+field_4772,startRecordingAtOutputCount
+field_4773,begunRecording
 field_4774,isStopped
 field_4775,recordingStartCycleOffset
 field_4776,startCycle
 field_4777,endCycle
-field_4778,isCycleEditMode
+field_4778,isManualStartEndCycle
 field_4779,gifRecorder
 param_8712,solution
 param_8713,isOpening
@@ -5628,8 +5628,8 @@ method_1041,RenderMenuButton
 method_1042,MenuButtons
 field_2553,wasInitialized
 field_2554,volumeCount
-field_2555,pushSubmissionScreen
-param_4688,pushSubmissionScreen
+field_2555,showDifficultyWarningIfNeeded
+param_4688,showDifficultyWarningIfNeeded
 param_4689,isOpening
 param_4690,deltaTime
 param_4691,icon
@@ -5685,8 +5685,9 @@ param_4711,isOpening
 param_4712,deltaTime
 ## NestedClasses
 enum_152,Type
-# 0: Warning
-# 1: Submission
+# 0: NewPlayerDifficultyWarning
+# 1: SubmissionInfo
+# 2: JournalIssueSelector
 ## LambdaGeneratedClass
 class_473,LambdaGeneratedClass
 field_4208,instance
@@ -5727,7 +5728,7 @@ param_4867,molecule
 class_354,HexIndexHolder
 field_2662,hexPos
 class_355,BondMatcher
-method_2348,IsMoleculeAtBond
+method_2348,BondIsPartialOrFloating
 field_4517,molecEditScr
 field_4518,primaryMolecule
 field_4519,secondaryMolecule
@@ -6147,8 +6148,8 @@ method_935,SetLogManager
 method_936,GetScreenTransition
 method_937,SetScreenTransition
 # method_2383,
-method_938,GetLastScreen
-method_939,GetBeforeLastScreen
+method_938,GetCurrentScreen
+method_939,GetBelowCurrentScreen
 method_940,IsMinWindow
 method_941,IsWindowOver1080p
 method_942,GameInit
@@ -6308,18 +6309,18 @@ field_1015,fullscreenWindows
 # field_1018,
 field_1019,useMutexLaunch
 field_1020,resizableWindows
-field_1021,testInstructions
+field_1021,validateInstructionIds
 field_1022,allowPseudo
 field_1023,useEnglishWhenMissing
-field_1025,showHexPos
+field_1025,renderDebugHexPos
 field_1026,logSimulationState
 field_1027,addTestResolutions
 field_1028,dumpLore
 field_1029,generatePuzzlePreviews
-field_1030,allowMarkers
+field_1030,allowMarkingHexes
 field_1031,testAtomRender
 # field_1032,
-field_4473,blockDLC
+field_4473,forceDisableDlc
 
 ## Platform
 enum_131,Platform
