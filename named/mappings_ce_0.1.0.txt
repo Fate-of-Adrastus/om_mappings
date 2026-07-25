@@ -2085,7 +2085,7 @@ method_2072,ClearInstrSelection
 method_2073,ClearPartSelection
 method_2074,GetInstructionAtPos
 method_2075,GetInstructionsIn
-method_2076,GetInstructionLableBounds
+method_2076,GetInstructionLabelBounds
 method_2077,GetProgrammableByLabelAt
 method_2078,GetProgramIndexOfRow
 method_2079,IsFastForwardHeld
@@ -3088,11 +3088,11 @@ method_1903,RenderAtom
 method_1904,RenderNewGameReveal
 method_1905,RenderAndRun
 method_1906,RenderPulseAnimation
-field_3883,solitaireScreen
+field_3883,renderAtom
 field_3884,pos
 field_3885,getScreenPosition
 field_3886,deltaTime
-field_3887,renderAtom
+field_3887,solitaireScreen
 param_5441,hexPos
 param_5442,gameState
 param_5443,atomType
@@ -3341,15 +3341,15 @@ param_5065,texture
 param_5066,to
 param_5067,from
 param_5068,texture
-param_5069,vertecies
+param_5069,vertices
 param_5070,elements
 param_5071,vertexBufferSize
 param_5072,elementArrayBufferSize
 param_5073,mesh
-param_5074,vertecies
+param_5074,vertices
 param_5075,elements
 param_5076,mesh
-param_5077,vertecies
+param_5077,vertices
 param_5078,elements
 param_5079,width
 param_5080,height
@@ -3414,7 +3414,7 @@ method_158,DestroyShader
 method_159,CreateTexture
 method_160,CreateDynamicTexture
 method_161,SetTextureData
-method_162,GetTextureDat
+method_162,GetTextureData
 method_163,CopyTextureData
 method_164,DestroyTexture
 method_165,CreateMesh
@@ -3461,7 +3461,7 @@ param_3204,data
 param_3205,to
 param_3206,from
 param_3207,texture
-param_3208,vertecies
+param_3208,vertices
 param_8040,vertexBufferSize
 param_3210,elements
 param_8041,elementArrayBufferSize
@@ -3475,7 +3475,7 @@ param_3218,vertexBuffer
 param_3219,elementArrayBuffer
 param_3220,vertexBuffer
 param_3221,elementArrayBuffer
-param_3222,vertecies
+param_3222,vertices
 param_3223,vertexBufferSize
 param_3224,elements
 param_3225,elementArrayBufferSize
@@ -3666,7 +3666,7 @@ field_1697,textShader
 field_1698,mesh
 field_1699,batches
 field_1700,currentBatch
-field_1701,vertecies
+field_1701,vertices
 field_1702,elements
 
 ## TextureRenderer
