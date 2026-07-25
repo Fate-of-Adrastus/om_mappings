@@ -94,9 +94,9 @@ field_15,rimlight
 
 ## PrismaticAtomTextures
 class_229,PrismaticAtomTextures
-field_1950,base
-field_1951,colorsMask
-field_1952,mask
+field_1950,base1
+field_1951,colors
+field_1952,colorsMask
 field_1953,rimlight
 
 ## BondTypeEnum
@@ -4010,7 +4010,7 @@ method_445,GetOrInsert
 method_446,TypeToString
 method_448,Middle
 method_447,MaxOrDefault
-method_449,CeilingToNextPow2
+method_449,CeilToPow2
 method_2356,Gcd
 method_450,ReplaceFirst
 method_451,Append
