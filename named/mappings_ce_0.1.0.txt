@@ -2509,8 +2509,8 @@ param_5523,part
 param_8322,part
 param_8323,solution
 
-## HistogramType
-enum_133,HistogramType
+## ScoreMetric
+enum_133,ScoreMetric
 
 ## PartLayer
 enum_137,PartLayer
@@ -5036,7 +5036,7 @@ method_2352,QuitEditor
 method_2353,RenderHistograms
 method_2354,RenderNoHistogramText
 field_4520,solEditScr
-field_4521,histogramData
+field_4521,scoreData
 param_8539,solEditScr
 param_8540,saveProgress
 param_8541,isOpening
@@ -5404,7 +5404,7 @@ field_2805,storyPanel
 field_2806,scrollbar
 field_2807,selectedSolution
 field_2808,lastSelectionTime
-field_2809,histogramData
+field_2809,scoreData
 param_5006,puzzle
 param_5007,track
 param_5008,fanfare
@@ -5752,7 +5752,7 @@ method_315,SolutionButton
 method_316,PuzzleButton
 method_317,RenderScreenTitle
 method_318,FancyTextButton
-method_319,FormatHistogramData
+method_319,FormatMetricScore
 method_320,Unused
 method_321,RenderHistogram
 method_322,RenderScreenArms
@@ -5793,7 +5793,7 @@ param_3563,data
 param_3564,unused
 param_3565,data
 param_3566,pos
-param_3567,renderDif
+param_3567,renderDiff
 param_3568,screenPos
 param_3569,pos
 param_3570,size
@@ -5825,7 +5825,7 @@ method_329,RenderLine
 method_330,RenderLineWeak
 method_331,RenderLine2
 method_332,RenderLine3
-field_1563,scoreData
+field_1563,histogramData
 field_1564,calcOffset
 field_1565,height
 field_1566,histgRenderer
@@ -5861,12 +5861,12 @@ method_337,RenderGraphLine
 method_338,AsPrevious
 method_339,AsNow
 method_340,AsBest
-method_341,FormatHistogramData
+method_341,FormatMetricScore
 method_342,AsBestBold
 method_343,RenderLeaderboard
 field_1576,bounds
 field_1577,data
-field_1578,bestScore
+field_1578,topPercentileScore
 param_8095,value
 param_8096,scale
 param_3587,value
@@ -5916,19 +5916,19 @@ method_356,RenderButton
 # field_1591,
 # field_1592,
 
-## HistogramData
-class_132,HistogramData
+## ScoreData
+class_132,ScoreData
 field_1480,type
 field_1481,saveKey
-field_1482,scoreData
+field_1482,histogramData
 field_1483,best
-field_1484,score
-field_1485,now
+field_1484,previous
+field_1485,current
 
-## ScoreData
-class_182,ScoreData
-# field_1725,
-field_1726,scores
+## HistogramData
+class_182,HistogramData
+field_1725,maxScore
+field_1726,buckets
 
 ## Scrollbar
 class_262,Scrollbar
