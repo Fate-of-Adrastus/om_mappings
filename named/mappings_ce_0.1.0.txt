@@ -35,9 +35,9 @@ field_2293,isGlassy
 field_4541,isMetallic
 field_2296,isPrismatic
 field_2295,isQuicksilver
-field_2297,successor
-field_4542,predecessor
-field_2294,division
+field_2297,successorMetal
+field_4542,predecessorMetal
+field_2294,metalDivision
 field_2298,internalMolecule
 param_4426,type1
 param_4427,type2
@@ -68,8 +68,8 @@ field_1689,repeat
 field_1690,quintessence
 field_1691,atoms
 
-## AtomDivision
-struct_139,AtomDivision
+## MetalDivision
+struct_139,MetalDivision
 param_8546,upper
 param_8547,lower
 field_4526,upper
@@ -161,19 +161,19 @@ method_1118,Translate
 method_1119,MergeWith
 method_2397,SplitIntoConnectedComponents
 # method_1120,CompressRepetition --Removed
-method_1121,GetSinglet
-method_1122,GetDoublet
+method_1121,CreateMonoatomic
+method_1122,CreateDiatomic
 # method_2398,
 # method_2399,
-# method_2400,
-# method_2401,
+method_2400,RepeatMonomer
+method_2401,RepeatMonomer
 method_2402,RepeatAtomPositions
-method_2403,RemoveRepetitions
+method_2403,RemoveRepeatAtoms
 field_2638,shouldRecomputeConnectivity
 field_2639,displayName
 field_2640,hoverMoleculeRenderT
 field_2641,baseMoleculeRenderT
-field_2642,atomDict
+field_2642,atoms
 field_2643,bonds
 field_2644,monomer
 # field_4604,
@@ -251,7 +251,7 @@ method_396,PrismaBond
 method_2329,Push
 method_397,Pop
 method_398,RepeatPrevious
-method_399,AddRotatedToOrigin
+method_399,DuplicateSixfoldAboutOrigin
 field_1623,molecule
 field_1624,hexPath
 param_3654,name
@@ -2355,7 +2355,7 @@ param_4591,molecule
 param_4592,isInput
 param_4593,isHover
 param_4594,scaleBound
-param_4595,largeSinglets
+param_4595,smallMoleculesUseFullScale
 param_4596,scaleFactor
 ## NestedClasses
 # class_469,
@@ -3829,7 +3829,7 @@ param_3458,font
 param_8080,color
 param_3460,text
 param_3461,position
-param_3462,fontStyles
+param_3462,styleableFont
 param_3463,color
 param_3464,textAlignment
 param_3465,lineGapsPerLine
@@ -3844,7 +3844,7 @@ param_3473,calculateBounds
 param_3474,doRender
 param_3475,text
 param_8081,position
-param_3476,fontStyles
+param_3476,styleableFont
 param_3477,textAlignment
 param_3478,lineGapsPerLine
 param_3479,lineGapMultiplier
@@ -3852,7 +3852,7 @@ param_3480,lineWidth
 param_3481,overflowSize
 param_3482,text
 param_8082,position
-param_3484,fontStyles
+param_3484,styleableFont
 param_3485,color
 param_3486,textAlignment
 param_3487,lineGapsPerLine
@@ -3865,7 +3865,7 @@ param_3493,gradientTexture
 param_3494,maxRenderdCharCount
 param_3495,text
 param_3496,position
-param_3497,fontStyles
+param_3497,styleableFont
 param_3498,color
 param_3499,textAlignment
 param_3500,lineGapsPerLine
@@ -3885,7 +3885,7 @@ method_295,SwitchType
 method_296,ShouldSkipChar
 field_1508,activeStyle
 field_1509,activeFont
-field_1510,fontStyles
+field_1510,styleableFont
 # field_4525,
 field_1513,forcePrintNextChar
 field_1514,switchType
@@ -4172,8 +4172,8 @@ field_1880,rotation
 ## HexGrid
 class_187,HexGrid
 method_490,GetHexWidth
-method_491,ToWorldCoords
-method_492,ToWorldCoords
+method_491,ToPixelCoords
+method_492,ToPixelCoords
 method_493,GetHexOffset
 field_1742,standardGrid
 field_1743,solitaireGrid
@@ -4605,9 +4605,9 @@ param_3972,character
 # field_1982,
 # field_1983,
 
-## FontStyles
-class_1,FontStyles
-field_0,styles
+## StyleableFont
+class_1,StyleableFont
+field_0,fonts
 field_1,fallback
 param_0,universalFont
 param_1,regular
@@ -4628,22 +4628,22 @@ enum_121,FontStyle
 # 1: Bold
 # 2: Italic
 
-## LanguageSpecificFont
-class_511,LanguageSpecificFont
+## LocalizedFont
+class_511,LocalizedFont
 method_2311,SetForLanguage
-method_2312,SetForEastern
+method_2312,SetForCjk
 method_2313,SetSame
-method_2314,As
-method_2315,AsEnglish
-field_4342,languageDict
-param_8412,englishStyles
+method_2314,GetForLanguage
+method_2315,GetEnglish
+field_4342,fontsByLanguage
+param_8412,englishFont
 param_8413,language
-param_8414,styles
-param_8415,japaneseStyles
-param_8416,chineseKoreanStyles
-param_8417,forThis
+param_8414,font
+param_8415,chineseFont
+param_8416,japaneseKoreanFont
+param_8417,to
 param_8418,from
-param_8419,languageFont
+param_8419,localizedFont
 param_8420,language
 
 ## SoundAssets
