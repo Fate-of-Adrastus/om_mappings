@@ -304,9 +304,9 @@ param_8574,alignment
 
 ## ChapterAlignment
 enum_195,ChapterAlignment
-# 0: Left
-# 1: Right
-# 2: Center
+enum_195.0,Left
+enum_195.1,Right
+enum_195.2,Center
 
 ## CampaignItem
 method_825,IsComplete
@@ -391,13 +391,13 @@ param_3887,obj
 
 ## CampaignItemType
 enum_129,CampaignItemType
-## 0: PUZZLE
-## 1: CUTSCENE
-## 2: LETTER
-## 3: SOLITAIRE
-## 4: ?
-## 5: ?
-## 6: ?
+enum_129.0,Puzzle
+enum_129.1,Cutscene
+enum_129.2,Letter
+enum_129.3,Solitaire
+# enum_129.4,?
+# enum_129.5,?
+# enum_129.6,?
 
 ## UnlockRequirement
 class_259,UnlockRequirement
@@ -486,9 +486,9 @@ param_5766,progress
 param_5767,storyPanelSections
 ## NestedClasses
 enum_193,AdvanceMode
-# 0: Stopped
-# 1: Trigger
-# 2: Timer
+enum_193.0,Stopped
+enum_193.1,Trigger
+enum_193.2,Timer
 class_444,ScrollbarInfo
 field_4097,scrollOffset
 field_4098,maxOffset
@@ -581,10 +581,10 @@ field_4787,portrait
 
 ## VignetteEventType
 enum_194,VignetteEventType
-## 0: TalkEvent
-## 1: EnterEvent
-## 2: ChangeEvent
-## 3: ExitEvent
+enum_194.0,TalkEvent
+enum_194.1,EnterEvent
+enum_194.2,ChangeEvent
+enum_194.3,ExitEvent
 
 ## Portraits
 class_172,Portraits
@@ -1047,15 +1047,15 @@ param_8580,instruction
 
 ## InstructionCategory
 enum_144,InstructionCategory
-## 0: Idle
-## 1: Extend
-## 2: Rotate
-## 3: Pivot
-## 4: Move
-## 5: Grab
-## 6: Reset
-## 7: Repeat
-## 8: Halt
+enum_144.0,Idle
+enum_144.1,Extend
+enum_144.2,Rotate
+enum_144.3,Pivot
+enum_144.4,Move
+enum_144.5,Grab
+enum_144.6,Reset
+enum_144.7,Repeat
+enum_144.8,Halt
 
 ## InstructionType
 method_1036,GetHotkey
@@ -1335,9 +1335,9 @@ param_4417,hexPos2
 
 ## PartTypeLayer
 enum_2,PartTypeLayer
-## 0: TOP-BOTTOM
-## 1: TOP
-## 2: BOTTOM
+enum_2.0,TopAndBottom
+enum_2.1,Top
+enum_2.2,Bottom
 
 
 ## Tip
@@ -1377,14 +1377,14 @@ field_2271,points
 
 ## NoteStickMode
 enum_145,NoteStickMode
-## 0: ProgramPanel
-## 1: PartPanel
-## 2: BoardPanel
+enum_145.0,ProgramPanel
+enum_145.1,PartPanel
+enum_145.2,BoardPanel
 
 ## NoteVisibilityMode
 enum_147,NoteVisibilityMode
-## 0: Always
-## 1: NoInputOutput
+enum_147.0,Always
+enum_147.1,NoInputOutput
 
 
 ## ISim
@@ -1533,10 +1533,10 @@ param_5408,sound
 # param_8664,
 ## NestedClasses
 enum_190,ColliderType
-## 0: Atom
-## 1: PartBase
-## 2: PartSubpart
-## 3: Chamber
+enum_190.0,Atom
+enum_190.1,PartBase
+enum_190.2,PartSubpart
+enum_190.3,Chamber
 class_401,HolderMovementInfo
 method_1857,GetStationary
 method_1858,FormatType
@@ -1623,8 +1623,8 @@ field_4524,errorMessage
 
 ## InstructionCycleState
 enum_127,InstructionCycleState
-## 0: AfterGlyphs
-## 1: BeforeGlyphs
+enum_127.0,AfterGlyphs
+enum_127.1,BeforeGlyphs
 
 ## PartSimState
 field_2724,newPosition
@@ -2266,8 +2266,8 @@ param_4952,hasPerms
 
 ## PanningMode
 enum_135,PanningMode
-# 0: MouseDrag
-# 1: MouseWheel
+enum_135.0,MouseDrag
+enum_135.1,MouseWheel
 
 ## SimpleSolutionEditor
 class_194,SimpleSolutionEditor
@@ -2514,9 +2514,9 @@ enum_133,ScoreMetric
 
 ## PartLayer
 enum_137,PartLayer
-## 0: TOP-BOTTOM
-## 1: TOP
-## 2: BOTTOM
+enum_137.0,TopAndBottom
+enum_137.1,Top
+enum_137.2,Bottom
 
 ## PartSelection
 class_6,PartSelection
@@ -2733,13 +2733,13 @@ param_8534,solutionEditor
 
 ## EffectTimescaleType
 enum_7,EffectTimescaleType
-# 0: SimTime
-# 1: RealTime
+enum_7.0,SimTime
+enum_7.1,RealTime
 
 ## TransmutationEffectRenderMode
 enum_132,TransmutationEffectRenderMode
-# 0: AsMask
-# 1: AsEffect
+enum_132.0,AsMask
+enum_132.1,AsEffect
 
 
 ## IInputMode
@@ -3002,17 +3002,17 @@ method_210,DisposeContext
 
 ## ModifierKeyType
 enum_143,ModifierKeyType
-# 0: Shift
-# 1: CTRL
-# 2: ALT
+enum_143.0,Shift
+enum_143.1,Ctrl
+enum_143.2,Alt
 
 ## MouseButtonType
 enum_142,MouseButtonType
-# 0: ?
-# 1: LeftClick
-# 2: MiddleClick
-# 3: RightClick
-# 4: ?
+# enum_142.0,?
+enum_142.1,LeftClick
+enum_142.2,MiddleClick
+enum_142.3,RightClick
+# enum_142.4,?
 
 
 ## SolitaireScreen
@@ -3171,10 +3171,10 @@ param_8684,action2
 param_5472,action3
 ## NestedClasses
 enum_192,State
-# 0: WaitingForNewGame
-# 1: RevealNewGame
-# 2: Gameplay
-# 3: WonLastGame
+enum_192.0,WaitingForNewGame
+enum_192.1,RevealNewGame
+enum_192.2,Gameplay
+enum_192.3,WonLastGame
 # Note: non-obfuscated name remapped here
 WaitingForNewGameFields,WaitingForNewGame
 struct_123,RevealNewGame
@@ -3255,9 +3255,9 @@ param_64,deltaTime
 
 ## SolitaireType
 enum_196,SolitaireType
-# 0: Normal
-# 1: Advanced
-# 2: Colvan
+enum_196.0,Normal
+enum_196.1,Quintessence
+enum_196.2,Colvan
 
 
 ## Renderer
@@ -3598,8 +3598,8 @@ param_4419,color
 
 ## RendererType
 enum_6,RendererType
-## 0: OpenGL
-## 1: 
+enum_6.0,OpenGL
+# enum_6.1,?
 
 ## Shader
 class_221,Shader
@@ -3650,10 +3650,10 @@ field_1807,elementCount
 
 ## SamplerMode
 enum_123,SamplerMode
-## 0: NearestClamp
-## 1: NearestRepeat
-## 2: LinearClamp
-## 3: LinearRepeat
+enum_123.0,NearestClamp
+enum_123.1,NearestRepeat
+enum_123.2,LinearClamp
+enum_123.3,LinearRepeat
 
 ## TextureBatcher
 class_176,TextureBatcher
@@ -3925,21 +3925,23 @@ param_2481,lightTexture
 
 ## FlippingMode
 enum_1,FlippingMode
-# 2^0: FlipX
-# 2^1: FlipY
+enum_1.0x0,None
+enum_1.0x1,FlipX
+enum_1.0x2,FlipY
+enum_1.0x3,FlipXAndY
 
 ## OrientationMode
 enum_130,OrientationMode
-# 0: 0°
-# 1: 90°
-# 2: 180°
-# 3: 270°
+enum_130.0,Normal
+enum_130.1,Rotate90
+enum_130.2,Rotate180
+enum_130.3,Rotate270
 
 ## TextAlignment
 enum_0,TextAlignment
-# 0: Left
-# 0: Center
-# 0: Right
+enum_0.0,Left
+enum_0.1,Center
+enum_0.2,Right
 
 
 ## MusicManager
@@ -4624,9 +4626,9 @@ param_8,pointSize
 
 ## FontStyle
 enum_121,FontStyle
-# 0: Regular
-# 1: Bold
-# 2: Italic
+enum_121.0,Regular
+enum_121.1,Bold
+enum_121.2,Italic
 
 ## LocalizedFont
 class_511,LocalizedFont
@@ -5321,8 +5323,8 @@ method_1271,Empty2
 
 ## PuzzleEditorScreenType
 enum_138,PuzzleEditorScreenType
-# 0: PersonalPuzzles
-# 1: WorkshopPuzzles
+enum_138.0,PersonalPuzzles
+enum_138.1,WorkshopPuzzles
 
 ## PuzzleSelectScreen
 method_1288,PreventLowerScreenUpdates
@@ -5685,9 +5687,9 @@ param_4711,isOpening
 param_4712,deltaTime
 ## NestedClasses
 enum_152,Type
-# 0: NewPlayerDifficultyWarning
-# 1: SubmissionInfo
-# 2: JournalIssueSelector
+enum_152.0,NewPlayerDifficultyWarning
+enum_152.1,SubmissionInfo
+enum_152.2,JournalIssueSelector
 ## LambdaGeneratedClass
 class_473,LambdaGeneratedClass
 field_4208,instance
@@ -6349,64 +6351,64 @@ struct_103,SDL_Event
 enum_160,SDLKey
 enum_167,SDL_WindowFlags
 enum_175,SDL_EventType
-# 0      : SDL_FIRSTEVENT
-# 0x100  : SDL_QUIT
-# 0x101  : SDL_APP_TERMINATING
-# 0x102  : SDL_APP_LOWMEMORY
-# 0x103  : SDL_APP_WILLENTERBACKGROUND
-# 0x104  : SDL_APP_DIDENTERBACKGROUND
-# 0x105  : SDL_APP_WILLENTERFOREGROUND
-# 0x106  : SDL_APP_DIDENTERFOREGROUND
-# 0x107  : SDL_LOCALECHANGED
-# 0x150  : SDL_DISPLAYEVENT
-# 0x200  : SDL_WINDOWEVENT
-# 0x201  : SDL_SYSWMEVENT
-# 0x300  : SDL_KEYDOWN
-# 0x301  : SDL_KEYUP
-# 0x302  : SDL_TEXTEDITING
-# 0x303  : SDL_TEXTINPUT
-# 0x304  : SDL_KEYMAPCHANGED
-# 0x305  : SDL_TEXTEDITING_EXT
-# 0x400  : SDL_MOUSEMOTION
-# 0x401  : SDL_MOUSEBUTTONDOWN
-# 0x402  : SDL_MOUSEBUTTONUP
-# 0x403  : SDL_MOUSEWHEEL
-# 0x600  : SDL_JOYAXISMOTION
-# 0x601  : SDL_JOYBALLMOTION
-# 0x602  : SDL_JOYHATMOTION
-# 0x603  : SDL_JOYBUTTONDOWN
-# 0x604  : SDL_JOYBUTTONUP
-# 0x605  : SDL_JOYDEVICEADDED
-# 0x606  : SDL_JOYDEVICEREMOVED
-# 0x607  : SDL_JOYBATTERYUPDATED
-# 0x650  : SDL_CONTROLLERAXISMOTION
-# 0x651  : SDL_CONTROLLERBUTTONDOWN
-# 0x652  : SDL_CONTROLLERBUTTONUP
-# 0x653  : SDL_CONTROLLERDEVICEADDED
-# 0x654  : SDL_CONTROLLERDEVICEREMOVED
-# 0x655  : SDL_CONTROLLERDEVICEREMAPPED
-# 0x656  : SDL_CONTROLLERTOUCHPADDOWN
-# 0x657  : SDL_CONTROLLERTOUCHPADMOTION
-# 0x658  : SDL_CONTROLLERTOUCHPADUP
-# 0x659  : SDL_CONTROLLERSENSORUPDATE
-# 0x65A  : SDL_CONTROLLERUPDATECOMPLETE_RESERVED_FOR_SDL3
-# 0x65B  : SDL_CONTROLLERSTEAMHANDLEUPDATED
-# 0x700  : SDL_FINGERDOWN
-# 0x701  : SDL_FINGERUP
-# 0x702  : SDL_FINGERMOTION
-# 0x800  : SDL_DOLLARGESTURE
-# 0x801  : SDL_DOLLARRECORD
-# 0x802  : SDL_MULTIGESTURE
-# 0x900  : SDL_CLIPBOARDUPDATE
-# 0x1000 : SDL_DROPFILE
-# 0x1001 : SDL_DROPTEXT
-# 0x1002 : SDL_DROPBEGIN
-# 0x1003 : SDL_DROPCOMPLETE
-# 0x1100 : SDL_AUDIODEVICEADDED
-# 0x1101 : SDL_AUDIODEVICEREMOVED
-# 0x1200 : SDL_SENSORUPDATE
-# 0x2000 : SDL_RENDER_TARGETS_RESET
-# 0x2001 : SDL_RENDER_DEVICE_RESET
-# 0x7F00 : SDL_POLLSENTINEL
-# 0x8000 : SDL_USEREVENT
-# 0xFFFF : SDL_LASTEVENT
+enum_175.0,SDL_FIRSTEVENT
+enum_175.0x100,SDL_QUIT
+enum_175.0x101,SDL_APP_TERMINATING
+enum_175.0x102,SDL_APP_LOWMEMORY
+enum_175.0x103,SDL_APP_WILLENTERBACKGROUND
+enum_175.0x104,SDL_APP_DIDENTERBACKGROUND
+enum_175.0x105,SDL_APP_WILLENTERFOREGROUND
+enum_175.0x106,SDL_APP_DIDENTERFOREGROUND
+enum_175.0x107,SDL_LOCALECHANGED
+enum_175.0x150,SDL_DISPLAYEVENT
+enum_175.0x200,SDL_WINDOWEVENT
+enum_175.0x201,SDL_SYSWMEVENT
+enum_175.0x300,SDL_KEYDOWN
+enum_175.0x301,SDL_KEYUP
+enum_175.0x302,SDL_TEXTEDITING
+enum_175.0x303,SDL_TEXTINPUT
+enum_175.0x304,SDL_KEYMAPCHANGED
+enum_175.0x305,SDL_TEXTEDITING_EXT
+enum_175.0x400,SDL_MOUSEMOTION
+enum_175.0x401,SDL_MOUSEBUTTONDOWN
+enum_175.0x402,SDL_MOUSEBUTTONUP
+enum_175.0x403,SDL_MOUSEWHEEL
+enum_175.0x600,SDL_JOYAXISMOTION
+enum_175.0x601,SDL_JOYBALLMOTION
+enum_175.0x602,SDL_JOYHATMOTION
+enum_175.0x603,SDL_JOYBUTTONDOWN
+enum_175.0x604,SDL_JOYBUTTONUP
+enum_175.0x605,SDL_JOYDEVICEADDED
+enum_175.0x606,SDL_JOYDEVICEREMOVED
+enum_175.0x607,SDL_JOYBATTERYUPDATED
+enum_175.0x650,SDL_CONTROLLERAXISMOTION
+enum_175.0x651,SDL_CONTROLLERBUTTONDOWN
+enum_175.0x652,SDL_CONTROLLERBUTTONUP
+enum_175.0x653,SDL_CONTROLLERDEVICEADDED
+enum_175.0x654,SDL_CONTROLLERDEVICEREMOVED
+enum_175.0x655,SDL_CONTROLLERDEVICEREMAPPED
+enum_175.0x656,SDL_CONTROLLERTOUCHPADDOWN
+enum_175.0x657,SDL_CONTROLLERTOUCHPADMOTION
+enum_175.0x658,SDL_CONTROLLERTOUCHPADUP
+enum_175.0x659,SDL_CONTROLLERSENSORUPDATE
+enum_175.0x65A,SDL_CONTROLLERUPDATECOMPLETE_RESERVED_FOR_SDL3
+enum_175.0x65B,SDL_CONTROLLERSTEAMHANDLEUPDATED
+enum_175.0x700,SDL_FINGERDOWN
+enum_175.0x701,SDL_FINGERUP
+enum_175.0x702,SDL_FINGERMOTION
+enum_175.0x800,SDL_DOLLARGESTURE
+enum_175.0x801,SDL_DOLLARRECORD
+enum_175.0x802,SDL_MULTIGESTURE
+enum_175.0x900,SDL_CLIPBOARDUPDATE
+enum_175.0x1000,SDL_DROPFILE
+enum_175.0x1001,SDL_DROPTEXT
+enum_175.0x1002,SDL_DROPBEGIN
+enum_175.0x1003,SDL_DROPCOMPLETE
+enum_175.0x1100,SDL_AUDIODEVICEADDED
+enum_175.0x1101,SDL_AUDIODEVICEREMOVED
+enum_175.0x1200,SDL_SENSORUPDATE
+enum_175.0x2000,SDL_RENDER_TARGETS_RESET
+enum_175.0x2001,SDL_RENDER_DEVICE_RESET
+enum_175.0x7F00,SDL_POLLSENTINEL
+enum_175.0x8000,SDL_USEREVENT
+enum_175.0xFFFF,SDL_LASTEVENT
