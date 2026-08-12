@@ -147,9 +147,6 @@ method_1104,Clone
 method_1105,AddAtom
 method_1106,ReplaceAtom
 method_1107,RemoveAtom
-# method_1108,AddRepeat --Removed
-# method_1109,RemoveAndRepeat --Removed
-# method_1110,SpawnRepeats --Removed
 method_1111,AddBond
 method_1112,AddBond
 method_1113,GetBondTypeAt
@@ -160,11 +157,10 @@ method_1117,CloneAndTranslate
 method_1118,Translate
 method_1119,MergeWith
 method_2397,SplitIntoConnectedComponents
-# method_1120,CompressRepetition --Removed
 method_1121,CreateMonoatomic
 method_1122,CreateDiatomic
-# method_2398,
-# method_2399,
+method_2398,GetTrimmedMonomer
+method_2399,GetMonomer
 method_2400,RepeatMonomer
 method_2401,RepeatMonomer
 method_2402,RepeatAtomPositions
@@ -176,36 +172,37 @@ field_2641,baseMoleculeRenderT
 field_2642,atoms
 field_2643,bonds
 field_2644,monomer
-# field_4604,
+field_4604,trimmedMonomer
 field_2645,repetitionHexPos
-param_4822,repetitionHexPos
+param_8616,repetitionHexPos
 param_4823,atom
-param_4824,hexPos
+param_8242,hexPos
 param_4825,atom
 param_4826,hexPos
-param_4827,hexPos
-param_4828,repeatCount
-param_4829,hexPos
-param_4830,repeatCount
+param_8243,hexPos
 param_4831,type
 param_4832,hexPos1
 param_4833,hexPos2
 param_4834,type
 param_4835,hexPos1
 param_4836,hexPos2
-param_4837,effects
+param_8617,bondEffect
 param_4838,hexPos1
 param_4839,hexPos2
 param_4840,hexPos1
 param_4841,hexPos2
-param_4842,rotation
+param_8244,rotation
 param_4843,center
+param_8245,rotation
 param_4844,translation
 param_4845,translation
 param_4846,molecule
 param_4847,atom
 param_4848,atom1
 param_4849,atom2
+param_8618,monomer
+param_8619,monomer
+param_8620,repetitionPos
 param_8621,skipRecomputeConnectivity
 ## NestedClasses
 class_348,BondMatcher
@@ -1427,7 +1424,7 @@ method_1842,Drop
 method_1843,SpawnMolecules
 method_1844,IsSameMolecule
 method_1845,IsSameMolecule
-# method_2430,                  ??? GetCompletedRepeats
+method_2430,GetCompletedRepeats
 method_1847,GetSimState
 method_1848,GetMoleculeAt
 method_1849,GetMolecules
@@ -1438,10 +1435,10 @@ method_1853,ReportMovementError
 method_1854,ReportMovementError
 method_1855,GetOffsetToNextTrackHex
 method_1856,PlaySound
-# method_2431,
-# method_2432,
-# method_2433,
-# method_2434,
+method_2431,OffsetR
+method_2432,ScaleWithGcd
+method_2433,MinQForR
+method_2434,MaxQForR
 field_3804,simErrorMultDir
 field_3805,simErrorBoundMDir
 field_3806,simErrorAtomColl
@@ -1467,7 +1464,7 @@ field_3825,isCycleInProgress
 field_3826,additionalCollisions
 field_3827,simDeltaTime
 field_3828,droppedMolecules
-# field_4262,
+field_4262,emptySim
 # field_3829,
 # field_3830,
 field_3831,collSizeAtom
@@ -1498,10 +1495,11 @@ param_5381,translation
 param_5382,rotation
 param_5383,molecule1
 param_5384,molecule2
-# param_8653,                   ??? outputPos
-# param_8654,
-# param_8655,                   ??? repeatingOutput
-# param_8656,                   ??? moleculeToTest
+param_8653,partPos
+param_8654,rotation
+param_8655,outputMolecule
+param_8656,testMolecule
+param_8657,requiredOutputCount
 param_5388,part
 param_5389,hexPos
 param_5390,part
@@ -1524,13 +1522,13 @@ param_5405,hexPos2
 param_5406,currentHex
 param_5407,isPositiveChange
 param_5408,sound
-# param_8658,
-# param_8659,
-# param_8660,
-# param_8661,
-# param_8662,
-# param_8663,
-# param_8664,
+param_8658,hexPos
+param_8659,hexPos
+param_8660,slopeData
+param_8661,hexPos
+param_8662,slopeData
+param_8663,hexPos
+param_8664,slopeData
 ## NestedClasses
 enum_190,ColliderType
 enum_190.0,Atom
@@ -1546,10 +1544,11 @@ field_3838,translateBy
 field_3839,rotationPivot
 field_3840,rotation
 # param_5409,
-# struct_140,
-# field_4730,
-# field_4731,
-# field_4732,
+## HexSlopeData
+struct_140,HexSlopeData
+field_4730,gcdRemainders
+field_4731,minQ
+field_4732,maxQ
 class_402,ReferredPart
 method_1859,IsPairedConduit
 field_3841,part
@@ -3893,9 +3892,74 @@ param_3511,style
 
 ## PartRenderer
 class_195,PartRenderer
+method_519,GetRenderMatrix
+method_520,GetRenderMatrix
+method_521,RenderBase
+method_522,RenderBase
+method_523,RenderBase
+method_524,RenderPistonSegment
+method_525,RenderBaseModular
+method_526,RenderOnHexEdge
+method_527,RenderTrackLights
+method_528,RenderRotating
+method_529,RenderUpright
+method_530,RenderShadowCircle
+method_531,RenderBonderCylinder
 field_1797,partPos
 field_1798,partRotation
 # field_1799,
+param_3822,partPos
+param_3823,partRotation
+# param_3824,
+param_3825,scale
+param_3826,partOffset
+param_3827,pivotOffset
+param_3828,rotation
+param_3829,scale
+param_3830,partOffset
+param_3831,offset
+param_3832,pivotOffset
+param_3833,rotation
+param_3834,texture
+param_3835,offset
+param_3836,texture
+param_3837,offset
+param_3838,rotation
+param_8137,texture
+param_3839,offset
+param_3840,pivotOffset
+param_3841,rotation
+param_3842,texture
+param_3843,pivotOffset
+# param_3844,
+param_3845,partPixelLength
+param_3846,texture
+param_3847,offset
+param_3848,hexPos
+param_3849,rotation
+param_3850,texture
+param_3851,partRelativeHexPos
+param_3852,offset
+param_3853,pivotOffset
+param_3854,rotation
+param_3855,lightTextures
+param_3856,partRelativeHexPos
+param_3857,offset
+param_3858,pivotOffset
+param_3859,rotation
+param_3860,texture
+param_3861,hexPos
+param_3862,offset
+param_8138,texture
+param_3863,hexPos
+param_3864,offset
+param_3865,texture
+param_3866,hexPos
+param_3867,rotation
+param_3868,lightMapTexture
+param_3869,texture
+param_3870,hexPos
+param_3871,rotation
 
 ## LightDirTextures
 class_126,LightDirTextures
@@ -4235,6 +4299,21 @@ method_634,TranslateToUpper
 ## EmptyLocString
 class_237,EmptyLocString
 
+## PackedColor
+struct_0,PackedColor
+method_25,FromInt
+field_16,r
+field_17,g
+field_18,b
+field_19,a
+field_20,white
+field_21,black
+param_34,r
+param_35,g
+param_5839,b
+param_37,a
+param_38,colorInt
+
 ## Random
 class_137,Random
 method_297,SetSeed
@@ -4464,6 +4543,18 @@ param_3955,delta2
 param_8149,delta1
 param_3957,delta2
 
+## BoundsPosition
+enum_150,BoundsPosition
+enum_150.0,TopLeft
+enum_150.1,TopEdge
+enum_150.2,TopRight
+enum_150.3,LeftEdge
+enum_150.4,Center
+enum_150.5,RightEdge
+enum_150.6,BottomLeft
+enum_150.7,BottomEdge
+enum_150.8,BottomRight
+
 ## OpusMagnumException
 class_266,OpusMagnumException
 param_4200,message
@@ -4565,12 +4656,12 @@ field_2154,naver_17_25
 
 ## Font
 class_233,Font
-# method_607,
-# method_608,
-method_609,getGlyphInfoForChar
-# method_610,
-# method_611,
-# method_612,
+method_607,ParseValid
+method_608,GetGlyphInfoForChar
+method_609,GetGlyphInfoForChar
+method_610,BasicGlyphs
+method_611,ExtendedGlyphs
+method_612,Create
 # method_613,
 # method_614,
 field_1965,unicodeBlackCircleGlyphInfo
@@ -4582,15 +4673,15 @@ field_1965,unicodeBlackCircleGlyphInfo
 # field_1971,
 # field_1972,
 # field_1973,
-# param_3969,
-# param_3970,
-# param_3971,
-param_3972,character
-# param_3973,
-# param_3974,
+param_3969,toValid
+param_3970,glyphIndex
+param_3971,info
+param_3972,glyphIndex
+param_3973,fontFileName
+param_3974,pointSize
 # param_3975,
 # param_8151,
-# param_8548,
+param_8548,validRanges
 # param_3977,
 # param_3978,
 # param_3979,
@@ -4647,6 +4738,13 @@ param_8417,to
 param_8418,from
 param_8419,localizedFont
 param_8420,language
+
+## ValidGlyphRange
+struct_26,ValidGlyphRange
+field_1927,minimumIndex
+field_1928,maximumIndex
+param_3910,minimumIndex
+param_3911,maximumIndex
 
 ## SoundAssets
 class_201,SoundAssets
