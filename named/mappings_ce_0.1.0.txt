@@ -3027,7 +3027,7 @@ method_2436,RenderAtomCounter
 method_2437,RenderCounters
 method_2438,RenderAtomDivDot
 method_2439,RenderAtomDivLine
-method_2440,RenderAtomC
+method_2440,RenderAtomCounterAndStepPosition
 field_3867,orderedBoardHexes
 field_3868,storyPanelSections
 field_3869,marbleRevealDelay
@@ -3074,7 +3074,7 @@ class_411,AtomManager
 method_1898,IsQuintessence
 method_1899,IsQuintessence2
 method_1900,IsGlassy
-field_3879,gameplayF
+field_3879,gameplay
 field_3880,isQuintessence
 field_3881,isQuintessence2
 field_3882,isGlassy
@@ -3096,9 +3096,9 @@ param_5441,hexPos
 param_5442,gameState
 param_5443,atomType
 param_5444,hexPos
-param_5445,revealNewGameF
-param_5446,gameplayF
-param_5447,wonLastGameF
+param_5445,revealNewGame
+param_5446,gameplay
+param_5447,wonLastGame
 class_413,AtomCounter
 method_2441,CountAtoms
 method_2442,IsSameType1
@@ -3110,7 +3110,7 @@ field_3891,isSameType1
 field_3892,isSameType2
 param_8676,revealNewGameF
 param_8677,atomType
-param_8678,gameplayF
+param_8678,gameplay
 param_8679,atomType
 ## LambdaGeneratedClass
 class_492,LambdaGeneratedClass
@@ -3127,22 +3127,22 @@ param_5455,isHover
 param_8315,isEnabled
 
 ## SolitaireState
-method_1917,GetWfForNewGame
-method_1918,GetRevealNewGameF
-method_1919,GetGameplayF
-method_1920,GetWonLastGameF
-method_1921,IsWfForNewGameF
-method_1922,IsRevealNewGameF
-method_1923,IsGameplayF
-method_1924,IsWonLastGameF
-method_1925,ToWfForNewGameF
-method_1926,ToRevealNewGameF
-method_1927,ToGameplayF
-method_1928,ToWonLastGameF
-method_1929,ActionOnWfForNewGameF
-method_1930,ActionOnRevealNewGameF
-method_1931,ActionOnGameplayF
-method_1932,ActionOnWonLastGameF
+method_1917,GetWaitingForNewGame
+method_1918,GetRevealNewGame
+method_1919,GetGameplay
+method_1920,GetWonLastGame
+method_1921,IsWaitingForNewGame
+method_1922,IsRevealNewGame
+method_1923,IsGameplay
+method_1924,IsWonLastGame
+method_1925,ToWaitingForNewGame
+method_1926,ToRevealNewGame
+method_1927,ToGameplay
+method_1928,ToWonLastGame
+method_1929,ActionOnWaitingForNewGame
+method_1930,ActionOnRevealNewGame
+method_1931,ActionOnGameplay
+method_1932,ActionOnWonLastGame
 method_1933,ActionOnEach
 field_4275,state
 field_3900,primaryState
@@ -3325,8 +3325,8 @@ param_5054,window
 param_5055,width
 param_8279,height
 param_5056,shaderHLSLName
-param_5057,shaderVSName
-param_5058,shaderPSName
+param_5057,vertexShaderName
+param_5058,pixelShaderName
 param_5059,png
 param_5060,width
 param_8280,height
@@ -3605,8 +3605,8 @@ class_221,Shader
 field_1915,shader
 field_1916,directoryName
 field_1917,creationTime
-field_1918,nameVS
-field_1919,namePS
+field_1918,vertexShaderName
+field_1919,pixelShaderName
 
 ## Texture
 class_256,Texture
@@ -4758,7 +4758,7 @@ class_186,MusicTrack
 ## CurveAssets
 class_278,CurveAssets
 method_755,Init
-field_2190,screenTransCurve
+field_2190,screenTransitionCurve
 
 ## ShaderAssets
 class_190,ShaderAssets
@@ -5261,7 +5261,7 @@ class_546,LambdaGeneratedClass
 field_4782,instance
 method_2478,AutoRenderText
 method_2479,IsOutput
-method_2480,IsRepOutput
+method_2480,IsRepeatingOutput
 method_2481,IsHalt
 param_8717,text
 param_8718,pos
@@ -5398,7 +5398,7 @@ param_5003,name
 param_8639,x
 param_8640,y
 ## NestedClasses
-class_374,PuzzleCont
+class_374,PuzzleContainer
 field_2791,puzzle
 class_375,InputOutputRemover
 method_1267,RemoveInputOutput
@@ -5537,9 +5537,9 @@ method_1153,ToggleButtons
 method_1154,SliderBar
 field_2679,storyPanelSections
 field_2680,storyPanel
-field_2681,languageDDLOpen
-field_2682,resolutionDDLOpen
-field_2683,keyboardLayoutDDLOpen
+field_2681,languageDropdownOpen
+field_2682,resolutionDropdownOpen
+field_2683,keyboardLayoutDropdownOpen
 field_2684,soundVolumeChanged
 field_2685,musicVolumeChanged
 field_2686,inputtedCode
@@ -5605,8 +5605,8 @@ method_2371,CtrlZero
 method_881,PreventLowerScreenUpdates
 method_882,RenderTitle
 method_883,RenderPerson
-method_884,RenderSpcThx
-method_885,RenderCopyRight
+method_884,RenderSpecialThanks
+method_885,RenderCopyright
 method_886,RenderItem
 method_887,AddDelay
 field_2392,fadeInOutLength
@@ -5644,16 +5644,16 @@ field_2399,alphaModifier
 field_2400,actionHolder
 class_312,ActionHolder
 field_2401,action
-class_313,CopyRightRenderer
-method_890,RenderCpR
+class_313,CopyrightRenderer
+method_890,RenderCopyright
 field_2402,pos
 param_8213,alpha
 class_464,SpecialThanksRenderer
-method_891,RenderSpcThx
+method_891,RenderSpecialThanks
 field_2403,pos
 param_4541,alpha
 class_315,PersonRenderer
-method_892,RenderP
+method_892,RenderPerson
 field_2404,person
 field_2405,pos
 field_2406,title
@@ -5668,7 +5668,7 @@ param_4543,action
 method_2372,PreventLowerScreenUpdates
 method_2373,RenderTitle
 method_2374,RenderPerson
-method_2375,RenderCopyRight
+method_2375,RenderCopyright
 method_2376,RenderItem
 method_2377,AddDelay
 field_4581,fadeInOutLength
@@ -5695,8 +5695,8 @@ class_534,TitleRenderer
 method_2378,RenderTitle
 field_4585,pos
 param_8596,alpha
-class_535,CopyRightRenderer
-method_2379,RenderCpR
+class_535,CopyrightRenderer
+method_2379,RenderCopyright
 field_4586,pos
 param_8597,alpha
 class_536,RenderActionRunner
@@ -5704,7 +5704,7 @@ method_2380,RunRender
 field_4587,alphaModifier
 field_4588,actionHolder
 class_537,PersonRenderer
-method_2381,RenderP
+method_2381,RenderPerson
 field_4589,person
 field_4590,pos
 field_4591,title
@@ -6092,14 +6092,14 @@ field_904,screen
 field_905,secondaryTransition
 field_906,amount
 param_5841,type
-param_70,outTrans
+param_70,outTransition
 param_71,screen
-param_8439,inTrans
-param_73,inTrans
+param_8439,inTransition
+param_73,inTransition
 param_74,amount
-param_75,outTrans
-param_8440,inTrans
-param_77,inTrans
+param_75,outTransition
+param_8440,inTransition
+param_77,inTransition
 param_8441,action
 param_8442,action
 param_8443,action
@@ -6112,19 +6112,19 @@ param_8449,action4
 param_8450,action5
 ## NestedClasses
 enum_4,TransitionType
-struct_10,FadeOutPushScrTrans
-field_907,outTrans
+struct_10,FadeOutPushTransition
+field_907,outTransition
 field_908,newScreen
-field_909,inTrans
-struct_11,FadeOutPopScrTrans
+field_909,inTransition
+struct_11,FadeOutPopTransition
 field_910,amount
-field_911,outTrans
-field_912,inTrans
-struct_134,FadeInPopScrTrans
-field_4478,inTrans
-struct_135,FadeInPushScrTrans
-field_4479,inTrans
-struct_14,EmptyScrTrans
+field_911,outTransition
+field_912,inTransition
+struct_134,FadeInPopTransition
+field_4478,inTransition
+struct_135,FadeInPushTransition
+field_4479,inTransition
+struct_14,EmptyTransition
 
 ## Transitions
 method_2181,Init
@@ -6347,7 +6347,7 @@ class_324,ScreenUpdater
 method_974,UpdateScreen
 field_4195,gameLogic
 field_2476,lastDeltaTime
-field_2477,updateFunct
+field_2477,updateFunc
 param_4642,screen
 param_4643,hasInputAccess
 param_8610,transition
