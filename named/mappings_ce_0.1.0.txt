@@ -452,7 +452,7 @@ param_4199,vignettePath
 ## StoryPanel
 method_2170,GetCompletion
 method_2171,SaveScrollbarState
-method_2172,TickFrame
+method_2172,RenderFrame
 method_2173,RenderWithoutVignette
 method_2174,RenderSingleEvent
 method_2175,RenderVignette
@@ -2044,7 +2044,7 @@ param_5737,part
 class_245,SolutionEditorPanel
 method_357,GetBounds
 method_358,IsMouseInPanel
-method_2275,TickFrame
+method_2275,RenderFrame
 method_361,PanPanel
 field_2007,solEditScr
 param_3996,solEditScr
@@ -5095,7 +5095,7 @@ param_8368,targetHandle
 ## IScreen
 method_47,OnOpenOrClose
 method_48,Reset
-method_50,TickFrame
+method_50,RenderFrame
 method_1037,PreventLowerScreenUpdates
 param_4686,deltaTime
 param_4687,isOpening
@@ -6202,7 +6202,7 @@ method_2273,FocusLogWindow
 method_222,ShowLogWindow
 method_223,MakeEntry
 method_224,MakeDataEntry
-method_225,TickFrame
+method_225,RenderFrame
 method_226,RenderText
 method_227,RenderButton
 field_1451,logWindow
