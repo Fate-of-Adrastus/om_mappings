@@ -2763,33 +2763,31 @@ param_4881,instructionType
 
 ## PartDraggingInputMode
 method_1212,StartInputMode
-# method_1213,
-method_2407,renderGlow
-# method_1214,
-# method_1215,
-# method_1216,
-field_2711,MousePosition
-field_2712,DraggedParts
-field_2713,IsDragged
-field_2714,IsDuplicating
-field_2715,SelectedHex
-field_2716,Rotation
+method_1213,StartFromNewPart
+method_2407,RenderDraggedParts
+method_1214,GetDraggedParts
+method_1215,RotateParts
+method_1216,GetPartAtTarget
+field_2711,startMousePosition
+field_2712,draggedParts
+field_2713,isFromPanel
+field_2714,isCloning
+field_2715,selectedHex
+field_2716,rotation
 param_8259,solEditScr
+param_4931,origin
 param_4932,solEditScr
-param_4933,solEditScr
+param_4933,createdPart
 param_4934,solEditScr
 param_8260,solEditScr
 param_8625,solEditScr
+param_8626,currentPosition
 param_4935,solEditScr
 param_4936,solEditScr
+param_4937,rotation
 param_4938,solEditScr
-
-param_4931,mousePosition
-param_8626,mousePosition
-param_4937,rotateBy
-
-# param_4939,
-# param_4940,
+param_4939,hexPos
+param_4940,part
 ## NestedClasses
 # class_362,
 # method_1217,
