@@ -2046,8 +2046,8 @@ method_357,GetBounds
 method_358,IsMouseInPanel
 method_2275,RenderFrame
 method_361,PanPanel
-field_2007,solEditScr
-param_3996,solEditScr
+field_2007,solEditScrn
+param_3996,solEditScrn
 param_3997,deltaTime
 param_3998,panningMode
 param_3999,startPos
@@ -2058,7 +2058,7 @@ class_153,SolutionEditorBoardPanel
 method_359,GetBoardOffset
 method_360,SetBoardStartOffset
 method_2349,RenderHighlightsAndGhosts
-param_8102,solEditScr
+param_8102,solEditScrn
 param_3616,deltaTime
 param_3617,panningMode
 param_3618,startPos
@@ -2098,7 +2098,7 @@ field_3985,blinkingLitFraction
 field_3986,rowLabelRenderHandle
 field_3987,rowRenderHandle
 field_3988,programOffset
-param_5657,solEditScr
+param_5657,solEditScrn
 param_5658,deltaTime
 param_5659,instructionType
 param_8343,instructionType
@@ -2191,7 +2191,7 @@ field_3964,panningOffset
 field_3965,isHidden
 field_3966,hidingState
 field_3967,hidingTime
-param_5634,solEditScr
+param_5634,solEditScrn
 param_5635,deltaTime
 param_5636,panningMode
 param_5637,startPos
@@ -2581,7 +2581,7 @@ method_2305,GetAlpha
 method_2306,GetRenderOrigin
 method_2307,GetRemainingTime
 method_2308,GetShake
-field_4337,solEditScr
+field_4337,solEditScrn
 field_4338,delay
 field_4339,pos
 field_4340,textMessage
@@ -2746,14 +2746,14 @@ interface_0,IInputMode
 method_0,Process
 method_1,ProcessAfterFrame
 # method_2,
-param_5840,solEditScr
-param_67,solEditScr
-param_68,solEditScr
+param_5840,solEditScrn
+param_67,solEditScrn
+param_68,solEditScrn
 
 ## NormalInputMode
-param_4879,solEditScr
-param_4240,solEditScr
-param_4880,solEditScr
+param_4879,solEditScrn
+param_4240,solEditScrn
+param_4880,solEditScrn
 field_2678,markedHexes
 ## LambdaGeneratedClass
 class_479,LambdaGeneratedClass
@@ -2774,18 +2774,18 @@ field_2713,isFromPanel
 field_2714,isCloning
 field_2715,selectedHex
 field_2716,rotation
-param_8259,solEditScr
+param_8259,solEditScrn
 param_4931,origin
-param_4932,solEditScr
+param_4932,solEditScrn
 param_4933,createdPart
-param_4934,solEditScr
-param_8260,solEditScr
-param_8625,solEditScr
+param_4934,solEditScrn
+param_8260,solEditScrn
+param_8625,solEditScrn
 param_8626,currentPosition
-param_4935,solEditScr
-param_4936,solEditScr
+param_4935,solEditScrn
+param_4936,solEditScrn
 param_4937,rotation
-param_4938,solEditScr
+param_4938,solEditScrn
 param_4939,hexPos
 param_4940,part
 ## NestedClasses
@@ -2796,7 +2796,7 @@ param_8261,part
 class_363,RotatableChecker
 method_1218,IsRotatable
 method_1219,IsRotatable
-field_2718,solEditScr
+field_2718,solEditScrn
 param_8262,part
 param_8263,part
 # class_542,
@@ -2822,11 +2822,11 @@ param_8266,part
 ## PartDraggingPrecursorInputMode
 class_122,PartDraggingPrecursorInputMode
 method_229,StartInputMode
-param_3306,solEditScr
+param_3306,solEditScrn
 param_3307,part
-param_3308,solEditScr
-param_3309,solEditScr
-param_8057,solEditScr
+param_3308,solEditScrn
+param_3309,solEditScrn
+param_8057,solEditScrn
 field_1456,origin
 field_1457,part
 
@@ -2835,12 +2835,12 @@ class_249,InstructionRowInsertInputMode
 method_668,StartInputMode
 method_669,GetNewProgramIndex
 field_2010,part
-param_4153,solEditScr
+param_4153,solEditScrn
 param_4154,part
-param_4155,solEditScr
-param_4156,solEditScr
-param_4157,solEditScr
-param_4158,solEditScr
+param_4155,solEditScrn
+param_4156,solEditScrn
+param_4157,solEditScrn
+param_4158,solEditScrn
 
 ## InstructionInsertInputMode
 class_217,InstructionInsertInputMode
@@ -2848,13 +2848,13 @@ class_217,InstructionInsertInputMode
 field_1907,startMousePos
 # field_1908,
 # field_1909,
-param_3892,solEditScr
+param_3892,solEditScrn
 param_3893,startMousePos
-param_3894,solEditScr
+param_3894,solEditScrn
 param_3895,startMousePos
-param_3896,solEditScr
-param_3897,solEditScr
-param_3898,solEditScr
+param_3896,solEditScrn
+param_3897,solEditScrn
+param_3898,solEditScrn
 # param_3899,
 # param_3900,
 ## NestedClasses
@@ -2878,26 +2878,26 @@ method_560,StartInputMode
 method_561,StartInputMode
 field_2066,startMousePos
 field_2067,instruction
-param_4185,solEditScr
+param_4185,solEditScrn
 param_4186,instruction
-param_4187,solEditScr
-param_4188,solEditScr
-param_4189,solEditScr
+param_4187,solEditScrn
+param_4188,solEditScrn
+param_4189,solEditScrn
 
 ## HandleControlInputMode
 class_282,HandleControlInputMode
 method_776,CanStart
 method_777,IsHandleControlled
 # method_778,
-param_4295,solEditScr
+param_4295,solEditScrn
 # param_4296,
 # param_4297,
-param_8538,solEditScr
+param_8538,solEditScrn
 # param_4298,
 # param_4299,
-param_8178,solEditScr
-param_4300,solEditScr
-param_4301,solEditScr
+param_8178,solEditScrn
+param_4300,solEditScrn
+param_4301,solEditScrn
 field_2206,part
 field_4175,origArmLength
 
@@ -2906,23 +2906,23 @@ class_114,TrackControlInputMode
 method_186,CanStart
 field_1423,track
 # field_1424,isTrackFront
-param_3261,solEditScr
+param_3261,solEditScrn
 # param_3262,
 # param_3263,
-param_3264,solEditScr
-param_3265,solEditScr
-param_3266,solEditScr
+param_3264,solEditScrn
+param_3265,solEditScrn
+param_3266,solEditScrn
 
 ## PanningInputMode
 class_2,PanningInputMode
 field_2,pannedItem
 field_3,startMousePos
 field_4476,isBoard
-param_8437,solEditScr
+param_8437,solEditScrn
 param_8438,pannedItem
-param_14,solEditScr
-param_15,solEditScr
-param_5836,solEditScr
+param_14,solEditScrn
+param_15,solEditScrn
+param_5836,solEditScrn
 
 ## AreaSelectPartsInputMode
 class_223,AreaSelectInputMode
@@ -2931,11 +2931,11 @@ method_567,GetBounds
 field_1924,startMousePos
 field_1925,currentMousePos
 field_1926,selectedParts
-param_8142,solEditScr
-param_3907,solEditScr
-param_3908,solEditScr
-param_3909,solEditScr
-param_8143,solEditScr
+param_8142,solEditScrn
+param_3907,solEditScrn
+param_3908,solEditScrn
+param_3909,solEditScrn
+param_8143,solEditScrn
 
 ## AreaSelectInstructionsInputMode
 class_270,AreaSelectInstructionsInputMode
@@ -2944,10 +2944,10 @@ method_732,GetBounds
 field_2110,startMousePos
 field_2111,currentMousePos
 field_2112,selectedInstructions
-param_8175,solEditScr
-param_4239,solEditScr
-param_4241,solEditScr
-param_4242,solEditScr
+param_8175,solEditScrn
+param_4239,solEditScrn
+param_4241,solEditScrn
+param_4242,solEditScrn
 
 ## InputManager
 class_115,InputManager
@@ -3821,8 +3821,8 @@ param_3451,baseBottom
 param_8078,baseTop
 param_3453,texture
 param_8079,color
-param_3455,ch
-param_3456,ch
+param_3455,chr
+param_3456,chr
 param_3457,pos
 param_3458,font
 param_8080,color
@@ -4273,7 +4273,7 @@ field_1505,translationDict
 param_3340,str
 param_3341,str
 param_8453,language
-param_3343,ch
+param_3343,chr
 param_3344,str
 param_8454,toTranslate
 param_8059,toTranslate
@@ -5135,9 +5135,9 @@ method_2351,ContinueEditing
 method_2352,QuitEditor
 method_2353,RenderHistograms
 method_2354,RenderNoHistogramText
-field_4520,solEditScr
+field_4520,solEditScrn
 field_4521,scoreData
-param_8539,solEditScr
+param_8539,solEditScrn
 param_8540,saveProgress
 param_8541,isOpening
 param_8542,deltaTime
@@ -5154,7 +5154,7 @@ method_2358,RenderCompletionScreen
 field_4533,randomiser
 field_4534,timer
 field_4535,boardOffset
-param_8564,solEditScr
+param_8564,solEditScrn
 param_8565,saveProgress
 param_8566,isOpening
 param_8567,deltaTime
@@ -6353,7 +6353,7 @@ param_4643,hasInputAccess
 param_8610,transition
 class_325,SimStateGetter
 method_975,GetSimState
-field_2478,solEditScr
+field_2478,solEditScrn
 param_8226,part
 ## LambdaGeneratedClass
 class_470,LambdaGeneratedClass
