@@ -2775,17 +2775,19 @@ field_2714,IsDuplicating
 field_2715,SelectedHex
 field_2716,Rotation
 param_8259,solEditScr
-param_4931,mousePosition
-# param_4932,
+param_4932,solEditScr
 param_4933,solEditScr
 param_4934,solEditScr
 param_8260,solEditScr
 param_8625,solEditScr
-# param_8626,
 param_4935,solEditScr
 param_4936,solEditScr
-param_4937,rotateBy
 param_4938,solEditScr
+
+param_4931,mousePosition
+param_8626,mousePosition
+param_4937,rotateBy
+
 # param_4939,
 # param_4940,
 ## NestedClasses
