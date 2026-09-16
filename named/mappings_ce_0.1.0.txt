@@ -228,7 +228,7 @@ field_2651,testHexPos1
 field_2652,testHexPos2
 param_4852,bond
 class_541,BondPositionChecker
-method_2404,IsMoleculeAtBond
+method_2404,IsFloatingBond
 field_4605,molecule
 param_8622,bond
 ## LambdaGeneratedClass
