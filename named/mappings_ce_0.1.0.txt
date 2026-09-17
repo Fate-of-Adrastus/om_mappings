@@ -4746,6 +4746,15 @@ field_1928,maximumIndex
 param_3910,minimumIndex
 param_3911,maximumIndex
 
+## Volume
+class_11,Volume
+field_52,volumeDictionary
+method_27,getVolume
+method_28,playSound
+param_42,sound
+param_43,sound
+param_44,volume
+
 ## SoundAssets
 class_201,SoundAssets
 
@@ -6309,7 +6318,7 @@ field_2460,workshopManager
 field_2464,fadeBackground
 # field_2465,
 # field_2466,
-# field_2467,
+# field_2467, UnverifiedSolution
 # field_2468,
 # field_4598,
 # field_4599,
