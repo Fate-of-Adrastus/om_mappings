@@ -4749,11 +4749,14 @@ param_3911,maximumIndex
 ## Volume
 class_11,Volume
 field_52,volumeDictionary
-method_27,getVolume
-method_28,playSound
+method_27,GetVolume
+method_28,PlaySound
 param_42,sound
 param_43,sound
 param_44,volume
+
+## Sound
+field_4060
 
 ## SoundAssets
 class_201,SoundAssets
