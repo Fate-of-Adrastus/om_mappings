@@ -4756,13 +4756,17 @@ param_43,sound
 param_44,volume
 
 ## Sound
-field_4060
+field_4060,id
+field_4062,isPlayed
 
 ## SoundAssets
 class_201,SoundAssets
+method_539,LoadSounds
+method_540,ResetPlayedSounds
 
 ## MusicAssets
 class_102,MusicAssets
+
 
 ## MusicTrack
 class_186,MusicTrack
