@@ -4748,25 +4748,28 @@ param_3911,maximumIndex
 
 ## Volume
 class_11,Volume
-field_52,volumeDictionary
 method_27,GetVolume
 method_28,PlaySound
+field_52,volumeDict
 param_42,sound
 param_43,sound
-param_44,volume
+param_44,volumeMultiplier
 
 ## Sound
+method_2148,PlaySoundDefault
 field_4060,id
-field_4062,isPlayed
+# field_4061,
+field_4062,isPlaying
+param_5742,volumeMultiplier
 
 ## SoundAssets
 class_201,SoundAssets
-method_539,LoadSounds
-method_540,ResetPlayedSounds
+method_539,Init
+method_540,ResetPlayingSounds
 
 ## MusicAssets
 class_102,MusicAssets
-
+method_129,Init
 
 ## MusicTrack
 class_186,MusicTrack
