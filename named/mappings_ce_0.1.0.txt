@@ -5229,6 +5229,7 @@ method_2472,GetEffectiveCompletedOutputs
 method_2473,GetOutputCountToStartRecording
 method_2474,WaitingForAnyPartToHalt
 method_2475,GetLoopedCycle
+method_2518,GetGifOutputDirectory
 field_4762,boundsMargin
 field_4763,cycleLength
 field_4764,cyclesPerSec
@@ -5268,6 +5269,23 @@ param_8718,pos
 param_8719,part
 param_8720,part
 param_8721,instruction
+
+## GifRecorder
+class_92,GifRecorder
+field_915,paletteDataLoaded
+field_916,paletteData1
+field_917,paletteData2
+field_921,frameTime
+field_922,outputStream
+field_4495,outputLocation
+param_88,outputLoc
+method_74,loadPaletteData
+method_75,setFrameTime
+param_89,centiseconds
+method_76,renderFrame
+param_90,pngImage
+method_77,closeStream
+method_78,cancelRecording
 
 ## EscapeScreen
 class_178,EscapeScreen
@@ -6513,19 +6531,13 @@ enum_175.0xFFFF,SDL_LASTEVENT
 
 ## Unused
 class_3,_UnusedClass0
-generic_0,T1
-generic_1,T2
 class_103,_UnusedClass1
 class_108,_UnusedClass2
 class_184,_UnusedClass3
 class_185,_UnusedClass4
 class_204,_UnusedClass5
-struct_15,_UnusedVector2
-param_5843,x
-param_118,y
-field_962,X
-field_963,Y
-struct_23,_UnusedSteamID
-struct_30,_UnusedColor
-struct_32,_UnusedIEnumerable
-generic_14,T
+class_118,_UnusedClass6
+struct_15,_UnusedStruct0
+struct_23,_UnusedStruct1
+struct_30,_UnusedStruct2
+struct_32,_UnusedStruct3
