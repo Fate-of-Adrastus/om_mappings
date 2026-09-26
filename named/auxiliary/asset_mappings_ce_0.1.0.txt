@@ -231,6 +231,22 @@ class_46,ConductiveEnamelTextures
 field_462,empty
 field_463,filling
 
+## MusicAssets
+field_968,mapMusic
+field_969,solitaireMusic
+field_970,solving1Music
+field_971,solving2Music
+field_972,solving3Music
+field_973,solving4Music
+field_974,solving5Music
+field_975,solving6Music
+field_4506,solving7Music
+field_4507,solving8Music
+field_4508,solving9Music
+field_4509,story1Music
+field_977,story2Music
+field_978,titleMusic
+
 ## DentalAmalgamTextures
 class_517,DentalAmalgamTextures
 field_4436,empty
