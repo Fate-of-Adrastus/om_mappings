@@ -6609,6 +6609,7 @@ class_204,_UnusedClass5
 class_118,_UnusedClass6
 class_216,_UnusedClass7
 class_239,_UnusedClass8
+class_528,_UnusedClass9
 method_44,_DoNothing0
 method_621,_DoNothing1
 method_622,_DoNothing2
@@ -6617,6 +6618,14 @@ method_624,_DoNothing4
 method_625,_DoNothing5
 method_626,_DoNothing6
 method_627,_DoNothing7
+method_2337,_DoNothing8
+method_2338,_DoNothing9
+method_2339,_DoNothing10
+method_2340,_DoNothing11
+method_2341,_DoNothing12
+method_2342,_DoNothing13
+method_2343,_DoNothing14
+method_2344,_DoNothing15
 struct_15,_UnusedStruct0
 struct_23,_UnusedStruct1
 struct_30,_UnusedStruct2
