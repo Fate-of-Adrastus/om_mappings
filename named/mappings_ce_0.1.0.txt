@@ -4739,6 +4739,12 @@ param_8418,from
 param_8419,localizedFont
 param_8420,language
 
+## FontLoader
+class_138,FontLoader
+method_304,GetFont
+param_3521,filePath
+param_3522,size
+
 ## ValidGlyphRange
 struct_26,ValidGlyphRange
 field_1927,minimumIndex
@@ -4938,7 +4944,7 @@ field_1934,tipLearned
 field_1935,customVersion
 field_1936,customWorkshopID
 field_1937,creditsSeen
-field_4319,dlcCreaditsSeen
+field_4319,dlcCreditsSeen
 field_1938,WASDLearned
 field_1939,diagramLearned
 field_1940,defaultChapter
@@ -4976,6 +4982,29 @@ param_3937,value
 param_3938,value
 param_3939,value
 param_8386,index
+
+## PlatformBridge
+class_269,PlatformBridge
+field_2098,platform
+field_2099,osDiagnostics
+field_2100,graphicsDiagnostics
+field_2101,usingMono
+field_2102,savePath
+field_2103,rng
+field_2104,fileWriter
+field_2105,textureBatcher
+field_2106,cursorAsset
+field_2107,cursorVisible
+field_2108,musicVolume
+field_2109,soundVolume
+## CursorAsset
+class_108,CursorAsset
+
+## OSInfo
+class_161,OSInfo
+method_400,LogOSDiagnostics
+method_401,GetDefaultKeyboardIsAzerty
+method_402,GetSavePath
 
 ## WorkshopManager
 method_2226,GetIsUploading
@@ -5279,13 +5308,13 @@ field_921,frameTime
 field_922,outputStream
 field_4495,outputLocation
 param_88,outputLoc
-method_74,loadPaletteData
-method_75,setFrameTime
+method_74,LoadPaletteData
+method_75,SetFrameTime
 param_89,centiseconds
-method_76,renderFrame
+method_76,RenderFrame
 param_90,pngImage
-method_77,closeStream
-method_78,cancelRecording
+method_77,CloseStream
+method_78,CancelRecording
 
 ## EscapeScreen
 class_178,EscapeScreen
@@ -6532,7 +6561,6 @@ enum_175.0xFFFF,SDL_LASTEVENT
 ## Unused
 class_3,_UnusedClass0
 class_103,_UnusedClass1
-class_108,_UnusedClass2
 class_184,_UnusedClass3
 class_185,_UnusedClass4
 class_204,_UnusedClass5
