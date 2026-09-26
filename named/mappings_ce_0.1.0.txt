@@ -1392,6 +1392,14 @@ method_483,GetMolecules
 method_484,GetOccupiedHexes
 param_3776,part
 param_8130,part
+## ISimGripper
+class_123,ISimGripper
+method_230,GetGripperHex
+method_231,GetGripperOffset
+param_3312,part
+param_3313,armIndex
+param_3315,part
+param_3316,armIndex
 
 ## Sim
 method_1817,GetSolution
@@ -6490,6 +6498,15 @@ class_130,Imports
 # param_3332,
 # param_3333,
 
+## BinaryReaderBigEndian
+class_7,BinaryReaderBigEndian
+method_19,ReadBigEndianUShort
+method_20,ReadBigEndianShort
+method_21,ReadBigEndianUInt
+method_22,ReadBigEndianInt
+method_23,FlipUShort
+method_24,FlipUInt
+
 
 ## SDL
 struct_103,SDL_Event
@@ -6561,6 +6578,8 @@ enum_175.0xFFFF,SDL_LASTEVENT
 ## Unused
 class_3,_UnusedClass0
 class_103,_UnusedClass1
+class_15,_UnusedClass2
+method_44,DoNothingOnF3
 class_184,_UnusedClass3
 class_185,_UnusedClass4
 class_204,_UnusedClass5
