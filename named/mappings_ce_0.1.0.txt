@@ -1923,8 +1923,8 @@ method_2123,BoardPanelContainsMouse
 method_2124,PartsPanelContainsMouse
 method_2125,ProgramPanelContainsMouse
 method_2126,CloseEditorScreen
-# method_2465,
-# method_2466,
+method_2465,TriggerCompletionScreen
+method_2466,TriggerNormalCompletionScreen
 method_2467,RenderErrorPanel
 method_2127,GetCycle
 method_2128,GetOccupiedHexes
