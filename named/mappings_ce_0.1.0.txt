@@ -6610,6 +6610,8 @@ class_118,_UnusedClass6
 class_216,_UnusedClass7
 class_239,_UnusedClass8
 class_528,_UnusedClass9
+class_271,_UnusedClass10
+class_127,_UnusedClass11
 method_44,_DoNothing0
 method_621,_DoNothing1
 method_622,_DoNothing2
@@ -6630,3 +6632,5 @@ struct_15,_UnusedStruct0
 struct_23,_UnusedStruct1
 struct_30,_UnusedStruct2
 struct_32,_UnusedStruct3
+enum_124,_UnusedEnum0
+enum_141,_UnusedEnum1
