@@ -1943,7 +1943,7 @@ field_4006,fanfare
 field_4007,needsSaving
 field_4008,needsNewSnapshot
 field_4009,boardOffset
-# field_4755,
+field_4755,boardScale
 field_4010,currentInputMode
 field_4011,partSelection
 field_4012,instructionSelection
@@ -1956,7 +1956,7 @@ field_4018,footprint
 field_4019,draggingPosition
 field_4020,draggingAngle
 field_4021,draggingRotationTarget
-# field_4757,
+field_4757,alreadySolved
 field_4022,simulation
 field_4023,simulationState
 field_4024,cycleTime
