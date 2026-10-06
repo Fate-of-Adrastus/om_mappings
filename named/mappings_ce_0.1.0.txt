@@ -4769,6 +4769,22 @@ class_102,MusicAssets
 ## MusicTrack
 class_186,MusicTrack
 
+## AudioManager
+class_158,AudioManager
+method_372,Init
+method_375,LoadAudioFile
+param_3637,filePath
+
+## AudioFile
+class_244,AudioFile
+method_91,Load
+
+## AudioFileWav
+class_94,AudioFileWav
+
+## AudioFileOgg
+class_287,AudioFileOgg
+
 ## CurveAssets
 class_278,CurveAssets
 method_755,Init
