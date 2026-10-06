@@ -232,20 +232,20 @@ field_462,empty
 field_463,filling
 
 ## MusicAssets
-field_968,mapMusic
-field_969,solitaireMusic
-field_970,solving1Music
-field_971,solving2Music
-field_972,solving3Music
-field_973,solving4Music
-field_974,solving5Music
-field_975,solving6Music
-field_4506,solving7Music
-field_4507,solving8Music
-field_4508,solving9Music
-field_4509,story1Music
-field_977,story2Music
-field_978,titleMusic
+field_968,map
+field_969,solitaire
+field_970,solving1
+field_971,solving2
+field_972,solving3
+field_973,solving4
+field_974,solving5
+field_975,solving6
+field_4506,solving7
+field_4507,solving8
+field_4508,solving9
+field_4509,story1
+field_977,story2
+field_978,title
 
 ## DentalAmalgamTextures
 class_517,DentalAmalgamTextures
