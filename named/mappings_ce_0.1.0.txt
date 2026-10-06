@@ -4780,7 +4780,7 @@ param_3637,filePath
 
 ## AudioFile
 class_244,AudioFile
-method_91,Load
+field_2006,sourceFileName
 
 ## AudioFileWav
 class_94,AudioFileWav
@@ -5339,14 +5339,14 @@ field_917,paletteData2
 field_921,frameTime
 field_922,outputStream
 field_4495,outputLocation
-param_88,outputLoc
 method_74,LoadPaletteData
 method_75,SetFrameTime
-param_89,centiseconds
 method_76,RenderFrame
-param_90,pngImage
 method_77,CloseStream
 method_78,CancelRecording
+param_88,outputLoc
+param_89,centiseconds
+param_90,pngImage
 
 ## EscapeScreen
 class_178,EscapeScreen
@@ -6550,6 +6550,9 @@ method_22,ReadBigEndianInt
 method_23,FlipUShort
 method_24,FlipUInt
 
+## StringLoader
+class_103,StringLoader
+
 
 ## SDL
 struct_103,SDL_Event
@@ -6620,36 +6623,10 @@ enum_175.0xFFFF,SDL_LASTEVENT
 
 ## Unused
 class_3,_UnusedClass0
-class_103,_UnusedClass1
-class_15,_UnusedClass2
-class_184,_UnusedClass3
-class_185,_UnusedClass4
-class_204,_UnusedClass5
-class_118,_UnusedClass6
-class_216,_UnusedClass7
-class_239,_UnusedClass8
-class_528,_UnusedClass9
-class_271,_UnusedClass10
-class_127,_UnusedClass11
-method_44,_DoNothing0
-method_621,_DoNothing1
-method_622,_DoNothing2
-method_623,_DoNothing3
-method_624,_DoNothing4
-method_625,_DoNothing5
-method_626,_DoNothing6
-method_627,_DoNothing7
-method_2337,_DoNothing8
-method_2338,_DoNothing9
-method_2339,_DoNothing10
-method_2340,_DoNothing11
-method_2341,_DoNothing12
-method_2342,_DoNothing13
-method_2343,_DoNothing14
-method_2344,_DoNothing15
+class_184,_UnusedClass1
+class_118,_UnusedClass2
+class_216,_UnusedClass3
 struct_15,_UnusedStruct0
 struct_23,_UnusedStruct1
 struct_30,_UnusedStruct2
 struct_32,_UnusedStruct3
-enum_124,_UnusedEnum0
-enum_141,_UnusedEnum1
