@@ -1392,12 +1392,15 @@ method_483,GetMolecules
 method_484,GetOccupiedHexes
 param_3776,part
 param_8130,part
-## ISimGripper
-class_123,ISimGripper
+
+## GripperExtensions
+class_123,GripperExtensions
 method_230,GetGripperHex
 method_231,GetGripperOffset
+param_3311,sim
 param_3312,part
 param_3313,armIndex
+param_3314,sim
 param_3315,part
 param_3316,armIndex
 
