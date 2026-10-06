@@ -3966,7 +3966,7 @@ param_3863,hexPos
 param_3864,offset
 param_3865,texture
 param_3866,hexPos
-param_3867,rotation
+param_3867,shadowOffset
 param_3868,lightMapTexture
 param_3869,texture
 param_3870,hexPos
