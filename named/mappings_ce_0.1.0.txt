@@ -1959,7 +1959,7 @@ field_4018,footprint
 field_4019,draggingPosition
 field_4020,draggingAngle
 field_4021,draggingRotationTarget
-field_4757,alreadySolved
+field_4757,wasCompletedThisOnThisScreen
 field_4022,simulation
 field_4023,simulationState
 field_4024,cycleTime
@@ -4753,8 +4753,8 @@ param_8420,language
 ## FontLoader
 class_138,FontLoader
 method_304,GetFont
-param_3521,filePath
-param_3522,size
+param_3521,fileName
+param_3522,pointSize
 
 ## ValidGlyphRange
 struct_26,ValidGlyphRange
