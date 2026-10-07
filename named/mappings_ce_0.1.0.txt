@@ -4787,6 +4787,20 @@ method_540,ResetPlayingSounds
 ## MusicAssets
 class_102,MusicAssets
 method_129,Init
+field_968,map
+field_969,solitaire
+field_970,solving1
+field_971,solving2
+field_972,solving3
+field_973,solving4
+field_974,solving5
+field_975,solving6
+field_4506,solving7
+field_4507,solving8
+field_4508,solving9
+field_4509,story1
+field_977,story2
+field_978,title
 
 ## MusicTrack
 class_186,MusicTrack
