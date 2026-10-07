@@ -1026,6 +1026,7 @@ param_4505,programDict
 param_4506,part
 param_4507,cycle
 param_4508,part
+param_4509,index
 param_8577,instructionIndex
 param_8208,solution
 ## LambdaGeneratedClass
@@ -1319,7 +1320,7 @@ field_1921,hexPos2
 field_1922,bondType
 field_1923,uniqueAtom
 param_3903,hexPos1
-param_3904,hexPos1
+param_3904,hexPos2
 param_8141,bondType
 param_3905,uniqueAtom
 
@@ -1676,7 +1677,7 @@ method_510,GetRealTime
 method_511,GetSimulationSpeed
 method_512,IsPartDragged
 method_513,CurrentlyEditedPart
-# method_514,
+method_514,GetRotationHandlePos
 method_515,GetTrackStartPos
 method_516,GetTrackEndPos
 method_517,IsPartSelected
@@ -1692,7 +1693,7 @@ method_1989,GetIntermState
 method_1990,GetIntermState
 method_1991,TransitionState
 method_1992,TransitionState
-# method_1993,
+method_1993,RenderPart
 method_1994,RenderPartOverlays
 method_1995,GetLightData
 method_1996,RenderPartBase
@@ -1711,7 +1712,7 @@ method_2007,RenderArms
 method_2008,RenderPistonLights
 method_2009,ClearDebugMarkers
 method_2010,AddDebugMarker
-# method_2011,
+method_2011,GetHoveredPart
 # method_2012,
 method_2013,DoesTransfOvelapAtPoint
 method_2014,RenderBoard
@@ -1765,11 +1766,11 @@ param_8685,intermediatePartStates
 param_8325,part
 param_5551,pos
 param_5552,t
-# param_5553,
-# param_5554,
+param_5553,part
+param_5554,pos
 # param_5555,
-# param_5556,
-# param_5557,
+param_5556,renderProgramIndex
+param_5557,skipMoleculeRenderWhileStopped
 param_5558,part
 param_5559,pos
 param_5560,renderProgramIndex
@@ -1822,8 +1823,8 @@ param_5600,intermState
 param_5601,part
 param_5602,intermState
 param_5603,pos
-# param_5604,
-# param_5605,
+param_5604,mousePos
+param_5605,boardOffset
 # param_5606,
 # param_5607,
 # param_5608,
@@ -2403,7 +2404,7 @@ method_1942,GetTrackUnderPart
 method_1943,OrderProgrammables
 method_1944,SetProgramIndex
 method_1945,ResetAllById
-method_1946,CompareIndices
+method_1946,ComparePosition
 method_1947,GetOccupiedHexes
 method_1948,IsAllowedPlacement
 method_1949,CanArmBePlacedInChamber
@@ -2418,9 +2419,9 @@ method_1957,FromPuzzle
 method_1958,GetSolutionAt
 method_1959,ToData
 method_1960,FromData
-method_1961,SavePartsSnapshot
-method_1962,CreatePartsSnapshot
-method_1963,RestorePartsSnapshot
+method_1961,SaveSnapshot
+method_1962,CreateSnapshot
+method_1963,RestoreSnapshot
 method_1964,MakeCopyOfSolution
 method_1965,Save
 method_1966,SetNameAndSave
@@ -2564,8 +2565,8 @@ method_371,IsMatching
 field_1596,comparedInstRef
 param_3633,instRef
 
-## PartsSnapshot
-class_291,PartsSnapshot
+## Snapshot
+class_291,Snapshot
 field_2272,parts
 
 
@@ -4513,7 +4514,7 @@ method_1089,From
 method_1090,GetOrDefault
 method_1091,Or
 method_1092,Map
-method_1093,ApplyIfPresent
+method_1093,OnValue
 field_2616,hasValue
 field_2617,value
 param_4782,hasValue
@@ -6423,12 +6424,12 @@ field_2457,httpManager
 field_2458,scoreManager
 # field_2459,
 field_2460,workshopManager
-# field_2461,
+field_2461,globalSolutions
 # field_4597,
 field_2464,fadeBackground
 # field_2465,
 # field_2466,
-# field_2467, UnverifiedSolution
+field_2467,solutionQueue
 # field_2468,
 # field_4598,
 # field_4599,
