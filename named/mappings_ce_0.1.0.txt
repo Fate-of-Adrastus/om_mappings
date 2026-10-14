@@ -5920,7 +5920,7 @@ field_2656,molecule
 field_2657,isProduct
 field_2658,onSave
 field_2659,selectedAtomType
-field_2660,selectedBondType
+field_2660,selectedBondTypeEnum
 field_2661,errorMessage
 param_8248,molecule
 param_4855,isProduct
