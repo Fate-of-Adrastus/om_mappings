@@ -637,6 +637,8 @@ method_1253,ReadHexPosFromFile
 method_1254,HasPermissionForPart
 method_1255,HasPermissionForInstr
 method_2409,HasDRMPermission
+method_2520,GetInputMolecule
+method_2520,GetOutputMolecule
 field_2765,maxPuzzleFormatVersion
 field_2766,puzzleId
 field_2767,puzzleName
@@ -668,6 +670,8 @@ param_4986,molecule
 param_4987,reader
 param_4988,partType
 param_4989,instructionType
+param_8770,index
+param_8771,index
 ## NestedClasses
 class_371,IdMatcher
 method_1256,IsMatchingId
@@ -2565,8 +2569,8 @@ method_371,IsMatching
 field_1596,comparedInstRef
 param_3633,instRef
 
-## Snapshot
-class_291,Snapshot
+## UndoSnapshot
+class_291,UndoSnapshot
 field_2272,parts
 
 
