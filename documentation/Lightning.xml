@@ -1,0 +1,1046 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Lightning</name>
+  </assembly>
+  <members>
+    <member name="F:Sim.field_3824">
+      <summary>Contains whichever hexes have ever been 'occupied' at any point during the solve, including arm grabbers.</summary>
+    </member>
+    <member name="M:Sim.method_484">
+      <returns>Whichever hexes have ever been 'occupied' at any point during the solve, including arm grabbers.</returns>
+    </member>
+    <member name="M:Sim.method_1848(HexIndex)">
+      <summary>Returns the molecule present at the specified position, if it exists.</summary>
+      <param name="param_5389">Global position to get the molecule at.</param>
+      <returns>The molecule present at said location, if it exists.</returns>
+    </member>
+    <member name="M:Sim.method_482(Part)">
+      <summary>Returns the molecule held by the specified part, if it exists.</summary>
+      <param name="param_5390">The part to get the held molecule of.</param>
+      <returns>The molecule held by the part, if it exists.</returns>
+    </member>
+    <member name="M:Sim.method_1822">
+      <summary>Returns whether the cycle is currently in progress, set to true after BeginCycle() returns and then set back to false after EndCycle() returns.</summary>
+      <returns>Whether the cycle is in progress.</returns>
+    </member>
+    <member name="M:Sim.method_1818">
+      <summary>Returns the current cycle of the simulation.</summary>
+      <returns>Current cycle.</returns>
+    </member>
+    <member name="T:PartSimState">
+      <summary>The state a given part finds itself in during the simulation.</summary>
+    </member>
+    <member name="F:PartSimState.field_2737">
+      <summary>Difference in length between what it was previously and what it is now.</summary>
+    </member>
+    <member name="F:PartSimState.field_2725">
+      <summary>Length of this part after the current cycle ran. (Current length)</summary>
+    </member>
+    <member name="F:PartSimState.field_2736">
+      <summary>Length of this part before the current cycle ran.</summary>
+    </member>
+    <member name="F:PartSimState.field_2741">
+      <summary>Difference in pivot between what it was previously and what it is now.</summary>
+    </member>
+    <member name="F:PartSimState.field_2727">
+      <summary>Pivot of this part after the current cycle ran. (Current pivot)</summary>
+    </member>
+    <member name="F:PartSimState.field_2735">
+      <summary>Difference in position between what it was previously and what it is now.</summary>
+    </member>
+    <member name="F:PartSimState.field_2724">
+      <summary>Position of this part after the current cycle ran. (Current position)</summary>
+    </member>
+    <member name="F:PartSimState.field_2734">
+      <summary>Position of this part before the current cycle ran.</summary>
+    </member>
+    <member name="F:PartSimState.field_2739">
+      <summary>Difference in rotation between what it was previously and what it is now.</summary>
+    </member>
+    <member name="F:PartSimState.field_2738">
+      <summary>Rotation of this part before the current cycle ran.</summary>
+    </member>
+    <member name="F:PartSimState.field_2726">
+      <summary>Rotation of this part after the current cycle ran. (Current rotation)</summary>
+    </member>
+    <member name="M:SolutionEditorBase.method_504">
+      <summary>Gets the time that's elapsed during the cycle, starting at 0.0 at the beginning of the cycle.</summary>
+      <returns>The time that's elapsed during the cycle, starting at 0.0 at the beginning of the cycle.</returns>
+    </member>
+    <member name="M:SolutionEditorBase.method_509">
+      <summary>Gets the total time that's elapsed in the simulation, starting at 
+      0.0 at the beginning of the simulation and increasing only when the simulation is running.</summary>
+      <returns>Time elapsed in the simulation while running.</returns>
+    </member>
+    <member name="M:SolutionEditorBase.method_510">
+      <summary>Gets the real time elapsed. It does not reset when the simulation does, and it runs 
+      even when the simulation itself does not.</summary>
+      <returns>Real time elapsed.</returns>
+    </member>
+    <member name="M:SolutionEditorBase.method_2019">
+      <summary>Gets the time elapsed in the cycle, clamped between 0.0 and 1.0. See 
+      also <see cref="M:SolutionEditorBase.method_504" /></summary>
+      <returns>Time elapsed in the current cycle, clamped between 0.0 and 1.0</returns>
+    </member>
+    <!-- TODO GetScaledClampedCycleTime -->
+    <member name="M:SolutionEditorBase.method_2449">
+      <summary>Returns the current mouse position.<br />
+      The origin (0,0) of the returned value is the bottom-left corner of the screen.<br />
+      Increasing values of X represent moving towards the right edge of the screen.<br />
+      Increasing values of Y represent moving towards the top edge of the screen.<br /></summary>
+      <returns>The current mouse position.</returns>
+    </member>
+    <member name="M:SolutionEditorBase.method_518(System.Single,System.String,Vector2[])">
+      <summary>Makes the sim produce a simulation error and stops the simulation from proceeding.</summary>
+      <param name="param_5530">Time, relative to the cycle, at which the simulation error occurs.
+      This mst be a value between 0.0 and 1.0</param>
+      <param name="param_5531">Message to display on the simulation error.</param>
+      <param name="param_5532">A list of locations which will be
+      highlighted as the cause of the error.<br />
+      A position of (0,0) represents the origin of the board.</param>
+    </member>
+    <member name="T:Puzzle">
+      <summary>A type containing the data for a puzzle</summary>
+    </member>
+    <member name="F:Puzzle.CustomPermissions">
+      <summary>Custom Permissions for this puzzle. <b>Is not valid for vanilla puzzles.</b></summary>
+    </member>
+    <member name="F:AtomType.field_2293">
+      <summary>Used for rendering. If true, the atom will render with a 
+      glassy look, utilizing <see cref="F:AtomType.field_2289" />.<br />
+      An example of a vanilla atom utilizing this are the cardinals (water,air,fire,earth)
+      </summary>
+    </member>
+    <member name="F:AtomType.field_4541">
+      <summary>Used for rendering. If true, the atom will render with a metallic look, utilizing 
+      the textures found in <see cref="F:AtomType.field_4540" />.</summary>
+    </member>
+    <member name="F:AtomType.field_2296">
+      <summary>Used for rendering. If true, the attom will render with a 'prismatic' look, such as 
+      the one quintessence utilizes. For this, it utilizes textures found in <see cref="F:AtomType.field_2292" />.</summary>
+    </member>
+    <member name="F:AtomType.field_4540">
+      <summary>Default textures for matte atoms, to be used when no specific rendering flags 
+      (<see cref="F:AtomType.field_4541" />,<see cref="F:AtomType.field_2293" />...) are true.<br />
+      This is the usual look of atoms such as salt.</summary>
+    </member>
+    <member name="M:Molecule.method_1104">
+      <summary>Makes an independent copy of the molecule, and returns it.</summary>
+      <returns>Copy of the molecule.</returns>
+    </member>
+    <member name="M:Molecule.method_1106(AtomType,HexIndex)">
+      <summary>Replaces the atom in the given position with another, if the given position had an atom to replace in the first place.</summary>
+      <param name="param_4825">The new atom that will replace the old one.</param>
+      <param name="param_4826">The position in which to try and replace the original atom.</param>
+    </member>
+    <member name="M:Molecule.AddBond(BondType,HexIndex,HexIndex)">
+      <summary>Adds a bond of the given type between the two positions to the molecule.<br />
+      See <see cref="M:Molecule.AddBond(BondType,HexIndex,HexIndex,Maybe{class_507})" /></summary>
+      <returns>Whether the bond was successfully added.</returns>
+      <param name="type">The type of the bond to try and add.</param>
+      <param name="pos1">Position to start the bond at.</param>
+      <param name="pos2">Position to end the bond at.</param>
+      <exception cref="T:class_266">Thrown if the provided positions aren't adjacent.</exception>
+    </member>
+    <member name="M:Molecule.AddBond(BondType,HexIndex,HexIndex,Maybe{class_507})">
+      <summary>Adds a bond of the given type between the two positions to the molecule, optionally adding a <see cref="T:class_507" /> if not empty.<br />
+      The positions to form a bond between must be adjacent. If the given bond isn't compatible with a currently present bond, no changes will be made.
+      (For example, trying to add a Standard bond on top of a triplex bond won't be successful)
+      </summary>
+      <param name="type">The type of the bond to try and add.</param>
+      <param name="pos1">Position to start the bond at.</param>
+      <param name="pos2">Position to end the bond at.</param>
+      <param name="effects">Optional <see cref="T:class_507" />, if not empty.</param>
+      <returns>Whether the bond was successfully added.</returns>
+      <exception cref="T:class_266">Thrown if the provided positions aren't adjacent.</exception>
+    </member>
+    <!-- Add Molecule.AddAtom, maybe? It's quite obvious though. -->
+    <member name="M:Molecule.GetBondAt(HexIndex,HexIndex)">
+      <summary>Gets the bond present between the provided positions. Additionally see <see cref="T:BondType" />.</summary>
+      <param name="pos1">First position of the bond to get the type of.</param>
+      <param name="pos2">Second position of the bond to get the type of.</param>
+      <returns>The bond type at the provided position.</returns>
+    </member>
+    <member name="M:Molecule.RemoveBond(BondType,HexIndex,HexIndex)">
+      <summary>Attempts to remove the bond type from a bond between the given positions.</summary>
+      <param name="toRemove">The bond type to remove from the bond at the given position.</param>
+      <param name="pos1">First position of the bond to remove from.</param>
+      <param name="pos2">Second position of the bond to remove from.</param>
+      <returns>True if removal was successful, False if there was no change.</returns>
+    </member>
+    <member name="M:Molecule.method_1114(HexIndex,HexIndex)">
+      <summary>Attempts to remove the bond between the given positions.</summary>
+      <param name="param_4840">First position of the bond to remove.</param>
+      <param name="param_4841">Second position of the bond to remove.</param>
+      <returns>True if removal was successful, False if there was no bond to remove in the first place.</returns>
+    </member>
+    <member name="M:Molecule.method_1115(HexRotation)">
+      <summary>Creates a clone of the current molecule rotated by the provided amount.</summary>
+      <param name="param_8244">Rotation to apply to the returned copy.</param>
+      <returns>A clone of the original molecule, rotated.</returns>
+    </member>
+    <member name="M:Molecule.method_1116(HexIndex,HexRotation)">
+      <summary>Rotates the current molecule by the provided amount around the given <see cref="T:HexIndex" /></summary>
+      <param name="param_4843">Position to rotate the molecule around, acting as the center of said rotation.</param>
+      <param name="param_8245">Rotation to apply</param>
+    </member>
+    <member name="M:Molecule.method_1117(HexIndex)">
+      <summary>Creates a clone of the current molecule translated by some amount.</summary>
+      <param name="param_4844">Amount to translate the returned copy by</param>
+      <returns>A clone of the original molecule, translated by the provided amount.</returns>
+    </member>
+    <member name="M:Molecule.method_1118(HexIndex)">
+      <summary>Translates the current molecule by the given amount.</summary>
+      <param name="param_4845">Amount to translate the current molecule by.</param>
+    </member>
+    <member name="M:Molecule.method_1119(Molecule)">
+      <summary>Returns a new molecule that is the result of merging the current molecule with the given one.</summary>
+      <param name="param_4846">Molecule to merge the current molecule with.</param>
+      <returns>A new molecule, made by merging the two given molecules together.</returns>
+      <!-- Specify what happens if they share atoms/bonds? -->
+    </member>
+    <member name="M:Molecule.method_2397">
+      <summary>Returns a list of molecules that would result from attempting to split the current molecule into its connected components.</summary>
+    </member>
+    <member name="M:Molecule.method_1121(AtomType)">
+      <summary>Creates a new molecule with a singular atom at (0,0) of the provided type.</summary>
+      <param name="param_4847">The singular atom of this molecule.</param>
+      <returns>Resulting monoatomic Molecule.</returns>
+    </member>
+    <member name="M:Molecule.method_1122(AtomType,AtomType)">
+      <summary>Creates a new molecule consisting of two atoms bound together by a simple standard bond.</summary>
+      <param name="param_4848">Atom type at 0,0</param>
+      <param name="param_4849">Atom type at 1,0</param>
+      <returns>Resulting diatomic Molecule.</returns>
+    </member>
+    <member name="M:class_525.method_2331(Molecule,Vector2,HexIndex,System.Single,System.Single,System.Single,System.Single,System.Boolean,SolutionEditorBase)">
+      <summary>Responsible for rendering molecules</summary>
+      <param name="param_8456">The molecule to render</param>
+      <param name="param_8457">The offset to apply to the molecule.</param>
+      <param name="param_8458">The board HexIndex of the molecule to render.</param>
+      <param name="param_8459">Rotation to apply.</param>
+      <param name="param_8460">Opacity. 0.0 represents full transparency, and 1.0 a fully visible molecule.</param>
+      <param name="param_8461">Used to render molecules 'disappearing' into the board, such as in outputs. A value of 1.0 renders the molecule as normal, while decreasing values will make the molecule appear to sink/disappear into the board.</param>
+      <param name="param_8462">Strength of the shadow to apply.</param>
+      <param name="param_8463">If true, the colors of the molecule will be adjusted to that of what an output uses to render its molecules.</param>
+      <param name="param_8464">For handling transmutation effects, bond effects, and the like if present. Null is a valid value.</param>
+    </member>
+    <member name="M:class_525.method_924(Vector2,System.Boolean)">
+      <summary>Responsible for rendering the 'Part Handle', which is the handle that appears on parts when editing a solution and allows parts to be rotated using the mouse.</summary>
+      <param name="param_8218">The position to render at</param>
+      <param name="param_4568">Whether the mouse is hovering over the handle.</param>
+    </member>
+    <member name="M:class_525.method_2332(class_277,Vector2,HexIndex,System.Single,System.Single,System.Single,SolutionEditorBase)">
+      <summary>Responsible for rendering a single bond.</summary>
+      <param name="param_8465">The bond to render.</param>
+      <param name="param_8466">Pixel offset to render the bond at.</param>
+      <param name="param_8467">Hex offset to render the bond at.</param>
+      <param name="param_8468">Rotation to apply.</param>
+      <param name="param_8469">Opacity. 0.0 represents full transparency, and 1.0 fully visible.</param>
+      <param name="param_8470">Used to render molecules 'disappearing' into the board, such as in outputs. A value of 1.0 renders as normal, while decreasing values will make it appear to sink/disappear into the board.</param>
+      <param name="param_8471">Optional SolutionEditorBase to render additional effects.</param>
+    </member>
+    <member name="M:class_525.method_927(AtomType,Vector2,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,class_256,class_256,System.Boolean)">
+      <summary>Responsible for rendering a single atom.</summary>
+      <param name="param_4580">AtomType to render.</param>
+      <param name="param_4581">Translation to apply.</param>
+      <param name="param_4582">Scale multiplier.</param>
+      <param name="param_4583">Opacity. 0.0 represents full transparency, and 1.0 fully visible.</param>
+      <param name="param_8219">Used to render molecules 'disappearing' into the board, such as in outputs. A value of 1.0 renders as normal, while decreasing values will make it appear to sink/disappear into the board.</param>
+      <param name="param_4585">Strength of the rendered shadow.</param>
+      <param name="param_4586">Amount by which the shadow is offset. -21f appears to be the value used to render atoms on the board.</param>
+      <param name="param_4587">Angle of the shadow in radians.</param>
+      <param name="param_4588">Texture to use. May be null to use a default value.</param>
+      <param name="param_8472">Overlay effect. May be null to use a default value.</param>
+      <param name="param_4590">If true, the colors of the atom will be adjusted to that of what an output uses to render its atoms.</param>
+    </member>
+    <member name="M:class_162.method_403(System.Boolean,System.String)">
+      <summary>Asserts that the given condition/boolean is true. If it is not, it throws an exception with the specified message.</summary>
+      <param name="param_3660">Condition which is being asserted true.</param>
+      <param name="param_3661">Message to display, if not true.</param>
+      <exception cref="T:class_266">With the defined message, if condition isn't true.</exception>
+    </member>
+    <member name="M:class_162.method_404(System.Int32,System.Int32,System.Int32)">
+      <summary>Returns the value provided, clamped between min and max, such that it can't be lower than min or higher than max.</summary>
+      <param name="param_3662">Value to clamp</param>
+      <param name="param_3663">Minimum value.</param>
+      <param name="param_3664">Maximum value.</param>
+      <returns>Clamped value.</returns>
+    </member>
+    <member name="M:class_162.method_405(System.Single,System.Single,System.Single)">
+      <summary>Returns the value provided, clamped between min and max, such that it can't be lower than min or higher than max.</summary>
+      <param name="param_8107">Value to clamp</param>
+      <param name="param_3665">Minimum value.</param>
+      <param name="param_3666">Maximum value.</param>
+      <returns>Clamped value.</returns>
+    </member>
+    <member name="M:class_162.method_406(System.Single)">
+      <summary>Returns the value, clamped between 0.0 and 1.0, such that it can't be lower than 0.0 or higher than 1.0.</summary>
+      <param name="param_3667">Value to clamp</param>
+      <returns>The provided value, clamped between 0 and 1.</returns>
+    </member>
+    <member name="M:class_162.method_407(System.UInt64)">
+      <summary>A hashing function, which 'shuffles'/hashes the provided value into a new one.</summary>
+      <param name="param_8108">The value to shuffle/hash</param>
+      <returns>Shuffled value</returns>
+    </member>
+    <member name="M:class_162.method_2355(System.String)">
+      <summary>A hashing function suitable for use with strings, such that for a certain string the output hash 
+      will remain stable. (It hashes the contents of the string, as opposed to just the string object itself)</summary>
+      <param name="param_8559">String to hash</param>
+      <returns>Result of hashing the provided string.</returns>
+    </member>
+    <member name="M:class_162.method_408(System.Int32,System.Int32)">
+      <summary>Calculates the Modulo. This is different from the <c>%</c> operator in how it handles negative inputs. For example, <c>-5 % 10</c> is -3, whereas <c>Modulo(-5,10)</c> is 7.</summary>
+      <param name="param_8109">Dividend</param>
+      <param name="param_3669">Modulo</param>
+      <returns>Dividend mod modulo</returns>
+    </member>
+    <member name="M:class_162.method_409(System.Single,System.Single)">
+      <summary>Calculates the Modulo. This is different from the <c>%</c> operator in how it handles negative inputs. For example, <c>-5 % 10</c> is -3, whereas <c>Modulo(-5,10)</c> is 7.</summary>
+      <param name="param_8110">Dividend</param>
+      <param name="param_3671">Modulo</param>
+      <returns>Dividend mod modulo</returns>
+    </member>
+    <member name="M:class_162.method_410(System.Single,System.Single)">
+      <summary>In radians, returns the smallest angle required to turn from <paramref name="param_8111" /> to <paramref name="param_3672" /></summary>
+      <param name="param_8111">Final angle</param>
+      <param name="param_3672">Starting angle</param>
+      <returns>Rotation required</returns>
+    </member>
+    <member name="M:class_162.method_411(System.Single,System.Single,System.Single)">
+      <summary>Linearly interpolate t between start and end.</summary>
+      <param name="param_3673">Start</param>
+      <param name="param_3674">End</param>
+      <param name="param_3675">T</param>
+      <returns>Interpolated value</returns>
+    </member>
+    <member name="M:class_162.method_412(System.Single,System.Single,System.Single)">
+      <summary>In radians, interpolate between the starting angle and the end angle as T grows from 0.0 to 1.0</summary>
+      <param name="param_3676">Start angle</param>
+      <param name="param_3677">End angle</param>
+      <param name="param_3678">T</param>
+      <returns>Interpolated value</returns>
+    </member>
+    <member name="M:class_162.method_413(Vector2,Vector2,System.Single)">
+      <summary>Interpolate such that as T grows from 0.0 to 1.0, the start vector moves towards the end vector.</summary>
+      <param name="param_3679">Starting Vector</param>
+      <param name="param_3680">End Vector</param>
+      <param name="param_3681">T</param>
+      <returns>Interpolated vector</returns>
+    </member>
+    <member name="M:class_162.method_414(Vector2,Vector2,Vector2)">
+      <summary>Interpolate such that as T grows from 0.0 to 1.0, the start vector moves towards the end vector, using a different value of T for each component of the Vector.</summary>
+      <param name="param_3682">Starting Vector</param>
+      <param name="param_8112">End Vector</param>
+      <param name="param_3683">Vector controlling the interpolation</param>
+      <returns>Interpolated vector</returns>
+    </member>
+    <member name="M:class_162.method_415(System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>Using the first argument t, interpolate using (x1,x2,y1,y2) such that:<br />
+      When t is x1, the output is y1.<br />
+      When t is x2, the output is y2.<br />
+      You can think of this as a 'remapping' operation, taking a value t in the range [x1,x2] and 
+      transforming it into an equivalent value in the range [y1,y2] instead.<br />
+      The returned value will be as far along the [y1,y2] range as t is along the [x1,x2] range, 
+      for example if t is exactly halfway between x1 and x2, the output will be halfway between y1 and y2.<br />
+      If t is outside the range [x1,x2], it continues to work the same.
+      </summary>
+      <param name="param_8113">Value controlling the interpolation.</param>
+      <param name="param_3684">x1</param>
+      <param name="param_3685">x2</param>
+      <param name="param_3686">y1</param>
+      <param name="param_3687">y2</param>
+      <returns>Interpolation result</returns>
+    </member>
+    <member name="M:class_162.method_416(System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>Using the first argument t, interpolate using (x1,x2,y1,y2), and additionally clamp the output such that:<br />
+      When t is x1, the output is y1.<br />
+      When t is x2, the output is y2.<br />
+      You can think of this as a 'remapping' operation, taking a value t in the range [x1,x2] and 
+      transforming it into an equivalent value in the range [y1,y2] instead.<br />
+      The returned value will be as far along the [y1,y2] range as t is along the [x1,x2] range, 
+      for example if t is exactly halfway between x1 and x2, the output will be halfway between y1 and y2.<br />
+      If t is outside the range [x1,x2] its output is clamped, such that it cannot be lower than y1 or higher than y2.
+      </summary>
+      <param name="param_8114">Value controlling the interpolation.</param>
+      <param name="param_3688">x1</param>
+      <param name="param_3689">x2</param>
+      <param name="param_3690">y1</param>
+      <param name="param_3691">y2</param>
+      <returns>Interpolation result</returns>
+    </member>
+    <member name="M:class_162.method_417(System.Single,System.Single,System.Single)">
+      <summary>Interpolates the cos(t) mathematical function such that the lowest value it takes is <paramref name="param_3692" />, and the 
+      highest is <paramref name="param_8115" /></summary>
+      <param name="param_3692">Lowest value the interpolated cos function may reach</param>
+      <param name="param_8115">Highest value the interpolated cos function may reach</param>
+      <param name="param_3694">Interpolation value</param>
+      <returns>cos(t), interpolated to be between start and end instead.</returns>
+    </member>
+    <member name="M:class_162.FillArray``1(``0[],``0)">
+      <summary>Fills the entire length of the given array with the provided value.</summary>
+      <param name="array">Array to fill</param>
+      <param name="value">Value to fill the entire array with</param>
+      <typeparam name="T">Type of the array to operate on.</typeparam>
+      <returns>The array, completely filled with <paramref name="value" /></returns>
+    </member>
+    <member name="M:class_162.method_419(class_137,System.Int32)">
+      <summary>Generates a string of length <paramref name="param_3698" /> consisting entirely of 
+      randomly chosen digits.</summary>
+      <param name="param_3697">Randomness source</param>
+      <param name="param_3698">Length of the string</param>
+      <returns>A string of length <paramref name="param_3698" /></returns>
+    </member>
+    <member name="M:class_162.method_420(System.Int32)">
+      <summary>Converts the given number to a hexadecimal digit, or throws if 
+      <paramref name="param_8117" /> is &lt; 0 or &gt;= 16.</summary>
+      <param name="param_8117"></param>
+      <returns>Character representing the given digit converted to hexadecimal.</returns>
+      <exception cref="T:class_266">If <paramref name="param_8117" /> is out of the range [0,15].</exception>
+    </member>
+    <member name="M:class_162.HexIntValue(System.Char,System.Int32@)">
+      <summary>Converts the given hexadecimal character into its number representation. If the conversion fails, 
+      this method will return false.</summary>
+      <param name="@char">Hexadecimal character to convert back to int.</param>
+      <param name="value">(out) The int value of the hexadecimal value, if conversion succeeded.</param>
+      <returns>Whether the convrsion was successful.</returns>
+    </member>
+    <member name="M:class_162.method_422(System.Diagnostics.Stopwatch)">
+      <summary>Returns the number of seconds that have elapsed on the stopwatch so far.</summary>
+      <!-- Unsure whether to add param and returns, this one is too obvious beyond the fact that it's seconds. -->
+    </member>
+    <member name="M:class_162.method_423(enum_3)">
+      <summary>Returns the byte multiplier for the given texture format, such that 
+      image.X * image.Y * byteMultiplier = size.</summary>
+      <param name="param_8118">Texture Format</param>
+      <returns>The byte multiplier for the <see cref="T:enum_3" /></returns>
+      <exception cref="T:class_266">If the given <paramref name="param_8118" /> doesn't have a byte multiplier that this function knows about, or is an invalid value. </exception>
+    </member>
+    <member name="M:class_162.method_424(System.String,struct_28)">
+      <summary>Calculates the substring corresponding to the given interval.</summary>
+      <returns>Substring</returns>
+    </member>
+    <member name="M:class_162.ActionOnEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+      <summary>Calls the given action on every element of the given enumerable.</summary>
+      <param name="enumerable">IEnumerable to call the <paramref name="action" /> on.</param>
+      <param name="action">Action to call for every <paramref name="enumerable" /></param>
+    </member>
+    <member name="M:class_162.Shuffle``1(class_137,System.Collections.Generic.IList{``0})">
+      <summary>Shuffles the given list so that its elements have randomly chosen positions in the list.</summary>
+      <param name="source">Randomness source</param>
+      <param name="list">List that will be shuffled in-place. (as opposed to returning a new list)</param>
+    </member>
+    <member name="M:class_162.Shuffle``1(System.Collections.Generic.IEnumerable{``0},class_137)">
+      <summary>Shuffles the given enumerable to have a random order, by making it into a list and then 
+      shuffling that internally.</summary>
+      <param name="enumerable">Enumerable</param>
+      <param name="source">Randomness source</param>
+      <returns>An enumerable, with its order randomized.</returns>
+    </member>
+    <member name="M:class_162.MergeRandom``1(class_137,System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+      <summary>Takes two IEnumerables, and outputs an enumerable that interleaves the elements of the two enumerables randomly.</summary>
+      <param name="source">Randomness source</param>
+      <param name="enumerable1">First Enumerable</param>
+      <param name="enumerable2">Second Enumerable</param>
+      <returns>An enumerable that interleaves the elements of both inputs randomly.</returns>
+    </member>
+    <member name="M:class_162.OrderWithKeys``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0},``1},System.Collections.Generic.IEnumerable{``1})">
+      <summary>Given an enumerable, a function mapping its elements to a certain key,
+       and an ordered list of such keys, it returns an enumerable that iterates through <paramref name="source" /> in the same order as the list of keys is in.</summary>
+      <param name="source">Source enumerable</param>
+      <param name="sourceKeyMap">Function mapping an element to its key</param>
+      <param name="orderedKeys">The keys, in order, which will decide the order of the output enumerable.</param>
+      <typeparam name="TSource">Elements of the source enumerable</typeparam>
+      <typeparam name="TKey">Type of the keys which will be used to order the enumerable.</typeparam>
+      <returns>An enumerable that has its elements in the same order as the given keys.</returns>
+    </member>
+    <!-- FirstOrNone and the like are extremely obvious, skipping for now -->
+    <member name="M:class_162.TruncateToSize``1(System.Collections.Generic.List{``0},System.Int32)">
+      <summary>Modifies the provided list and truncates it to the given length, discarding all elements at the end that wouldn't fit the new length.
+      <br /><paramref name="newCount" /> must be smaller than or equal to the given list's length.</summary>
+      <param name="list">The list to modify</param>
+      <param name="newCount">The new length of the list</param>
+    </member>
+    <!-- This function is unused (as far as I know?) and it seems a little specific, but it is what it is.
+    I don't see anybody using this but at least the docs will help them say 'yeah no, that's not what I need' -->
+    <member name="M:class_162.method_436(System.String)">
+      <summary>Replaces a few characters with ascii equivalents. These are the characters replaced:<br />
+      ‘ -&gt; ' <br />
+      ’ -&gt; ' <br />
+      “ -&gt; " <br />
+      ” -&gt; " <br />
+      … -&gt; ... <br />
+      \n -&gt; Empty string. <br /></summary>
+      <param name="param_3725">String to process</param>
+      <returns>A string with some of its characters potentially replaced with ASCII equivalents.</returns>
+    </member>
+    <member name="M:class_162.method_437(System.String)">
+      <summary>Removes all '*' and '_' characters from the given string.</summary>
+      <param name="param_3726">String to process</param>
+      <returns>A copy of the given string with <c>*</c> and <c>_</c> removed.</returns>
+    </member>
+    <member name="M:class_162.ItemsAreUnique``1(System.Collections.Generic.IList{``0})">
+      <summary>Returns whether all items present in the list are unique according to .Equals.</summary>
+      <typeparam name="T">Type of an element of the list.</typeparam>
+      <returns>Whether all items in the list are unique.</returns>
+    </member>
+    <member name="M:class_162.method_440(System.Int32)">
+      <summary>Returns the given number, in a nicely readable format making use of K and M prefixes.<br />
+      Any number above 1000_000_000 (1000M) will be displayed as +INF. Negative numbers won't make use 
+      of the prefixes.</summary>
+    </member>
+    <member name="M:class_162.method_441(System.String,System.Boolean)">
+      <summary>Formats the given string as bold (by wrapping it in '*') if <paramref name="param_8560" /> is true.</summary>
+      <param name="param_3731">String to format as bold</param>
+      <param name="param_8560">Whether to apply formatting changes.</param>
+      <returns>Formatted string</returns>
+    </member>
+    <member name="M:class_162.method_442(System.String,System.Boolean)">
+      <summary>Formats the given string as italics (by wrapping it in '_') if <paramref name="param_8561" /> is true.</summary>
+      <param name="param_3732">String to format as italics</param>
+      <param name="param_8561">Whether to apply formatting changes.</param>
+      <returns>Formatted string</returns>
+    </member>
+    <member name="M:class_162.method_443(System.String)">
+      <summary>Escapes formatting ('*' and '_') or the escape character itself ('\') by using \.<br />
+      It will transform * to \*, _ to \_, and \ to \\.</summary>
+      <param name="param_3733">String to escape</param>
+      <returns>Escaped string</returns>
+    </member>
+    <member name="M:class_162.method_449(System.Int32)">
+      <summary>Returns the number's next higher or equal power of two (For example, it returns 64 for the number 35, and 64 for 64 itself)</summary>
+      <param name="param_3741">Value, cannot be negative.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">If the provided number is negative.</exception>
+      <returns>The number's next higher or equal power of two.</returns>
+    </member>
+    <member name="M:class_162.method_2356(System.UInt32,System.UInt32)">
+      <summary>Returns the greatest common divisor of the two given numbers.</summary>
+      <returns>The greatest common divisor</returns>
+    </member>
+    <member name="M:class_162.method_450(System.String,System.String,System.String)">
+      <summary>Replaces the first occurrence of the <paramref name="param_3742" /> substring with <paramref name="param_3743" />.</summary>
+      <param name="param_8122">String to replace in.</param>
+      <param name="param_3742">Original substring to replace.</param>
+      <param name="param_3743">New substring to replace the original by.</param>
+      <returns>New string with the replacements made.</returns>
+    </member>
+    <member name="M:class_162.Append``1(System.Collections.Generic.IEnumerable{``0},``0)">
+      <summary>Returns a new sequence containing the <paramref name="first" /> sequence followed by 
+      <paramref name="second" />.</summary>
+      <param name="first">Original Enumerable</param>
+      <param name="second">Element to append at the end.</param>
+      <typeparam name="TSource">Type of the elements involved.</typeparam>
+      <returns>A new Enumerable, with the <paramref name="second" /> element appended at the end.</returns>
+    </member>
+    <member name="M:class_140.method_312(class_256,class_256,class_256,Vector2)">
+      <summary>Draws a button on the screen, utilizing the specified textures and on the given location (origin is at the bottom-left corner of the window)</summary>
+      <param name="param_3538">Texture to use to draw the button</param>
+      <param name="param_3539">Texture to use instead when the button is hovered over.</param>
+      <param name="param_3540">Texture to use when the button is disabled.</param>
+      <param name="param_3541">Position to draw the button at. (origin is bottom-left corner of the window)</param>
+      <returns>A struct containing the information required to draw the desired button.</returns>
+    </member>
+    <member name="M:class_140.method_313(System.String,Vector2,System.Int32,System.Int32)">
+      <summary>Draws a simple button labeled with the given text.</summary>
+      <param name="param_3542">Text to label the button with.</param>
+      <param name="param_8084">Position to draw the button at. (origin is bottom-left corner of the window)</param>
+      <param name="param_8085">Width of the button</param>
+      <param name="param_3544">Height of the button</param>
+      <returns>A struct containing the information required to draw the desired button.</returns>
+    </member>
+    <member name="M:class_140.method_323(Vector2,Vector2,Vector2)">
+      <summary>Draws a close button, and returns whether the current window should close, which can be because 
+      the button itself was pressed, because ESC was pressed, or because the player clicked outside of the window.<br />
+      This method takes <i>the position and size of the window</i> it should be attached to, not of the button itself.<br />
+      The button is rendered on the bottom-left of the rect/bounds2 defined by the two vectors by default. You can change this using <paramref name="param_3571" />.<br />
+      Clicking not just outside the defined rect, but near the edges of the rect 
+      is taken as indication you wish to leave the window, 
+      and thus this function will then return true. This is due to a margin OM itself applies.<br />
+      If you wish to 'cancel out' this margin and make it so that only clicks that are fully outside of the 
+      rect defined by <paramref name="param_3569" /> and <paramref name="param_3570" />, it could be done by doing:<br /><c>
+      Bounds2 b = Bounds2.WithSize(ORIGINAL_POS,ORIGINAL_SIZE).Expanded(70f, 66f, 80f, 59f);<br />
+      var shouldClose = UIUtils.CloseButton(b.BottomLeft, b.Size, ORIGINAL_OFFSET - new Vector2(70,66));
+      </c><br />
+      Or you could simply copy the contents of this function, and take out the part which handles this margin, 
+      if you need something similar but without the margin. I'm just saying this function does a bit more than 
+      it seems at a glance.
+      </summary>
+      <param name="param_3569">Position of the 'window' to close button will be drawn on.</param>
+      <param name="param_3570">Size of the window the close button will be drawn on.</param>
+      <param name="param_3571">Offset of the close button</param>
+      <returns>Whether the current screen/UI element should be closed.</returns>
+    </member>
+    <member name="M:class_140.method_316(System.String,Vector2,System.Int32,System.Boolean,System.Boolean)">
+      <summary>Creates a button of the kind utilized to select one particular puzzle in the 
+      custom puzzles / steam workshop menu.<br />
+      Worth noting that <paramref name="param_8087" /> utilizes a value of 321 in vanilla, and 
+      that the puzzle completion checkbox is drawn in the same spot regardless of the value of 
+      <paramref name="param_8087" />, so it is probably best to always use a value of 321.</summary>
+      <param name="param_3551">String to display on the button, usually the puzzle name.</param>
+      <param name="param_3552">Position of the button</param>
+      <param name="param_8087">The length of the button, text will be truncated if it is larger. <br />
+      321 seems to be the value utilized by vanilla OM.</param>
+      <param name="param_3553">Whether the puzzle is currently selected</param>
+      <param name="param_3554">Whether the puzzle should be shown as having been completed</param>
+      <returns>A struct containing the information required to draw the desired button.</returns>
+    </member>
+    <member name="M:class_140.method_319(enum_133,System.Int32)">
+      <summary>Formats the metric for a given score. In practice, this means calling 
+      <see cref="M:class_162.method_440(System.Int32)" /> on all metrics except for cost, which is simply
+      processed as <c>$"{cost}$"</c> (it's processed as just the value, with a dollar sign appended at the end)</summary>
+      <param name="param_8090">Kind of metric</param>
+      <param name="param_3563">Value for that metric</param>
+      <returns>The given score of the specified metric, formatted for display.</returns>
+    </member>
+    <member name="M:class_140.method_317(System.String,Vector2,System.Int32,System.Boolean,System.Boolean)">
+      <summary>Draws a 'screen title', which is used to display text ---LIKE THIS--- in many parts throughout 
+      the game, such as on the title of a journal, on the molecule editor, and more.</summary>
+      <param name="param_3555">Text to draw</param>
+      <param name="param_8088">Position of the screen title</param>
+      <param name="param_3556">Length of the screen title</param>
+      <param name="param_3557">Whether the title is a 'spaced out' title. If false, it adds some extra length 
+      to the title, which makes the <paramref name="param_3556" /> parameter not quite exact. If true, 
+      <paramref name="param_3556" /> is exactly how long (in the +X direction) the drawn title is.</param>
+      <param name="param_3558">Whether to render the text as uppercase.</param>
+    </member>
+    <member name="M:class_140.method_322(Vector2)">
+      <summary>Renders a pair of metal arms holding up the screen. Worth noting that the distance between 
+      the two arms this method draws cannot be adjusted.<br />The <paramref name="param_3568" /> parameter 
+      specifies where the screen starts, not where the first arm should be drawn.</summary>
+      <param name="param_3568">Where the screen to "hold up" with the metal arms is currently at.</param>
+    </member>
+    <member name="M:class_140.method_315(System.String,Maybe{System}.String},Vector2,System.Int32,System.Boolean)">
+      <summary>Draws a button in the style of those utilized to select a given solution within a puzzle, but it is nonetheless pretty flexible and should be easy to use for other purposes too.</summary>
+      <param name="param_3547">Name for the button. In solutions, this displays the name of the solution.</param>
+      <param name="param_3548">Subtext for the button. In solutions, this displays 'NOT YET SOLVED' or the metrics of the solution.</param>
+      <param name="param_3549">Position to draw the button at (bottom left corner)</param>
+      <param name="param_8086">The length of the button, text will be truncated if it is larger.</param>
+      <param name="param_3550">Whether this solution is currently the one selected.</param>
+      <returns>A struct containing the information required to draw the desired button.</returns>
+    </member>
+    <member name="M:class_140.method_321(class_132,Vector2,System.Boolean)">
+      <summary>Draws a metrics histogram. See <see cref="T:class_132" /> and <see cref="T:class_182" />.</summary>
+      <param name="param_3565">The data of the histogram to draw.</param>
+      <param name="param_3566">Position to draw the metrics histogram at (bottom-left corner)</param>
+      <param name="param_3567">Whether to draw the difference between best and previous. For this to work, 'best' 
+      and 'previous' must have a value, which stand for 'best' and 'this solution' respectively, and 'current' 
+      must not be present.</param>
+    </member>
+    <member name="T:class_132">
+      <summary>Data for a metrics histogram.</summary>
+    </member>
+    <member name="F:class_132.field_1480">
+      <summary>Kind of metric that this histogram is for</summary>
+    </member>
+    <member name="F:class_132.field_1483">
+      <summary>The best value for this metric seen so far.</summary>
+    </member>
+    <member name="F:class_132.field_1485">
+      <summary>The current value for this metric, in the current solve.</summary>
+    </member>
+    <member name="F:class_132.field_1484">
+      <summary>The previous value for this metric.</summary>
+    </member>
+    <member name="F:class_132.field_1482">
+      <summary>See <see cref="T:class_182" /></summary>
+    </member>
+    <member name="T:class_182">
+      <summary>Data of the other solutions to this puzzle.</summary>
+    </member>
+    <member name="F:class_182.field_1725">
+      <summary>The highest value for this metric ever seen so far. Used also to decide at which value the histogram graph ends.</summary>
+    </member>
+    <member name="F:class_182.field_1726">
+      <summary>'Buckets' of the histogram and how full they currently are, as a value from 
+      0.0f to 1.0f. The range [0,maxScore] will be split into buckets of however many values this 
+      array contains, and the float stored in each bucket represents how many people of the total would 
+      fall within said bucket.</summary>
+    </member>
+    <!-- member name="M:class_135.method_258(class_221,class_221)">
+      <summary>TODO!</summary>
+      <param name="param_3350"></param>
+      <param name="param_3351"></param>
+    </member -->
+    <!-- member name="M:class_135.method_259">
+      <summary>TODO!</summary>
+    </member-->
+    <!-- member name="M:class_135.method_260(System.Int32,System.Int32)">
+      <summary>TODO!</summary>
+      <param name="param_3352"></param>
+      <param name="param_3353"></param>
+    </member -->
+    <member name="M:class_135.method_261(class_256,MeshVertex,MeshVertex,MeshVertex,MeshVertex)">
+      <summary>Renders a square mesh by specifying the mesh data at each of the corners and the texture to use.</summary>
+      <param name="param_3354">Texture to render.</param>
+      <param name="param_3355">Mesh vertex data for the top left corner.</param>
+      <param name="param_3356">Mesh vertex data for the top right corner</param>
+      <param name="param_3357">Mesh vertex data for the bottom right corner</param>
+      <param name="param_3358">Mesh vertex data for the bottom left corner</param>
+    </member>
+    <member name="M:class_135.method_262(class_256,Color,Matrix4)">
+      <summary>Render the given texture utilizing the provided transform matrix.</summary>
+      <param name="param_3359">Texture to render</param>
+      <param name="param_3360">Color to apply to the texture</param>
+      <param name="param_3361">Transformation matrix</param>
+    </member>
+    <member name="M:class_135.method_263(class_256,Color,Vector2,Vector2)">
+      <summary>Render the given texture by specifying its position and size.<br />
+      The co-ords of position are the bottom left corner of the texture.</summary>
+      <param name="param_3362">Texture to render</param>
+      <param name="param_3363">Color to apply to the texture</param>
+      <param name="param_3364">Position (bottom-left corner) of the texture</param>
+      <param name="param_3365">Size of the texture</param>
+    </member>
+    <member name="M:class_135.method_264(class_256,Color,Vector2,Vector2,Bounds2)">
+      <summary>Render the given texture by specifying its position, size, and additionally the 
+      texture coords/UVs to use.</summary>
+      <param name="param_3366">Texture to render</param>
+      <param name="param_3367">Color to apply to the texture</param>
+      <param name="param_8060">Position (bottom-left corner) of the texture</param>
+      <param name="param_8061">Size of the texture</param>
+      <param name="param_3370">Texture Cooods (UVs) to use when rendering the texture.</param>
+    </member>
+    <member name="M:class_135.method_265(class_256,Color,Bounds2,Matrix4)">
+      <summary>Render the given texture specifying its texture coords and a transformation matrix.</summary>
+      <param name="param_8062">Texture to render</param>
+      <param name="param_3371">Color to apply to the texture</param>
+      <param name="param_3372">Texture Cooods (UVs) to use when rendering the texture.</param>
+      <param name="param_3373">Transform matrix</param>
+    </member>
+    <member name="M:class_135.method_266(class_256,Color,Vector2,Vector2,Bounds2,enum_130,enum_1)">
+      <summary>Render the texture given its position, size, texture coords and orientation.</summary>
+      <param name="param_8063">Texture to render</param>
+      <param name="param_3375">Color to apply to the texture</param>
+      <param name="param_3376">Position (bottom-left corner) of the texture</param>
+      <param name="param_3377">Size of the texture</param>
+      <param name="param_3378">Texture Cooods (UVs) to use when rendering the texture.</param>
+      <param name="param_3379">Orientation of the texture</param>
+      <param name="param_3380">Flip to apply to the texture</param>
+    </member>
+    <member name="M:class_135.method_267(class_256,Color,Vector2,enum_130,enum_1)">
+      <summary>Render the texture given its position and orientation, in 1:1 size (the size of the 
+      rendered texture is the same as the size of the texture itself)</summary>
+      <param name="param_8064">Texture to render</param>
+      <param name="param_8065">Color to apply to the texture</param>
+      <param name="param_8066">Position (bottom-left corner) of the texture</param>
+      <param name="param_3382">Orientation of the texture</param>
+      <param name="param_3383">Flip to apply to the texture</param>
+    </member>
+    <member name="M:class_135.method_268(class_256,Color,Vector2,Bounds2)">
+      <summary>Render the texture, masked by the given bounds, such that parts of the texture that 
+      aren't in the specified bounds aren't rendered at all.<br />
+      The size of the render is set to the size of the texture itself.</summary>
+      <param name="param_3384">Texture to render</param>
+      <param name="param_8067">Color to apply to the texture</param>
+      <param name="param_3385">Position (bottom-left corner) of the texture</param>
+      <param name="param_3386">Mask to apply</param>
+    </member>
+    <member name="M:class_135.method_269(class_256,Color,Vector2,Vector2,Bounds2)">
+      <summary>Render the texture, masked by the given bounds, such that parts of the texture that 
+      aren't in the specified bounds aren't rendered at all.</summary>
+      <param name="param_3387">Texture to render</param>
+      <param name="param_3388">Color to apply to the texture</param>
+      <param name="param_3389">Position (bottom-left corner) of the texture</param>
+      <param name="param_3390">Size of the texture</param>
+      <param name="param_3391">Mask to apply</param>
+    </member>
+    <member name="M:class_135.method_270(class_256,Color,Vector2,Vector2)">
+      <summary>Fills the square defined by <paramref name="param_3393" /> and <paramref name="param_3394" /> with 
+      the given texture, repeated however many times is necessary to fill the square, at 1:1 scale 
+      (without stretching or distorting the texture)</summary>
+      <param name="param_3392">Texture to render</param>
+      <param name="param_8068">Color to apply to the texture</param>
+      <param name="param_3393">Position (bottom-left corner) of the texture</param>
+      <param name="param_3394">Size of the rect that will be filled with the repeating texture</param>
+    </member>
+    <member name="M:class_135.method_271(class_256,Color,Vector2)">
+      <summary>Render the given texture at 1:1 scale (the size of the rendered region equals the size of the texture)</summary>
+      <param name="param_3395">Texture to render</param>
+      <param name="param_8069">Color to apply to the texture</param>
+      <param name="param_3396">Position (bottom-left corner) of the texture</param>
+    </member>
+    <member name="M:class_135.method_272(class_256,Vector2)">
+      <summary>Render the given texture at 1:1 scale (the size of the rendered region equals the size of the texture)</summary>
+      <param name="param_3397">Texture to render</param>
+      <param name="param_3398">Position (bottom-left corner) of the texture</param>
+    </member>
+    <!-- member name="M:class_135.method_273(class_256,Color,Vector2,Vector2,Vector2)">
+      <summary>TODO!</summary>
+      <param name="param_8070"></param>
+      <param name="param_3399"></param>
+      <param name="param_3400"></param>
+      <param name="param_3401"></param>
+      <param name="param_3402"></param>
+    </member-->
+    <!-- member name="M:class_135.method_274(class_256,struct_0,Vector2,Vector2,Vector2)">
+      <summary>TODO!</summary>
+      <param name="param_3403"></param>
+      <param name="param_8071"></param>
+      <param name="param_8072"></param>
+      <param name="param_3406"></param>
+      <param name="param_3407"></param>
+    </member-->
+    <member name="M:class_135.method_275(class_256,Color,Bounds2)">
+      <summary>Renders the given texture as a 9-slice, often used to render rectangles and borders without distorting the corners or edges of the texture.</summary>
+      <param name="param_8073">Texture to render</param>
+      <param name="param_3409">Color to apply</param>
+      <param name="param_3410">Bounds of the rectangle to render</param>
+    </member>
+    <member name="M:class_135.method_276(class_256,Color,Vector2,Vector2)">
+      <summary>Renders the given texture as a 9-slice, often used to render rectangles and borders without distorting the corners or edges of the texture.</summary>
+      <param name="param_3411">Texture to render</param>
+      <param name="param_8074">Color to apply</param>
+      <param name="param_3412">Position to render at</param>
+      <param name="param_8075">Size of the rectangle</param>
+    </member>
+    <member name="M:class_135.method_278(Color,System.Single,System.Single,System.Single,System.Single)">
+      <summary>Renders a rect of the given color</summary>
+      <param name="param_3423">Color to render</param>
+      <param name="param_3424">Position X</param>
+      <param name="param_3425">Position Y</param>
+      <param name="param_3426">Scale X</param>
+      <param name="param_3427">Scale Y</param>
+    </member>
+    <member name="M:class_135.method_279(Color,Vector2,Vector2)">
+      <summary>Renders a rect of the given color</summary>
+      <param name="param_3428">Color to render</param>
+      <param name="param_8076">Position to render at</param>
+      <param name="param_3430">Scale of the colored rect</param>
+    </member>
+    <member name="M:class_135.method_280(Color,Bounds2)">
+      <summary>Renders a rect of the given color</summary>
+      <param name="param_3431">Color to render</param>
+      <param name="param_3432">Rect to render as the given color</param>
+    </member>
+    <member name="M:class_135.method_281(Color,Vector2,Vector2,System.Single)">
+      <summary>Renders a colored border around the defined rect</summary>
+      <param name="param_3433">Color of the border</param>
+      <param name="param_3434">Position of the rect</param>
+      <param name="param_3435">Size of the rect</param>
+      <param name="param_3436">Width of the colored line</param>
+    </member>
+    <member name="M:class_135.method_282(Color,Bounds2,System.Single)">
+      <summary>Renders a colored border around the defined rect</summary>
+      <param name="param_3437">Color of the border</param>
+      <param name="param_3438">Rect to render a colored border around.</param>
+      <param name="param_3439">Width of the colored line</param>
+    </member>
+    <member name="M:class_135.method_283(Color,Bounds2)">
+      <summary>Renders a colored border of width 1 around the defined rect</summary>
+      <param name="param_3440">Color of the border</param>
+      <param name="param_3441">Rect to render a colored border around.</param>
+    </member>
+    <member name="M:class_135.method_284(Color,Bounds2)">
+      <summary>Renders a rect of the given color.</summary>
+      <param name="param_3442">Color to render</param>
+      <param name="param_3443">Bounds of the rect</param>
+    </member>
+    <member name="M:class_135.method_285(Color,Vector2,System.Single)">
+      <summary>Renders a colored rect centered in the given position</summary>
+      <param name="param_3444">Color to render</param>
+      <param name="param_3445">Position</param>
+      <param name="param_3446">'Radius' of the rect to render (half of its length)</param>
+    </member>
+    <member name="M:class_135.method_286(Vector2,Vector2,System.Single,Color)">
+      <summary>Draws a colored rectangle of the given width, orientated such that it connects the two 
+      given points.</summary>
+      <param name="param_3447">First point to connect with the rectangle.</param>
+      <param name="param_8077">Second point to connect with the rectangle.</param>
+      <param name="param_3449">Width of the colored rect</param>
+      <param name="param_3450">Color of the rect</param>
+    </member>
+    <member name="M:class_135.method_287(Vector2,Vector2,class_256,Color)">
+      <summary>Draws a texture on <paramref name="param_3451" /> at 1:1 size, oriented towards 
+      <paramref name="param_8078" />.</summary>
+      <param name="param_3451">First point to connect and where the texture itself will be drawn</param>
+      <param name="param_8078">Second point, that the texture will be oriented towards.</param>
+      <param name="param_3453">Texture to draw</param>
+      <param name="param_8079">Color to apply to the texture</param>
+    </member>
+    <member name="M:class_135.method_289(System.Char,Vector2,class_233,Color)">
+      <summary>Renders the given character. Position is the top-left corner of the final output character.</summary>
+      <param name="param_3456">Character to render</param>
+      <param name="param_3457">Top-left corner of the final character. (The character will be rendered down and towards the right)</param>
+      <param name="param_3458">Font to use</param>
+      <param name="param_8080">Color</param>
+    </member>
+    <member name="M:class_135.method_290(System.String,Vector2,class_1,Color,enum_0,System.Single,System.Single,System.Single,System.Single,System.Int32,Color,class_256,System.Int32,System.Boolean,System.Boolean)">
+      <summary>Renders text, calculates the bounds it would take, or both.</summary>
+      <param name="param_3460">Text to draw</param>
+      <param name="param_3461">Position to draw the text at</param>
+      <param name="param_3462">Font to use</param>
+      <param name="param_3463">Color of the text</param>
+      <param name="param_3464">Alignment of the text</param>
+      <param name="param_3465">Amount of space to leave between one line and the next</param>
+      <param name="param_3466">Multiplier to leave between one paragraph and the next, used for example when the input is <c>\n\n</c></param>
+      <param name="param_3467">Width per line allowed. If this value is too low, the game will hang.</param>
+      <param name="param_3468">The length after which text is truncated to fit</param>
+      <param name="param_3469">Offset of the text shadow, the higher this is the 'further apart' the shadow will appear from the text. Set to 0 for no shadow.</param>
+      <param name="param_3470">The color of the shadow</param>
+      <param name="param_3471">Gradient texture to use when rendering this text. Set to null for no gradient.</param>
+      <param name="param_3472">Max amount of characters to render</param>
+      <param name="param_3473">Whether to also calculate the bounds of the drawn text</param>
+      <param name="param_3474">Whether to render the text</param>
+      <returns>The bounds of the rendered text, if <paramref name="param_3473" /> is true</returns>
+    </member>
+    <member name="M:class_135.method_291(System.String,Vector2,class_1,enum_0,System.Single,System.Single,System.Single,System.Single)">
+      <summary>Calculates the bounds the given text would occupy, if you were to render it.</summary>
+      <param name="param_3475">Text to draw</param>
+      <param name="param_8081">Position to draw the text at</param>
+      <param name="param_3476">Font to use</param>
+      <param name="param_3477">Alignment of the text</param>
+      <param name="param_3478">Amount of space to leave between one line and the next</param>
+      <param name="param_3479">Multiplier to leave between one paragraph and the next, used for example when the input is <c>\n\n</c></param>
+      <param name="param_3480">Width per line allowed. If this value is too low, the game will hang.</param>
+      <param name="param_3481">The length after which text is truncated to fit</param>
+      <returns>The bounds of the text, were it to be rendered</returns>
+    </member>
+    <member name="M:class_135.method_292(System.String,Vector2,class_1,Color,enum_0,System.Single,System.Single,System.Single,System.Single,System.Int32,Color,class_256,System.Int32)">
+      <summary>Renders the given text, vertically centered around the given position.</summary>
+      <param name="param_3482">Text to draw</param>
+      <param name="param_3483">Where to render the text, vertically centered.</param>
+      <param name="param_3484">Font to use</param>
+      <param name="param_3485">Color of the text</param>
+      <param name="param_3486">Alignment of the text</param>
+      <param name="param_3487">Amount of space to leave between one line and the next</param>
+      <param name="param_3488">Multiplier to leave between one paragraph and the next, used for example when the input is <c>\n\n</c></param>
+      <param name="param_3489">Width per line allowed. If this value is too low, the game will hang.</param>
+      <param name="param_3490">The length after which text is truncated to fit</param>
+      <param name="param_3491">Offset of the text shadow, the higher this is the 'further apart' the shadow will appear from the text. Set to 0 for no shadow.</param>
+      <param name="param_3492">The color of the shadow</param>
+      <param name="param_3493">Gradient texture to use when rendering this text. Set to null for no gradient.</param>
+      <param name="param_3494">Max amount of characters to render</param>
+    </member>
+    <member name="M:class_135.method_294(Rotation2)">
+      <summary>Turns a given <see cref="T:Rotation2" /> into its equivalent orientation.</summary>
+      <param name="param_3510">Rotation2</param>
+      <returns>The orientation such a <see cref="T:Rotation2" /> translates to.</returns>
+    </member>
+    <member name="M:class_195.method_519(Index2,Vector2,Vector2,System.Single)">
+      <summary>Obtain a matrix that can be used to render textures onto this part.</summary>
+      <param name="param_3825">Size of the texture that will be drawn</param>
+      <param name="param_3826">Offset, in pixel distance from the part's origin</param>
+      <param name="param_3827">Position to pivot around, if a rotation is provided</param>
+      <param name="param_3828">Rotation to apply</param>
+      <returns>Output transform Matrix</returns>
+    </member>
+    <member name="M:class_195.method_520(Index2,Vector2,Vector2,Vector2,System.Single)">
+      <summary>Obtain a matrix that can be used to render textures onto this part.</summary>
+      <param name="param_3829">Size of the texture that will be drawn</param>
+      <param name="param_3830">Offset, in pixel distance from the part's origin</param>
+      <param name="param_3831">Additional pixel offset for the texture alone.</param>
+      <param name="param_3832">Position to pivot around, if a rotation is provided</param>
+      <param name="param_3833">Rotation to apply</param>
+      <returns>Output transform Matrix</returns>
+    </member>
+    <member name="M:class_195.method_521(class_256,Vector2)">
+      <summary>Render a certain texture onto the part. The texture is drawn 
+      with its bottom-left corner at <paramref name="param_3835" />. 0,0 means "the center 
+      of the central hex of this part".<br />
+      The texture rotates and moves along with the rest of the part.</summary>
+      <param name="param_3834">Texture to render</param>
+      <param name="param_3835">Offset to render the texture at</param>
+    </member>
+    <member name="M:class_195.method_522(class_256,Vector2,System.Single)">
+      <summary>Render a certain texture onto the part. The texture is drawn 
+      with its bottom-left corner at <paramref name="param_3837" />. 0,0 means "the center 
+      of the central hex of this part".<br />
+      The texture rotates and moves along with the rest of the part.</summary>
+      <param name="param_3836">Texture to render</param>
+      <param name="param_3837">Offset to render the texture at</param>
+      <param name="param_3838">Rotation to apply to the texture</param>
+    </member>
+    <member name="M:class_195.method_523(class_256,Vector2,Vector2,System.Single)">
+      <summary>Render a certain texture onto the part. The texture is drawn 
+      with its bottom-left corner at <paramref name="param_3839" />. 0,0 means "the center 
+      of the central hex of this part".<br />
+      The texture rotates and moves along with the rest of the part.</summary>
+      <param name="param_8137">Texture to render</param>
+      <param name="param_3839">Offset to render the texture at</param>
+      <param name="param_3840">Pivot position to rotate the texture around</param>
+      <param name="param_3841">Rotation to apply to the texture</param>
+    </member>
+    <member name="M:class_195.method_524(class_256,System.Single,System.Single,System.Single)">
+      <summary>Function utilized to render one of the piston segments and quite specialized to this task alone.<br />
+      This function will draw the defined texture such that the *center* of its left edge is at the center of the 
+      0,0 hex of this part, with the rest of the texture extending towards the direction arms normally 
+      extend in (right, when no rotation has been applied to the part). If all float params are 0, the texture 
+      is simply drawn in full as explained.<br /><br />
+      To explain how this works imagine there is a line to the right after which the 
+      texture is truncated and isn't displayed anymore. (The line is really just a subtraction, though)
+      When all float values are 0, this coincides with the right edge of the texture.<br /><paramref name="param_3843" /> nudges the texture towards the right without moving said 'truncation line'.
+      If everything else is set to 0, this will cause the texture to get cut off.<br /><paramref name="param_3844" /> moves the 'truncation line' towards the *left*<br /><paramref name="param_3845" /> Makes the 'truncation line' advance towards the right instead.<br /><paramref name="param_3845" /> is generally set to the current length of this piston, in pixels, and changes
+       as the piston expands and retracts.<br /><br /><paramref name="param_3843" /> and <paramref name="param_3844" /> are generally set as constants in vanilla, 
+      chosen such that the 'truncation line' reveals the underlying texture at the correct time, with 
+      <paramref name="param_3845" /> being controlled by the length of the piston.
+      <!-- There's probably a better explanation hiding in here or a better way to think about this.
+      Hopefully this is good enough for now though. --></summary>
+      <param name="param_3842">Texture to render</param>
+      <param name="param_3843">Moves the texture towards the right without moving the 'truncation line'</param>
+      <param name="param_3844">Moves the 'truncation line' towards the left.</param>
+      <param name="param_3845">Current length of the piston in pixels</param>
+    </member>
+    <member name="M:class_195.method_525(class_256,Vector2,HexIndex,System.Single)">
+      <summary>Renders a certain texture onto the part, centered on <paramref name="param_3848" />.<br /><paramref name="param_3849" /> pivots around the hex 0,0 of this part.</summary>
+      <param name="param_3846">Texture to render</param>
+      <param name="param_3847">Offset for the texture</param>
+      <param name="param_3848">Grid position to draw this texture at</param>
+      <param name="param_3849">Rotation to apply</param>
+    </member>
+    <member name="M:class_195.method_526(class_256,HexIndex,Vector2,Vector2,System.Single)">
+      <summary>Render a certain texture onto the part. The texture is drawn 
+      with its bottom-left corner at <paramref name="param_3852" /> relative to 
+      the chosen hex (<paramref name="param_3851" />). 0,0 means "the center 
+      of the chosen hex".<br />
+      The texture rotates and moves along with the rest of the part.</summary>
+      <param name="param_3850">Texture to render</param>
+      <param name="param_3851">Hex offset</param>
+      <param name="param_3852">Texture offset</param>
+      <param name="param_3853">Position around which to pivot around when rotating</param>
+      <param name="param_3854">Rotation to apply</param>
+    </member>
+    <!-- Another highly specialized rendering method, bit of a doozy also -->
+    <!-- member name="M:class_195.method_527(class_126,HexIndex,Vector2,Vector2,System.Single)">
+      <summary>TODO!</summary>
+      <param name="param_3855"></param>
+      <param name="param_3856"></param>
+      <param name="param_3857"></param>
+      <param name="param_3858"></param>
+      <param name="param_3859"></param>
+    </member-->
+    <member name="M:class_195.method_528(class_256,HexIndex,Vector2)">
+      <summary>Renders a given texture in such a way that it rotates to face the light source, useful for things 
+      such as bowls that are rotationally symmetric and have their lightning drawn into the texture itself.</summary>
+      <param name="param_3860">Texture to render.</param>
+      <param name="param_3861">Hex to draw the texture at</param>
+      <param name="param_3862">Additional offset to apply. Note that this can interact a bit strangely 
+      with the rotation as it doesn't seem to move the pivot point.</param>
+    </member>
+    <member name="M:class_195.method_529(class_256,HexIndex,Vector2)">
+      <summary>Renders a given texture in such a way that it always stays upright, and never rotates along 
+      with the rest of the part. Useful for alchemical symbols and other such elements that should look 
+      the same no matter which way the part is rotated.</summary>
+      <param name="param_8138">Texture to render.</param>
+      <param name="param_3863">Hex to draw the texture at.</param>
+      <param name="param_3864">Additional offset to apply.</param>
+    </member>
+    <member name="M:class_195.method_530(class_256,HexIndex,System.Single)">
+      <summary>Draws the given texture as a shadow, which is to say slightly transparent and below 
+      the given hex.</summary>
+      <param name="param_3865">Texture to render.</param>
+      <param name="param_3866">Hex to draw the texture at.</param>
+      <param name="param_3867">Downwards offset to apply to the shadow. Higher values make the part look like 
+      it's higher up in the air.</param>
+    </member>
+    <member name="M:class_195.method_531(class_256,class_256,HexIndex,System.Single)">
+      <summary>Utilized to render bonder cylinders. This function will draw the bonder cylinder such that 
+      it connects the given <paramref name="param_3870" /> with the one immediately to the right ( hexPos+(1,0) )</summary>
+      <param name="param_3868">Lightmap of the texture to render</param>
+      <param name="param_3869">Texture to render</param>
+      <param name="param_3870">Hex to draw the texture at.</param>
+      <param name="param_3871">Rotation to apply, around the center of the given hex.</param>
+    </member>
+  </members>
+</doc>
