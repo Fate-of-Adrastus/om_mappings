@@ -3745,11 +3745,11 @@ param_3367,color
 param_8060,pos
 param_8061,size
 param_3370,texCoord
-param_2151,texture
+param_8062,texture
 param_3371,color
 param_3372,texCoord
 param_3373,transformation
-param_3374,texture
+param_8063,texture
 param_3375,color
 param_3376,pos
 param_3377,size
@@ -3795,6 +3795,7 @@ param_3410,bounds
 param_3411,texture
 param_8074,color
 param_3412,pos
+# param_3401,
 param_3413,texture
 param_3414,color
 param_3415,texCoordXPos
@@ -3865,8 +3866,9 @@ param_3478,lineGapsPerLine
 param_3479,paragraphGapMultiplier
 param_3480,lineWidth
 param_3481,overflowSize
-param_3482,text
 param_8082,position
+param_3482,text
+param_3483,position
 param_3484,styleableFont
 param_3485,color
 param_3486,textAlignment
@@ -3905,6 +3907,7 @@ field_1510,styleableFont
 field_1513,forcePrintNextChar
 field_1514,switchType
 param_3511,style
+param_3512,chr
 
 ## PartRenderer
 class_195,PartRenderer
