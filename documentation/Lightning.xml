@@ -134,30 +134,40 @@
       <param name="param_4825">The new atom that will replace the old one.</param>
       <param name="param_4826">The position in which to try and replace the original atom.</param>
     </member>
-    <member name="M:Molecule.method_1111(enum_126,HexIndex,HexIndex)">
+    <member name="M:Molecule.AddBond(BondType,HexIndex,HexIndex)">
       <summary>Adds a bond of the given type between the two positions to the molecule.<br />
-      See <see cref="M:Molecule.method_1112(enum_126,HexIndex,HexIndex,Maybe{class_507})" /></summary>
+      See <see cref="M:Molecule.AddBond(BondType,HexIndex,HexIndex,Maybe{class_507})" /></summary>
       <returns>Whether the bond was successfully added.</returns>
+      <param name="type">The type of the bond to try and add.</param>
+      <param name="pos1">Position to start the bond at.</param>
+      <param name="pos2">Position to end the bond at.</param>
       <exception cref="T:class_266">Thrown if the provided positions aren't adjacent.</exception>
     </member>
-    <member name="M:Molecule.method_1112(enum_126,HexIndex,HexIndex,Maybe{class_507})">
+    <member name="M:Molecule.AddBond(BondType,HexIndex,HexIndex,Maybe{class_507})">
       <summary>Adds a bond of the given type between the two positions to the molecule, optionally adding a <see cref="T:class_507" /> if not empty.<br />
       The positions to form a bond between must be adjacent. If the given bond isn't compatible with a currently present bond, no changes will be made.
       (For example, trying to add a Standard bond on top of a triplex bond won't be successful)
       </summary>
-      <param name="param_4834">The type of the bond to try and add.</param>
-      <param name="param_4835">Position to start the bond at.</param>
-      <param name="param_4836">Adjacent position to end the bond at.</param>
-      <param name="param_8617">Optional <see cref="T:class_507" />, if not empty.</param>
+      <param name="type">The type of the bond to try and add.</param>
+      <param name="pos1">Position to start the bond at.</param>
+      <param name="pos2">Position to end the bond at.</param>
+      <param name="effects">Optional <see cref="T:class_507" />, if not empty.</param>
       <returns>Whether the bond was successfully added.</returns>
       <exception cref="T:class_266">Thrown if the provided positions aren't adjacent.</exception>
     </member>
     <!-- Add Molecule.AddAtom, maybe? It's quite obvious though. -->
-    <member name="M:Molecule.method_1113(HexIndex,HexIndex)">
-      <summary>Gets the bond type present between the provided positions, or the empty <see cref="T:enum_126" /> if there are no bonds there.</summary>
-      <param name="param_4838">First position of the bond to get the type of.</param>
-      <param name="param_4839">Second position of the bond to get the type of.</param>
+    <member name="M:Molecule.GetBondAt(HexIndex,HexIndex)">
+      <summary>Gets the bond present between the provided positions. Additionally see <see cref="T:BondType" />.</summary>
+      <param name="pos1">First position of the bond to get the type of.</param>
+      <param name="pos2">Second position of the bond to get the type of.</param>
       <returns>The bond type at the provided position.</returns>
+    </member>
+    <member name="M:Molecule.RemoveBond(BondType,HexIndex,HexIndex)">
+      <summary>Attempts to remove the bond type from a bond between the given positions.</summary>
+      <param name="toRemove">The bond type to remove from the bond at the given position.</param>
+      <param name="pos1">First position of the bond to remove from.</param>
+      <param name="pos2">Second position of the bond to remove from.</param>
+      <returns>True if removal was successful, False if there was no change.</returns>
     </member>
     <member name="M:Molecule.method_1114(HexIndex,HexIndex)">
       <summary>Attempts to remove the bond between the given positions.</summary>
