@@ -638,7 +638,7 @@ method_1254,HasPermissionForPart
 method_1255,HasPermissionForInstr
 method_2409,HasDRMPermission
 method_2520,GetInputMolecule
-method_2520,GetOutputMolecule
+method_2521,GetOutputMolecule
 field_2765,maxPuzzleFormatVersion
 field_2766,puzzleId
 field_2767,puzzleName
