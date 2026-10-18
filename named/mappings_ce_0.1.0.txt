@@ -1847,7 +1847,7 @@ param_5618,partPos
 param_5619,texture
 param_5620,color
 param_5621,pos
-# param_8330,
+param_8330,angle
 param_5622,intermState
 param_5623,hexes
 param_5624,color
@@ -4853,9 +4853,9 @@ field_1759,cabinet
 class_107,TextureOffsets
 method_143,Init
 method_144,GetOffset
-method_145,GetScale
+method_145,GetCenter
 field_996,offsets
-field_997,scales
+field_997,centers
 param_5847,texture
 param_145,texture
 
