@@ -6579,7 +6579,7 @@ field_1004,gameIdentifier
 field_1006,steamAppId
 field_4471,steamDeReMetallicaId
 field_1007,minWindowSize
-field_1008,offcenterWindows
+field_1008,centeredWindows
 field_1009,use_CONTEXT_PROFILE_MASKs
 field_1010,isDevEnv
 field_1011,vsync
