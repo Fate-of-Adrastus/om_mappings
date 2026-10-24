@@ -638,7 +638,7 @@ method_1254,HasPermissionForPart
 method_1255,HasPermissionForInstr
 method_2409,HasDRMPermission
 method_2520,GetInputMolecule
-method_2520,GetOutputMolecule
+method_2521,GetOutputMolecule
 field_2765,maxPuzzleFormatVersion
 field_2766,puzzleId
 field_2767,puzzleName
@@ -1772,7 +1772,7 @@ param_5551,pos
 param_5552,t
 param_5553,part
 param_5554,pos
-# param_5555,
+param_5555,renderPartHandles
 param_5556,renderProgramIndex
 param_5557,skipMoleculeRenderWhileStopped
 param_5558,part
@@ -1923,7 +1923,7 @@ method_2116,IsInstructionRowInsertMode
 method_2117,IsPartDraggingPrecursorMode
 method_2118,IsPartEditMode
 method_2119,IsNormalMode
-# method_2120,
+method_2120,ClearInstrSelection
 method_2121,ClearPartSelection
 # method_2464,
 method_2122,GetSolutionWindowBounds
@@ -2254,8 +2254,16 @@ param_8340,partType
 ## SolutionEditorPartsPanel.PartsSection
 # method_2050,
 # method_2051,
-# method_2052,
+method_2052,RenderFrame
 # method_2053,
+field_3975,sectionName
+field_3976,partTypes
+param_5648,sectionName
+param_5649,partTypes
+param_5650,solEditScrn
+param_5651,isNonFirst
+param_5652,hoveredPart
+param_5653,solEditScrn
 ## LambdaGeneratedClass
 # method_2054,
 # method_2055,
@@ -2761,7 +2769,7 @@ enum_132.1,AsEffect
 interface_0,IInputMode
 method_0,Process
 method_1,ProcessAfterFrame
-# method_2,
+method_2,RenderOverlay
 param_5840,solEditScrn
 param_67,solEditScrn
 param_68,solEditScrn
@@ -3558,6 +3566,41 @@ field_936,renderTarget
 field_937,renderedTexture
 param_98,size
 param_99,color
+
+## RenderTargetStackManager
+class_226,RenderTargetStackManager
+method_595,GetStack
+method_596,Push
+method_597,Push
+method_598,Push
+method_599,Pop
+method_600,Clear
+param_3945,canvas
+param_8146,canvas
+param_3946,viewMatrix
+param_8147,canvas
+param_3947,targetSize
+param_3948,projectionMatrix
+param_3949,viewMatrix
+param_8148,color
+## NestedClasses
+class_227,RenderTargetStackDisposer
+method_601,Dispose
+
+## RenderTargetStackEntry
+class_193,RenderTargetStackEntry
+field_1787,canvas
+field_1788,size
+field_1789,projectionMatrix
+field_1790,viewMatrix
+param_8134,canvas
+param_3806,size
+param_3807,projectionMatrix
+param_3808,viewMatrix
+
+## RenderTargetStack
+class_268,RenderTargetStack
+field_2097,stack
 
 ## Window
 class_279,Window
@@ -5519,6 +5562,7 @@ param_8639,x
 param_8640,y
 ## NestedClasses
 class_374,PuzzleContainer
+field_4622,currentPuzzle
 field_2791,puzzle
 class_375,InputOutputRemover
 method_1267,RemoveInputOutput
@@ -6171,8 +6215,8 @@ param_8168,height
 param_4193,height
 param_4194,pos
 param_4195,barSize
-param_4196,xOffset
-param_4197,handleHeightDelta
+param_4196,handleHeightDelta
+param_4197,xOffset
 param_4198,context
 ## NestedClasses
 class_263,ScrollbarContext
@@ -6535,7 +6579,7 @@ field_1004,gameIdentifier
 field_1006,steamAppId
 field_4471,steamDeReMetallicaId
 field_1007,minWindowSize
-# field_1008,
+field_1008,centeredWindows
 field_1009,use_CONTEXT_PROFILE_MASKs
 field_1010,isDevEnv
 field_1011,vsync

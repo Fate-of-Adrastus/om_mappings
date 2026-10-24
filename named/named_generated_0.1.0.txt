@@ -134,6 +134,14 @@ field_533,portrait_frame_inactive
 field_534,text_frame
 field_535,backgrounds
 
+## class_130
+method_241,LoadLibrary
+method_242,FreeLibrary
+method_243,GetProcAddress
+
+## class_15
+method_46,RDTSCP
+
 ## class_17
 field_74,cursor_fast_forward
 field_75,cursor_hand_closed
@@ -225,6 +233,71 @@ field_1875,ui_paper_back
 field_1876,ui_transition
 field_1877,ui_transition_back
 field_1878,ui_unlock
+
+## class_216
+method_559,CompressRgbaToBC3
+
+## class_247
+method_636,Initialize
+method_637,InitializeWindow
+method_638,GetAdapterInfo
+method_639,CreateShader
+method_640,DestroyShader
+method_641,CreateTexture
+method_642,CreateDynamicTexture
+method_643,SetTextureData
+method_644,GetTextureData
+method_645,CopyTextureData
+method_646,DestroyTexture
+method_647,CreateMesh
+method_648,CreateDynamicMesh
+method_649,SetMeshData
+method_650,CreateRenderTarget
+method_651,DestroyRenderTarget
+method_652,ClearWindow
+method_653,ClearRenderTarget
+method_654,SetRenderTargetToWindow
+method_655,SetRenderTarget
+method_656,SetBackfaceCullingMode
+method_657,SetDepthTestMode
+method_658,SetShader
+method_659,SetTextures
+method_660,SetSamplers
+method_661,SetPerFrameConstants
+method_662,SetPerCameraConstants
+method_663,SetPerMeshConstants
+method_664,SetMesh
+method_665,DrawSubmesh
+method_666,Present
+method_667,OnWindowResize
+
+## class_267
+method_714,IMG_LinkedVersion
+method_716,IMG_Init
+method_717,IMG_Quit
+method_718,IMG_Load
+method_719,IMG_Load_RW
+method_720,IMG_LoadTyped_RW
+method_721,IMG_LoadTexture
+method_722,IMG_LoadTexture_RW
+method_723,IMG_LoadTextureTyped_RW
+method_724,IMG_InvertAlpha
+method_725,IMG_ReadXPMFromArray
+method_726,IMG_SavePNG
+method_727,IMG_SavePNG_RW
+
+## class_274
+method_738,ov_clear
+method_739,ov_fopen
+method_740,ov_streams
+method_741,ov_info
+method_742,ov_read
+method_743,ov_time_seek
+
+## class_549
+method_2501,OleInitialize
+method_2502,OleUninitialize
+method_2503,CoCreateInstance
 
 ## ConductiveEnamelTextures
 class_46,ConductiveEnamelTextures
