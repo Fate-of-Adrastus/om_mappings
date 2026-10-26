@@ -4094,17 +4094,18 @@ enum_0.2,Right
 
 ## MusicManager
 class_251,MusicManager
-method_673,SetTrack
-# method_674,
-# method_675,
-# method_677,
+method_673,SetTrackWithFade
+method_674,SetTrackImmediately
+method_675,FadeOutMusic
+param_4168,fadeDurationSeconds
 method_676,UpdateMusic
-# field_2032,
-# field_2033,
-# field_2034,
-# field_2035, defaultMusic?
-# field_2036, currentMusic?
-# field_2037,
+method_677,UpdateTrackPosition
+field_2032,fadeOutDurationSeconds
+field_2033,fadeInDurationSeconds
+field_2034,volumeMultiplier
+field_2035,currentTrack
+field_2036,nextTrack
+field_2037,musicVolume
 param_4166,musicTrack
 param_4167,musicTrack
 param_4170,musicTrack
@@ -4850,14 +4851,14 @@ param_44,volumeMultiplier
 ## Sound
 method_2148,PlaySoundDefault
 field_4060,id
-# field_4061,
-field_4062,isPlaying
+field_4061,audioSource
+field_4062,playedThisFrame
 param_5742,volumeMultiplier
 
 ## SoundAssets
 class_201,SoundAssets
 method_539,Init
-method_540,ResetPlayingSounds
+method_540,ResetPlayedThisFrame
 
 ## MusicAssets
 class_102,MusicAssets
@@ -4879,22 +4880,136 @@ field_978,title
 
 ## MusicTrack
 class_186,MusicTrack
+field_1739,audioSource
+field_1740,lastPlayedAt
+field_1741,playbackPosition
 
 ## AudioManager
 class_158,AudioManager
+field_1603,deviceId
+field_1604,handle
+field_1605,audioCallback
+field_1606,sampleRate
+field_1607,dummyAudioFile
 method_372,Init
-method_375,LoadAudioFile
+method_373,WriteAudioToBuffer
+param_3634,userData
+param_3635,buffer
+param_3636,byteLength
+method_374,GetHandle
+method_375,CreateAudioSource
 param_3637,filePath
+method_376,PlaySound
+param_3638,file
+param_3639,volume
+param_3640,looping
 
-## AudioFile
-class_244,AudioFile
+## AudioManagerHandle
+class_113,AudioManagerHandle
+field_1418,music
+field_1419,sounds
+field_1420,debugGameAudioRecording
+method_154,Unlock
+
+## AudioStream
+class_165,AudioStream
+method_467,WriteToBuffer
+param_3759,buffer
+param_3760,sampleCount
+param_3761,volume
+param_3762,loop
+method_468,HasEnded
+method_469,Seek
+param_3763,time
+method_470,Close
+
+## DummyAudioStream
+class_180,DummyAudioStream
+param_3785,buffer
+param_3786,sampleCount
+param_3787,volume
+param_3788,loop
+param_3789,time
+
+## RawAudioStream
+class_273,RawAudioStream
+field_2127,file
+field_2128,sampleIndex
+param_4250,buffer
+param_4251,sampleCount
+param_4252,volume
+param_4253,loop
+param_4254,time
+
+## OggAudioStream
+class_225,OggAudioStream
+field_1942,oggVorbisFile
+field_1943,ended
+param_3940,buffer
+param_3941,sampleCount
+param_3942,volume
+param_3943,loop
+param_3944,time
+
+## AudioSource
+class_244,AudioSource
 field_2006,sourceFileName
+method_91,GetAudioStream
 
-## AudioFileWav
-class_94,AudioFileWav
+## RawAudioSource
+class_94,RawAudioSource
+field_935,samples
 
-## AudioFileOgg
-class_287,AudioFileOgg
+## OggAudioSource
+class_287,OggAudioSource
+field_2233,filePath
+
+## DummyAudioSource
+class_280,DummyAudioSource
+field_2205,source
+
+## WrappedAudioStream
+class_276,WrappedAudioStream
+param_4273,file
+param_4274,volume
+param_4275,looping
+field_2181,source
+field_2182,volume
+field_2183,looping
+field_2184,fadeVolume
+field_2185,fadeVolumeChangePerSecond
+method_748,GetSource
+method_749,SetSource
+param_4276,source
+method_750,SetFile
+param_4277,file
+method_751,IsActive
+method_752,FadeIn
+param_4278,durationSeconds
+method_753,FadeOut
+param_4279,durationSeconds
+
+## WavFile
+class_99,WavFile
+field_952,channelCount
+field_953,sampleRate
+field_954,bitsPerSample
+field_955,data
+method_115,GetSampleCount
+method_116,GetLengthSeconds
+method_117,LogInfo
+param_109,label
+method_118,ReadFromFile
+param_110,filePath
+method_119,WriteToFile
+param_111,filePath
+param_112,sampleRate
+param_113,samples
+method_120,GetAsciiBytes
+param_114,str
+method_121,AssertTrue
+param_115,flag
+param_116,exceptionMessage
 
 ## CurveAssets
 class_278,CurveAssets
@@ -6628,7 +6743,7 @@ field_1028,dumpLore
 field_1029,generatePuzzlePreviews
 field_1030,allowMarkingHexes
 field_1031,testAtomRender
-# field_1032,
+field_1032,recordAndDumpGameAudio
 field_4473,forceDisableDlc
 
 ## Platform
@@ -6810,6 +6925,9 @@ field_2753,direction
 enum_122,PsdGuideDirection
 enum_122.0,Horizontal
 enum_122.1,Vertical
+
+## LibVorbisFile
+class_274,LibVorbisFile
 
 ## SDL_Image
 class_267,SDL_Image
