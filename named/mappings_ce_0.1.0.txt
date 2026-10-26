@@ -7115,6 +7115,29 @@ method_2143,LoadAllSolutions
 method_2144,GetSolutionsForPuzzle
 param_5738,puzzle
 
+## RobustFileWriter
+field_2993,maxWriteAttempts
+field_2994,timeBetweenWrites
+field_2995,timeOfLastWrite
+field_2996,pendingWrites
+method_1355,WriteFile
+param_5118,filePath
+param_5119,data
+method_1356,WriteAsciiStringToFile
+param_5120,filePath
+param_5121,text
+method_1357,AttemptWrites
+method_1358,ShouldRetryWrite
+param_5122,exception
+
+## PendingFileWrite
+param_5124,filePath
+param_5125,data
+field_2998,filePath
+field_2999,data
+field_3000,hasSucceeded
+field_3001,failedWriteAttempts
+
 ## Steam
 method_2150,DiscardPreviousEventsAndRunCallbacks
 method_2152,SetCallback
