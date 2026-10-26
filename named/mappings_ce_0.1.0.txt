@@ -663,7 +663,7 @@ field_2765,maxPuzzleFormatVersion
 field_2766,puzzleId
 field_2767,puzzleName
 field_2768,journalAuthor
-# field_4614,                        ?????
+field_4614,leaderboardKeyPrefix
 field_2769,puzzleTip
 field_2770,inputs
 field_2771,outputs
@@ -6319,10 +6319,10 @@ method_356,RenderButton
 # field_1591,
 # field_1592,
 
-## ScoreData
-class_132,ScoreData
+## ScoreDataForDisplay
+class_132,ScoreDataForDisplay
 field_1480,type
-field_1481,saveKey
+field_1481,leaderboardKey
 field_1482,histogramData
 field_1483,best
 field_1484,previous
@@ -6716,7 +6716,7 @@ class_110,AppConsts
 field_1002,title
 field_1003,gamePath
 field_1004,gameIdentifier
-# field_1005,
+field_1005,zachtronicsStatsUrl
 field_1006,steamAppId
 field_4471,steamDeReMetallicaId
 field_1007,minWindowSize
@@ -6925,6 +6925,165 @@ field_2753,direction
 enum_122,PsdGuideDirection
 enum_122.0,Horizontal
 enum_122.1,Vertical
+
+## HttpManager
+field_2523,pendingHttpRequests
+method_1019,SendGetRequest
+param_4668,url
+param_4669,onResponse
+param_4670,onFailure
+method_1020,PostOctetStream
+param_4671,url
+param_4672,data
+param_4673,onResponse
+param_4674,onFailure
+method_1021,PostHtmlForm
+param_4675,url
+param_4676,formFields
+param_4677,onResponse
+param_4678,onFailure
+method_1022,SendRequestAndGetResponse
+param_4679,request
+method_1023,SendRequestWithCallbacks
+param_4680,onResponse
+param_4681,onFailure
+param_4682,sendRequest
+method_1024,CheckPendingHttpRequests
+method_2389,ApplyUriEscapeCodes
+param_8611,str
+
+## OctetStreamPostRequest
+class_331,OctetStreamPostRequest
+field_2526,url
+field_2527,data
+field_2528,httpManager
+method_1026,SendRequestAndReadResponse
+
+## HtmlFormPostRequest
+class_332,HtmlFormPostRequest
+field_2529,formFields
+field_2530,url
+field_2531,httpManager
+method_1027,SendRequestAndReadResponse
+
+## GetRequest
+class_333,GetRequest
+field_2532,url
+field_2533,httpManager
+method_1028,SendRequestAndReadResponse
+
+## HttpRequestSender
+class_330,HttpRequestSender
+field_2524,request
+field_2525,sendMethod
+method_1025,SendRequest
+
+## HttpRequest
+class_334,HttpRequest
+field_2534,requestTask
+field_2535,onResponse
+field_2536,onFailure
+field_2537,responseData
+
+## GeneratedClass
+class_471,GeneratedClass
+field_4204,instance
+field_2538,unused
+method_1029,FormatFieldsForHtmlForm
+
+## ScoreManager
+field_3004,metrics
+field_3005,leaderboardEntriesToGet
+field_3006,histogramData
+field_3007,leaderboardEntries
+field_3008,topPercentiles
+field_4727,pendingExternalLeaderboardUploads
+method_2422,HasPendingExternalLeaderboardUploads
+method_1361,GetZachtronicsLeaderboardPlayerUrl
+param_5126,playerId
+method_1362,GetZachtronicsLeaderboardUrl
+method_1363,QueryLeaderboards2
+method_1364,QueryLeaderboards
+method_1365,UpdateScoresFromSolution
+param_5127,solution
+param_8647,metricScores
+param_5129,upload
+method_1366,GetLeaderboardKey
+param_5130,puzzle
+param_5131,metric
+method_1367,GetAllLeaderboards
+method_1368,QueryZachtronicsLeaderboard
+method_1369,SubmitScoreToSteamLeaderboard
+param_8291,puzzle
+param_8291,metric
+param_8291,score
+method_1370,QuerySteamLeaderboard
+param_5135,leaderboardKey
+method_1371,OnSteamLeaderboardFindResult
+param_8292,result
+param_5136,ioFailure
+method_1372,SetTopPercentile
+param_5137,leaderboardData
+param_5138,ioFailure
+method_1373,SetFriendScores
+param_8293,leaderboardData
+param_5139,ioFailure
+method_1374,GetSteamLeaderboardData
+param_5140,puzzle
+param_5141,metric
+method_1375,GetLeaderboardEntries
+param_5142,leaderboardKey
+method_1376,GetTopPercentile
+param_5143,leaderboardKey
+method_1377,GetScoreDataForDisplay
+param_5144,puzzle
+param_5145,solution
+method_1378,GetScoreDataForDisplay
+param_5146,puzzle
+param_5147,solution
+param_5148,metric
+method_2423,UploadToExternalLeaderboards
+param_8648,solution
+param_8649,gifFilePath
+method_1379,OnZachtronicsLeaderboardQueryResponse
+param_5149,responseData
+method_2424,OnExternalLeaderboardUploadResponse
+param_8650,responseData
+method_2425,OnExternalLeaderboardUploadFailure
+## ScoreDataWrapper
+class_396,ScoreDataWrapper
+field_3016,scoreData
+## ExternalLeaderboardFormData
+class_543,ExternalLeaderboardFormData
+field_4728,fields
+method_2426,AttachGif
+param_8651,gifFilePath
+## AsyncStateMachine
+class_395,AsyncStateMachine
+field_3009,currentValue
+field_3012,puzzlesWithLeaderboards
+field_3013,puzzle
+field_3014,metrics
+field_3015,metricIndex
+
+## LeaderboardEntries
+class_248,LeaderboardEntries
+param_4152,leaderboardHandle
+field_2008,leaderboardHandle
+field_2009,entries
+
+## LeaderboardEntry
+param_4718,userDisplayName
+param_4719,score
+param_4720,isPlayer
+param_4721,unused
+field_2593,userDisplayName
+field_2594,score
+field_2595,isPlayer
+field_2596,unused
+
+## Steam
+method_2152,SetCallback
 
 ## LibVorbisFile
 class_274,LibVorbisFile
