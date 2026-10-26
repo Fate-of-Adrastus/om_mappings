@@ -349,8 +349,27 @@ param_4487,track
 param_4488,fanfare
 param_4489,requirement
 param_4490,itemId
+## AsyncStateMachine
 class_300,AsyncStateMachine
-
+param_4491,state
+field_2332,state
+field_2333,currentEvent
+field_2334,threadId
+field_2335,campaigns
+field_2336,campaignIndex
+field_2337,chapters
+field_2338,chapterIndex
+field_2339,currentChapter
+field_2340,chapterCompletePuzzleCount
+field_2341,campaignItems
+field_2342,currentCampaignItem
+method_834,Dispose
+method_835,DisposeInner
+method_836,GetCurrent
+method_837,Reset
+method_838,GetCurrent_untyped
+method_839,GetEnumerator
+method_840,GetEnumerator_untyped
 ## LambdaGeneratedClass
 class_460,LambdaGeneratedClass
 field_4176,instance
