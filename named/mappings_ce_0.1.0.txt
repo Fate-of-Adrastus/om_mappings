@@ -990,7 +990,7 @@ method_898,CopyInstructionsTo
 method_899,FirstInstructionIndex
 method_900,LastInstructionIndex
 method_901,GetInstruction
-# method_902,
+method_902,GetInstructionsWithIndices
 method_903,HasInstruction
 method_904,Count
 method_905,SetInstruction
@@ -1022,7 +1022,7 @@ param_4563,instructionList
 param_4564,instructionIndex
 ## NestedClasses
 ## NestedClasses
-# class_318,AsyncStateMachine
+class_318,AsyncStateMachine
 ## LambdaGeneratedClass
 class_468,LambdaGeneratedClass
 field_4191,instance
@@ -1915,7 +1915,8 @@ method_2089,GetSimulationError
 method_2462,SetSimulationError
 method_2091,CloseButtonDisplayArea
 method_2092,PreventLowerScreenUpdates
-# method_2463,
+param_8705,doRender
+method_2463,RenderAtBoardScale
 method_2093,RenderNote
 method_2094,GetButtonState
 method_2095,EditorPanels
@@ -2352,8 +2353,8 @@ param_4461,isEnabled
 
 ## Editor
 class_525,Editor
-# method_921,
-# method_922,
+method_921,GetBoardScreenBounds
+method_922,GetLightSourcePosition
 method_923,RenderBandBox
 method_924,RenderPartHandle
 method_2331,RenderMolecule
@@ -6296,28 +6297,45 @@ field_1584,lineWidth
 param_3596,bounds
 param_3597,isHover
 param_3598,isEnabled
-# class_149,                    -- Should Remove this with Quintessencial
-# method_348,
-# method_349,
-# method_350,
+class_149,UnusedButtons
+method_348,UnusedTextButton
+param_3599,text
+param_3600,position
+param_3601,size
+method_349,IconButton
+param_3602,iconTexture
+param_3603,position
+param_3604,size
+method_350,ClickableText
+param_3605,text
+param_8098,position
 ## NestedClasses
-# class_150,
+class_150,ClickableText
 method_351,GetBounds
 method_352,RenderButton
-# field_1585,
-# field_1586,
-# class_151,
+param_8099,bounds
+param_8100,isHover
+param_3609,isEnabled
+field_1585,text
+field_1586,position
+class_151,IconButton
 method_353,GetBounds
 method_354,RenderButton
-# field_1587,
-# field_1588,
-# field_1589,
-# class_152,
+param_8101,bounds
+param_3610,isHover
+param_3611,isEnabled
+field_1587,position
+field_1588,size
+field_1589,iconTexture
+class_152,UnusedTextButton
 method_355,GetBounds
 method_356,RenderButton
-# field_1590,
-# field_1591,
-# field_1592,
+param_3612,bounds
+param_3613,isHover
+param_3614,isEnabled
+field_1590,position
+field_1591,size
+field_1592,text
 
 ## ScoreDataForDisplay
 class_132,ScoreDataForDisplay
@@ -6786,6 +6804,14 @@ method_968,Render
 
 ## GLRenderer
 field_2219,vsyncEnabled
+# LinkShader
+param_4320,vertexShaderHandle
+param_4321,pixelShaderHandle
+# LoadShaderFile
+param_8180,shaderType
+param_4322,shaderFilePath
+# DestroyShader
+param_4323,shaderHandle
 # Present
 param_4392,window
 param_4393,vsyncEnabled
@@ -7082,8 +7108,20 @@ field_2594,score
 field_2595,isPlayer
 field_2596,unused
 
+## SolutionManager
+# class_438,
+# class_499,
+method_2143,LoadAllSolutions
+method_2144,GetSolutionsForPuzzle
+param_5738,puzzle
+
 ## Steam
+method_2150,DiscardPreviousEventsAndRunCallbacks
 method_2152,SetCallback
+
+## StringLoader
+method_131,GetObfuscatedStringById
+param_136,stringId
 
 ## LibVorbisFile
 class_274,LibVorbisFile
