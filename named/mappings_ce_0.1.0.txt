@@ -350,6 +350,7 @@ param_4488,fanfare
 param_4489,requirement
 param_4490,itemId
 class_300,AsyncStateMachine
+
 ## LambdaGeneratedClass
 class_460,LambdaGeneratedClass
 field_4176,instance
@@ -3402,7 +3403,7 @@ param_5100,indices
 param_5101,baseVertex
 param_5102,mesh
 param_5103,window
-# param_5104,
+param_5104,vsyncEnabled
 param_5105,window
 param_5106,width
 param_5107,height
@@ -3527,7 +3528,7 @@ param_3252,count
 param_3253,indices
 param_3254,baseVertex
 param_3255,window
-# param_3256,
+param_3256,vsyncEnabled
 param_3257,window
 param_3258,width
 param_8045,height
@@ -3622,8 +3623,8 @@ method_770,SetFullscreen
 method_771,SetSizeWithScaling
 method_772,SetSizeToDrawable
 method_773,RequiresScaling
-# method_774,
-# method_775,
+method_774,GetActiveDisplayResolution
+method_775,GetDisplayResolution
 field_2191,HiDPIscaling
 field_2192,window
 field_2193,renderWindow
@@ -3644,7 +3645,7 @@ param_4285,size
 param_4286,color
 param_4287,toFullscreen
 param_4288,size
-# param_4289,
+param_4289,displayIndex
 
 ## IRenderCanvas
 interface_3,IRenderCanvas
@@ -3685,6 +3686,8 @@ param_4180,obj
 
 ## TextureFormat
 enum_3,TextureFormat
+enum_3.1,Alpha
+enum_3.2,RGBA
 
 ## TextureBatch
 class_100,TextureBatch
@@ -4658,12 +4661,14 @@ param_3983,color
 ## TextureAssets
 class_17,TextureAssets
 method_51,InitColors
+method_52,LoadTextures
 field_71,white
 field_72,black
 field_73,transparent
+param_65,progressReporter
 
-## PngImage
-class_272,PngImage
+## ImageData
+class_272,ImageData
 method_733,GetWidth
 method_734,GetHeight
 method_735,Save
@@ -6424,8 +6429,10 @@ method_939,GetBelowCurrentScreen
 method_940,IsMinWindow
 method_941,IsWindowOver1080p
 method_942,GameInit
-# method_943,
-# method_944,
+method_943,UpdateLoadingScreen
+param_4612,renderLoadingScreen
+method_944,UpdateLoadingProgress
+param_4613,progress
 method_945,PushScreen
 method_946,PushScreen
 method_2384,PopScreen
@@ -6439,13 +6446,13 @@ method_2386,InitFonts
 method_956,ContentInit
 method_957,GameLoop
 # method_958,
-# method_959,
+method_959,UpdateFullscreenStateAndResolution
 method_960,CreateWindow
 method_961,GetCursorAsset
 # method_962,
 method_963,GameUnload
-# method_964,
-# method_965,
+method_964,AddTextureLoadingProgress
+method_965,IncrementFontLoadingProgress
 # method_966,
 # method_967,
 field_2434,instance
@@ -6454,17 +6461,17 @@ field_2436,windows
 field_2437,gameWindow
 # field_2438,
 # field_2439,
-# field_2440,
-# field_2441,
+field_2440,shouldUpdateFullscreenState
+field_2441,shouldUpdateResolution
 # field_2442,
 field_2443,musicManager
 field_2444,time
-# field_2445,
-# field_2446,
+field_2445,lastLoadingScreenRenderTime
+field_2446,loadingProgressCounter
 # field_2447,
 # field_2448,
-# field_2449,
-# field_2450,
+field_2449,currentSdlCursor
+field_2450,currentSdlCursorVisibility
 field_2451,saveData
 field_2452,settingsData
 field_2453,logManager
@@ -6502,13 +6509,13 @@ param_4623,amount
 param_4626,title
 param_4627,width
 param_8222,height
-param_4628,center
+param_4628,unused
 param_4629,path
 param_4630,texture
 param_4631,exitCode
-# param_8223,
-# param_8224,
-# param_8225,
+param_8223,addedProgress
+param_8224,maxProgress
+param_8225,maxProgress
 # param_8233,
 # param_4634,
 # param_4635,
@@ -6638,6 +6645,155 @@ method_24,FlipUInt
 ## StringLoader
 class_103,StringLoader
 
+## LoadingScreenTitleRenderer
+class_322,LoadingScreenTitleRenderer
+field_2472,loadingProgress
+method_968,Render
+
+## GLRenderer
+field_2219,vsyncEnabled
+# Present
+param_4392,window
+param_4393,vsyncEnabled
+
+## PsdImage
+field_2754,width
+field_2755,height
+field_2756,channelCount
+field_2757,layers
+field_2758,pixelData
+field_2759,imageResources
+method_1228,LoadImageDataFromPath
+param_4953,path
+method_1229,LoadPsdDataFromPath
+param_4954,path
+method_1230,PadStreamPositionToAlignment
+param_4955,stream
+param_4956,currentAlignmentOffset
+param_4957,targetAlignment
+method_1231,ReadRgba
+param_4958,reader
+param_4959,width
+param_4960,height
+param_4961,channels
+method_1232,SkipRleRowLengthData
+param_4962,reader
+param_8268,height
+param_4964,channelCount
+method_1233,ReadColorChannelBytes
+param_4965,reader
+param_4966,encoding
+param_4967,bounds
+method_1234,LogData
+param_4968,includeChannelData
+method_1235,NotImplemented
+method_1236,NotImplemented2
+method_1237,GetPsdGuides
+method_1238,GetPsdGuides
+param_4973,imageResources
+method_1239,AssertTrue
+param_4974,flag
+method_1240,ReadBounds
+param_4975,reader
+method_1241,ReadRunLengthEncodedBytes
+param_4976,reader
+param_4977,count
+method_1242,ReadImageResources
+param_4978,reader
+method_1243,LoadPsdGuidesFromFile
+param_4979,path
+## RunLengthDecodingState
+enum_155,RunLengthDecodingState
+enum_155.0,ReadLength
+enum_155.1,ReadNonRepeatingBytes
+enum_155.2,ReadRepeatedByte
+## GeneratedClass
+class_482,GeneratedClass
+field_4239,instance
+field_4240,unused
+field_4241,unused2
+method_1244,ByteToHexString
+param_8269,value
+method_1245,IsPsdGuide
+param_8270,imageResource
+
+## PsdCompressionMethod
+enum_139,PsdCompressionMethod
+
+## RgbaArrays
+class_242,RgbaArrays
+field_2000,sourceCompressionMethod
+field_2001,red
+field_2002,green
+field_2003,blue
+field_2004,alpha
+
+## PsdBounds
+struct_24,PsdBounds
+field_1649,left
+field_1651,right
+field_1648,top
+field_1650,bottom
+method_472,Width
+method_473,Height
+method_474,IsZeroSize
+method_475,Create
+param_3770,left
+param_3771,right
+param_3772,top
+param_3773,bottom
+
+## PsdImageResource
+field_2762,type
+field_2763,name
+field_2764,data
+
+## PsdLayer
+class_271,PsdLayer
+field_2113,name
+field_2114,bounds
+field_2115,blendMode
+field_2116,opacity
+field_2117,isVisible
+field_2118,sectionDividerType
+field_2119,red
+field_2120,green
+field_2121,blue
+field_2122,alpha
+
+## PsdLayerChannelData
+class_127,PsdLayerChannelData
+field_1467,channelId
+field_1468,compressionMethod
+field_1469,encodedDataLength
+field_1470,decodedData
+
+## PsdChannelId
+enum_124,PsdChannelId
+
+## PsdSectionDividerType
+enum_141,PsdSectionDividerType
+enum_141.0,Default
+enum_141.1,OpenFolder
+enum_141.2,ClosedFolder
+enum_141.3,BoundingSectionDivider
+
+## PsdImageResourceId
+enum_134,PsdImageResourceId
+enum_134.1032,GridAndGuidesInfo
+
+## PsdGuide
+field_2752,position
+field_2753,direction
+# method_1227,  gets the position but divided by 32??? I don't know why
+
+## PsdGuideDirection
+enum_122,PsdGuideDirection
+enum_122.0,Horizontal
+enum_122.1,Vertical
+
+## SDL_Image
+class_267,SDL_Image
 
 ## SDL
 struct_103,SDL_Event
@@ -6743,8 +6899,3 @@ method_2341,_DoNothing12
 method_2342,_DoNothing13
 method_2343,_DoNothing14
 method_2344,_DoNothing15
-# What even is this? Something PsdImage related...
-class_271,_UnusedClass9
-class_127,_UnusedClass10
-enum_124,_UnusedEnum0
-enum_141,_UnusedEnum1
