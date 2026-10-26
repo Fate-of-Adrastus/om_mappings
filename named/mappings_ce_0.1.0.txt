@@ -1751,8 +1751,8 @@ method_2021,RenderConsumptionEffects
 # method_2022,
 # method_2452,
 method_2452,IsCompleted
-field_3935,glyphEffects
-# field_3936,   glyphEffects2 ???
+field_3935,underneathPartsGlyphEffects
+field_3936,glyphEffects
 field_3937,consumptionEffects
 # field_4742,
 # field_4743,
