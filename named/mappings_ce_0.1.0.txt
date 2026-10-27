@@ -1708,7 +1708,13 @@ method_517,IsPartSelected
 method_518,HandleSimulationError
 # method_2448,
 method_2449,GetMousePos
-# method_1984,
+method_1984,RenderSolution
+param_5533,boardOffset
+param_5534,backgroundBounds
+param_5535,visibleBounds
+param_5536,renderProgrammablePartIndices
+param_5537,ghostMolecules
+param_5538,recordedSolutionVialTextures
 method_1985,GetHolder
 method_1986,GetGripperState
 method_1987,GetLightForGripper
@@ -1884,12 +1890,13 @@ method_2024,At
 field_3941,list
 class_421,AsyncStateMachine
 # class_423,
-# method_2032,
-# method_2033,
-# field_3958,
-# field_3959,
-# param_5631,
-# param_5632,
+method_2032,GetAlphaForPartGlow
+method_2033,RenderAtom
+field_3958,solutionEditor
+field_3959,atomRenderOffset
+param_5630,part
+param_5631,atomType
+param_5632,position
 ## LambdaGeneratedClass
 class_494,LambdaGeneratedClass
 field_4282,instance
@@ -2094,7 +2101,7 @@ param_4000,deltaPos
 class_153,SolutionEditorBoardPanel
 method_359,GetBoardOffset
 method_360,SetBoardStartOffset
-method_2349,RenderHighlightsAndGhosts
+method_2349,RenderSolution
 param_8102,solEditScrn
 param_3616,deltaTime
 param_3617,panningMode
@@ -3000,15 +3007,19 @@ method_188,EnableInput
 method_189,DisableInput
 method_190,DisableNonKeyInput
 method_191,ForceNextDelete
-method_192,WhileKeyHeld
+method_192,IsKeyHeld
 method_193,IsModifierKeyHeld
-method_194,IsKeyCombination
-method_195,IsKeyCombination
+method_194,IsKeyCombinationPressed
+method_195,IsKeyCombinationPressed
+method_2290,IsKeyCombinationHeld
+param_8387,modifier1
+param_8388,modifier2
+param_8389,key
 method_196,IsEnterPressed
 method_197,IsDeletePressed
 method_198,IsKeyPressed
 method_199,IsKeyReleased
-method_200,IsKeyHeld
+method_200,IsKeyTyped
 method_201,GetCharByInput
 method_202,MousePos
 method_203,MouseDelta
@@ -3056,7 +3067,8 @@ enum_142,MouseButtonType
 enum_142.1,LeftClick
 enum_142.2,MiddleClick
 enum_142.3,RightClick
-# enum_142.4,?
+enum_142.4,MouseButton4
+enum_142.5,MouseButton5
 
 
 ## SolitaireScreen
@@ -3628,6 +3640,7 @@ class_279,Window
 method_756,IsScreenTarget
 method_757,GetSize
 method_758,SetSizeOfWindow
+param_4284,size
 method_759,GetWidth
 method_760,GetHeight
 method_761,SetSize
@@ -3649,16 +3662,17 @@ field_2191,HiDPIscaling
 field_2192,window
 field_2193,renderWindow
 field_2194,size
-# field_2195,
-# field_2196,
-# field_2197,
-# field_2198,
-# field_2199,
-# field_2200,
-# field_2201,
-# field_2202,
-# field_2203,
-# field_2204,
+field_2195,mousePosition
+field_2196,mouseDelta
+field_2197,scrollWheelDelta
+field_2198,heldKeys
+field_2199,prevFrameHeldKeys
+field_2200,keyPressesIncludingRepeats
+field_2201,heldMouseButtons
+field_2202,prevFrameHeldMouseButtons
+field_4477,deferredMouseUps
+field_2203,textInputChar
+field_2204,unloadRequested
 param_4282,window
 param_4283,renderWindow
 param_4285,size
@@ -6575,7 +6589,7 @@ method_934,GetLogManager
 method_935,SetLogManager
 method_936,GetScreenTransition
 method_937,SetScreenTransition
-# method_2383,
+method_2383,GetBackgroundFadeOverlayAlpha
 method_938,GetCurrentScreen
 method_939,GetBelowCurrentScreen
 method_940,IsMinWindow
@@ -6593,35 +6607,36 @@ method_949,PopScreen
 method_950,PopScreens
 method_951,ForceRemoveScreenType
 method_952,HasScreenOfType
-# method_954,
+method_954,_DoNothing
 method_2386,InitFonts
 method_956,ContentInit
 method_957,GameLoop
-# method_958,
+method_958,HandleSdlWindowEvent
+param_4625,sdlEvent
 method_959,UpdateFullscreenStateAndResolution
 method_960,CreateWindow
 method_961,GetCursorAsset
-# method_962,
+method_962,GetPlayerId
 method_963,GameUnload
 method_964,AddTextureLoadingProgress
 method_965,IncrementFontLoadingProgress
-# method_966,
-# method_967,
+method_966,Unused_OnFileRename
+method_967,Unused_OnFileSystemEvent
 field_2434,instance
 field_2435,rendererType
 field_2436,windows
 field_2437,gameWindow
-# field_2438,
-# field_2439,
+field_2438,gameRenderTarget
+field_2439,currentResolution
 field_2440,shouldUpdateFullscreenState
 field_2441,shouldUpdateResolution
-# field_2442,
+field_2442,shouldReloadTexturesAndShaders
 field_2443,musicManager
 field_2444,time
 field_2445,lastLoadingScreenRenderTime
 field_2446,loadingProgressCounter
-# field_2447,
-# field_2448,
+field_2447,emulatingEscapePress
+field_2448,emulatingRightClick
 field_2449,currentSdlCursor
 field_2450,currentSdlCursorVisibility
 field_2451,saveData
@@ -6632,19 +6647,19 @@ field_2455,screenTransition
 field_2456,timeSinceTransition
 field_2457,httpManager
 field_2458,scoreManager
-# field_2459,
+field_2459,unused
 field_2460,workshopManager
 field_2461,globalSolutions
-# field_4597,
+field_4597,solitaireStates
 field_2464,fadeBackground
-# field_2465,
-# field_2466,
+field_2465,backgroundFadeAmount
+field_2466,journalAndUserContentScreenIndex
 field_2467,solutionQueue
-# field_2468,
-# field_4598,
-# field_4599,
-# field_4600,
-# field_4601,
+field_2468,productionPuzzleChamberMaskRenderT
+field_4598,unusedRenderT
+field_4599,currentlyRenderingProductionPuzzle
+field_4600,backgroundFadeTimeSeconds
+field_4601,backgroundFadeOverlayMaxAlpha
 param_8220,logManager
 param_8221,transition
 param_4614,screen
@@ -6657,7 +6672,7 @@ param_8604,amount
 param_8605,outTransition
 param_8606,inTransition
 param_4623,amount
-# param_8607,
+param_8607,progressReporter
 param_4626,title
 param_4627,width
 param_8222,height
@@ -7139,6 +7154,7 @@ field_3000,hasSucceeded
 field_3001,failedWriteAttempts
 
 ## Steam
+method_2149,CreateCallbacks
 method_2150,DiscardPreviousEventsAndRunCallbacks
 method_2152,SetCallback
 
