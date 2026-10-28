@@ -1058,6 +1058,7 @@ enum_144.5,Grab
 enum_144.6,Reset
 enum_144.7,Repeat
 enum_144.8,Halt
+enum_144.255,Custom
 
 ## InstructionType
 method_1036,GetHotkey
