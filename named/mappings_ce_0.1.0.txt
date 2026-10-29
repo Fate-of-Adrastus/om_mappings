@@ -6688,6 +6688,19 @@ param_8225,maxProgress
 # param_4635,
 # param_4636,
 ## NestedClasses
+class_323,ScreenTransitionUpdater
+field_2473,currentScreen
+field_2474,screenUpdater
+method_969,UpdateNoTransition
+method_970,UpdateFadeOutPush
+method_2387,UpdateFadeInPush
+method_972,UpdateFadeOutPop
+method_2388,UpdateFadeInPop
+param_4637,transition
+param_4638,transition
+param_8608,transition
+param_4640,transition
+param_8609,transition
 class_324,ScreenUpdater
 method_974,UpdateScreen
 field_4195,gameLogic
