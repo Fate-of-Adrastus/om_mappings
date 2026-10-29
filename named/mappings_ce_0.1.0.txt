@@ -679,7 +679,7 @@ field_2780,outputMultiplier
 field_2781,isWorkshop
 field_2782,isCustom
 field_2783,fileHash
-# field_2784,			!not set at creation?
+field_2784,fileSavedBySteamUser
 param_4980,path
 param_4981,path
 param_4982,writer
@@ -1194,6 +1194,8 @@ method_1201,HasArms
 method_1202,HasAtoms
 method_1203,IsNotConduit
 method_1204,InitConduit
+method_2519,UpdateOutputType
+param_8769,isRepeating
 method_1205,SetType2
 field_2689,minLength
 field_2690,maxLength
@@ -1243,7 +1245,7 @@ param_4924,solution
 param_4925,rotation
 param_8258,solution
 param_4926,rotation
-param_4927,armLenght
+param_4927,armLength
 param_4928,conduitHexes
 param_4929,type
 ## NestedClasses
@@ -1952,7 +1954,7 @@ method_2118,IsPartEditMode
 method_2119,IsNormalMode
 method_2120,ClearInstrSelection
 method_2121,ClearPartSelection
-# method_2464,
+method_2464,GetBoardPanelScreenBounds
 method_2122,GetSolutionWindowBounds
 method_2123,BoardPanelContainsMouse
 method_2124,PartsPanelContainsMouse
@@ -1964,9 +1966,9 @@ method_2467,RenderErrorPanel
 method_2127,GetCycle
 method_2128,GetOccupiedHexes
 method_2129,GetProgram
-# method_2130,
-method_2131,GetInputOutputConduitHexes
-# method_2468,
+method_2130,GetRotationHandlePosFromGlyphFootprint
+method_2131,GetGlyphFootprintHexes
+method_2468,RenderInputModeOverlay
 field_4001,partsPanel
 field_4002,boardPanel
 field_4003,programPanel
@@ -2251,7 +2253,7 @@ param_8338,part
 param_8339,part
 class_426,OutputMatcher
 method_2042,OutputWMatchingIndex
-method_2043,OutputWMatchingIndex
+method_2043,OutputWMatchingIndex2
 param_5640,part
 param_4647,part
 field_3970,index
@@ -2433,9 +2435,11 @@ field_4481,solutionEditor
 ## Solution
 method_1934,GetPuzzle
 method_1935,SetPuzzle
-# method_1936,
+method_1936,GetPartsForRendering
+param_5478,sim
 method_1937,CollectPartsAndSubparts
-# method_1938,
+method_1938,CollectPartsAndSubpartsForRendering
+param_5479,sim
 method_1939,RepositionPart
 method_1940,RemovePart
 method_1941,GetOrderedProgrammables
@@ -2458,6 +2462,7 @@ method_1957,FromPuzzle
 method_1958,GetSolutionAt
 method_1959,ToData
 method_1960,FromData
+method_2522,UpdateOutputPartTypes
 method_1961,SaveSnapshot
 method_1962,CreateSnapshot
 method_1963,RestoreSnapshot
@@ -2484,8 +2489,6 @@ param_5474,solutionName
 param_5475,solutionDiscName
 param_5476,creationTime
 param_5477,puzzle
-# param_5478,
-# param_5479,
 param_5480,part
 param_5481,newHexPos
 param_5482,part
@@ -2545,6 +2548,8 @@ method_1977,IsTrue
 method_1978,IsProgrammable
 method_1979,GetProgramIndex
 method_1980,NotFixedAndNotSubpart
+method_2523,GetParts
+param_8772,snapshot
 method_1981,IsNotFixed
 method_1982,IsNotFixed
 method_1983,GetSerialNumber
@@ -3452,15 +3457,15 @@ param_5112,png
 param_5113,path
 ## NestedClasses
 class_389,PsdHelper
-method_1345,GetHeightDif
+method_1345,GetVerticalSlicePos
 param_8288,psdGuide
 field_2983,texture
 ## LambdaGeneratedClass
 class_487,LambdaGeneratedClass
 field_4252,instance
-# method_1346,
-# method_1347,
-# method_1348,
+method_1346,IsHorizontal
+method_1347,GetHorizontalSlicePos
+method_1348,IsVertical
 param_8289,psdGuide
 param_5114,psdGuide
 param_5115,psdGuide
@@ -4877,11 +4882,13 @@ param_5742,volumeMultiplier
 ## SoundAssets
 class_201,SoundAssets
 method_539,Init
+param_3876,progressReporter
 method_540,ResetPlayedThisFrame
 
 ## MusicAssets
 class_102,MusicAssets
 method_129,Init
+param_132,progressReporter
 field_968,map
 field_969,solitaire
 field_970,solving1
@@ -6680,7 +6687,7 @@ param_8607,progressReporter
 param_4626,title
 param_4627,width
 param_8222,height
-param_4628,unused
+param_4628,displayIndex
 param_4629,path
 param_4630,texture
 param_4631,exitCode
@@ -6770,7 +6777,7 @@ field_1005,zachtronicsStatsUrl
 field_1006,steamAppId
 field_4471,steamDeReMetallicaId
 field_1007,minWindowSize
-field_1008,centeredWindows
+field_1008,explicitDisplayIndex
 field_1009,use_CONTEXT_PROFILE_MASKs
 field_1010,isDevEnv
 field_1011,vsync
@@ -6778,9 +6785,9 @@ field_1012,requireSteam
 field_1013,linkCrashSite
 field_1014,showLogWindow
 field_1015,fullscreenWindows
-# field_4472,
-# field_1017,
-# field_1018,
+field_4472,unused1080pDimensions
+field_1017,dumpSystemFontsAndShaderCompilerLogs
+field_1018,ignoreMissingTextures
 field_1019,useMutexLaunch
 field_1020,resizableWindows
 field_1021,validateInstructionIds
