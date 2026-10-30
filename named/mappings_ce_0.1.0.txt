@@ -350,7 +350,7 @@ param_4488,fanfare
 param_4489,requirement
 param_4490,itemId
 ## AsyncStateMachine
-class_300,AsyncStateMachine
+class_300,AsyncStateMachine_EnumeratePuzzleSelectEvents
 param_4491,state
 field_2332,state
 field_2333,currentEvent
@@ -1022,7 +1022,7 @@ param_4563,instructionList
 param_4564,instructionIndex
 ## NestedClasses
 ## NestedClasses
-class_318,AsyncStateMachine
+class_318,AsyncStateMachine_EnumerateInstructionsWithIndices
 ## LambdaGeneratedClass
 class_468,LambdaGeneratedClass
 field_4191,instance
@@ -1247,7 +1247,7 @@ param_4927,armLenght
 param_4928,conduitHexes
 param_4929,type
 ## NestedClasses
-class_360,AsyncStateMachine
+class_360,AsyncStateMachine_EnumeratePartAncestors
 
 ## PartType
 class_139,PartType
@@ -1888,7 +1888,7 @@ param_8693,effect
 class_420,HexModuloList
 method_2024,At
 field_3941,list
-class_421,AsyncStateMachine
+class_421,AsyncStateMachine_EnumerateArmCursorIntersectionData
 # class_423,
 method_2032,GetAlphaForPartGlow
 method_2033,RenderAtom
@@ -2073,7 +2073,7 @@ field_4048,width
 field_4049,text
 param_5734,bounds
 param_4703,isHover
-class_436,AsyncStateMachine
+class_436,AsyncStateMachine_EnumerateEditorPanels
 ## LambdaGeneratedClass
 class_498,LambdaGeneratedClass
 field_4291,instance
@@ -4303,7 +4303,7 @@ param_8126,value
 param_8127,value
 param_3756,format
 ## NestedClasses
-class_164,AsyncStateMachine
+class_164,AsyncStateMachine_MergeRandom
 class_163,SourceKeyIndexer
 generic_8,TSource
 generic_9,TKey
@@ -4317,18 +4317,18 @@ param_3757,Source
 class_96,Extensions
 method_96,GetOrNone
 method_97,GetNonEmpty
-method_98,Transform
+method_98,SelectSome
 method_99,GetOrDefault
 param_100,dict
 param_101,key
 param_102,enumerable
 param_103,enumerable
-param_104,transform
+param_104,selector
 param_105,maybe
 param_106,value
 # NestedClasses
-class_508,AsyncStateMachine1
-class_509,AsyncStateMachine2
+class_508,AsyncStateMachine_SelectAndGetNonEmpty
+class_509,AsyncStateMachine_GetNonEmpty
 
 ## HexTransform
 class_202,HexTransform
@@ -5353,7 +5353,7 @@ field_4143,tempFilePath
 field_4144,puzzlePreviewPath
 param_8365,result
 field_3487,unknownError
-class_456,AsyncStateMachine
+class_456,AsyncStateMachine_EnumeratePuzzlesInFolder
 class_453,PuzzleMatcher
 method_2252,IsSameId
 field_4141,puzzle
@@ -7113,7 +7113,7 @@ field_4728,fields
 method_2426,AttachGif
 param_8651,gifFilePath
 ## AsyncStateMachine
-class_395,AsyncStateMachine
+class_395,AsyncStateMachine_EnumerateLeaderboards
 field_3009,currentValue
 field_3012,puzzlesWithLeaderboards
 field_3013,puzzle
@@ -7167,9 +7167,13 @@ field_3000,hasSucceeded
 field_3001,failedWriteAttempts
 
 ## Steam
+field_4072,events
 method_2149,CreateCallbacks
 method_2150,DiscardPreviousEventsAndRunCallbacks
+method_2151,GetEventsOfType
 method_2152,SetCallback
+## NestedClasses
+class_442,AsyncStateMachine_EnumerateEventsOfType
 
 ## StringLoader
 method_131,GetObfuscatedStringById
@@ -7180,6 +7184,19 @@ class_274,LibVorbisFile
 
 ## SDL_Image
 class_267,SDL_Image
+
+## Range2.AsyncStateMachine
+class_387,AsyncStateMachine_EnumerateCoordinatesInRange
+field_2958,state
+field_2960,threadId
+field_2963,currentY
+field_2964,currentX
+
+## HexIndex.AsyncStateMachine_EnumerateSpiral
+class_327,AsyncStateMachine_EnumerateSpiral
+
+## HexIndex.AsyncStateMachine_EnumerateRing
+class_328,AsyncStateMachine_EnumerateRing
 
 ## _CompilerGenerated
 class_9,_CompilerGenerated
