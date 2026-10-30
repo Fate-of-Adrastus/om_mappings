@@ -1725,7 +1725,7 @@ method_1991,TransitionState
 method_1992,TransitionState
 method_1993,RenderPart
 method_1994,RenderPartOverlays
-method_1995,GetLightData
+method_1995,GetArmCursorIntersectionData
 method_1996,RenderPartBase
 method_1997,RenderGlow
 method_1998,RenderStroke
@@ -1743,8 +1743,16 @@ method_2008,RenderPistonLights
 method_2009,ClearDebugMarkers
 method_2010,AddDebugMarker
 method_2011,GetHoveredPart
-# method_2012,
-method_2013,DoesTransfOvelapAtPoint
+method_2012,GetHoveredArm
+param_5606,mousePos
+param_5607,boardOffset
+param_5608,armLikeParts
+method_2013,DoesTextureIntersectPoint
+param_5609,texture
+param_5610,texturePos
+param_5611,texturePivotOffset
+param_8328,textureRotation
+param_5613,point
 method_2014,RenderBoard
 method_2015,RenderMoleculeWithHolder
 method_2016,RenderRotated
@@ -1855,14 +1863,6 @@ param_5602,intermState
 param_5603,pos
 param_5604,mousePos
 param_5605,boardOffset
-# param_5606,
-# param_5607,
-# param_5608,
-param_5609,texture
-param_5610,centerOffset
-param_5611,pos
-param_8328,rotation
-param_5613,point
 # param_5614,
 # param_5615,
 # param_5616,
@@ -4075,16 +4075,16 @@ param_3321,bottom
 param_3322,top
 param_3323,universal
 
-## LightDirData
-struct_25,LightDirData
-field_1735,lightTexture
-# field_1736,
-# field_1737,
-# field_1738,
-param_2481,lightTexture
-# param_3790,
-# param_3791,
-# param_3792,
+## ArmCursorIntersectionData
+struct_25,ArmCursorIntersectionData
+field_1735,texture
+field_1736,pos
+field_1737,pivotOffset
+field_1738,rotation
+param_2481,texture
+param_3790,pos
+param_3791,pivotOffset
+param_3792,rotation
 
 ## FlippingMode
 enum_1,FlippingMode
