@@ -4759,46 +4759,46 @@ field_2154,naver_17_25
 ## Font
 class_233,Font
 method_607,ParseValid
+param_3969,toValid
 method_608,GetGlyphInfoForChar
+param_3970,glyphIndex
+param_3971,info
 method_609,GetGlyphInfoForChar
+param_3972,glyphIndex
 method_610,BasicGlyphs
 method_611,ExtendedGlyphs
 method_612,Create
-# method_613,
-# method_614,
-field_1965,unicodeBlackCircleGlyphInfo
-# field_1966,
-# field_1967,
-# field_1968,
-# field_1969,
-# field_1970,
-# field_1971,
-# field_1972,
-# field_1973,
-param_3969,toValid
-param_3970,glyphIndex
-param_3971,info
-param_3972,glyphIndex
 param_3973,fontFileName
 param_3974,pointSize
-# param_3975,
-# param_8151,
+param_3975,alphaCorrectionFactor
+param_8151,lineAdvanceOffset
 param_8548,validRanges
-# param_3977,
-# param_3978,
-# param_3979,
-## NestedClasses
-# class_234,
-# field_1974,
-# field_1975,
-# field_1976,
-# field_1977,
-# field_1978,
-# field_1979,
-# field_1980,
-# field_1981,
-# field_1982,
-# field_1983,
+method_613,DumpGlyph
+param_3977,data
+param_3978,glyphIndex
+method_614,LoadCodePage437BitmapFontFromImage
+param_3979,filePath
+field_1965,unicodeBlackCircleGlyphInfo
+field_1966,ascent
+field_1967,descent
+field_1968,lineAdvance
+field_1969,validGlyphRanges
+field_1970,glyphInfo
+field_1971,atlasTextureSize
+field_1972,atlasTextures
+field_1973,defaultAtlasTextureSize
+## FontDataForDumping
+class_234,FontDataForDumping
+field_1974,d3d11FontRenderer
+field_1975,atlasTextureSize
+field_1976,atlasTextures
+field_1977,pointSize
+field_1978,alphaCorrectionFactor
+field_1979,glyphBitmapBuffer
+field_1980,currentX
+field_1981,currentY
+field_1982,nextRowY
+field_1983,glyphIndexZeroInfo
 
 ## StyleableFont
 class_1,StyleableFont
@@ -7180,6 +7180,11 @@ class_274,LibVorbisFile
 
 ## SDL_Image
 class_267,SDL_Image
+
+## _CompilerGenerated
+class_9,_CompilerGenerated
+method_26,HashVignettePath
+param_39,path
 
 ## SDL
 struct_103,SDL_Event
