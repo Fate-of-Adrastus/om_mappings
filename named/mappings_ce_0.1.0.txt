@@ -1694,7 +1694,7 @@ method_502,GetSolution
 method_503,GetSimPlayState
 method_504,GetCycleTime
 method_505,HasError
-# method_506,GetFastForwardCycleTarget  -!- find Better Name For Current Version
+method_506,GetVolumeMultiplier
 method_507,GetSimulation
 method_509,GetSimTime
 method_510,GetRealTime
@@ -1706,7 +1706,7 @@ method_515,GetTrackStartPos
 method_516,GetTrackEndPos
 method_517,IsPartSelected
 method_518,HandleSimulationError
-# method_2448,
+method_2448,GetInverseBoardScale
 method_2449,GetMousePos
 method_1984,RenderSolution
 param_5533,boardOffset
@@ -2264,10 +2264,10 @@ param_5642,part
 field_3971,index
 class_428,ToolbarManager
 method_2046,AddTypeToToolbar
-# method_2047,
+method_2047,AddSection
 param_5643,partToolbar
 param_5644,partType
-# param_5645,
+param_5645,name
 param_5646,partToolbar
 field_3972,partsPanel
 field_3973,sections
@@ -2447,7 +2447,7 @@ method_1945,ResetAllById
 method_1946,ComparePosition
 method_1947,GetOccupiedHexes
 method_1948,IsAllowedPlacement
-method_1949,CanArmBePlacedInChamber
+method_1949,CanArmReplacePart
 method_1950,GetChamberHexes
 method_1951,IsArmInsideChamber
 method_1952,GetContainingChambers
@@ -2896,10 +2896,13 @@ param_4158,solEditScrn
 
 ## InstructionInsertInputMode
 class_217,InstructionInsertInputMode
-# method_562,
+method_562,GetInstruction
+param_3899,instructionRef
+method_563,DraggingInstructionOfType
+param_3900,instructionType
 field_1907,startMousePos
-# field_1908,
-# field_1909,
+field_1908,draggedInstructions
+field_1909,cursorInstruction
 param_3892,solEditScrn
 param_3893,startMousePos
 param_3894,solEditScrn
@@ -2907,14 +2910,15 @@ param_3895,startMousePos
 param_3896,solEditScrn
 param_3897,solEditScrn
 param_3898,solEditScrn
-# param_3899,
-# param_3900,
 ## NestedClasses
-# enum_140,
-# class_220,
+enum_140,InsertOperation
+enum_140.0,Cancel
+enum_140.1,Delete
+enum_140.2,Insert
+class_220,DraggedInstruction
 field_1912,type
-# field_1913,
-# field_1914,
+field_1913,dragOffset
+field_1914,originalPosition
 class_219,InstructionMatcher
 method_565,IsMatching
 field_1911,instruction
@@ -2928,6 +2932,7 @@ field_1910,instruction
 class_258,InstrInsertPrecursorInputMode
 method_560,StartInputMode
 method_561,StartInputMode
+method_695,StartInputMode
 field_2066,startMousePos
 field_2067,instruction
 param_4185,solEditScrn
