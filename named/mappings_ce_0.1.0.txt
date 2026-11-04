@@ -1731,8 +1731,12 @@ method_1997,RenderGlow
 method_1998,RenderStroke
 method_1999,GetPos
 method_2000,RenderInputOutputEffects
-method_2001,GetGlossOfset
-# method_2450,
+method_2001,GetGlossOffset
+method_2450,RenderMaskedGloss
+param_8686,partRenderer
+param_8687,glossTexture
+param_8688,maskTexture
+param_8689,offset
 method_2002,RenderCenterRotated
 method_2003,RenderLights
 method_2004,RenderWithLights
@@ -1754,25 +1758,34 @@ param_5611,texturePivotOffset
 param_8328,textureRotation
 param_5613,point
 method_2014,RenderBoard
+param_5614,screenSpaceBounds
+param_5615,boardOffset
+param_5616,renderLogoHex
+param_8690,inverseBoardScale
 method_2015,RenderMoleculeWithHolder
+param_5617,molecule
+param_5618,partPos
+param_8329,opacityMultiplier
 method_2016,RenderRotated
 method_2017,RenderHexSelection
 method_2018,GetScaledClampedCycleTime
 method_2019,GetClampedCycleTime
 method_2020,RenderGlyphEffects
 method_2021,RenderConsumptionEffects
-# method_2451,
-# method_2022,
-# method_2452,
+method_2451,RenderEffects
+param_8691,effects
+param_8692,boardOffset
+method_2022,GetShadowOffsetAtPos
+param_8331,screenPos
 method_2452,IsCompleted
 field_3935,underneathPartsGlyphEffects
 field_3936,glyphEffects
 field_3937,consumptionEffects
-# field_4742,
-# field_4743,
+field_4742,programGrid
+field_4743,needsToRecreateProgramGrid
 field_3938,debugMarkerPositions
-# field_3939,
-# field_3940,
+field_3939,unusedLightRed
+field_3940,boardHexTints
 param_5524,part
 param_5525,part
 # param_5526,
@@ -1827,14 +1840,10 @@ param_5571,intermState
 param_5572,hexPos
 param_5573,intermState
 param_5574,offset
-param_4854,molecule
+param_8327,molecule
 param_5575,isInput
 param_5576,renderer
 param_5577,hexPos
-# param_8686,
-# param_8687,
-# param_8688,
-# param_8689,
 param_5578,texture
 param_5579,pos
 param_5580,centerOffset
@@ -1863,13 +1872,6 @@ param_5602,intermState
 param_5603,pos
 param_5604,mousePos
 param_5605,boardOffset
-# param_5614,
-# param_5615,
-# param_5616,
-# param_8690,
-param_5617,molecule
-param_5618,partPos
-# param_8329,
 param_5619,texture
 param_5620,color
 param_5621,pos
@@ -1880,9 +1882,6 @@ param_5624,color
 param_5625,glyphEffects
 param_5626,offset
 param_5627,offset
-# param_8691,
-# param_8692,
-# param_8331,
 param_8693,effect
 ## NestedClasses
 class_420,HexModuloList
@@ -1893,7 +1892,7 @@ class_421,AsyncStateMachine_EnumerateArmCursorIntersectionData
 method_2032,GetAlphaForPartGlow
 method_2033,RenderAtom
 field_3958,solutionEditor
-field_3959,atomRenderOffset
+field_3959,boardOffset
 param_5630,part
 param_5631,atomType
 param_5632,position
@@ -2623,7 +2622,7 @@ param_150,simTime
 param_151,realTime
 param_152,solutionEditor
 param_8570,solutionEditor
-param_8571,pos
+param_8571,boardOffset
 param_8572,angle
 param_8573,solutionEditor
 
@@ -2651,7 +2650,7 @@ param_8405,time
 param_8406,solutionEditor
 param_8407,time
 param_8408,solutionEditor
-param_8409,pos
+param_8409,boardOffset
 param_8410,angle
 param_8411,solutionEditor
 
@@ -2668,7 +2667,7 @@ param_8553,pos
 param_8554,text
 param_8555,errorDict
 param_8556,solutionEditor
-param_8557,pos
+param_8557,boardOffset
 param_8558,angle
 
 ## TextureEffect
@@ -2688,7 +2687,7 @@ param_8426,delay
 param_8427,solutionEditor
 param_8428,solutionEditor
 param_8429,solutionEditor
-param_8430,pos
+param_8430,boardOffset
 param_8431,angle
 param_8432,solutionEditor
 
@@ -2712,7 +2711,7 @@ param_8479,offset
 param_8480,angleOffset
 param_8481,delay
 param_8482,solutionEditor
-param_8483,pos
+param_8483,boardOffset
 param_8484,angle
 
 ## TransmutationEffect
@@ -2750,7 +2749,7 @@ param_8492,solutionEditor
 param_8493,atomRef1
 param_8494,atomRef2
 param_8495,solutionEditor
-param_8496,pos
+param_8496,boardOffset
 param_8497,angle
 param_8498,solutionEditor
 
@@ -2778,7 +2777,7 @@ param_8528,velocity
 param_8529,angularVelocity
 param_8530,shadowEffect
 param_8531,solutionEditor
-param_8532,_pos
+param_8532,boardOffset
 param_8533,angle
 param_8534,solutionEditor
 
