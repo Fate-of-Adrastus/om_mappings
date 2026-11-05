@@ -1167,13 +1167,13 @@ method_1174,SetConduitHexes
 method_1175,Clone
 method_1176,SetupInputOutputFromSolution
 method_1177,HasNoParent
-method_1178,GetSimState
+method_1178,CreateSimState
 method_1179,GetRootPart
 method_1180,GetParentList
 method_1181,CollectSelfAndSubparts
 method_1182,CollectSelfAndSubparts
 method_1183,GetDebugReferenceName
-method_1184,InFrontBy
+method_1184,GlobalPosFromLocal
 method_1185,GetMoleculeForInputOutput
 method_1186,GetHexFootprint
 method_1187,GetHexFootprintWithTransform
@@ -1275,8 +1275,8 @@ field_1543,isConduit
 field_1544,attachedAtoms
 field_1545,isSubpart
 field_1546,canRotateInEditor
-field_1547,baseTexture
-field_1548,hoverTexture
+field_1547,iconTexture
+field_1548,iconHoverTexture
 field_1549,glowTexture
 field_1550,strokeTexture
 field_1551,permissionCategory
@@ -3373,13 +3373,13 @@ field_2967,isD3D11
 field_2968,shader
 # field_2971,
 # field_2972,
-field_2969,textures
+field_2969,boundTextures
 field_2970,samplerModes
 field_2973,vertexArray
 field_2974,vertexBuffer
 field_2975,elementArrayBuffer
-field_2976,textures
-field_2977,shaders
+field_2976,allTextures
+field_2977,allShaders
 # field_2979,
 # field_2980,
 # field_2981,
