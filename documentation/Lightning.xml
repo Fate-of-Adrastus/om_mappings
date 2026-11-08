@@ -100,11 +100,22 @@
       highlighted as the cause of the error.<br />
       A position of (0,0) represents the origin of the board.</param>
     </member>
+    <member name="M:Solution.method_1936(interface_2)">
+      <summary>Same as <see cref="F:Solution.parts"/> but reorders overlapping arms, seemingly to make them render more nicely.</summary>
+      <returns>Parts list, with arms possibly reordered compared to the stored parts list.</returns>
+    </member>
+    <member name="M:Solution.method_1938(interface_2)">
+      <summary>Same as <see cref="M:Solution.method_1937()"/> but reorders overlapping arms, seemingly to make them render more nicely.</summary>
+      <returns>Parts list including subparts, with arms possibly reordered compared to the stored parts list.</returns>
+    </member>
     <member name="T:Puzzle">
       <summary>A type containing the data for a puzzle</summary>
     </member>
     <member name="F:Puzzle.CustomPermissions">
       <summary>Custom Permissions for this puzzle. <b>Is not valid for vanilla puzzles.</b></summary>
+    </member>
+    <member name="F:Puzzle.field_2784">
+      <summary>Only present on puzzles loaded from vanilla puzzle files; steam id of the player who saved the file. (It's overwritten on save, so it's whoever most recently modified the puzzle.) Unused in vanilla.</summary>
     </member>
     <member name="F:AtomType.field_2293">
       <summary>Used for rendering. If true, the atom will render with a 
@@ -1041,6 +1052,24 @@
       <param name="param_3869">Texture to render</param>
       <param name="param_3870">Hex to draw the texture at.</param>
       <param name="param_3871">Rotation to apply, around the center of the given hex.</param>
+    </member>
+    <member name="M:class_115.method_198(SDL2.SDL.SDLKey)">
+      <summary>Returns true for one frame whenever a key is pressed down. If holding down the key should be treated as repeated inputs, instead use <see cref="M:class_115.method_200(SDL2.SDL.SDLKey)"/>.</summary>
+      <param name="param_3278">Key to check if pressed</param>
+    </member>
+    <member name="M:class_115.method_199(SDL2.SDL.SDLKey)">
+      <summary>Returns true for one frame whenever a key is released.</summary>
+      <param name="param_3279">Key to check if released</param>
+    </member>
+    <member name="M:class_115.method_200(SDL2.SDL.SDLKey)">
+      <summary>Returns true for one frame whenever a key is typed, including repeats when a key is held down. (e.g. if you held down a key in a text field, this would return true once for each time a letter was typed.) If holding down the key should only activate something once, instead use <see cref="M:class_115.method_198(SDL2.SDL.SDLKey)"/>.</summary>
+      <param name="param_3280">Key to check if typed</param>
+    </member>
+    <member name="M:class_158.method_374">
+      <summary>Calling this method locks the SDL audio device; this method should always be called with a <c>using</c> statement, to ensure that the audio device is properly unlocked afterwards, and no references should be kept to the handle or its fields outside of the <c>using</c> block.</summary>
+    </member>
+    <member name="F:Sound.field_4062">
+      <summary>Whether a copy of this sound started playing this frame. Multiple copies can overlap, but not on the same frame.</summary>
     </member>
   </members>
 </doc>
