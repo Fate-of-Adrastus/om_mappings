@@ -5582,20 +5582,93 @@ param_8721,instruction
 
 ## GifRecorder
 class_92,GifRecorder
+param_88,outputLoc
 field_915,paletteDataLoaded
-field_916,paletteData1
-field_917,paletteData2
+field_916,paletteColors
+field_917,paletteLookupTable
+field_4168,width
+field_919,height
+field_920,maximumLoopCount
 field_921,frameTime
 field_922,outputStream
+field_923,pixelBuffer
+field_924,currentFrameRgb
+field_925,previousFrameRgb
+field_926,pixelsChanged
+field_927,pixelPaletteIndices
+field_928,paletteBitWidth
+field_929,paletteBitWidthMinus1
+field_930,isFirstFrame
+field_931,widthHeightSet
 field_4495,outputLocation
 method_74,LoadPaletteData
 method_75,SetFrameTime
+param_89,centiseconds
 method_76,RenderFrame
+param_90,imageData
 method_77,CloseStream
 method_78,CancelRecording
-param_88,outputLoc
-param_89,centiseconds
-param_90,pngImage
+method_79,ComputePaletteIndices
+method_80,ExtractRgbFromRgba
+method_81,WriteGraphicsControlExtensionBlock
+method_82,WriteLocalImageDescriptor
+method_83,WriteFileHeader
+method_84,WriteNetscapeLoopingExtensionBlock
+method_85,WritePaletteData
+method_86,WriteFrameImageData
+method_87,WriteIntLower2Bytes
+param_5842,value
+method_88,WriteString
+param_92,str
+
+## GifFrameWriter
+class_289,GifFrameWriter
+param_8189,width
+param_8190,height
+param_4403,paletteIndices
+param_4404,paletteBitWidth
+field_2242,pixelDataEndMarker
+field_2243,width
+field_2244,height
+field_2245,paletteIndices
+field_2246,paletteBitWidth
+field_2247,pixelsRemaining
+field_2248,pixelIndex
+# field_2249,
+# field_2250,
+# field_2251,
+# field_2252,
+# field_2253,
+# field_2254,
+# field_2255,
+# field_2256,
+# field_2257,
+# field_2258,
+# field_2259,
+# field_2260,
+# field_2261,
+# field_2262,
+# field_2263,
+# field_2264,
+# field_2265,
+# field_2266,
+# field_2267,
+# method_792,
+# param_4405,
+# param_4406,
+# method_793,
+# method_794,
+# method_795,
+# param_4409,
+param_4410,stream
+# method_796,
+param_4411,stream
+# method_797,
+param_4412,stream
+method_798,Pow2Minus1
+param_4413,value
+method_799,GetNextPixelData
+# method_800,
 
 ## EscapeScreen
 class_178,EscapeScreen
